@@ -15,6 +15,7 @@ import { Materials } from './pages/Materials'
 import { Crew } from './pages/Crew'
 import { Photos } from './pages/Photos'
 import { Reports } from './pages/Reports'
+import { Settings } from './pages/Settings'
 
 const queryClient = new QueryClient()
 
@@ -87,6 +88,7 @@ function AuthWrapper() {
           <Route path="crew" element={<Crew />} />
           <Route path="photos" element={<Photos />} />
           <Route path="reports" element={<Reports />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>
     </BrowserRouter>

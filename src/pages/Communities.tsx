@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Plus, Building2, Edit, Trash2 } from 'lucide-react'
+import { Plus, Building2, Edit, Trash2, X } from 'lucide-react'
 import { supabase } from '../lib/supabase'
 import { useAuth } from '../contexts/AuthContext'
 
@@ -8,6 +8,8 @@ export function Communities() {
   const [communities, setCommunities] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   const [showCreateModal, setShowCreateModal] = useState(false)
+  const [selectedCommunity, setSelectedCommunity] = useState<any>(null)
+  const [showDetailsModal, setShowDetailsModal] = useState(false)
 
   useEffect(() => {
     fetchCommunities()
@@ -19,7 +21,7 @@ export function Communities() {
         .from('communities')
         .select(`
           *,
-          jobs(id)
+          jobs(id, job_number, status, work_order_type, estimated_cost)
         `)
         .order('name')
 
@@ -30,6 +32,11 @@ export function Communities() {
     } finally {
       setLoading(false)
     }
+  }
+
+  const handleViewDetails = (community: any) => {
+    setSelectedCommunity(community)
+    setShowDetailsModal(true)
   }
 
   const isAdmin = profile?.is_admin === true || 
@@ -120,7 +127,10 @@ export function Communities() {
                     <span className="text-gray-600">Active Jobs: </span>
                     <span className="font-medium text-gray-900">{community.jobs?.length || 0}</span>
                   </div>
-                  <button className="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                  <button 
+                    onClick={() => handleViewDetails(community)}
+                    className="text-sm text-blue-600 hover:text-blue-700 font-medium"
+                  >
                     View Details →
                   </button>
                 </div>
@@ -136,6 +146,17 @@ export function Communities() {
           onSuccess={() => {
             setShowCreateModal(false)
             fetchCommunities()
+          }}
+        />
+      )}
+
+      {/* Community Details Modal */}
+      {showDetailsModal && selectedCommunity && (
+        <CommunityDetailsModal
+          community={selectedCommunity}
+          onClose={() => {
+            setShowDetailsModal(false)
+            setSelectedCommunity(null)
           }}
         />
       )}
@@ -294,6 +315,126 @@ function CreateCommunityModal({
             </button>
           </div>
         </form>
+      </div>
+    </div>
+  )
+}
+
+function CommunityDetailsModal({ 
+  community, 
+  onClose 
+}: {
+  community: any
+  onClose: () => void
+}) {
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'completed':
+        return 'bg-green-100 text-green-800'
+      case 'in_progress':
+        return 'bg-yellow-100 text-yellow-800'
+      case 'scheduled':
+        return 'bg-blue-100 text-blue-800'
+      case 'on_hold':
+        return 'bg-gray-100 text-gray-800'
+      case 'cancelled':
+        return 'bg-red-100 text-red-800'
+      default:
+        return 'bg-gray-100 text-gray-800'
+    }
+  }
+
+  const totalValue = community.jobs?.reduce((sum: number, job: any) => sum + (job.estimated_cost || 0), 0) || 0
+  const completedJobs = community.jobs?.filter((job: any) => job.status === 'completed').length || 0
+  const activeJobs = community.jobs?.filter((job: any) => ['scheduled', 'in_progress'].includes(job.status)).length || 0
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white rounded-xl w-full max-w-4xl max-h-[90vh] overflow-hidden">
+        {/* Header */}
+        <div className="p-6 border-b border-gray-200">
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900">{community.name}</h2>
+              <p className="text-gray-600">{community.builder_name}</p>
+            </div>
+            <button
+              onClick={onClose}
+              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+
+        <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+          {/* Community Info */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Community Information</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <span className="font-medium text-gray-700">Address:</span>
+                <p className="text-gray-600">{community.address}</p>
+                <p className="text-gray-600">{community.city}, {community.state} {community.zip_code}</p>
+              </div>
+              <div>
+                <span className="font-medium text-gray-700">Builder:</span>
+                <p className="text-gray-600">{community.builder_name}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Statistics */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Statistics</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <p className="text-blue-600 font-medium">Total Jobs</p>
+                <p className="text-2xl font-bold text-blue-900">{community.jobs?.length || 0}</p>
+              </div>
+              <div className="bg-green-50 p-4 rounded-lg">
+                <p className="text-green-600 font-medium">Completed</p>
+                <p className="text-2xl font-bold text-green-900">{completedJobs}</p>
+              </div>
+              <div className="bg-purple-50 p-4 rounded-lg">
+                <p className="text-purple-600 font-medium">Total Value</p>
+                <p className="text-2xl font-bold text-purple-900">${totalValue.toLocaleString()}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Recent Jobs */}
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Jobs</h3>
+            {community.jobs && community.jobs.length > 0 ? (
+              <div className="space-y-3">
+                {community.jobs.slice(0, 10).map((job: any) => (
+                  <div key={job.id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div>
+                      <p className="font-medium text-gray-900">#{job.job_number}</p>
+                      <p className="text-sm text-gray-600">{job.work_order_type}</p>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium capitalize ${getStatusColor(job.status)}`}>
+                        {job.status.replace('_', ' ')}
+                      </span>
+                      <span className="text-sm font-medium text-gray-900">
+                        ${job.estimated_cost?.toLocaleString()}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+                {community.jobs.length > 10 && (
+                  <p className="text-sm text-gray-500 text-center py-2">
+                    And {community.jobs.length - 10} more jobs...
+                  </p>
+                )}
+              </div>
+            ) : (
+              <p className="text-gray-500 text-center py-8">No jobs found for this community</p>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   )
