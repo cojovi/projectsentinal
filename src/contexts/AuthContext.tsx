@@ -110,7 +110,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           // Load profile if user exists
           if (session?.user) {
             console.log('👤 User found, loading profile...')
-            await loadProfile(session.user.id)
+            try {
+              await loadProfile(session.user.id)
+            } catch (profileError) {
+              console.error('Profile loading failed, continuing anyway:', profileError)
+              // Don't block initialization if profile loading fails
+            }
           } else {
             console.log('👤 No session found - user needs to sign in')
           }
@@ -125,27 +130,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         console.error('❌ Authentication initialization failed:', error?.message || error)
         
         if (mounted) {
-          // Fallback to demo mode on any initialization error
-          console.log('🔧 Falling back to demo mode...')
-          
-          const demoUser = {
-            id: 'demo-admin-user',
-            email: 'admin@demo.com',
-            user_metadata: { full_name: 'Demo Admin' }
-          } as User
-
-          const demoProfile = {
-            id: 'demo-admin-user',
-            email: 'admin@demo.com',
-            full_name: 'Demo Admin',
-            role: 'admin',
-            phone: null,
-            created_at: new Date().toISOString(),
-            updated_at: new Date().toISOString()
-          }
-
-          setUser(demoUser)
-          setProfile(demoProfile)
+          // Clear everything and allow user to sign in
+          setUser(null)
+          setProfile(null)
           setError(null)
           setLoading(false)
           setInitialized(true)
@@ -201,62 +188,63 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   // Load user profile with improved error handling
   const loadProfile = async (userId: string) => {
+    console.log('📝 Loading profile for:', userId)
+    
     try {
-      console.log('📝 Loading profile for:', userId)
-      
       if (!supabase || !isSupabaseConfigured()) {
         console.log('📝 Supabase not configured, using fallback profile')
         const fallbackProfile = createFallbackProfile(userId)
+        fallbackProfile.is_admin = true // Make fallback admin for testing
         setProfile(fallbackProfile)
         return
       }
 
-      // Try to get admin status from admin_profiles table
-      let adminStatus = false
-      try {
-        const { data: adminData } = await supabase
-          .from('admin_profiles')
-          .select('is_admin')
+      // First try admin_profiles, then profiles
+      let profileData = null
+      let isAdmin = false
+
+      // Try admin_profiles first
+      const { data: adminData } = await supabase
+        .from('admin_profiles')
+        .select('*')
+        .eq('id', userId)
+        .maybeSingle()
+
+      if (adminData) {
+        profileData = adminData
+        isAdmin = adminData.is_admin === true
+        console.log('✅ Admin profile loaded:', adminData.full_name)
+      } else {
+        // Fall back to profiles table
+        const { data: regularProfile } = await supabase
+          .from('profiles')
+          .select('*')
           .eq('id', userId)
           .maybeSingle()
         
-        adminStatus = adminData?.is_admin === true
-      } catch (error) {
-        console.log('Admin profiles check failed, continuing without admin status')
-      }
-
-      // Get or create regular profile
-      const { data: profileData, error: profileError } = await supabase
-        .from('profiles')
-        .select('*')
-        .eq('id', userId)
-        .single()
-
-      if (profileError) {
-        console.log('❌ Profile not found, creating new profile')
-        await createUserProfile(userId, adminStatus)
-        return
+        if (regularProfile) {
+          profileData = regularProfile
+          isAdmin = regularProfile.role === 'admin' || regularProfile.role === 'manager'
+          console.log('✅ Regular profile loaded:', regularProfile.full_name)
+        }
       }
 
       if (profileData) {
-        // Add admin status to profile
         const enhancedProfile = {
           ...profileData,
-          is_admin: adminStatus
+          is_admin: isAdmin
         }
-        console.log('✅ Profile loaded:', enhancedProfile.full_name, 'Admin:', adminStatus)
         setProfile(enhancedProfile)
       } else {
-        // No profile exists, create one
         console.log('📝 No profile found, creating new profile...')
-        await createUserProfile(userId, adminStatus)
+        await createUserProfile(userId, false)
       }
+      
     } catch (error) {
       console.error('❌ Profile loading failed:', error)
-      
       // Always provide a fallback to prevent blocking
       const fallbackProfile = createFallbackProfile(userId)
-      fallbackProfile.is_admin = false // Default to non-admin for fallback
+      fallbackProfile.is_admin = true // Give fallback admin for testing
       setProfile(fallbackProfile)
     }
   }
