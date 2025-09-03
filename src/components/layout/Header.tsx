@@ -1,9 +1,11 @@
 import React from 'react'
-import { Bell, Search, User, LogOut } from 'lucide-react'
+import { Bell, Search, User, LogOut, Edit } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext'
 
 export function Header() {
   const { profile, signOut } = useAuth()
+
+  const [showProfileModal, setShowProfileModal] = React.useState(false)
 
   const handleSignOut = async () => {
     await signOut()
@@ -32,21 +34,24 @@ export function Header() {
           <div className="flex items-center space-x-3">
             <div className="text-right">
               <p className="text-sm font-medium text-gray-900">
-                {profile?.full_name || 'Loading...'}
+                {profile?.full_name || 'New User'}
               </p>
               <p className="text-xs text-gray-500 capitalize">
-                {profile?.role ? profile.role.replace('_', ' ') : 'Loading...'}
+                {profile?.role ? profile.role.replace('_', ' ') : 'crew member'}
               </p>
             </div>
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 bg-blue-600 rounded-full flex items-center justify-center">
+              <button 
+                onClick={() => setShowProfileModal(true)}
+                className="h-8 w-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors cursor-pointer"
+              >
                 <span className="text-white font-medium text-sm">
-                  {profile?.full_name ? 
+                  {profile?.full_name && profile.full_name !== 'New User' ? 
                     profile.full_name.split(' ').map(n => n[0]).join('').toUpperCase() : 
-                    '?'
+                    'NU'
                   }
                 </span>
-              </div>
+              </button>
               <button
                 onClick={handleSignOut}
                 className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
@@ -57,6 +62,12 @@ export function Header() {
           </div>
         </div>
       </div>
+
+      {/* Profile Edit Modal */}
+      {showProfileModal && (
+        <ProfileEditModal
+          onClose={() => setShowProfileModal(false)}
+        />
+      )}
     </header>
   )
-}
