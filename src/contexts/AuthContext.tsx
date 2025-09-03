@@ -205,57 +205,58 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       console.log('📝 Loading profile for:', userId)
       
       if (!supabase || !isSupabaseConfigured()) {
-        console.log('📝 Supabase not configured, using demo profile')
-        return
-      }
-      
-      // Check admin_profiles first, then fall back to profiles
-      const { data: adminData, error: adminError } = await supabase
-        .from('admin_profiles')
-        .select('*')
-        .eq('id', userId)
-        .maybeSingle()
-
-      if (adminError) {
-        console.error('❌ Admin profile query failed:', adminError)
-      }
-
-      // If we have admin data, use it
-      if (adminData) {
-        console.log('✅ Admin profile loaded:', adminData.full_name)
-        setProfile(adminData)
-        return
-      }
-
-      // Fall back to regular profiles table
-      const { data: profileData, error: profileError } = await supabase
-        .from('profiles')
-        .select('*')
-        .eq('id', userId)
-        .maybeSingle()
-
-      if (profileError) {
-        console.error('❌ Profile query failed:', profileError)
-        
-        // Create fallback profile from user metadata
+        console.log('📝 Supabase not configured, using fallback profile')
         const fallbackProfile = createFallbackProfile(userId)
         setProfile(fallbackProfile)
         return
       }
 
+      // Try to get admin status from admin_profiles table
+      let adminStatus = false
+      try {
+        const { data: adminData } = await supabase
+          .from('admin_profiles')
+          .select('is_admin')
+          .eq('id', userId)
+          .maybeSingle()
+        
+        adminStatus = adminData?.is_admin === true
+      } catch (error) {
+        console.log('Admin profiles check failed, continuing without admin status')
+      }
+
+      // Get or create regular profile
+      const { data: profileData, error: profileError } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('id', userId)
+        .single()
+
+      if (profileError) {
+        console.log('❌ Profile not found, creating new profile')
+        await createUserProfile(userId, adminStatus)
+        return
+      }
+
       if (profileData) {
-        console.log('✅ Profile loaded:', profileData.full_name)
-        setProfile(profileData)
+        // Add admin status to profile
+        const enhancedProfile = {
+          ...profileData,
+          is_admin: adminStatus
+        }
+        console.log('✅ Profile loaded:', enhancedProfile.full_name, 'Admin:', adminStatus)
+        setProfile(enhancedProfile)
       } else {
         // No profile exists, create one
         console.log('📝 No profile found, creating new profile...')
-        await createUserProfile(userId)
+        await createUserProfile(userId, adminStatus)
       }
     } catch (error) {
       console.error('❌ Profile loading failed:', error)
       
       // Always provide a fallback to prevent blocking
       const fallbackProfile = createFallbackProfile(userId)
+      fallbackProfile.is_admin = false // Default to non-admin for fallback
       setProfile(fallbackProfile)
     }
   }
@@ -278,9 +279,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }
 
   // Create new user profile in database
-  const createUserProfile = async (userId: string) => {
+  const createUserProfile = async (userId: string, isAdmin = false) => {
     try {
       const newProfile = createFallbackProfile(userId)
+      newProfile.is_admin = isAdmin
 
       const { data: createdProfile, error: createError } = await supabase
         .from('profiles')
@@ -295,6 +297,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         console.log('✅ Profile created:', createdProfile.full_name)
         setProfile(createdProfile)
       } else {
+        newProfile.is_admin = isAdmin
         setProfile(newProfile) // Use fallback
       }
     } catch (error) {
