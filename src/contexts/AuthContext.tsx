@@ -26,7 +26,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   // Simple, bulletproof initialization
   useEffect(() => {
-    const initialize = () => {
+    const initialize = async () => {
       // Set a maximum timeout to prevent infinite loading
       const loadingTimeout = setTimeout(() => {
         console.log('⚠️ Loading timeout - forcing completion')
@@ -43,19 +43,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           return
         }
 
-        // Get current session with timeout
-        supabase.auth.getSession().then(({ data: { session } }) => {
-          setSession(session)
-          setUser(session?.user || null)
-          setLoading(false)
-          clearTimeout(loadingTimeout)
-        }).catch((error) => {
-          console.error('Session error:', error)
+        // Get session without timeout
+        const { data: { session }, error: sessionError } = await supabase.auth.getSession()
+        if (sessionError) {
           setUser(null)
           setProfile(null)
           setLoading(false)
           clearTimeout(loadingTimeout)
-        })
+        }
         
       } catch (error) {
         console.error('Auth initialization error:', error)
