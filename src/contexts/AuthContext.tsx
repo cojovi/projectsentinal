@@ -26,41 +26,48 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   // Simple, bulletproof initialization
   useEffect(() => {
-    let mounted = true
-
-    const initialize = async () => {
+    const initialize = () => {
+      // Set a maximum timeout to prevent infinite loading
+      const loadingTimeout = setTimeout(() => {
+        console.log('⚠️ Loading timeout - forcing completion')
+        setLoading(false)
+      }, 3000)
+      
       try {
         if (!supabase) {
           console.log('No Supabase - using demo mode')
-          if (mounted) {
-            setUser(null)
-            setProfile(null)
-            setLoading(false)
-          }
+          setUser(null)
+          setProfile(null)
+          setLoading(false)
+          clearTimeout(loadingTimeout)
           return
         }
 
-        // Get current session
-        const { data: { session }, error } = await supabase.auth.getSession()
-        
-        if (mounted) {
+        // Get current session with timeout
+        supabase.auth.getSession().then(({ data: { session } }) => {
           setSession(session)
           setUser(session?.user || null)
-          setLoading(false) // ALWAYS set loading to false
-        }
-      } catch (error) {
-        console.error('Auth initialization error:', error)
-        if (mounted) {
+          setLoading(false)
+          clearTimeout(loadingTimeout)
+        }).catch((error) => {
+          console.error('Session error:', error)
           setUser(null)
           setProfile(null)
-          setLoading(false) // ALWAYS set loading to false
-        }
+          setLoading(false)
+          clearTimeout(loadingTimeout)
+        })
+        
+      } catch (error) {
+        console.error('Auth initialization error:', error)
+        setUser(null)
+        setProfile(null)
+        setLoading(false)
+        clearTimeout(loadingTimeout)
       }
     }
 
     // Set up auth listener
-    const { data } = supabase?.auth.onAuthStateChange(async (event, session) => {
-      if (mounted) {
+    const authListener = supabase?.auth.onAuthStateChange(async (event, session) => {
         setSession(session)
         setUser(session?.user || null)
         
@@ -70,16 +77,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         } else if (event === 'SIGNED_OUT') {
           setProfile(null)
         }
-      }
     })
 
     initialize()
 
     return () => {
-      mounted = false
-      data?.subscription?.unsubscribe()
+      authListener?.data?.subscription?.unsubscribe()
     }
-  }, [])
+  }, []) // Empty dependency array - only run once
 
   // Load user profile - separate from initialization
   const loadProfile = async (userId?: string) => {
