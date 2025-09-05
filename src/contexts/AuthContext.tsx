@@ -92,6 +92,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (!targetUserId || !supabase) return
 
     try {
+      // Special case for admin email
+      if (user?.email === 'codyv@cmacroofing.com') {
+        setProfile({
+          id: targetUserId,
+          email: user.email,
+          full_name: 'Cody Viveiros',
+          role: 'admin',
+          phone: '8177512041',
+          is_admin: true,
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString()
+        })
+        return
+      }
+
       // Try admin_profiles first
       const { data: adminProfile } = await supabase
         .from('admin_profiles')
