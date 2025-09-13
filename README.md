@@ -2,6 +2,8 @@
 
 A comprehensive web application for residential roofing, framing, and windows contractors with professional project management capabilities.
 
+This is still in really early stages, was kinda just fkn around when i got started on this....
+
 ## Features
 
 ### 🏗️ Core Business Management
