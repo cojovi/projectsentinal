@@ -159,6 +159,4 @@ Sample data includes:
 - Role-based demo accounts
 
 ---
-
-**Built for Production Use**
-This application provides a solid foundation for construction management and can be extended with additional features like payment processing, advanced reporting, and builder portal integrations.
+still thinking of ideas for more features and workability.  --cody
