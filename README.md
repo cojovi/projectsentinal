@@ -1,3 +1,4 @@
+![Project TrueGrit](https://raw.githubusercontent.com/cojovi/TrueGrit_cmac/blob/main/public/banner1.png)
 # TrueGrit - Construction Management Platform
 
 A comprehensive web application for residential roofing, framing, and windows contractors with professional project management capabilities.
