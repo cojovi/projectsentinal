@@ -16,8 +16,8 @@ site:
   link: ''
   language: en
   multi_language: false
-  logo: https://github.com/cojovi/stargazerproject/blob/main/test/7.png?raw=true
-  avatar: https://i.imgur.com/9K6Noxf.png
+  logo: https://github.com/cojovi/projectsentinal/blob/main/test/7.png?raw=true
+  avatar: https://github.com/cojovi/projectsentinal/blob/main/test/5.png?raw=true
   beian:
     number: ''
     link: ''
@@ -26,7 +26,7 @@ site:
     link: ''
   # Start date of the blog YYY-MM-DD
   # 博客开始运行日期
-  started_date: 2023-09-14
+  started_date: 2025-02-10
   # Path unique identifier (文章 URL 唯一标识)
   # uid: use unique ID
   # slug: use generated slug base on title
@@ -104,7 +104,7 @@ socials:
 #! ---------------------------------------------------------------
 site_meta:
   cdn: cn
-  favicon: https://github.com/cojovi/stargazerproject/blob/main/test/7.png?raw=true
+  favicon: https://github.com/cojovi/projectsentinal/blob/main/test/7.png?raw=true
   description: 'Protocol Sentinel : a goldmine in the darkness'
   keywords: 'Tech, Electronics, AI, exploits'
   author: 'Digital Predator'
