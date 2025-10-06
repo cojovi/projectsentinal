@@ -1,13 +1,12 @@
 import React from 'react'
-import { 
-  Home, 
-  Calendar, 
-  FileText, 
-  Users, 
-  DollarSign, 
-  Package, 
-  Camera, 
-  Building2,
+import {
+  Home,
+  Calendar,
+  FileText,
+  Users,
+  DollarSign,
+  Package,
+  Camera,
   Map,
   BarChart3,
   Settings
@@ -45,7 +44,7 @@ export function Sidebar() {
   return (
     <div className="flex flex-col w-64 bg-gray-900 text-white">
       <div className="flex items-center h-16 px-6 bg-gray-800">
-        <Building2 className="h-8 w-8 text-blue-400" />
+        <img src="/tru_grit_svg.svg" alt="TrueGrit Logo" className="h-8 w-8" />
         <span className="ml-2 text-xl font-bold">TrueGrit</span>
       </div>
 

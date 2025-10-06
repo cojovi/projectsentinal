@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
-import { UserPlus, Building2 } from 'lucide-react'
+import { UserPlus } from 'lucide-react'
 
 interface SignUpFormProps {
   onToggleMode: () => void
@@ -36,9 +36,7 @@ export function SignUpForm({ onToggleMode }: SignUpFormProps) {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-xl text-center">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-green-600 rounded-full">
-              <Building2 className="h-8 w-8 text-white" />
-            </div>
+            <img src="/tru_grit_svg.svg" alt="TrueGrit Logo" className="h-16 w-16" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Account Created!</h1>
           <p className="text-gray-600">
@@ -60,9 +58,7 @@ export function SignUpForm({ onToggleMode }: SignUpFormProps) {
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-xl">
         <div className="text-center">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-blue-600 rounded-full">
-              <Building2 className="h-8 w-8 text-white" />
-            </div>
+            <img src="/tru_grit_svg.svg" alt="TrueGrit Logo" className="h-16 w-16" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Join TrueGrit</h1>
           <p className="text-gray-600 mt-2">Create your professional account</p>
