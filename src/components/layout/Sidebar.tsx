@@ -45,7 +45,7 @@ export function Sidebar() {
   return (
     <div className="flex flex-col w-64 bg-gray-900 text-white">
       <div className="flex items-center h-16 px-6 bg-gray-800">
-        <img src="/tru_grit_svg.svg" alt="TrueGrit Logo" className="h-8 w-8" />
+        <img src="/tru_grit_white_svg.svg" alt="TrueGrit Logo" className="h-8 w-8" />
         <span className="ml-2 text-xl font-bold">TrueGrit</span>
       </div>
 
