@@ -7,6 +7,7 @@ import {
   DollarSign,
   Package,
   Camera,
+  Building2,
   Map,
   BarChart3,
   Settings
