@@ -32,7 +32,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         console.log('⚠️ Loading timeout - forcing completion')
         setLoading(false)
       }, 3000)
-      
+
       try {
         if (!supabase) {
           console.log('No Supabase - using demo mode')
@@ -45,16 +45,30 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
         // Get session without timeout
         const { data: { session }, error: sessionError } = await supabase.auth.getSession()
+
         if (sessionError) {
+          console.warn('Session error:', sessionError.message)
+          // Clear invalid session from storage
+          if (sessionError.message?.includes('refresh_token_not_found') ||
+              sessionError.message?.includes('Invalid Refresh Token')) {
+            await supabase.auth.signOut()
+          }
           setUser(null)
+          setSession(null)
           setProfile(null)
-          setLoading(false)
-          clearTimeout(loadingTimeout)
+        } else if (session) {
+          setSession(session)
+          setUser(session.user)
+          await loadProfile(session.user.id)
         }
-        
+
+        setLoading(false)
+        clearTimeout(loadingTimeout)
+
       } catch (error) {
         console.error('Auth initialization error:', error)
         setUser(null)
+        setSession(null)
         setProfile(null)
         setLoading(false)
         clearTimeout(loadingTimeout)
@@ -62,16 +76,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
 
     // Set up auth listener
-    const authListener = supabase?.auth.onAuthStateChange(async (event, session) => {
-        setSession(session)
-        setUser(session?.user || null)
-        
-        if (session?.user && event === 'SIGNED_IN') {
-          // Load profile AFTER sign in, not during initialization
-          await loadProfile(session.user.id)
-        } else if (event === 'SIGNED_OUT') {
-          setProfile(null)
+    const authListener = supabase?.auth.onAuthStateChange((event, session) => {
+      (async () => {
+        try {
+          setSession(session)
+          setUser(session?.user || null)
+
+          if (session?.user && event === 'SIGNED_IN') {
+            await loadProfile(session.user.id)
+          } else if (event === 'SIGNED_OUT') {
+            setProfile(null)
+          }
+        } catch (error) {
+          console.error('Auth state change error:', error)
         }
+      })()
     })
 
     initialize()
