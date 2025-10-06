@@ -36,7 +36,7 @@ export function SignUpForm({ onToggleMode }: SignUpFormProps) {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-xl text-center">
           <div className="flex justify-center mb-4">
-            <img src="/tru_grit_white_svg.svg" alt="TrueGrit Logo" className="h-16 w-16" />
+            <img src="/tru_grit_white_png.png" alt="TrueGrit Logo" className="h-16 w-16" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Account Created!</h1>
           <p className="text-gray-600">
@@ -58,7 +58,7 @@ export function SignUpForm({ onToggleMode }: SignUpFormProps) {
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-xl">
         <div className="text-center">
           <div className="flex justify-center mb-4">
-            <img src="/tru_grit_white_svg.svg" alt="TrueGrit Logo" className="h-16 w-16" />
+            <img src="/tru_grit_white_png.png" alt="TrueGrit Logo" className="h-16 w-16" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Join TrueGrit</h1>
           <p className="text-gray-600 mt-2">Create your professional account</p>
