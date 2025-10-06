@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
-import { LogIn } from 'lucide-react'
+import { LogIn, Building2 } from 'lucide-react'
 
 interface LoginFormProps {
   onToggleMode: () => void
@@ -32,7 +32,7 @@ export function LoginForm({ onToggleMode }: LoginFormProps) {
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-xl">
         <div className="text-center">
           <div className="flex justify-center mb-4">
-            <img src="/logo-dark.svg" alt="TrueGrit Logo" className="h-16 w-16" />
+            <Building2 className="h-16 w-16 text-blue-600" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900">TrueGrit</h1>
           <p className="text-gray-600 mt-2">Professional Construction Management</p>
