@@ -1,6 +1,6 @@
 ---
-title: Charlie Kirk's Israel Stance: More Complicated Than You Think (Especially After *That* Hamptons Lunch)
-date: 2023-XX-XX XX:XX:XX
+title: "Charlie Kirk's Israel Stance: More Complicated Than You Think (Especially After *That* Hamptons Lunch)"
+date: 2025-10-07 11:00:00
 tags:
   - Charlie Kirk
   - Israel
