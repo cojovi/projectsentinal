@@ -40,8 +40,8 @@ site:
 authors:
   ##! example
   # TriDiamond:
-     name: Digital Predator
-     avatar: https://i.imgur.com/JCcuHM9.jpg
+     name: Tech Predator
+     avatar: https://github.com/cojovi/projectsentinal/blob/main/test/TechPredator_NoBG.png?raw=true
      link: https://github.com/cojovi
      description: 'watch carefully, listen more.'
   #   socials:
@@ -107,7 +107,7 @@ site_meta:
   favicon: https://github.com/cojovi/projectsentinal/blob/main/test/7.png?raw=true
   description: 'Protocol Sentinel : a goldmine in the darkness'
   keywords: 'Tech, Electronics, AI, exploits'
-  author: 'Digital Predator'
+  author: 'Tech Predator'
 
 # Sitemap
 #sitemap:

@@ -38,4 +38,4 @@ Yet, beneath the surface of steadfast support, cracks began to show. Following t
 
 Kirk also expressed growing "antisemitism fatigue," frustrated by critics of Israel being too readily slapped with the "antisemite" label, suggesting it was "bad for everybody." He believed an "earthquake" was coming in U.S. opinion on Israel, hinting at a possible "decoupling" from American aid, questioning what the U.S. truly received in return for billions in support.
 
-![Charlie Kirk's Tug of War](https://oaidalleapiprod.blob.core.windows.net/private/org-qV171x3lqMh461y38zDk24tP/generations/gen-kC7tY92vU0b0kQxO3n1P82q/image.webp?timestamp=1708453488730)
+![Charlie Kirk's Tug of War](https://github.com/cojovi/projectsentinal/blob/main/test/charliek.png?raw=true)
