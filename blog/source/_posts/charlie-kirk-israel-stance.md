@@ -19,7 +19,7 @@ categories:
   - Conservative Movement
   - Current Events
 feature: true
-cover: https://oaidalleapiprod.blob.core.windows.net/private/org-qV171x3lqMh461y38zDk24tP/generations/gen-kC7tY92vU0b0kQxO3n1P82q/image.webp?timestamp=1708453488730
+cover: https://github.com/cojovi/projectsentinal/blob/main/test/charliek.png?raw=true
 ---
 
 ## Charlie Kirk's Israel Stance: More Complicated Than You Think (Especially After *That* Hamptons Lunch)
