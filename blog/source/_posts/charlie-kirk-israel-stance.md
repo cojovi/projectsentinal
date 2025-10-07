@@ -20,6 +20,8 @@ categories:
   - Current Events
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/charliek.png?raw=true
+image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true
+og_image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true
 ---
 
 ## Charlie Kirk's Israel Stance: More Complicated Than You Think (Especially After *That* Hamptons Lunch)
