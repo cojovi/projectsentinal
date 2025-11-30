@@ -181,7 +181,7 @@ feed:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: aurora
 
 # OpenGraph Image Generator
 opengraph_image:
