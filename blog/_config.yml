@@ -193,6 +193,26 @@ opengraph_image:
   date_font: "Regular 30pt Arial"
   date_style: "YYYY/MM/DD"
 
+# JSON Content Generator (for Aurora theme API)
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    raw: false
+    content: false
+    slug: true
+    updated: true
+    comments: false
+    link: false
+    permalink: true
+    excerpt: false
+    categories: true
+    tags: true
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
