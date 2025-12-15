@@ -9,15 +9,15 @@
 #！ @docs https://aurora.tridiamond.tech/guide/configuration.html
 #! ---------------------------------------------------------------
 site:
-  subtitle: Tech Done Cheap - Innovations in Technology and DIY Projects
-  author: TechDoneCheap
-  nick: Self Taught Tech Enthusiast
-  description: Explore the latest in technology, software development, coding tutorials, and unique DIY projects. Tech Done Cheap offers in-depth reviews, expert insights, and hands-on guides for tech enthusiasts and DIYers.
+  subtitle: Discover Cutting-Edge Tech, AI News & Hacks, Speak your mind freely
+  author: Protocol Sentinel
+  nick: Enthusiast of the coding arts, conspiracy theorist, debater
+  description: Explore the latest in technology, learn about AI hacks and exploits, coding tutorials, and feel welcome to my online ai tools for free.
   link: ''
   language: en
   multi_language: false
-  logo: https://i.imgur.com/7wBcp0O.png
-  avatar: https://i.imgur.com/DyTYAMn.png
+  logo: https://github.com/cojovi/projectsentinal/blob/main/test/7.png?raw=true
+  avatar: https://github.com/cojovi/projectsentinal/blob/main/test/5.png?raw=true
   beian:
     number: ''
     link: ''
@@ -26,7 +26,7 @@ site:
     link: ''
   # Start date of the blog YYY-MM-DD
   # 博客开始运行日期
-  started_date: 2017-10-14
+  started_date: 2025-02-10
   # Path unique identifier (文章 URL 唯一标识)
   # uid: use unique ID
   # slug: use generated slug base on title
@@ -40,10 +40,10 @@ site:
 authors:
   ##! example
   # TriDiamond:
-     name: cojovi
-     avatar: https://i.imgur.com/o6C9GyA.png
+     name: Tech Predator
+     avatar: https://github.com/cojovi/projectsentinal/blob/main/test/TechPredator_NoBG.png?raw=true
      link: https://github.com/cojovi
-     description: 'code like your life depends on it.'
+     description: 'watch carefully, listen more.'
   #   socials:
      github: https://github.com/cojovi
 
@@ -104,21 +104,21 @@ socials:
 #! ---------------------------------------------------------------
 site_meta:
   cdn: cn
-  favicon: https://i.imgur.com/To9I7ks.png
-  description: 'Explore the latest in technology, software development, coding tutorials, and unique DIY projects. Tech Done Cheap offers in-depth reviews, expert insights, and hands-on guides for tech enthusiasts and DIYers.'
-  keywords: 'Tech, Electronics, DIY, coding, AI'
-  author: 'TechDoneCheap'
+  favicon: https://github.com/cojovi/projectsentinal/blob/main/test/7.png?raw=true
+  description: 'Protocol Sentinel : a goldmine in the darkness'
+  keywords: 'Tech, Electronics, AI, exploits'
+  author: 'Tech Predator'
 
 # Sitemap
-sitemap:
-  path: 
-    - sitemap.xml
-    - sitemap.txt
-  template: ./sitemap_template.xml
-  template_txt: ./sitemap_template.txt
-  rel: false
-  tags: true
-  categories: true
+#sitemap:
+#  path: 
+#    - sitemap.xml
+#    - sitemap.txt
+#  template: ./sitemap_template.xml
+#  template_txt: ./sitemap_template.txt
+#  rel: false
+#  tags: true
+#  categories: true
 #! ---------------------------------------------------------------
 #! Plugins
 #! @docs https://aurora.tridiamond.tech/guide/plugins.html
@@ -143,8 +143,8 @@ gitalk:
 # see https://valine.js.org/quickstart.html
 valine:
   enable: false
-  app_id: 
-  app_key: 
+  app_id:
+  app_key:
   avatar: ''
   placeholder: Leave your thoughts behind~
   visitor: true
@@ -195,7 +195,7 @@ copy_protection:
   license:
     cn: 博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议
     en: This content is shared under the CC BY-NC-SA 4.0 protocol (Non-Commercial)
-    
+
 #! ---------------------------------------------------------------
 #! Enable Aurora Bot Dia
 #! @docs https://aurora.tridiamond.tech/guide/site-meta.html#custom-meta
@@ -340,6 +340,19 @@ aurora_bot:
 #! ---------------------------------------------------------------
 injects:
   scripts:
+    - |
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PQ6BC36T');</script>
+      <!-- End Google Tag Manager -->
+    - |
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ6BC36T"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
   css:
 
 #! ---------------------------------------------------------------
@@ -348,8 +361,8 @@ injects:
 footer_links:
   - title: Pish Posh
     links:
-      - title: Stargazer Project
-        url: www.stargazerproject.xyz
+      - title: Protocol Sentinel
+        url: www.protocolsentinel.com
       - title: Visit Beefy
         url: www.beefthroat.com
       - title: Visit Cojovi

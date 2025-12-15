@@ -3,19 +3,26 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Tech Done Cheap - Innovations in Technology and DIY Projects
-subtitle: Discover Cutting-Edge Tech, Software Insights, and Creative DIY Builds
-description: Explore the latest in technology, software development, coding tutorials, and unique DIY projects. Tech Done Cheap offers in-depth reviews, expert insights, and hands-on guides for tech enthusiasts and DIYers.
-keywords: technology, software development, coding, DIY projects, tech reviews, gadget testing, tech tutorials, innovative technology, home tech, tech DIY
-author: TechPredator
+title: Protocol Sentinel
+subtitle: 'We Blog, We Talk, Be Share!'
+description: 'Tech, Software, Coding, Builds'
+keywords:
+author: Digital Predator
 language: en
-# Consider setting your timezone to improve post scheduling accuracy
-timezone: America/Chicago # Replace with your timezone
+timezone: ''
 
-sitemap:
-    path: sitemap.xml
-    
-# https://github.com/dimaslanjaka/hexo-seo
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://www.protocolsentinel.com
+permalink: /post/:title.html
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# sitemap:
+#   path: sitemap.xml
+
 seo:
   # minify html
   html:
@@ -42,7 +49,7 @@ seo:
     # exclude css from minifying, multiple supported
     exclude:
       - "**/*.min.js"
-    # this is terser options, you can customize minifier with terser options https://
+    # this is terser options, you can customize minifier with terser options https://github.com/terser/terser
     # below is config example
     options:
       compress:
@@ -58,7 +65,7 @@ seo:
       enable: true
     sitelink:
       enable: true
-      searchUrl: https://www.techdonecheap.com/search?q={search_term_string}
+      searchUrl:
   # this function still under development because JAVASCRIPT HEAP MEMORY and my device is 8GB RAM
   img:
     enable: true
@@ -76,53 +83,13 @@ seo:
     enable: true
     # allowed following links, otherwise nofollow others
     exclude:
-      - techdonecheap.com
       - cojovi.com
-      - stargazerproject.xyz
-      - store.techdonecheap.com
-      - beefthroat.com
+      - techdonecheap.com
       - after5diy.com
+      - hotelnazi.com
   # auto generate seo friendly sitemap on http://yoursite.com/sitemap.xml
   # forked from yoast seo
   sitemap: true
-  
-  feed:
-    enable: true
-    type:
-      - atom
-      - rss2
-    path:
-      - atom.xml
-      - rss2.xml
-    limit: 20
-    hub:
-    content:
-    content_limit: 140
-    content_limit_delim: ' '
-    order_by: -date
-    icon: icon.png
-    autodiscovery: true
-    template:
-    
-#deploy:
-#  type: git
-#  repo: https://github.com/cojovi/cojovi.github.io.git
-#  branch: gh-pages
-#  token: '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'
-#  message: newish
-#  name: cojovi
-#  email: cojovi.mma@gmail.com
-#  ignore_hidden: false # default is true
-#  ignore_pattern: regexp  # whatever file that matches the regexp will be ignored when deploying
-
-# URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://techdonecheap.com
-permalink: /post/:title.html
-permalink_defaults:
-pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -144,7 +111,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -198,13 +165,58 @@ include:
 exclude:
 ignore:
 
+# RSS Feed
+## Generate Atom 1.0 or RSS 2.0 feed
+feed:
+  enable: true
+  type: rss2
+  path: rss.xml
+  limit: 20
+  content: false
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  autodiscovery: true
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: aurora
 
+# OpenGraph Image Generator
+opengraph_image:
+  enable: true
+  main_color: '#24c6dc'
+  secondary_color: "#5433ff"
+  font_color: "#ffffff"
+  title_font: "Bold 70pt Arial"
+  date_font: "Regular 30pt Arial"
+  date_style: "YYYY/MM/DD"
+
+# JSON Content Generator (for Aurora theme API)
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    raw: false
+    content: false
+    slug: true
+    updated: true
+    comments: false
+    link: false
+    permalink: true
+    excerpt: false
+    categories: true
+    tags: true
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
-  
+
+
+
