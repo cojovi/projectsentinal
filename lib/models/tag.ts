@@ -8,6 +8,28 @@ export = (ctx: Hexo) => {
     name: {type: String, required: true}
   });
 
+  // Check for duplicate tags (case-insensitive) before saving
+  Tag.pre('save', function(next) {
+    if (this.name && typeof this.name === 'string') {
+      const TagModel = ctx.model('Tag');
+      // Find all tags and check for case-insensitive duplicates
+      const allTags = TagModel.find({}, {lean: true});
+      const normalizedName = this.name.toLowerCase();
+      
+      for (const tag of allTags) {
+        if (tag.name && tag.name.toLowerCase() === normalizedName) {
+          // Skip if it's the same document being updated
+          if (tag._id && this._id && tag._id.toString() === this._id.toString()) {
+            continue;
+          }
+          // Tag with same name (case-insensitive) already exists
+          return next(new Error(`Tag \`${this.name}\` already exists (case-insensitive match with \`${tag.name}\`)!`));
+        }
+      }
+    }
+    next();
+  });
+
   Tag.virtual('slug').get(function() {
     const map = ctx.config.tag_map || {};
     let name = this.name;
@@ -17,7 +39,9 @@ export = (ctx: Hexo) => {
       name = map[name] || name;
     }
 
-    return slugize(name, {transform: ctx.config.filename_case});
+    // Always use lowercase transform for tags to ensure consistent URLs
+    // This prevents issues where tags with different cases create different slugs
+    return slugize(name, {transform: 1}); // 1 = lowercase
   });
 
   Tag.virtual('path').get(function() {
@@ -49,18 +73,7 @@ export = (ctx: Hexo) => {
     return PostTag.find({tag_id: this._id}).length;
   });
 
-  // Check whether a tag exists
-  Tag.pre('save', data => {
-    const { name } = data;
-    if (!name) return;
-
-    const Tag = ctx.model('Tag');
-    const tag = Tag.findOne({name}, {lean: true});
-
-    if (tag) {
-      throw new Error(`Tag \`${name}\` has already existed!`);
-    }
-  });
+  // Note: Duplicate check moved to pre-save hook above for case-insensitive checking
 
   // Remove PostTag references
   Tag.pre('remove', data => {
