@@ -20,8 +20,11 @@ pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
-# sitemap:
-#   path: sitemap.xml
+# Sitemap configuration - excluding tag/category pages for Aurora theme SPA compatibility
+sitemap:
+  path: sitemap.xml
+  tag: false
+  category: false
 
 seo:
   # minify html
