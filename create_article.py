@@ -42,8 +42,8 @@ GITHUB_BRANCH = "main"
 GITHUB_BASE_URL = f"https://github.com/{GITHUB_USER}/{GITHUB_REPO}/blob/{GITHUB_BRANCH}/test"
 
 # Content generation settings
-WORD_COUNT_MIN = 750
-WORD_COUNT_MAX = 1150
+WORD_COUNT_MIN = 950  # BARE MINIMUM - NO EXCEPTIONS
+WORD_COUNT_MAX = None  # No maximum limit - can be as long as needed
 READING_SPEED_WPM = 200  # Words per minute for reading time calculation
 
 # DALL-E image settings
@@ -260,13 +260,13 @@ Tone analysis:"""
     
     try:
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-5.2",
             messages=[
                 {"role": "system", "content": "You are a writing style analyst."},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.3,
-            max_tokens=200
+            max_completion_tokens=200
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
@@ -295,12 +295,31 @@ def generate_article_content(
         
 Tone guidelines: {tone}
 
-CRITICAL REQUIREMENTS:
-- Output MUST be 750-1150 words (strict requirement)
+CRITICAL REQUIREMENTS - WORD COUNT IS MANDATORY:
+- Output MUST be AT LEAST 950 words - THIS IS A BARE MINIMUM WITH NO EXCEPTIONS
+- Articles can be longer than 950 words if needed - there is NO maximum limit
+- Count words carefully and ensure the final article meets or exceeds 950 words
+- To reach 950+ words, include: detailed background, examples, expert perspectives, historical context, implications, deeper analysis, multiple sections with headers, extended lists, and blockquotes
 - Write in professional news journalism structure
 - Do NOT copy phrases directly - rewrite entirely while maintaining factual accuracy
 - No placeholder text, no [brackets], no repetition of instructions
 - Format response as JSON: {{"title": "Article Title", "body": "Article body text"}}
+
+MANDATORY MARKDOWN FORMATTING (use ALL of these throughout the article):
+1. Start with HTML comment for alt text: <!-- alt: Descriptive image alt text -->
+2. Add opening paragraph (2-3 sentences) introducing the topic
+3. Add TL;DR section: **TL;DR**: Brief summary sentence
+4. Add HTML comment: <!-- more --> (separates intro from main content)
+5. Use section headers: ## Section Title (use 4-6 sections)
+6. Use bold for emphasis: **important terms**, **names**, **key concepts**
+7. Use italic for subtle emphasis: *subtle emphasis* or *quotes*
+8. Include blockquotes with labels: > **Pro Tip**: Insightful tip or > **Key Insight**: Important point
+9. Use bullet lists: - **Bold item**: Description or - Regular item with **bold** emphasis
+10. Include a "Key Takeaways" section at the end with bullet list
+11. Use horizontal rules (---) to separate major sections if appropriate
+12. Structure content with clear narrative flow using headers
+
+CRITICAL: In the JSON body field, use \\n for newlines to preserve markdown formatting. Each markdown element (headers, lists, blockquotes) should be on separate lines using \\n.
 
 Article to rewrite:
 {content_preview}
@@ -312,12 +331,31 @@ JSON response:"""
 
 Tone guidelines: {tone}
 
-CRITICAL REQUIREMENTS:
-- Output MUST be 750-1150 words (strict requirement)
+CRITICAL REQUIREMENTS - WORD COUNT IS MANDATORY:
+- Output MUST be AT LEAST 950 words - THIS IS A BARE MINIMUM WITH NO EXCEPTIONS
+- Articles can be longer than 950 words if needed - there is NO maximum limit
+- Count words carefully and ensure the final article meets or exceeds 950 words
+- To reach 950+ words, include: detailed background, examples, expert perspectives, historical context, implications, deeper analysis, multiple sections with headers, extended lists, and blockquotes
 - Organize content with clear structure and professional narrative flow
 - Add context, analysis, and expert perspectives where appropriate
 - No placeholder text, no [brackets], no repetition of instructions
 - Format response as JSON: {{"title": "Article Title", "body": "Article body text"}}
+
+MANDATORY MARKDOWN FORMATTING (use ALL of these throughout the article):
+1. Start with HTML comment for alt text: <!-- alt: Descriptive image alt text -->
+2. Add opening paragraph (2-3 sentences) introducing the topic
+3. Add TL;DR section: **TL;DR**: Brief summary sentence
+4. Add HTML comment: <!-- more --> (separates intro from main content)
+5. Use section headers: ## Section Title (use 4-6 sections)
+6. Use bold for emphasis: **important terms**, **names**, **key concepts**
+7. Use italic for subtle emphasis: *subtle emphasis* or *quotes*
+8. Include blockquotes with labels: > **Pro Tip**: Insightful tip or > **Key Insight**: Important point
+9. Use bullet lists: - **Bold item**: Description or - Regular item with **bold** emphasis
+10. Include a "Key Takeaways" section at the end with bullet list
+11. Use horizontal rules (---) to separate major sections if appropriate
+12. Structure content with clear narrative flow using headers
+
+CRITICAL: In the JSON body field, use \\n for newlines to preserve markdown formatting. Each markdown element (headers, lists, blockquotes) should be on separate lines using \\n.
 
 Text to transform:
 {user_input}
@@ -329,12 +367,31 @@ JSON response:"""
 
 Tone guidelines: {tone}
 
-CRITICAL REQUIREMENTS:
-- Output MUST be 750-1150 words (strict requirement)
+CRITICAL REQUIREMENTS - WORD COUNT IS MANDATORY:
+- Output MUST be AT LEAST 950 words - THIS IS A BARE MINIMUM WITH NO EXCEPTIONS
+- Articles can be longer than 950 words if needed - there is NO maximum limit
+- Count words carefully and ensure the final article meets or exceeds 950 words
+- To reach 950+ words, include: detailed background, examples, expert perspectives, historical context, implications, deeper analysis, multiple sections with headers, extended lists, blockquotes, real-world applications, and statistical data
 - Write as researched journalism with context, analysis, and expert perspectives (synthesized)
 - Professional news journalism structure
 - No placeholder text, no [brackets], no repetition of instructions
 - Format response as JSON: {{"title": "Article Title", "body": "Article body text"}}
+
+MANDATORY MARKDOWN FORMATTING (use ALL of these throughout the article):
+1. Start with HTML comment for alt text: <!-- alt: Descriptive image alt text -->
+2. Add opening paragraph (2-3 sentences) introducing the topic
+3. Add TL;DR section: **TL;DR**: Brief summary sentence
+4. Add HTML comment: <!-- more --> (separates intro from main content)
+5. Use section headers: ## Section Title (use 4-6 sections)
+6. Use bold for emphasis: **important terms**, **names**, **key concepts**
+7. Use italic for subtle emphasis: *subtle emphasis* or *quotes*
+8. Include blockquotes with labels: > **Pro Tip**: Insightful tip or > **Key Insight**: Important point
+9. Use bullet lists: - **Bold item**: Description or - Regular item with **bold** emphasis
+10. Include a "Key Takeaways" section at the end with bullet list
+11. Use horizontal rules (---) to separate major sections if appropriate
+12. Structure content with clear narrative flow using headers
+
+CRITICAL: In the JSON body field, use \\n for newlines to preserve markdown formatting. Each markdown element (headers, lists, blockquotes) should be on separate lines using \\n.
 
 Idea to expand:
 {user_input}
@@ -345,25 +402,25 @@ JSON response:"""
         # Try with JSON response format (supported in newer models)
         try:
             response = client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-5.2",
                 messages=[
-                    {"role": "system", "content": "You are a professional journalist and content writer. Always respond with valid JSON."},
+                    {"role": "system", "content": "You are a professional journalist and content writer specializing in rich markdown formatting. Always use HTML comments, headers, bold/italic text, blockquotes, lists, and other markdown features to create visually engaging articles. You MUST generate articles that are AT LEAST 950 words - this is a hard requirement with no exceptions. Always respond with valid JSON."},
                     {"role": "user", "content": prompt}
                 ],
             temperature=0.7,
-            max_tokens=3000,
+            max_completion_tokens=6000,  # Increased to allow for longer articles (950+ words)
                 response_format={"type": "json_object"}
             )
         except Exception:
             # Fallback if response_format not supported
             response = client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-5.2",
                 messages=[
-                    {"role": "system", "content": "You are a professional journalist and content writer. Always respond with valid JSON."},
+                    {"role": "system", "content": "You are a professional journalist and content writer specializing in rich markdown formatting. Always use HTML comments, headers, bold/italic text, blockquotes, lists, and other markdown features to create visually engaging articles. You MUST generate articles that are AT LEAST 950 words - this is a hard requirement with no exceptions. Always respond with valid JSON."},
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.7,
-                max_tokens=3000
+                max_completion_tokens=6000  # Increased to allow for longer articles (950+ words)
             )
         
         content = response.choices[0].message.content.strip()
@@ -396,18 +453,29 @@ JSON response:"""
             
             json_str = content[start_idx:end_idx]
             
-            # Remove control characters that break JSON parsing
-            # Keep only printable characters and whitespace
-            json_str = ''.join(char for char in json_str if char.isprintable() or char in '\n\r\t')
+            # Preserve escaped newlines in JSON strings while cleaning up structure
+            # Protect escaped sequences first
+            json_str = re.sub(r'\\n', '__ESCAPED_NEWLINE__', json_str)
+            json_str = re.sub(r'\\r', '__ESCAPED_RETURN__', json_str)
+            json_str = re.sub(r'\\t', '__ESCAPED_TAB__', json_str)
             
-            # Clean up common JSON issues
+            # Remove literal newlines/tabs that break JSON structure (but keep escaped ones)
             json_str = json_str.replace('\n', ' ').replace('\r', ' ').replace('\t', ' ')
-            # Remove multiple spaces
+            
+            # Restore escaped sequences
+            json_str = json_str.replace('__ESCAPED_NEWLINE__', '\\n')
+            json_str = json_str.replace('__ESCAPED_RETURN__', '\\r')
+            json_str = json_str.replace('__ESCAPED_TAB__', '\\t')
+            
+            # Clean up multiple spaces
             json_str = re.sub(r' +', ' ', json_str)
             
             data = json.loads(json_str)
             title = data.get("title", "").strip()
             body = data.get("body", "").strip()
+            
+            # JSON parser automatically converts \n to actual newlines, so body should already have them
+            # But ensure we preserve any markdown formatting
             
             if not title or not body:
                 raise ValueError("Missing title or body in response")
@@ -464,25 +532,25 @@ JSON response:"""
         # Try with JSON response format (supported in newer models)
         try:
             response = client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-5.2",
                 messages=[
                     {"role": "system", "content": "You are a content metadata expert. Always respond with valid JSON."},
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.3,
-                max_tokens=500,
+                max_completion_tokens=500,
                 response_format={"type": "json_object"}
             )
         except Exception:
             # Fallback if response_format not supported
             response = client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-5.2",
                 messages=[
                     {"role": "system", "content": "You are a content metadata expert. Always respond with valid JSON."},
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.3,
-                max_tokens=500
+                max_completion_tokens=500
             )
         
         content = response.choices[0].message.content.strip()
@@ -555,13 +623,13 @@ DALL-E prompt:"""
     
     try:
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-5.2",
             messages=[
                 {"role": "system", "content": "You are a prompt engineer specializing in photorealistic image generation."},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.5,
-            max_tokens=200
+            max_completion_tokens=200
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
@@ -684,8 +752,11 @@ def main():
         print(f"✓ Article generated: {title}")
         print(f"✓ Word count: {word_count} words")
         
-        if word_count < WORD_COUNT_MIN or word_count > WORD_COUNT_MAX:
-            print(f"⚠️  Warning: Word count ({word_count}) is outside target range ({WORD_COUNT_MIN}-{WORD_COUNT_MAX})")
+        if word_count < WORD_COUNT_MIN:
+            print(f"\n⚠️  Warning: Word count ({word_count}) is below minimum ({WORD_COUNT_MIN})")
+            print(f"   The article has been generated but may need manual expansion.")
+        else:
+            print(f"✓ Word count meets minimum requirement ({word_count} >= {WORD_COUNT_MIN})")
     except Exception as e:
         error_msg = str(e)
         print(f"❌ Error generating article: {error_msg}")
