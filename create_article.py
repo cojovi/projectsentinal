@@ -12,6 +12,7 @@ import random
 import urllib.request
 import urllib.parse
 import urllib.error
+import requests
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional, Dict, List, Tuple
@@ -175,6 +176,34 @@ def sample_posts_for_tone(count: int = 5) -> List[str]:
     return contents
 
 
+def tavily_search(query: str, max_results: int = 6) -> List[Dict]:
+    """
+    Search the web using Tavily API for current information and sources.
+    Returns list of search results with title, url, and content.
+    """
+    tavily_api_key = os.getenv("TAVILY_API_KEY")
+    if not tavily_api_key:
+        return []
+    
+    try:
+        response = requests.post(
+            "https://api.tavily.com/search",
+            json={
+                "api_key": tavily_api_key,
+                "query": query,
+                "search_depth": "advanced",
+                "max_results": max_results,
+                "include_answer": False
+            },
+            timeout=60
+        )
+        response.raise_for_status()
+        return response.json().get("results", [])
+    except Exception as e:
+        print(f"⚠️  Warning: Tavily search failed: {e}")
+        return []
+
+
 def fetch_url_content(url: str) -> str:
     """Fetch and extract text content from URL."""
     # Enhanced headers to avoid 403 errors
@@ -250,11 +279,14 @@ def analyze_tone(client: openai.OpenAI, sample_contents: List[str]) -> str:
 
 {samples_text}
 
-Provide a concise description of the tone and writing style (2-3 sentences). Focus on:
-- Formality level
-- Voice characteristics
-- Writing patterns
-- Overall style
+Provide a detailed, actionable description of the tone and writing style (3-4 sentences). Focus on:
+- Formality level (formal, casual, conversational, etc.)
+- Voice characteristics (authoritative, humorous, analytical, etc.)
+- Writing patterns (sentence structure, use of rhetorical devices, pacing)
+- Overall style (journalistic, opinionated, narrative, etc.)
+- Specific techniques used (metaphors, examples, data presentation)
+
+Be specific and descriptive so the tone can be accurately replicated in new articles.
 
 Tone analysis:"""
     
@@ -278,7 +310,8 @@ def generate_article_content(
     client: openai.OpenAI,
     user_input: str,
     input_type: str,
-    tone: str
+    tone: str,
+    web_findings: Optional[List[Dict]] = None
 ) -> Tuple[str, str]:
     """
     Generate article content based on input type.
@@ -291,7 +324,18 @@ def generate_article_content(
         # Further limit to 3000 for prompt to ensure we stay under token limits
         content_preview = url_content[:3000]
         
-        prompt = f"""Completely rewrite this article in our publication's voice. 
+        # Build web sources section if available
+        web_sources = ""
+        if web_findings:
+            sources_list = "\n".join([f"- **{f.get('title', 'Source')}**: {f.get('url', '')}" for f in web_findings[:6]])
+            web_sources = f"""
+
+ADDITIONAL WEB SOURCES FOR CONTEXT (use these to enrich and fact-check the article):
+{sources_list}
+
+Use these sources to add depth, verify facts, provide additional context, and include recent developments. Paraphrase and synthesize - do not copy verbatim."""
+        
+        prompt = f"""Completely rewrite this article in our publication's voice, making it more engaging, insightful, and comprehensive.
         
 Tone guidelines: {tone}
 
@@ -300,20 +344,32 @@ CRITICAL REQUIREMENTS - WORD COUNT IS MANDATORY:
 - Articles can be longer than 950 words if needed - there is NO maximum limit
 - Count words carefully and ensure the final article meets or exceeds 950 words
 - To reach 950+ words, include: detailed background, examples, expert perspectives, historical context, implications, deeper analysis, multiple sections with headers, extended lists, and blockquotes
-- Write in professional news journalism structure
+
+WRITING QUALITY REQUIREMENTS:
+- Create a compelling hook in the opening paragraph that draws readers in
+- Use vivid, descriptive language that paints a clear picture
+- Include specific details, numbers, and concrete examples
+- Add context that helps readers understand the "why" behind the story
+- Include relevant quotes, statistics, or expert opinions where appropriate
+- Write with energy and personality while maintaining professionalism
+- Use transitions to create smooth flow between sections
+- End with a strong conclusion that ties everything together
+
+STRUCTURE REQUIREMENTS:
+- Write in professional news journalism structure with clear narrative arc
 - Do NOT copy phrases directly - rewrite entirely while maintaining factual accuracy
 - No placeholder text, no [brackets], no repetition of instructions
 - Format response as JSON: {{"title": "Article Title", "body": "Article body text"}}
 
 MANDATORY MARKDOWN FORMATTING (use ALL of these throughout the article):
 1. Start with HTML comment for alt text: <!-- alt: Descriptive image alt text -->
-2. Add opening paragraph (2-3 sentences) introducing the topic
+2. Add opening paragraph (2-3 sentences) introducing the topic with a compelling hook
 3. Add TL;DR section: **TL;DR**: Brief summary sentence
 4. Add HTML comment: <!-- more --> (separates intro from main content)
-5. Use section headers: ## Section Title (use 4-6 sections)
+5. Use section headers: ## Section Title (use 4-6 sections with engaging titles)
 6. Use bold for emphasis: **important terms**, **names**, **key concepts**
 7. Use italic for subtle emphasis: *subtle emphasis* or *quotes*
-8. Include blockquotes with labels: > **Pro Tip**: Insightful tip or > **Key Insight**: Important point
+8. Include blockquotes with labels: > **Pro Tip**: Insightful tip or > **Key Insight**: Important point or > **Expert View**: Expert perspective
 9. Use bullet lists: - **Bold item**: Description or - Regular item with **bold** emphasis
 10. Include a "Key Takeaways" section at the end with bullet list
 11. Use horizontal rules (---) to separate major sections if appropriate
@@ -322,12 +378,23 @@ MANDATORY MARKDOWN FORMATTING (use ALL of these throughout the article):
 CRITICAL: In the JSON body field, use \\n for newlines to preserve markdown formatting. Each markdown element (headers, lists, blockquotes) should be on separate lines using \\n.
 
 Article to rewrite:
-{content_preview}
+{content_preview}{web_sources}
 
 JSON response:"""
     
     elif input_type == "TEXT":
-        prompt = f"""Transform this unstructured text into a polished, professional article.
+        # Build web sources section if available
+        web_sources = ""
+        if web_findings:
+            sources_list = "\n".join([f"- **{f.get('title', 'Source')}**: {f.get('url', '')}" for f in web_findings[:6]])
+            web_sources = f"""
+
+ADDITIONAL WEB SOURCES FOR CONTEXT (use these to enrich and fact-check the article):
+{sources_list}
+
+Use these sources to add depth, verify facts, provide additional context, and include recent developments. Paraphrase and synthesize - do not copy verbatim."""
+        
+        prompt = f"""Transform this unstructured text into a polished, engaging, and comprehensive professional article.
 
 Tone guidelines: {tone}
 
@@ -336,6 +403,18 @@ CRITICAL REQUIREMENTS - WORD COUNT IS MANDATORY:
 - Articles can be longer than 950 words if needed - there is NO maximum limit
 - Count words carefully and ensure the final article meets or exceeds 950 words
 - To reach 950+ words, include: detailed background, examples, expert perspectives, historical context, implications, deeper analysis, multiple sections with headers, extended lists, and blockquotes
+
+WRITING QUALITY REQUIREMENTS:
+- Create a compelling hook in the opening paragraph that draws readers in
+- Use vivid, descriptive language that paints a clear picture
+- Include specific details, numbers, and concrete examples
+- Add context that helps readers understand the "why" behind the story
+- Include relevant quotes, statistics, or expert opinions where appropriate
+- Write with energy and personality while maintaining professionalism
+- Use transitions to create smooth flow between sections
+- End with a strong conclusion that ties everything together
+
+STRUCTURE REQUIREMENTS:
 - Organize content with clear structure and professional narrative flow
 - Add context, analysis, and expert perspectives where appropriate
 - No placeholder text, no [brackets], no repetition of instructions
@@ -343,13 +422,13 @@ CRITICAL REQUIREMENTS - WORD COUNT IS MANDATORY:
 
 MANDATORY MARKDOWN FORMATTING (use ALL of these throughout the article):
 1. Start with HTML comment for alt text: <!-- alt: Descriptive image alt text -->
-2. Add opening paragraph (2-3 sentences) introducing the topic
+2. Add opening paragraph (2-3 sentences) introducing the topic with a compelling hook
 3. Add TL;DR section: **TL;DR**: Brief summary sentence
 4. Add HTML comment: <!-- more --> (separates intro from main content)
-5. Use section headers: ## Section Title (use 4-6 sections)
+5. Use section headers: ## Section Title (use 4-6 sections with engaging titles)
 6. Use bold for emphasis: **important terms**, **names**, **key concepts**
 7. Use italic for subtle emphasis: *subtle emphasis* or *quotes*
-8. Include blockquotes with labels: > **Pro Tip**: Insightful tip or > **Key Insight**: Important point
+8. Include blockquotes with labels: > **Pro Tip**: Insightful tip or > **Key Insight**: Important point or > **Expert View**: Expert perspective
 9. Use bullet lists: - **Bold item**: Description or - Regular item with **bold** emphasis
 10. Include a "Key Takeaways" section at the end with bullet list
 11. Use horizontal rules (---) to separate major sections if appropriate
@@ -358,12 +437,23 @@ MANDATORY MARKDOWN FORMATTING (use ALL of these throughout the article):
 CRITICAL: In the JSON body field, use \\n for newlines to preserve markdown formatting. Each markdown element (headers, lists, blockquotes) should be on separate lines using \\n.
 
 Text to transform:
-{user_input}
+{user_input}{web_sources}
 
 JSON response:"""
     
     else:  # IDEA
-        prompt = f"""Expand this idea into a full, professional article.
+        # Build web sources section if available
+        web_sources = ""
+        if web_findings:
+            sources_list = "\n".join([f"- **{f.get('title', 'Source')}**: {f.get('url', '')}" for f in web_findings[:6]])
+            web_sources = f"""
+
+WEB SOURCES FOR RESEARCH (use these to create a well-researched, fact-based article):
+{sources_list}
+
+Use these sources to research the topic, gather facts, find examples, and provide current information. Synthesize information from multiple sources - do not copy verbatim. If sources provide conflicting information, note that in the article."""
+        
+        prompt = f"""Expand this idea into a full, engaging, and well-researched professional article.
 
 Tone guidelines: {tone}
 
@@ -372,20 +462,35 @@ CRITICAL REQUIREMENTS - WORD COUNT IS MANDATORY:
 - Articles can be longer than 950 words if needed - there is NO maximum limit
 - Count words carefully and ensure the final article meets or exceeds 950 words
 - To reach 950+ words, include: detailed background, examples, expert perspectives, historical context, implications, deeper analysis, multiple sections with headers, extended lists, blockquotes, real-world applications, and statistical data
+
+WRITING QUALITY REQUIREMENTS:
+- Create a compelling hook in the opening paragraph that draws readers in
+- Use vivid, descriptive language that paints a clear picture
+- Include specific details, numbers, and concrete examples from research
+- Add context that helps readers understand the "why" behind the story
+- Include relevant quotes, statistics, or expert opinions where appropriate
+- Write with energy and personality while maintaining professionalism
+- Use transitions to create smooth flow between sections
+- End with a strong conclusion that ties everything together
+
+RESEARCH REQUIREMENTS:
 - Write as researched journalism with context, analysis, and expert perspectives (synthesized)
+- Use the provided web sources to gather current, accurate information
+- Fact-check claims and provide evidence for assertions
+- Include multiple perspectives where relevant
 - Professional news journalism structure
 - No placeholder text, no [brackets], no repetition of instructions
 - Format response as JSON: {{"title": "Article Title", "body": "Article body text"}}
 
 MANDATORY MARKDOWN FORMATTING (use ALL of these throughout the article):
 1. Start with HTML comment for alt text: <!-- alt: Descriptive image alt text -->
-2. Add opening paragraph (2-3 sentences) introducing the topic
+2. Add opening paragraph (2-3 sentences) introducing the topic with a compelling hook
 3. Add TL;DR section: **TL;DR**: Brief summary sentence
 4. Add HTML comment: <!-- more --> (separates intro from main content)
-5. Use section headers: ## Section Title (use 4-6 sections)
+5. Use section headers: ## Section Title (use 4-6 sections with engaging titles)
 6. Use bold for emphasis: **important terms**, **names**, **key concepts**
 7. Use italic for subtle emphasis: *subtle emphasis* or *quotes*
-8. Include blockquotes with labels: > **Pro Tip**: Insightful tip or > **Key Insight**: Important point
+8. Include blockquotes with labels: > **Pro Tip**: Insightful tip or > **Key Insight**: Important point or > **Expert View**: Expert perspective
 9. Use bullet lists: - **Bold item**: Description or - Regular item with **bold** emphasis
 10. Include a "Key Takeaways" section at the end with bullet list
 11. Use horizontal rules (---) to separate major sections if appropriate
@@ -394,7 +499,7 @@ MANDATORY MARKDOWN FORMATTING (use ALL of these throughout the article):
 CRITICAL: In the JSON body field, use \\n for newlines to preserve markdown formatting. Each markdown element (headers, lists, blockquotes) should be on separate lines using \\n.
 
 Idea to expand:
-{user_input}
+{user_input}{web_sources}
 
 JSON response:"""
     
@@ -404,7 +509,7 @@ JSON response:"""
             response = client.chat.completions.create(
                 model="gpt-5.2",
                 messages=[
-                    {"role": "system", "content": "You are a professional journalist and content writer specializing in rich markdown formatting. Always use HTML comments, headers, bold/italic text, blockquotes, lists, and other markdown features to create visually engaging articles. You MUST generate articles that are AT LEAST 950 words - this is a hard requirement with no exceptions. Always respond with valid JSON."},
+                    {"role": "system", "content": "You are an expert professional journalist and content writer specializing in rich markdown formatting. You create compelling, well-researched articles that engage readers with vivid language, specific details, and clear narrative flow. Always use HTML comments, headers, bold/italic text, blockquotes, lists, and other markdown features to create visually engaging articles. You MUST generate articles that are AT LEAST 950 words - this is a hard requirement with no exceptions. Write with energy, personality, and professionalism. Always respond with valid JSON."},
                     {"role": "user", "content": prompt}
                 ],
             temperature=0.7,
@@ -416,7 +521,7 @@ JSON response:"""
             response = client.chat.completions.create(
                 model="gpt-5.2",
                 messages=[
-                    {"role": "system", "content": "You are a professional journalist and content writer specializing in rich markdown formatting. Always use HTML comments, headers, bold/italic text, blockquotes, lists, and other markdown features to create visually engaging articles. You MUST generate articles that are AT LEAST 950 words - this is a hard requirement with no exceptions. Always respond with valid JSON."},
+                    {"role": "system", "content": "You are an expert professional journalist and content writer specializing in rich markdown formatting. You create compelling, well-researched articles that engage readers with vivid language, specific details, and clear narrative flow. Always use HTML comments, headers, bold/italic text, blockquotes, lists, and other markdown features to create visually engaging articles. You MUST generate articles that are AT LEAST 950 words - this is a hard requirement with no exceptions. Write with energy, personality, and professionalism. Always respond with valid JSON."},
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.7,
@@ -507,12 +612,12 @@ def generate_metadata(
     body: str
 ) -> Dict:
     """Generate all article metadata using AI."""
-    prompt = f"""Analyze this article and generate appropriate metadata.
+    prompt = f"""Analyze this article and generate comprehensive, accurate metadata.
 
 Title: {title}
 
-Article body (first 1000 chars):
-{body[:1000]}
+Article body (first 1500 chars):
+{body[:1500]}
 
 Generate metadata as JSON with these exact fields:
 {{
@@ -522,9 +627,11 @@ Generate metadata as JSON with these exact fields:
 }}
 
 Requirements:
-- Category: Choose the single best-fit category from the list
-- Tags: 3-5 relevant tags, each 1-3 words, concise
-- Location: Only include if article has clear geographic relevance, otherwise null
+- Category: Choose the single best-fit category from the list. Consider the primary focus and main themes.
+- Tags: 3-5 highly relevant tags that accurately describe the article's content. Each tag should be 1-3 words, concise, and searchable. Include both broad and specific tags.
+- Location: Only include if article has clear geographic relevance (mentions specific cities, countries, regions, or location-based events), otherwise null
+
+Think carefully about what readers would search for to find this article. Make tags specific and useful.
 
 JSON response:"""
     
@@ -604,20 +711,22 @@ def generate_image_prompt(
     body_preview: str
 ) -> str:
     """Generate DALL-E prompt for photorealistic hero image."""
-    prompt = f"""Write a DALL-E prompt for a photorealistic news hero image.
+    prompt = f"""Write a compelling DALL-E prompt for a photorealistic news hero image that captures the essence of this article.
 
 Article title: {title}
 Category: {category}
 Article preview: {body_preview[:500]}
 
-CRITICAL INSTRUCTIONS:
-- Must specify "photograph" or "photo-realistic"
-- Must mention professional camera terms (DSLR, 50mm lens, etc.)
-- Must specify natural/cinematic lighting
-- Must describe editorial/documentary composition
-- MUST NEVER mention: illustration, painting, cartoon, CGI, 3D render
+CRITICAL INSTRUCTIONS FOR PHOTOREALISM:
+- Must specify "photograph" or "photo-realistic" or "editorial photography"
+- Must mention professional camera terms (DSLR, 50mm lens, 85mm portrait lens, etc.)
+- Must specify natural/cinematic/editorial lighting (soft natural light, dramatic shadows, etc.)
+- Must describe editorial/documentary composition (rule of thirds, leading lines, depth of field)
+- Include specific visual elements that relate to the article's content
+- Create a visually striking image that would work as a magazine cover or news feature
+- MUST NEVER mention: illustration, painting, cartoon, CGI, 3D render, digital art, artwork
 
-Generate a ~2 sentence prompt optimized for photorealism.
+Generate a detailed 2-3 sentence prompt that creates a compelling, professional editorial photograph.
 
 DALL-E prompt:"""
     
@@ -625,15 +734,34 @@ DALL-E prompt:"""
         response = client.chat.completions.create(
             model="gpt-5.2",
             messages=[
-                {"role": "system", "content": "You are a prompt engineer specializing in photorealistic image generation."},
+                {"role": "system", "content": "You are a prompt engineer specializing in photorealistic image generation. Always provide a detailed, complete prompt. Your response must be a valid DALL-E prompt, not empty."},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.5,
             max_completion_tokens=200
         )
-        return response.choices[0].message.content.strip()
+        
+        # Get the response content
+        if not response.choices or not response.choices[0].message:
+            raise ValueError("Empty response from GPT-5.2")
+        
+        image_prompt = response.choices[0].message.content
+        if image_prompt:
+            image_prompt = image_prompt.strip()
+        
+        # Validate that we got a non-empty prompt
+        if not image_prompt or len(image_prompt) < 10:
+            # Fallback: create a basic prompt from title and category
+            print("⚠️  Warning: GPT returned empty or too short image prompt, using fallback...")
+            # Clean title for prompt (remove special chars, limit length)
+            clean_title = re.sub(r'[^\w\s-]', '', title.lower())[:50]
+            image_prompt = f"Editorial photograph, professional DSLR camera, 50mm lens, natural lighting, {category.lower()} theme, {clean_title}, photorealistic, magazine cover style, rule of thirds composition, depth of field"
+        
+        return image_prompt
     except Exception as e:
-        raise Exception(f"Failed to generate image prompt: {e}")
+        # Fallback prompt if API call fails
+        print(f"⚠️  Warning: Image prompt generation failed: {e}, using fallback...")
+        return f"Editorial photograph, professional DSLR camera, 50mm lens, natural lighting, {category.lower()} theme, {title.lower()}, photorealistic, magazine cover style, rule of thirds composition"
 
 
 def generate_image(
@@ -744,10 +872,35 @@ def main():
         print(f"✓ Using custom tone: {tone}")
     print()
     
+    # Perform web search for additional context
+    web_findings = []
+    if input_type in ["IDEA", "TEXT"]:
+        print("🔍 Searching the web for additional context...")
+        # Extract search query from user input
+        search_query = user_input[:200] if len(user_input) > 200 else user_input
+        if input_type == "TEXT":
+            # Extract key topic from text (first sentence or first 100 chars)
+            search_query = user_input.split('.')[0][:100] if '.' in user_input else user_input[:100]
+        
+        web_findings = tavily_search(search_query, max_results=6)
+        if web_findings:
+            print(f"✓ Found {len(web_findings)} relevant sources")
+        else:
+            print("⚠️  No web sources found (Tavily API key may be missing or search returned no results)")
+        print()
+    elif input_type == "URL":
+        # For URLs, search for related topics to add context
+        print("🔍 Searching for related context...")
+        # Extract a search query from the URL or use a generic search
+        web_findings = tavily_search(user_input, max_results=4)
+        if web_findings:
+            print(f"✓ Found {len(web_findings)} related sources")
+        print()
+    
     # Generate article content
     print(f"📝 Generating article...")
     try:
-        title, body = generate_article_content(client, user_input, input_type, tone)
+        title, body = generate_article_content(client, user_input, input_type, tone, web_findings)
         word_count = count_words(body)
         print(f"✓ Article generated: {title}")
         print(f"✓ Word count: {word_count} words")
@@ -803,15 +956,27 @@ def main():
     print("🎨 Generating image prompt...")
     try:
         image_prompt = generate_image_prompt(client, title, category, body)
-        print(f"✓ Image prompt: {image_prompt[:100]}...")
+        if image_prompt and len(image_prompt) > 0:
+            print(f"✓ Image prompt: {image_prompt[:100]}...")
+        else:
+            print("⚠️  Warning: Generated empty prompt, will use fallback")
     except Exception as e:
         print(f"❌ Error generating image prompt: {e}")
-        return
+        # Create fallback prompt
+        clean_title = re.sub(r'[^\w\s-]', '', title.lower())[:50]
+        image_prompt = f"Editorial photograph, professional DSLR camera, 50mm lens, natural lighting, {category.lower()} theme, {clean_title}, photorealistic, magazine cover style, rule of thirds composition"
+        print(f"✓ Using fallback prompt: {image_prompt[:80]}...")
     print()
     
     # Generate image
     print("🖼️  Generating image with DALL-E...")
     try:
+        # Validate image prompt before generating
+        if not image_prompt or len(image_prompt.strip()) == 0:
+            print("⚠️  Warning: Image prompt is empty, generating fallback prompt...")
+            image_prompt = f"Editorial photograph, professional DSLR camera, 50mm lens, natural lighting, {category.lower()} theme, {title.lower()}, photorealistic, magazine cover style, rule of thirds composition"
+            print(f"✓ Using fallback prompt: {image_prompt[:80]}...")
+        
         image_filename = generate_image(client, image_prompt, slug)
         print(f"✓ Image saved: {image_filename}")
     except Exception as e:
