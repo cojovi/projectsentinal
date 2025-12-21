@@ -710,23 +710,55 @@ def generate_image_prompt(
     category: str,
     body_preview: str
 ) -> str:
-    """Generate DALL-E prompt for photorealistic hero image."""
-    prompt = f"""Write a compelling DALL-E prompt for a photorealistic news hero image that captures the essence of this article.
+    """Generate DALL-E prompt for synthwave/aurora retro arcade style image."""
+    
+    # OLD PROMPT (COMMENTED OUT - PRESERVED FOR FUTURE USE)
+    # prompt = f"""Write a compelling DALL-E prompt for a photorealistic news hero image that captures the essence of this article.
+    #
+    # Article title: {title}
+    # Category: {category}
+    # Article preview: {body_preview[:500]}
+    #
+    # CRITICAL INSTRUCTIONS FOR PHOTOREALISM:
+    # - Must specify "photograph" or "photo-realistic" or "editorial photography"
+    # - Must mention professional camera terms (DSLR, 50mm lens, 85mm portrait lens, etc.)
+    # - Must specify natural/cinematic/editorial lighting (soft natural light, dramatic shadows, etc.)
+    # - Must describe editorial/documentary composition (rule of thirds, leading lines, depth of field)
+    # - Include specific visual elements that relate to the article's content
+    # - Create a visually striking image that would work as a magazine cover or news feature
+    # - MUST NEVER mention: illustration, painting, cartoon, CGI, 3D render, digital art, artwork
+    #
+    # Generate a detailed 2-3 sentence prompt that creates a compelling, professional editorial photograph.
+    #
+    # DALL-E prompt:"""
+    
+    # NEW PROMPT - SYNTHWAVE/AURORA/RETRO ARCADE STYLE
+    prompt = f"""Write a compelling DALL-E prompt for a retro arcade-style image with synthwave aesthetics and aurora color scheme that captures the essence of this article.
 
 Article title: {title}
 Category: {category}
 Article preview: {body_preview[:500]}
 
-CRITICAL INSTRUCTIONS FOR PHOTOREALISM:
-- Must specify "photograph" or "photo-realistic" or "editorial photography"
-- Must mention professional camera terms (DSLR, 50mm lens, 85mm portrait lens, etc.)
-- Must specify natural/cinematic/editorial lighting (soft natural light, dramatic shadows, etc.)
-- Must describe editorial/documentary composition (rule of thirds, leading lines, depth of field)
-- Include specific visual elements that relate to the article's content
-- Create a visually striking image that would work as a magazine cover or news feature
-- MUST NEVER mention: illustration, painting, cartoon, CGI, 3D render, digital art, artwork
+CRITICAL STYLE REQUIREMENTS:
+- Visual style: Capcom CPS1 arcade board graphics OR 16-bit retro arcade pixel art style (choose the most appropriate)
+- Aesthetic: Heavy synthwave/outrun aesthetic with neon-drenched atmosphere
+- Color palette: Aurora color scheme as the primary focus - vibrant purples, magentas, cyans, electric blues, and neon pinks
+- Animation feel: Slight animated look, dynamic composition suggesting movement and energy
+- Pixel art elements: If using 16-bit style, include authentic pixel art techniques with limited color palettes and dithering
+- Arcade board style: If using CPS1 style, include bold outlines, vibrant saturated colors, and that distinctive early 90s arcade game aesthetic
+- Lighting: Neon glow effects, electric lighting, cyberpunk-inspired illumination
+- Composition: Bold, striking composition that would work as a retro game title screen or arcade cabinet art
+- Mood: Energetic, nostalgic, futuristic-retro fusion
+- Include visual elements that relate to the article's content but rendered in this retro arcade/synthwave style
 
-Generate a detailed 2-3 sentence prompt that creates a compelling, professional editorial photograph.
+CRITICAL - MUST INCLUDE:
+- Explicit mention of "synthwave" or "outrun" aesthetic
+- Aurora color scheme (purples, magentas, cyans, electric blues)
+- Either "Capcom CPS1 arcade board style" OR "16-bit retro arcade pixel art style"
+- "Slight animated look" or "dynamic composition"
+- Neon glow effects and electric lighting
+
+Generate a detailed 3-4 sentence prompt that creates a visually striking retro arcade/synthwave image with heavy aurora color scheme influence.
 
 DALL-E prompt:"""
     
@@ -734,7 +766,7 @@ DALL-E prompt:"""
         response = client.chat.completions.create(
             model="gpt-5.2",
             messages=[
-                {"role": "system", "content": "You are a prompt engineer specializing in photorealistic image generation. Always provide a detailed, complete prompt. Your response must be a valid DALL-E prompt, not empty."},
+                {"role": "system", "content": "You are a prompt engineer specializing in retro arcade, synthwave, and pixel art image generation. Always provide a detailed, complete prompt with heavy emphasis on aurora color schemes and retro gaming aesthetics. Your response must be a valid DALL-E prompt, not empty."},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.5,
@@ -755,13 +787,14 @@ DALL-E prompt:"""
             print("⚠️  Warning: GPT returned empty or too short image prompt, using fallback...")
             # Clean title for prompt (remove special chars, limit length)
             clean_title = re.sub(r'[^\w\s-]', '', title.lower())[:50]
-            image_prompt = f"Editorial photograph, professional DSLR camera, 50mm lens, natural lighting, {category.lower()} theme, {clean_title}, photorealistic, magazine cover style, rule of thirds composition, depth of field"
+            image_prompt = f"Synthwave retro arcade style, 16-bit pixel art, aurora color scheme with vibrant purples magentas cyans and electric blues, {category.lower()} theme, {clean_title}, Capcom CPS1 arcade board graphics style, neon glow effects, slight animated look, dynamic composition, outrun aesthetic, nostalgic futuristic retro fusion"
         
         return image_prompt
     except Exception as e:
         # Fallback prompt if API call fails
         print(f"⚠️  Warning: Image prompt generation failed: {e}, using fallback...")
-        return f"Editorial photograph, professional DSLR camera, 50mm lens, natural lighting, {category.lower()} theme, {title.lower()}, photorealistic, magazine cover style, rule of thirds composition"
+        clean_title = re.sub(r'[^\w\s-]', '', title.lower())[:50]
+        return f"Synthwave retro arcade style, 16-bit pixel art, aurora color scheme with vibrant purples magentas cyans and electric blues, {category.lower()} theme, {clean_title}, Capcom CPS1 arcade board graphics style, neon glow effects, slight animated look, dynamic composition, outrun aesthetic, nostalgic futuristic retro fusion"
 
 
 def generate_image(
@@ -964,7 +997,7 @@ def main():
         print(f"❌ Error generating image prompt: {e}")
         # Create fallback prompt
         clean_title = re.sub(r'[^\w\s-]', '', title.lower())[:50]
-        image_prompt = f"Editorial photograph, professional DSLR camera, 50mm lens, natural lighting, {category.lower()} theme, {clean_title}, photorealistic, magazine cover style, rule of thirds composition"
+        image_prompt = f"Synthwave retro arcade style, 16-bit pixel art, aurora color scheme with vibrant purples magentas cyans and electric blues, {category.lower()} theme, {clean_title}, Capcom CPS1 arcade board graphics style, neon glow effects, slight animated look, dynamic composition, outrun aesthetic, nostalgic futuristic retro fusion"
         print(f"✓ Using fallback prompt: {image_prompt[:80]}...")
     print()
     
@@ -974,7 +1007,8 @@ def main():
         # Validate image prompt before generating
         if not image_prompt or len(image_prompt.strip()) == 0:
             print("⚠️  Warning: Image prompt is empty, generating fallback prompt...")
-            image_prompt = f"Editorial photograph, professional DSLR camera, 50mm lens, natural lighting, {category.lower()} theme, {title.lower()}, photorealistic, magazine cover style, rule of thirds composition"
+            clean_title = re.sub(r'[^\w\s-]', '', title.lower())[:50]
+            image_prompt = f"Synthwave retro arcade style, 16-bit pixel art, aurora color scheme with vibrant purples magentas cyans and electric blues, {category.lower()} theme, {clean_title}, Capcom CPS1 arcade board graphics style, neon glow effects, slight animated look, dynamic composition, outrun aesthetic, nostalgic futuristic retro fusion"
             print(f"✓ Using fallback prompt: {image_prompt[:80]}...")
         
         image_filename = generate_image(client, image_prompt, slug)
