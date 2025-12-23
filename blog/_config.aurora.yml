@@ -104,7 +104,7 @@ socials:
 #! ---------------------------------------------------------------
 site_meta:
   cdn: cn
-  favicon: https://github.com/cojovi/projectsentinal/blob/main/test/7.png?raw=true
+  favicon: /favicon.ico
   description: 'Protocol Sentinel : a goldmine in the darkness'
   keywords: 'Tech, Electronics, AI, exploits'
   author: 'Tech Predator'
@@ -339,6 +339,18 @@ aurora_bot:
 #! @docs https://aurora.tridiamond.tech/guide/site-meta.html#custom-meta
 #! ---------------------------------------------------------------
 injects:
+  head_begin:
+    - |
+      <!-- Favicon Links -->
+      <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="48x48" href="/icons/favicon-48x48.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="/icons/favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="/icons/favicon-512x512.png">
+      <link rel="shortcut icon" href="/favicon.ico">
+      <meta name="msapplication-TileImage" content="/icons/favicon-192x192.png">
+      <meta name="theme-color" content="#5433ff">
   scripts:
     - |
       <!-- Google Tag Manager -->
