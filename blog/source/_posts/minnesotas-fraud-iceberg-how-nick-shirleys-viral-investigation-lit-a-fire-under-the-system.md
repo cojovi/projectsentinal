@@ -65,6 +65,8 @@ In 2022, the Department of Justice announced federal charges against **47 defend
 
 The allegation was devastatingly simple: money meant to feed children was billed as if meals were being served at scale, while investigators say few meals were actually provided — and the cash allegedly went to luxury purchases, travel, property, and more. ([Federal Bureau of Investigation][5])
 
+![](https://github.com/cojovi/projectsentinal/blob/main/test/nick4.png?raw=true)
+
 Federal agencies have since continued announcing guilty pleas, sentencing, and asset forfeitures connected to that case. ([Department of Justice][6])
 
 And it’s not just abstract “fraud.” Official records show specific examples of how this works mechanically: falsified meal counts, inflated claims, reimbursement checks, then transfers and laundering. ([Internal Revenue Service][7])
@@ -180,6 +182,8 @@ In Republican circles, the word “complicit” gets used because the pattern fe
 
 Even if you swap “complicit” for “gross negligence” (which is how many critics frame it), the result is the same for taxpayers: you’re funding a system that can be gamed. ([AP News][2])
 
+![](https://github.com/cojovi/projectsentinal/blob/main/test/nick5.png?raw=true)
+
 ---
 
 ## What the “big outlets” said to push back — and what to make of it
@@ -279,6 +283,8 @@ Vice President JD Vance reposted Shirley’s video and wrote: “This dude has d
 In the podcast transcripts you shared, Patrick Bet-David hammered the same theme from a different angle — praising the willingness to confront a powerful system and saying, “You can’t teach courage.” 
 
 You can roll your eyes at “influencer culture” all you want. But when the establishment won’t ask the questions, citizens will. And when citizens ask, the establishment gets nervous. ([WUNC][1])
+
+![](https://github.com/cojovi/projectsentinal/blob/main/test/nick6.png?raw=true)
 
 ---
 
