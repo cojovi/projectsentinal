@@ -10,7 +10,7 @@ tags:
 categories:
 - Politics
 feature: true
-cover: https://github.com/cojovi/projectsentinal/blob/main/test/nick1.png.png?raw=true
+cover: https://github.com/cojovi/projectsentinal/blob/main/test/nick_hero.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true
 og_image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true
 excerpt: "If you’ve been paying attention, you already know the basic outline: a 23-year-old independent YouTuber goes to Minneapolis, points his camera at a handful of state-funded child care sites that look “closed” or “empty,” asks uncomfortable questions, and within days the entire country is arguing about fraud, immigration, and whether legacy media has lost the plot."
