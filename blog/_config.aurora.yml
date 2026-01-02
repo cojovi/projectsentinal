@@ -106,7 +106,7 @@ site_meta:
   cdn: cn
   favicon: /favicon.ico
   description: 'Protocol Sentinel : a goldmine in the darkness'
-  keywords: 'Tech, Electronics, AI, exploits'
+  keywords: 'Tech, Electronics, AI, exploits, conspiracy'
   author: 'Tech Predator'
 
 # Sitemap
@@ -340,6 +340,11 @@ aurora_bot:
 #! ---------------------------------------------------------------
 injects:
   head_begin:
+    - |
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-4PBBYC5R3L"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     - |
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PBBYC5R3L"></script>
