@@ -76,6 +76,23 @@ CATEGORIES = [
     "Collaboration", "Business", "Future", "Coding", "News", "Tech Stuff"
 ]
 
+# Static Blog Tone (Witty + Sarcastic + Precise)
+BLOG_TONE = """Write like a sharp, jaded narrator who's extremely observant, slightly annoyed, and hilariously honest. The humor is witty, sarcastic, and punchy, but never confusing or sloppy. Keep the energy confident and conversational—like you're roasting the topic while still doing the homework better than everyone else.
+
+ACCURACY FIRST: Comedy never replaces facts—jokes are layered on top of correct reporting and clear explanations. If something is uncertain, say so plainly ("We don't know yet," "This hasn't been confirmed," "Here's what's alleged vs proven"). Don't invent quotes, numbers, documents, or events.
+
+HUMOR STYLE: Use sarcasm as seasoning, not the meal. Punch up the absurdity of situations, incentives, hypocrisy, and corporate/political doublespeak. Prefer dry one-liners, unexpected comparisons, and deadpan understatement. Avoid cringe: no try-hard meme speak, no "hello fellow kids," no endless exclamation points.
+
+READABILITY: Short paragraphs. Clean flow. Skimmable structure. Mix sentence lengths: quick jabs + occasional longer "spiral rant" that lands back on the point. Use occasional rhetorical questions and asides in parentheses like: (which is a fancy way of saying: it's dumb but expensive)
+
+STRUCTURE: Start with a hook that's funny and frames the topic clearly. Explain the topic in plain English first, then add nuance. Use headers that sound like a headline + a roast. Include bullet lists for clarity. Add a "What this means" section to translate implications. When referencing claims, label clearly: Fact / Claim / Allegation / Opinion. Include dates, names, and specifics.
+
+TONE CALIBRATION: The narrator can be cynical, but not incoherent. The blog should feel like: "I'm laughing because otherwise I'd scream," while still being useful.
+
+STYLE TOOLS (use often): "Translation:" lines ("Translation: ___", "What they mean is: ___"), reality checks ("Here's the part people skip…", "The boring detail that matters: ___"), controlled exaggeration (clearly comedic): "This is like ___, but with more paperwork and worse outcomes."
+
+FORBIDDEN: Slurs, hate, harassment. Defamation presented as fact. Making up sources. Joke paragraphs that derail the subject for too long."""
+
 # ============================================================================
 # UTILITY FUNCTIONS
 # ============================================================================
@@ -710,7 +727,7 @@ def generate_image_prompt(
     category: str,
     body_preview: str
 ) -> str:
-    """Generate DALL-E prompt for synthwave/aurora retro arcade style image."""
+    """Generate DALL-E prompt for retro arcade pixel art style image."""
     
     # OLD PROMPT (COMMENTED OUT - PRESERVED FOR FUTURE USE)
     # prompt = f"""Write a compelling DALL-E prompt for a photorealistic news hero image that captures the essence of this article.
@@ -732,33 +749,47 @@ def generate_image_prompt(
     #
     # DALL-E prompt:"""
     
-    # NEW PROMPT - SYNTHWAVE/AURORA/RETRO ARCADE STYLE
-    prompt = f"""Write a compelling DALL-E prompt for a retro arcade-style image with synthwave aesthetics and aurora color scheme that captures the essence of this article.
+    # NEW PROMPT - RETRO ARCADE PIXEL ART STYLE
+    prompt = f"""Write a compelling DALL-E prompt for ultra-high-quality retro arcade pixel art illustration that captures the essence of this article.
 
 Article title: {title}
 Category: {category}
 Article preview: {body_preview[:500]}
 
-CRITICAL STYLE REQUIREMENTS:
-- Visual style: Capcom CPS1 arcade board graphics OR 16-bit retro arcade pixel art style (choose the most appropriate)
-- Aesthetic: Heavy synthwave/outrun aesthetic with neon-drenched atmosphere
-- Color palette: Aurora color scheme as the primary focus - vibrant purples, magentas, cyans, electric blues, and neon pinks
-- Animation feel: Slight animated look, dynamic composition suggesting movement and energy
-- Pixel art elements: If using 16-bit style, include authentic pixel art techniques with limited color palettes and dithering
-- Arcade board style: If using CPS1 style, include bold outlines, vibrant saturated colors, and that distinctive early 90s arcade game aesthetic
-- Lighting: Neon glow effects, electric lighting, cyberpunk-inspired illumination
-- Composition: Bold, striking composition that would work as a retro game title screen or arcade cabinet art
-- Mood: Energetic, nostalgic, futuristic-retro fusion
-- Include visual elements that relate to the article's content but rendered in this retro arcade/synthwave style
+CRITICAL STYLE REQUIREMENTS - RETRO ARCADE PIXEL ART:
+- Style: Ultra-high-quality retro arcade pixel art illustration in authentic 8-bit to 16-bit era style (NES → SNES/Genesis transition)
+- Composition: Cinematic "attract screen" or game box-art composition with strong parallax depth: foreground pixel UI elements, midground central character/silhouette, and layered background environments
+- Technical details: Bold pixel outlines, intentional dithering, limited but vibrant color palette with electric neon highlights, arcade glow effects, subtle CRT scanlines, light chromatic aberration for classic cabinet display feel
+- Lighting: Dramatic and directional lighting, high contrast between illuminated elements and deep shadowed areas
+- Shading: Pixel-accurate shading techniques (clustered pixels, stair-stepped highlights) rather than smooth gradients
+- Interface elements: Symbolic interface elements (meters, icons, indicators) rendered as abstract pixel glyphs — NO readable text, NO logos, NO brands
+- Composition: Poster-worthy and balanced, strong central focal point, environmental storytelling through shapes, lighting, and color contrast
+- Visual tone: Cinematic, nostalgic, slightly surreal — blending retro video game aesthetics with modern depth and polish
+- Quality: Crisp pixels (no blur), sharp edges, clean resolution
+- Aspect ratio: 16:9 landscape format
 
-CRITICAL - MUST INCLUDE:
-- Explicit mention of "synthwave" or "outrun" aesthetic
-- Aurora color scheme (purples, magentas, cyans, electric blues)
-- Either "Capcom CPS1 arcade board style" OR "16-bit retro arcade pixel art style"
-- "Slight animated look" or "dynamic composition"
-- Neon glow effects and electric lighting
+OPTIONAL STYLE MODIFIERS (include 1-2 that fit the article's vibe):
+- Arcade cabinet glow, neon rim-lighting
+- SNES-era RPG box art detail level
+- Genesis-style darker color palette
+- Pixel-perfect CRT scanline overlay
+- Parallax depth layers with subtle atmospheric haze
+- Retro cyberpunk arcade aesthetic
+- Classic attract-mode title screen energy
 
-Generate a detailed 3-4 sentence prompt that creates a visually striking retro arcade/synthwave image with heavy aurora color scheme influence.
+CRITICAL - MUST INCLUDE IN PROMPT:
+- "Ultra-high-quality retro arcade pixel art illustration"
+- "Authentic 8-bit to 16-bit era style" or "NES → SNES/Genesis transition style"
+- "Cinematic attract screen" or "game box-art composition"
+- "Strong parallax depth" with foreground, midground, and background layers
+- "Bold pixel outlines, intentional dithering"
+- "Limited but vibrant color palette with electric neon highlights"
+- "Arcade glow effects, subtle CRT scanlines"
+- "Pixel-accurate shading techniques"
+- "Crisp pixels, sharp edges, clean resolution"
+- Visual elements related to the article content (but rendered as pixel art symbols/silhouettes, NOT text/logos)
+
+Generate a detailed 3-4 sentence prompt that creates a visually striking retro arcade pixel art illustration capturing the article's essence.
 
 DALL-E prompt:"""
     
@@ -766,11 +797,11 @@ DALL-E prompt:"""
         response = client.chat.completions.create(
             model="gpt-5.2",
             messages=[
-                {"role": "system", "content": "You are a prompt engineer specializing in retro arcade, synthwave, and pixel art image generation. Always provide a detailed, complete prompt with heavy emphasis on aurora color schemes and retro gaming aesthetics. Your response must be a valid DALL-E prompt, not empty."},
+                {"role": "system", "content": "You are a prompt engineer specializing in retro arcade pixel art image generation. You create detailed, authentic prompts for 8-bit to 16-bit era pixel art illustrations with cinematic composition, parallax depth, and arcade aesthetics. Always include technical pixel art specifications (dithering, pixel-accurate shading, CRT scanlines, etc.). Your response must be a valid DALL-E prompt, not empty."},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.5,
-            max_completion_tokens=200
+            max_completion_tokens=300
         )
         
         # Get the response content
@@ -787,14 +818,14 @@ DALL-E prompt:"""
             print("⚠️  Warning: GPT returned empty or too short image prompt, using fallback...")
             # Clean title for prompt (remove special chars, limit length)
             clean_title = re.sub(r'[^\w\s-]', '', title.lower())[:50]
-            image_prompt = f"Synthwave retro arcade style, 16-bit pixel art, aurora color scheme with vibrant purples magentas cyans and electric blues, {category.lower()} theme, {clean_title}, Capcom CPS1 arcade board graphics style, neon glow effects, slight animated look, dynamic composition, outrun aesthetic, nostalgic futuristic retro fusion"
+            image_prompt = f"Ultra-high-quality retro arcade pixel art illustration, authentic 8-bit to 16-bit era style (NES → SNES/Genesis transition), cinematic attract screen composition with strong parallax depth: foreground pixel UI elements, midground central silhouette, layered background environments, bold pixel outlines, intentional dithering, limited vibrant color palette with electric neon highlights, arcade glow effects, subtle CRT scanlines, light chromatic aberration, dramatic directional lighting with high contrast, pixel-accurate shading techniques, symbolic interface elements as abstract pixel glyphs, {category.lower()} theme, {clean_title}, crisp pixels sharp edges clean resolution, cinematic nostalgic slightly surreal tone"
         
         return image_prompt
     except Exception as e:
         # Fallback prompt if API call fails
         print(f"⚠️  Warning: Image prompt generation failed: {e}, using fallback...")
         clean_title = re.sub(r'[^\w\s-]', '', title.lower())[:50]
-        return f"Synthwave retro arcade style, 16-bit pixel art, aurora color scheme with vibrant purples magentas cyans and electric blues, {category.lower()} theme, {clean_title}, Capcom CPS1 arcade board graphics style, neon glow effects, slight animated look, dynamic composition, outrun aesthetic, nostalgic futuristic retro fusion"
+        return f"Ultra-high-quality retro arcade pixel art illustration, authentic 8-bit to 16-bit era style (NES → SNES/Genesis transition), cinematic attract screen composition with strong parallax depth: foreground pixel UI elements, midground central silhouette, layered background environments, bold pixel outlines, intentional dithering, limited vibrant color palette with electric neon highlights, arcade glow effects, subtle CRT scanlines, light chromatic aberration, dramatic directional lighting with high contrast, pixel-accurate shading techniques, symbolic interface elements as abstract pixel glyphs, {category.lower()} theme, {clean_title}, crisp pixels sharp edges clean resolution, cinematic nostalgic slightly surreal tone"
 
 
 def generate_image(
@@ -891,18 +922,9 @@ def main():
     print(f"✓ Input type detected: {input_type}")
     print()
     
-    # Analyze tone from existing posts
-    print("🔍 Analyzing existing articles to learn tone...")
-    sample_contents = sample_posts_for_tone(5)
-    tone = analyze_tone(client, sample_contents)
-    print(f"✓ Tone identified: {tone}")
-    print()
-    
-    # User tone override
-    user_tone = input(f"Default tone: {tone}\nPress Enter to use default, or type custom tone: ").strip()
-    if user_tone:
-        tone = user_tone
-        print(f"✓ Using custom tone: {tone}")
+    # Use static blog tone
+    tone = BLOG_TONE
+    print(f"✓ Using blog tone: Witty, sarcastic, and precise")
     print()
     
     # Perform web search for additional context
@@ -997,7 +1019,7 @@ def main():
         print(f"❌ Error generating image prompt: {e}")
         # Create fallback prompt
         clean_title = re.sub(r'[^\w\s-]', '', title.lower())[:50]
-        image_prompt = f"Synthwave retro arcade style, 16-bit pixel art, aurora color scheme with vibrant purples magentas cyans and electric blues, {category.lower()} theme, {clean_title}, Capcom CPS1 arcade board graphics style, neon glow effects, slight animated look, dynamic composition, outrun aesthetic, nostalgic futuristic retro fusion"
+        image_prompt = f"Ultra-high-quality retro arcade pixel art illustration, authentic 8-bit to 16-bit era style (NES → SNES/Genesis transition), cinematic attract screen composition with strong parallax depth: foreground pixel UI elements, midground central silhouette, layered background environments, bold pixel outlines, intentional dithering, limited vibrant color palette with electric neon highlights, arcade glow effects, subtle CRT scanlines, light chromatic aberration, dramatic directional lighting with high contrast, pixel-accurate shading techniques, symbolic interface elements as abstract pixel glyphs, {category.lower()} theme, {clean_title}, crisp pixels sharp edges clean resolution, cinematic nostalgic slightly surreal tone"
         print(f"✓ Using fallback prompt: {image_prompt[:80]}...")
     print()
     
@@ -1008,7 +1030,7 @@ def main():
         if not image_prompt or len(image_prompt.strip()) == 0:
             print("⚠️  Warning: Image prompt is empty, generating fallback prompt...")
             clean_title = re.sub(r'[^\w\s-]', '', title.lower())[:50]
-            image_prompt = f"Synthwave retro arcade style, 16-bit pixel art, aurora color scheme with vibrant purples magentas cyans and electric blues, {category.lower()} theme, {clean_title}, Capcom CPS1 arcade board graphics style, neon glow effects, slight animated look, dynamic composition, outrun aesthetic, nostalgic futuristic retro fusion"
+            image_prompt = f"Ultra-high-quality retro arcade pixel art illustration, authentic 8-bit to 16-bit era style (NES → SNES/Genesis transition), cinematic attract screen composition with strong parallax depth: foreground pixel UI elements, midground central silhouette, layered background environments, bold pixel outlines, intentional dithering, limited vibrant color palette with electric neon highlights, arcade glow effects, subtle CRT scanlines, light chromatic aberration, dramatic directional lighting with high contrast, pixel-accurate shading techniques, symbolic interface elements as abstract pixel glyphs, {category.lower()} theme, {clean_title}, crisp pixels sharp edges clean resolution, cinematic nostalgic slightly surreal tone"
             print(f"✓ Using fallback prompt: {image_prompt[:80]}...")
         
         image_filename = generate_image(client, image_prompt, slug)
