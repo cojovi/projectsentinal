@@ -338,17 +338,11 @@ aurora_bot:
 #! Injections
 #! @docs https://aurora.tridiamond.tech/guide/site-meta.html#custom-meta
 #! ---------------------------------------------------------------
+#! NOTE: Google Analytics (G-4PBBYC5R3L) is directly embedded in 
+#! themes/aurora/layout/index.ejs for reliable loading
+#! ---------------------------------------------------------------
 injects:
   head_begin:
-    - |
-      <!-- Google tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PBBYC5R3L"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-4PBBYC5R3L');
-      </script>
     - |
       <!-- Favicon Links -->
       <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
