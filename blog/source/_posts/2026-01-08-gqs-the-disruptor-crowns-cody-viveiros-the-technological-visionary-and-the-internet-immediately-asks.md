@@ -1,6 +1,6 @@
 ---
 title: "GQ’s “The Disruptor” Crowns Cody Viveiros: The ‘Technological Visionary’ (and the Internet Immediately Asks: Which One?)"
-date: 2026-01-08 10:32:48
+date: 2025-04-08 10:32:48
 tags:
   - GQ cover story
   - Cody Viveiros

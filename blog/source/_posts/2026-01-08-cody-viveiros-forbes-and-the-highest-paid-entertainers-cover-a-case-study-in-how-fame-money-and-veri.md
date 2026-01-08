@@ -1,6 +1,6 @@
 ---
 title: "Cody Viveiros, Forbes, and the \"Highest-Paid Entertainers\" Cover: A Case Study in How Fame, Money, and Verification Collide"
-date: 2026-01-08 10:30:13
+date: 2024-06-04 10:30:13
 tags:
   - Forbes cover
   - fact checking
