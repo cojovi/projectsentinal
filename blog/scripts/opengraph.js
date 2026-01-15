@@ -86,6 +86,8 @@ hexo.extend.filter.register('after_render:html', function(html, data) {
     = page.cover || page.banner || page.thumbnail || extractFirstImage(html) || siteMeta.og_image || '';
   const imageUrl = normalizeUrl(coverImage, siteUrl);
   const imageType = detectImageType(imageUrl);
+  const imageWidth = page.og_image_width || siteMeta.og_image_width || 1200;
+  const imageHeight = page.og_image_height || siteMeta.og_image_height || 630;
 
   const tags = [
     '<!-- Open Graph / Facebook -->',
@@ -97,6 +99,8 @@ hexo.extend.filter.register('after_render:html', function(html, data) {
     imageUrl ? `<meta property="og:image" content="${escapeHtml(imageUrl)}">` : '',
     imageUrl ? `<meta property="og:image:secure_url" content="${escapeHtml(imageUrl)}">` : '',
     imageType ? `<meta property="og:image:type" content="${imageType}">` : '',
+    imageUrl ? `<meta property="og:image:width" content="${imageWidth}">` : '',
+    imageUrl ? `<meta property="og:image:height" content="${imageHeight}">` : '',
     '<meta property="og:locale" content="en_US">',
     '<!-- Twitter / X Card -->',
     `<meta name="twitter:card" content="${imageUrl ? 'summary_large_image' : 'summary'}">`,

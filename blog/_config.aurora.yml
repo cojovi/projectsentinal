@@ -109,6 +109,8 @@ site_meta:
   keywords: 'Tech, Electronics, AI, exploits, conspiracy'
   author: 'Tech Predator'
   og_image: 'https://raw.githubusercontent.com/cojovi/projectsentinal/main/protocolsentinel_logos/OG_image_protocol.jpeg'
+  og_image_width: 1200
+  og_image_height: 630
 
 # Sitemap
 #sitemap:
