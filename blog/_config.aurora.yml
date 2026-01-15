@@ -108,6 +108,7 @@ site_meta:
   description: 'Protocol Sentinel : a goldmine in the darkness'
   keywords: 'Tech, Electronics, AI, exploits, conspiracy'
   author: 'Tech Predator'
+  og_image: 'https://raw.githubusercontent.com/cojovi/projectsentinal/main/protocolsentinel_logos/OG_image_protocol.jpeg'
 
 # Sitemap
 #sitemap:
@@ -354,28 +355,6 @@ injects:
       <link rel="shortcut icon" href="/favicon.ico">
       <meta name="msapplication-TileImage" content="/icons/favicon-192x192.png">
       <meta name="theme-color" content="#5433ff">
-    - |
-      <!-- Open Graph / Facebook -->
-      <meta property="og:type" content="website">
-      <meta property="og:site_name" content="Protocol Sentinel">
-      <meta property="og:title" content="Protocol Sentinel">
-      <meta property="og:description" content="Protocol Sentinel : a goldmine in the darkness">
-      <meta property="og:url" content="https://www.protocolsentinel.com">
-      <meta property="og:image" content="https://github.com/cojovi/projectsentinal/blob/main/protocolsentinel_logos/OG_image_protocol.jpeg">
-      <meta property="og:image:secure_url" content="https://github.com/cojovi/projectsentinal/blob/main/protocolsentinel_logos/OG_image_protocol.jpeg">
-      <meta property="og:image:type" content="image/jpeg">
-      <meta property="og:image:width" content="1200">
-      <meta property="og:image:height" content="630">
-      <meta property="og:image:alt" content="Protocol Sentinel - Advanced Cyber Defense, Guardian of Your Digital World">
-      <meta property="og:locale" content="en_US">
-    - |
-      <!-- Twitter / X Card -->
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:site" content="@protocolsentinel">
-      <meta name="twitter:title" content="Protocol Sentinel">
-      <meta name="twitter:description" content="Protocol Sentinel : a goldmine in the darkness">
-      <meta name="twitter:image" content="ttps://github.com/cojovi/projectsentinal/blob/main/protocolsentinel_logos/OG_image_protocol.jpeg">
-      <meta name="twitter:image:alt" content="Protocol Sentinel - Advanced Cyber Defense, Guardian of Your Digital World">
   scripts:
     - |
       <!-- Google tag (gtag.js) -->
