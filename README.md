@@ -1,163 +1,102 @@
-![Project TrueGrit](https://raw.githubusercontent.com/cojovi/TrueGrit_cmac/main/public/banner1.png)
-# TrueGrit - Construction Management Platform
+<img src="https://raw.githubusercontent.com/hexojs/logo/master/hexo-logo-avatar.png" alt="Hexo logo" width="100" height="100" align="right" />
 
-A comprehensive web application for residential roofing, framing, and windows contractors with professional project management capabilities.
+# Hexo
 
-This is still in really early stages, was kinda just fkn around when i got started on this....
+> A fast, simple & powerful blog framework, powered by [Node.js](https://nodejs.org).
+
+[Website](https://hexo.io) |
+[Documentation](https://hexo.io/docs/) |
+[Installation Guide](https://hexo.io/docs/#Installation) |
+[Contribution Guide](https://hexo.io/docs/contributing) |
+[Code of Conduct](CODE_OF_CONDUCT.md) |
+[API](https://hexo.io/api/) |
+[Twitter](https://twitter.com/hexojs)
+
+[![NPM version](https://badge.fury.io/js/hexo.svg)](https://www.npmjs.com/package/hexo)
+![Required Node version](https://img.shields.io/node/v/hexo)
+[![Build Status](https://github.com/hexojs/hexo/workflows/Tester/badge.svg)](https://github.com/hexojs/hexo/actions?query=workflow%3ATester)
+[![dependencies Status](https://img.shields.io/librariesio/release/npm/hexo)](https://libraries.io/npm/hexo)
+[![Coverage Status](https://coveralls.io/repos/hexojs/hexo/badge.svg?branch=master)](https://coveralls.io/r/hexojs/hexo?branch=master)
+[![Gitter](https://badges.gitter.im/hexojs/hexo.svg)](https://gitter.im/hexojs/hexo)
+[![Discord Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/teM2Anj)
+[![Telegram Chat](https://img.shields.io/badge/chat-on%20telegram-32afed.svg)](https://t.me/hexojs)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhexojs%2Fhexo.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhexojs%2Fhexo?ref=badge_shield)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
 ## Features
 
-### 🏗️ Core Business Management
-- **Project Management**: Complete job lifecycle from estimate to completion
-- **Scheduling**: Visual calendar with drag-and-drop job assignment
-- **Crew Management**: Team organization with role-based access control
-- **Estimate Generation**: Professional estimates with profit margin calculation
+- Blazing fast generating
+- Support for GitHub Flavored Markdown and most Octopress plugins
+- One-command deploy to GitHub Pages, Heroku, etc.
+- Powerful API for limitless extensibility
+- Hundreds of [themes](https://hexo.io/themes/) & [plugins](https://hexo.io/plugins/)
 
-### 📊 Advanced Features
-- **Communities & Floorplans**: Organize jobs by neighborhood and house types
-- **Material Inventory**: Track stock levels with low-stock alerts
-- **Photo Documentation**: Upload and organize job photos
-- **Reporting & Analytics**: Business insights and performance metrics
+## Quick Start
 
-### 🔐 Security & Access Control
-- **Role-based permissions**: Admin, Manager, Crew Lead, and Crew Member roles
-- **Secure authentication**: Email/password authentication via Supabase
-- **Row-level security**: Users only see data relevant to their role and assignments
+**Install Hexo**
 
-## Technology Stack
+``` bash
+$ npm install hexo-cli -g
+```
 
-- **Frontend**: React 18 + TypeScript + Tailwind CSS
-- **Database**: Supabase (PostgreSQL)
-- **Authentication**: Supabase Auth
-- **Charts**: Recharts
-- **Icons**: Lucide React
-- **Build Tool**: Vite
+Install with [brew](https://brew.sh/) on macOS and Linux:
 
-## Getting Started
+```bash
+$ brew install hexo
+```
 
-### Prerequisites
-- Node.js 18+ and npm
-- Supabase account and project
+**Setup your blog**
 
-### Setup Instructions
+``` bash
+$ hexo init blog
+$ cd blog
+```
 
-1. **Clone and Install**
-   ```bash
-   npm install
-   ```
+**Start the server**
 
-2. **Database Setup**
-   - Create a new Supabase project
-   - Click "Connect to Supabase" button in the top-right corner
-   - The database schema will be automatically applied
+``` bash
+$ hexo server
+```
 
-3. **Environment Variables**
-   ```bash
-   cp .env.example .env
-   ```
-   Update the `.env` file with your Supabase credentials (done automatically when connecting).
+**Create a new post**
 
-4. **Start Development Server**
-   ```bash
-   npm run dev
-   ```
+``` bash
+$ hexo new "Hello Hexo"
+```
 
-## Work Order Types
+**Generate static files**
 
-The application supports all standard residential construction work order types:
+``` bash
+$ hexo generate
+```
 
-**Roofing**
-- Metal Roof - Accent
-- Measure/Dry in Metal - Accent
-- Roof Deck
-- Roof Final-must take pictures
-- Shingles
-- Dry-in
-- Roof Inspection
-- Re-Roof
+## More Information
 
-**Flashing & Repair**
-- U Channel/Z Flashing
-- Counter Flashing
-- After Roof Punch
-- Metal or Flashing Repair
-- Door Pan Flashing
-- Leak Repair
-- Warranty Work
+- Read the [documentation](https://hexo.io/)
+- Visit the [Awesome Hexo](https://github.com/hexojs/awesome-hexo) list
+- Find solutions in [troubleshooting](https://hexo.io/docs/troubleshooting.html)
+- Join discussion on [Google Group](https://groups.google.com/group/hexo), [Discord](https://discord.gg/teM2Anj), [Gitter](https://gitter.im/hexojs/hexo) or [Telegram](https://t.me/hexojs)
+- See the [plugin list](https://hexo.io/plugins/) and the [theme list](https://hexo.io/themes/) on wiki
+- Follow [@hexojs](https://twitter.com/hexojs) for latest news
 
-**Service & Inspection**
-- Builder Service
-- Safety Inspection
-- Roofer Inspection
-- Training Service Tech
+## Contributing
 
-## User Roles & Permissions
+We welcome you to join the development of Hexo. Please see [contributing document](https://hexo.io/docs/contributing). 🤗
 
-### Admin
-- Full system access
-- Manage all users, communities, and system settings
-- View all jobs and reports
+Also, we welcome PR or issue to [official-plugins](https://github.com/hexojs).
 
-### Manager
-- Manage jobs, estimates, and crew assignments
-- Create communities and floorplans
-- Access to all reports and analytics
+## Contributors
 
-### Crew Lead
-- View and update assigned jobs
-- Upload photos and update job status
-- Manage crew member assignments
+[![](https://opencollective.com/Hexo/contributors.svg?width=890)](https://github.com/hexojs/hexo/graphs/contributors)
 
-### Crew Member
-- View assigned jobs only
-- Upload photos and time tracking
-- Limited access to job details
+## Backers
 
-## Database Schema
+[![Backers](https://opencollective.com/hexo/tiers/backers.svg?avatarHeight=36&width=600)](https://opencollective.com/hexo)
 
-### Core Tables
-- `profiles`: User information and roles
-- `communities`: Construction neighborhoods/developments
-- `floorplans`: House plans with specifications
-- `jobs`: Work orders and project details
-- `estimates`: Job estimates with line items
-- `crew_assignments`: Team member job assignments
-- `materials`: Inventory management
-- `job_photos`: Photo documentation
+## Sponsors
 
-### Security Features
-- Row Level Security (RLS) enabled on all tables
-- Role-based access policies
-- Secure data isolation between different user roles
+<a href="https://linktr.ee/rss3"><img src="https://d1fdloi71mui9q.cloudfront.net/8xxahBqRTnecXgXKObeo_L8ks2KjC31fmM5Nd" alt="RSS3" width="200"/></a>
 
-## Key Workflows
+## License
 
-1. **Job Creation**: Manager creates job → assigns community/floorplan → schedules crew
-2. **Estimation**: Generate estimate → calculate profit margin → send to client
-3. **Execution**: Crew receives assignment → updates status → uploads photos
-4. **Completion**: Mark complete → calculate actual costs → generate reports
-
-## Mobile Responsiveness
-
-The application is fully responsive and optimized for:
-- **Desktop**: Full feature access with advanced layouts
-- **Tablet**: Touch-friendly interface for office use
-- **Mobile**: Field-optimized for crew members
-
-## API Integration Ready
-
-The application structure supports future integrations with:
-- Builder portals (D.R. Horton VendorSuite, MarkSystems ITK)
-- Accounting systems (QuickBooks, Sage)
-- Material suppliers
-- Time tracking systems
-
-## Demo Data
-
-Sample data includes:
-- Pre-configured material inventory
-- Work order types specific to residential construction
-- Role-based demo accounts
-
----
-still thinking of ideas for more features and workability.  --cody
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhexojs%2Fhexo.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhexojs%2Fhexo?ref=badge_large)
