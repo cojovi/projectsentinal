@@ -18,14 +18,17 @@ function normalizeUrl(url, siteUrl) {
     return '';
   }
 
-  const githubBlobMatch = url.match(/^https?:\/\/github\.com\/([^/]+)\/([^/]+)\/blob\/(.+)$/i);
+  const cleanedUrl = url.replace(/\?raw=1$|\?raw=true$/i, '');
+  const githubBlobMatch = cleanedUrl.match(
+    /^https?:\/\/github\.com\/([^/]+)\/([^/]+)\/blob\/(.+)$/i
+  );
   if (githubBlobMatch) {
     const [, owner, repo, path] = githubBlobMatch;
     return `https://raw.githubusercontent.com/${owner}/${repo}/${path}`;
   }
 
   if (/^https?:\/\//i.test(url)) {
-    return url;
+    return cleanedUrl;
   }
 
   const base = siteUrl.endsWith('/') ? siteUrl : `${siteUrl}/`;
