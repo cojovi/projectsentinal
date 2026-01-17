@@ -3,6 +3,13 @@ from datetime import datetime
 from pathlib import Path
 import requests, yaml
 
+# Try to load .env file if python-dotenv is available
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # .env file support is optional
+
 POSTS_DIR = Path(os.getenv("POSTS_DIR", "blog/source/_posts")).resolve()
 DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "gpt-4o-mini")
 
