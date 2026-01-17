@@ -33,6 +33,8 @@ The **high seas** are the parts of the ocean **beyond any nation’s jurisdictio
 
 This is why marine scientists, environmental groups, and international lawyers have spent decades trying to strengthen governance out there. The idea is not controversial: **protect biodiversity**, reduce overfishing, manage pollution, and prevent the ocean from becoming a lawless soup of plastic and broken promises.
 
+![The High Seas Passport Artifact](https://github.com/cojovi/projectsentinal/blob/main/test/TerraMar1.jpg?raw=true)
+
 > **Key Insight**: The high seas are legally real and environmentally crucial. The governance gaps are also very real—which makes them attractive to both serious conservationists and people who enjoy “creative interpretations” of accountability.
 
 TerraMar’s stated mission fit neatly into this legitimate policy conversation: *raise awareness* and *advocate for protection of areas beyond national jurisdiction*. That’s the charitable version. The skeptical version is: it’s also a very convenient cause if you want to sound globally important without having to answer to any one government. (Translation: *a brand built on the world’s biggest jurisdictional shrug*.)
@@ -89,6 +91,8 @@ This has been reported in various places, but the precise legal significance is 
 
 ---
 
+![The Floating Facade](https://github.com/cojovi/projectsentinal/blob/main/test/TerraMar2.jpg?raw=true)
+
 ## So Was TerraMar a Scam or a Strategy? Here’s What’s Solid vs Squishy
 Let’s separate what’s **provable** from what’s **implied**, because the internet loves a tidy villain story and reality is usually messier.
 
@@ -125,6 +129,8 @@ This is why international efforts to protect the high seas have included academi
 **Translation:** Serious people are trying to write rules for the ocean. Meanwhile, unserious people are trying to sell you a laminated card that says you’re a citizen of “the vibes.”
 
 > **Key Insight**: The danger isn’t that a TerraMar passport becomes legally valid. The danger is that weak governance lets powerful actors behave as if it doesn’t matter what the law says—because enforcement is patchy and consequences are negotiable.
+
+![The Reputation Laundering Stage](https://github.com/cojovi/projectsentinal/blob/main/test/TerraMar3.jpg?raw=true)
 
 ---
 
