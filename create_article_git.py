@@ -9,6 +9,7 @@ import re
 import sys
 import json
 import random
+import subprocess
 import urllib.request
 import urllib.parse
 import urllib.error
@@ -876,6 +877,74 @@ def generate_author_name() -> Tuple[str, str]:
     return full_name, author_slug
 
 
+def push_to_github(filepath: Path, image_filepath: Path, title: str) -> bool:
+    """
+    Add, commit, and push the new article and image to GitHub.
+    Returns True if successful, False otherwise.
+    """
+    try:
+        # Check if we're in a git repository
+        result = subprocess.run(
+            ["git", "rev-parse", "--git-dir"],
+            capture_output=True,
+            text=True,
+            cwd=Path.cwd()
+        )
+        if result.returncode != 0:
+            print("⚠️  Warning: Not in a git repository, skipping GitHub push")
+            return False
+        
+        print("📤 Pushing to GitHub...")
+        
+        # Get relative paths for git add
+        # Convert to relative paths from repo root
+        repo_root = Path(subprocess.run(
+            ["git", "rev-parse", "--show-toplevel"],
+            capture_output=True,
+            text=True,
+            check=True
+        ).stdout.strip())
+        
+        article_rel_path = filepath.relative_to(repo_root) if filepath.is_absolute() else filepath
+        image_rel_path = image_filepath.relative_to(repo_root) if image_filepath.is_absolute() else image_filepath
+        
+        # Stage the files
+        subprocess.run(
+            ["git", "add", str(article_rel_path), str(image_rel_path)],
+            check=True,
+            cwd=repo_root
+        )
+        print(f"✓ Staged: {article_rel_path}")
+        print(f"✓ Staged: {image_rel_path}")
+        
+        # Commit with descriptive message
+        commit_message = f"Add blog post: {title}"
+        subprocess.run(
+            ["git", "commit", "-m", commit_message],
+            check=True,
+            cwd=repo_root
+        )
+        print(f"✓ Committed: {commit_message}")
+        
+        # Push to remote (default branch, typically 'main')
+        subprocess.run(
+            ["git", "push"],
+            check=True,
+            cwd=repo_root
+        )
+        print("✓ Pushed to GitHub successfully")
+        return True
+        
+    except subprocess.CalledProcessError as e:
+        print(f"⚠️  Warning: Git operation failed: {e}")
+        print("   You may need to manually commit and push the files")
+        return False
+    except Exception as e:
+        print(f"⚠️  Warning: Failed to push to GitHub: {e}")
+        print("   You may need to manually commit and push the files")
+        return False
+
+
 # ============================================================================
 # MAIN EXECUTION
 # ============================================================================
@@ -1093,6 +1162,11 @@ def main():
         print(f"❌ Error saving article: {e}")
         return
     
+    # Push to GitHub
+    image_filepath = TEST_DIR / image_filename
+    push_success = push_to_github(filepath, image_filepath, title)
+    print()
+    
     # Final summary
     print()
     print("=" * 70)
@@ -1100,14 +1174,24 @@ def main():
     print("=" * 70)
     print(f"Title: {title}")
     print(f"File: {filepath}")
-    print(f"Image: {TEST_DIR / image_filename}")
+    print(f"Image: {image_filepath}")
     print(f"Word count: {count_words(body)} words")
     print(f"Reading time: {reading_time} minutes")
     print()
-    print("Next steps:")
-    print("1. Review the article and image")
-    print("2. Commit and push to GitHub")
-    print("3. Deploy your Hexo site")
+    if push_success:
+        print("✅ Successfully pushed to GitHub!")
+        print("Next steps:")
+        print("1. Review the article and image on GitHub")
+        print("2. Deploy your Hexo site")
+    else:
+        print("Next steps:")
+        print("1. Review the article and image")
+        print("2. Manually commit and push to GitHub:")
+        print(f"   git add {filepath.relative_to(Path.cwd()) if filepath.is_absolute() else filepath}")
+        print(f"   git add {image_filepath.relative_to(Path.cwd()) if image_filepath.is_absolute() else image_filepath}")
+        print(f'   git commit -m "Add blog post: {title}"')
+        print("   git push")
+        print("3. Deploy your Hexo site")
     print("=" * 70)
 
 
