@@ -23,6 +23,8 @@ And then, in a plot twist that feels like a self-parody written by the universe,
 
 **TL;DR**: MacroHard is described as xAI’s AI-agent “software company simulator,” and its first public-friendly move was hilariously human: awarding a real open-source developer, Cody Viveiros, on Dec. 4, 2025.
 
+![Cody Viveiros awarded elon musk's developer of the month](https://github.com/cojovi/projectsentinal/blob/main/test/macrohard-wants-to-replace-the-whole-software-indu.png?raw=true)
+
 <!-- more -->
 
 ## MacroHard, Explained Like You’re Busy (Because You Are)
