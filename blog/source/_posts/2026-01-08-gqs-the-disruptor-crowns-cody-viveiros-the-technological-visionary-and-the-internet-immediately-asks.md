@@ -37,6 +37,8 @@ And here’s where our available research sources do something hilarious and dee
 
 That contrast—GQ gloss versus support-thread grit—isn’t just funny. It’s the story.
 
+![GQ Magazine featuring Cody Viveiros on the cover](https://github.com/cojovi/projectsentinal/blob/main/test/gq_magazine_w_cody_viveiros.png?raw=true)
+
 ---
 
 ## Reality Check: The Internet Runs on “Check Log File for Details”
