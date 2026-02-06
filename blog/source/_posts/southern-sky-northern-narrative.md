@@ -3,7 +3,7 @@ title: Southern Sky, Northern Narrative
 date: 2026-02-06 16:38:00 -0600
 categories: geopolitics, aviation, border-tech
 summary: FAA airspace advisories over Mexico and Central America aren’t just flight ops—they’re story fuel. How NOTAMs, GNSS jamming, and border politics get braided into a single cable-news chyron.
-cover: /test/hero-southern-sky.png
+cover: https://github.com/cojovi/projectsentinal/blob/main/test/hero-southern-sky.png?raw=true
 ---
 
 Your phone map would lie to you before the evening news would admit it.
@@ -47,7 +47,7 @@ Result: a technical, reversible risk (GNSS unreliability) hardens into an ambien
   - Satellite and AIS data showing reroutes/holds over the Gulf/eastern Pacific lanes
   - Additional NOTAMs that reference EW activity or joint exercises
 
-![Southern Sky map](/test/southern-sky-map.png)
+![Southern Sky map](https://github.com/cojovi/projectsentinal/blob/main/test/southern-sky-map.png?raw=true)
 
 ## Claims vs. receipts
 
