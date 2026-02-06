@@ -3,7 +3,7 @@ title: Southern Sky, Northern Narrative
 date: 2026-02-06 16:38:00 -0600
 categories: geopolitics, aviation, border-tech
 summary: FAA airspace advisories over Mexico and Central America aren’t just flight ops—they’re story fuel. How NOTAMs, GNSS jamming, and border politics get braided into a single cable-news chyron.
-cover: /test/southern-sky-map.png
+cover: /test/hero-southern-sky.png
 ---
 
 Your phone map would lie to you before the evening news would admit it.
