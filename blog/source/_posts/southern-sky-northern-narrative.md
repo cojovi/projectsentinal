@@ -41,13 +41,13 @@ Result: a technical, reversible risk (GNSS unreliability) hardens into an ambien
 
 ## Map + signals
 
-- Map (simple): shaded polygons for the affected FIRs/oceanic sectors called out in the advisory (Mazatlán Oceanic, portions of MX/Central America FIRs, eastern Pacific corridors).  
+- Map (simple): see image below with labeled regions (Mazatlán Oceanic, Mexico/Central America FIRs, Eastern Pacific corridors, Panama/Bogotá/Guayaquil sectors).  
 - Signals to watch in the same window:
   - PIREPs mentioning RAIM loss, RNP cancellations, or ATC vectoring due to nav anomalies
   - Satellite and AIS data showing reroutes/holds over the Gulf/eastern Pacific lanes
   - Additional NOTAMs that reference EW activity or joint exercises
 
-(We will update this post with a flat PNG once the polygons are confirmed against the primary advisory.)
+![Southern Sky map](/test/southern-sky-map.png)
 
 ## Claims vs. receipts
 
@@ -64,10 +64,13 @@ Result: a technical, reversible risk (GNSS unreliability) hardens into an ambien
 
 ## Sources
 
-- FAA advisories/NOTAMs (verify exact coordinates/times via official portals)  
-- Public report carrying advisory language: <https://www.ndtv.com/world-news/us-warns-of-military-activities-over-mexico-central-america-10767508>  
-- ICAO/EASA GNSS interference primers (background on typical phrasing)
-
+- FAA advisories/NOTAMs (verify exact coordinates/times via official portals):
+  - FAA NOTAM Search: <https://notams.aim.faa.gov/notamSearch/>
+  - FAA TFRs: <https://tfr.faa.gov/>
+- Public report carrying advisory language: <https://www.ndtv.com/world-news/us-warns-of-military-activities-over-mexico-central-america-10767508>
+- Background on GNSS interference phrasing:
+  - ICAO: GNSS vulnerabilities overview (doc set) <https://www.icao.int/>
+  - EASA Safety Information Bulletin SIB 2022-02 (GNSS degradation): <https://ad.easa.europa.eu/>
 —
 
 Have receipts, PIREPs, or FIR‑level details we should fold in? Reply with tail numbers and timestamps; we’ll update the map and the table.
