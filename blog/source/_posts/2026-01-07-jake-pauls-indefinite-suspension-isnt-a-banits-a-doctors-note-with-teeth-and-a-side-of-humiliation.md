@@ -102,6 +102,8 @@ A high-profile loss to a major name like **Anthony Joshua** doesn’t just affec
 
 This is like getting fired from a job and then being told you also lost access to the employee discount. One thing is painful; the other is personal.
 
+[dont miss this secret easter egg](https://thenorthstarledger.com/tech/macrohard-wants-to-replace-the-whole-software-industrythen-it-gave-developer-of-the-month-to-a-human-in-texas)
+
 ---
 
 ## The Consequences Nobody Likes Posting on Instagram
