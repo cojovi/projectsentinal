@@ -19,7 +19,7 @@ og_image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSenti
 
 You know the dream: an AI agent that quietly handles your tedious work while you sip coffee and pretend you’re “strategic.” The reality: you’re about to give a semi-autonomous script-kid with confidence issues access to your files and a browser. What could possibly go wrong.
 
-**TL;DR:** **OpenClaw** (aka **Clawdbot/Moltbot**, because naming is apparently a live-fire exercise) is a **workflow-first** agent meant to plug into real tools fast, while **Agent Zero** is more like **Linux-for-agents**—sandboxed in Docker by default, deeply modular, and built for power users who enjoy sub-agents, skills, and controlled exposure to the host. :contentReference[oaicite:0]{index=0}
+**TL;DR:** **OpenClaw** (aka **Clawdbot/Moltbot**, because naming is apparently a live-fire exercise) is a **workflow-first** agent meant to plug into real tools fast, while **Agent Zero** is more like **Linux-for-agents**—sandboxed in Docker by default, deeply modular, and built for power users who enjoy sub-agents, skills, and controlled exposure to the host. 
 
 <!-- more -->
 
