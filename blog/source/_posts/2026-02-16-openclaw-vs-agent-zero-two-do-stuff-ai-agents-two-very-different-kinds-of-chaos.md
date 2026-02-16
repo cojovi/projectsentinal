@@ -39,8 +39,8 @@ And this is where these two split hard.
 
 ## The 10,000-foot difference (one sentence each)
 
-- **OpenClaw:** “Plug me into your real workflows and I’ll start paying rent quickly.” :contentReference[oaicite:1]{index=1}  
-- **Agent Zero:** “Put me in a container sandbox and I’ll become a platform you build on.” :contentReference[oaicite:2]{index=2}  
+- **OpenClaw:** “Plug me into your real workflows and I’ll start paying rent quickly.” 
+- **Agent Zero:** “Put me in a container sandbox and I’ll become a platform you build on.” 
 
 Or, if you prefer maximum honesty:
 
@@ -51,21 +51,21 @@ Or, if you prefer maximum honesty:
 
 ## OpenClaw (aka Moltbot/Clawdbot): the practical daily driver that lives a little too close for comfort
 
-OpenClaw’s public identity has been… *fluid*. The rename churn is not fan fiction—it’s a recurring plotline in community threads: **Clawdbot → Moltbot → OpenClaw**, plus plenty of confusion about what the binary is called on any given day. :contentReference[oaicite:3]{index=3}  
+OpenClaw’s public identity has been… *fluid*. The rename churn is not fan fiction—it’s a recurring plotline in community threads: **Clawdbot → Moltbot → OpenClaw**, plus plenty of confusion about what the binary is called on any given day. 
 
-Despite the branding gymnastics, OpenClaw’s positioning is pretty consistent: it’s an **open-source agent designed to run locally and integrate with real workflows**, with lots of attention on “what it can do” *and* the security risks when you let an agent touch real systems. :contentReference[oaicite:4]{index=4}  
+Despite the branding gymnastics, OpenClaw’s positioning is pretty consistent: it’s an **open-source agent designed to run locally and integrate with real workflows**, with lots of attention on “what it can do” *and* the security risks when you let an agent touch real systems.
 
-And yeah—this thing got big enough that mainstream outlets are tracking it (including reports that its creator is joining OpenAI and that OpenClaw will continue as an open-source foundation). :contentReference[oaicite:5]{index=5}  
+And yeah—this thing got big enough that mainstream outlets are tracking it (including reports that its creator is joining OpenAI and that OpenClaw will continue as an open-source foundation).  
 
 ### Why people like OpenClaw
-- **Time-to-value is the main event.** It’s aimed at “useful fast” automation, not “build a platform first.” :contentReference[oaicite:6]{index=6}  
-- **Workflow-first orientation.** The point is plugging into tools, routines, and integrations that already exist in your life. :contentReference[oaicite:7]{index=7}  
-- **It’s trying to feel like a product, not just a repo.** (It’s not always there yet, but that’s the intent.) :contentReference[oaicite:8]{index=8}  
+- **Time-to-value is the main event.** It’s aimed at “useful fast” automation, not “build a platform first.”   
+- **Workflow-first orientation.** The point is plugging into tools, routines, and integrations that already exist in your life.  
+- **It’s trying to feel like a product, not just a repo.** (It’s not always there yet, but that’s the intent.)  
 
 ### Why people complain (and they do)
-Local agents tend to fail in the most annoying way possible: not with a dramatic explosion—more like a slow drip of friction. People talk about setup effort, token burn, and the general “cool demo, now make it work on Tuesday” problem. Even Hacker News has the classic “any real users?” vibe, which is a polite way of saying *I want receipts, not vibes*. :contentReference[oaicite:9]{index=9}  
+Local agents tend to fail in the most annoying way possible: not with a dramatic explosion—more like a slow drip of friction. People talk about setup effort, token burn, and the general “cool demo, now make it work on Tuesday” problem. Even Hacker News has the classic “any real users?” vibe, which is a polite way of saying *I want receipts, not vibes*.  
 
-UX folks also call out the cognitive friction: CLI-isms (`cd`, `ls`, `docker-compose`) are normal to developers and pure pain to everyone else. :contentReference[oaicite:10]{index=10}  
+UX folks also call out the cognitive friction: CLI-isms (`cd`, `ls`, `docker-compose`) are normal to developers and pure pain to everyone else.  
 
 > **Translation:** OpenClaw is *very* capable, but “capable” and “comfortable” are not synonyms.
 
@@ -86,7 +86,7 @@ Because “local” doesn’t automatically mean “safe.” It just means “th
 
 ## Agent Zero: Linux-for-agents… aka “your AI assistant lives in a box like it’s on time-out”
 
-Agent Zero’s entire pitch is architectural: it runs in a **Docker-contained Linux environment** and expects you to deliberately map in what it can access. :contentReference[oaicite:11]{index=11}  
+Agent Zero’s entire pitch is architectural: it runs in a **Docker-contained Linux environment** and expects you to deliberately map in what it can access.   
 
 That sounds like a small detail until you’ve lived through the alternative.
 
@@ -139,7 +139,7 @@ Agent Zero’s transcript describes memory like an actual subsystem:
 
 That last part is huge: the dual-model setup (strong main model + cheap/fast utility model) is a cost-and-latency strategy, not just a feature flex.
 
-OpenClaw can do memory-heavy workflows too, and there’s active discussion in the ecosystem about its memory approach and extraction/implementation patterns. :contentReference[oaicite:12]{index=12}  
+OpenClaw can do memory-heavy workflows too, and there’s active discussion in the ecosystem about its memory approach and extraction/implementation patterns.   
 But Agent Zero (as described in the transcript you provided) treats memory like a first-class architectural pillar, not an accessory.
 
 ---
@@ -174,10 +174,10 @@ It’s not just powerful—it’s psychologically comforting.
 ## Name churn, UX friction, and community reality (the internet tells the truth loudly)
 
 A few grounded vibes from the public chatter:
-- Rename churn is real and widely noticed. :contentReference[oaicite:13]{index=13}  
-- People ask for real-world usage proof, not just “look at my lobster emoji.” :contentReference[oaicite:14]{index=14}  
-- UX critiques basically say: local agents are still early, and the learning curve is not imaginary. :contentReference[oaicite:15]{index=15}  
-- At the same time, some long-form user writeups describe OpenClaw as transformative *when it clicks*—which is a common pattern in early tooling: high ceiling, uneven onboarding. :contentReference[oaicite:16]{index=16}  
+- Rename churn is real and widely noticed.  
+- People ask for real-world usage proof, not just “look at my lobster emoji.”  
+- UX critiques basically say: local agents are still early, and the learning curve is not imaginary. 
+- At the same time, some long-form user writeups describe OpenClaw as transformative *when it clicks*—which is a common pattern in early tooling: high ceiling, uneven onboarding.  
 
 ---
 
@@ -189,13 +189,13 @@ This isn’t purely technical. This is choosing your preferred failure mode.
 You’ll like OpenClaw if:
 - you want **speed-to-utility**
 - you want a workflow agent that plugs into real tools and routines
-- you’re willing to implement guardrails because the agent lives close enough to trip over your real stuff :contentReference[oaicite:17]{index=17}  
+- you’re willing to implement guardrails because the agent lives close enough to trip over your real stuff  
 
 ### Choose Agent Zero if you want: “Give me isolation, modularity, and a platform”
 You’ll like Agent Zero if:
 - sandboxing by default feels like **basic sanity**
 - you like Docker workflows and explicit control
-- you want skills, sub-agents, and a system you can shape over time :contentReference[oaicite:18]{index=18}  
+- you want skills, sub-agents, and a system you can shape over time   
 
 ### The unsexy-but-true answer
 A lot of power users will end up doing both:
@@ -211,8 +211,8 @@ and the other is the wizard in the basement building plugins at 3am.
 
 OpenClaw and Agent Zero represent two honest answers to the same question: *How do we make AI actually do work?*
 
-- OpenClaw says: **put the agent near the action** so it can integrate and become useful fast. :contentReference[oaicite:19]{index=19}  
-- Agent Zero says: **put the agent in a sandbox** and make capabilities explicit so you can scale power without scaling regret. :contentReference[oaicite:20]{index=20}  
+- OpenClaw says: **put the agent near the action** so it can integrate and become useful fast.   
+- Agent Zero says: **put the agent in a sandbox** and make capabilities explicit so you can scale power without scaling regret.   
 
 Neither is universally “better.” They’re optimized for different humans.
 
