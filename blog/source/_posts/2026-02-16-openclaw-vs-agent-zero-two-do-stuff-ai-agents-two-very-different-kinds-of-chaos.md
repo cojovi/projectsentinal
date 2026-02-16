@@ -1,6 +1,6 @@
 ---
 title: "OpenClaw vs. Agent Zero: Two “Do Stuff” AI Agents, Two Very Different Kinds of Chaos"
-date: 2026-02-16 03:03:21
+date: 2026-02-12 03:03:21
 tags:
   - AI agents
   - OpenClaw
@@ -103,10 +103,12 @@ If you’ve ever been nervous about giving an agent terminal access on your real
 
 ## Tools vs Skills vs “why does this agent have a job title now?”
 
-Here’s where Agent Zero gets spicy (from your transcript):
+Here’s where Agent Zero gets spicy:
 
 ### Agent Zero’s Skills
 Agent Zero leans hard into **skills**: folders containing instruction files (and optionally scripts/assets) that the agent can load and use. This makes skills shareable and easy to create—especially because many skills are “mostly instructions,” not heavy tooling. (In the transcript, they even mention migrating from “instruments” to “skills” for compatibility with a wider ecosystem.)
+
+**Extra fun** you can command it to do some.... "hacker style" commands, and it will actually do it... do with that, what you will ...
 
 **What that means in practice:** if you want a reusable capability, you don’t always write a giant plugin—you write a skill, and the agent executes it via terminal access.
 
@@ -149,7 +151,7 @@ But Agent Zero (as described in the transcript you provided) treats memory like 
 This is one of the cleanest, most concrete differences from your transcript.
 
 - In many agent setups (including typical local agents), secrets hygiene is largely **your responsibility**: where keys live, what gets logged, and whether the model can accidentally print them.
-- Agent Zero’s approach (per your transcript) is: the agent uses placeholders, secrets get injected at runtime, and even if a secret would appear in output, it gets masked back—so the model never directly sees raw values.
+- Agent Zero’s approach is: the agent uses placeholders, secrets get injected at runtime, and even if a secret would appear in output, it gets masked back—so the model never directly sees raw values.
 
 **Translation:**  
 Agent Zero is built for people who have had the “oh no I just leaked a credential” experience at least once and would like to stop aging.
