@@ -347,6 +347,9 @@ aurora_bot:
 injects:
   head_begin:
     - |
+      <!-- RSS Feed autodiscovery -->
+      <link rel="alternate" type="application/rss+xml" title="Protocol Sentinel" href="/rss.xml">
+    - |
       <!-- Favicon Links -->
       <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
       <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
@@ -373,6 +376,10 @@ injects:
 #! Footer links
 #! ---------------------------------------------------------------
 footer_links:
+  - title: Feed
+    links:
+      - title: RSS
+        url: /rss.xml
   - title: Pish Posh
     links:
       - title: Protocol Sentinel
