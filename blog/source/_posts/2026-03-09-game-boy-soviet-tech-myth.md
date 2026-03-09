@@ -11,6 +11,7 @@ tags:
   - Espionage
   - Retro Tech
   - Disinformation
+feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/protocolsentinel_logos/gameboy-espionage.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/protocolsentinel_logos/gameboy-espionage.png?raw=true
 og_image: https://github.com/cojovi/projectsentinal/blob/main/protocolsentinel_logos/gameboy-espionage.png?raw=true

@@ -9,7 +9,7 @@ tags:
   - death hoax
 categories:
   - Media
-feature: true
+feature: false
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/is-bob-joyce-secretly-elvis-the-conspiracy-theory-.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true
 og_image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true
