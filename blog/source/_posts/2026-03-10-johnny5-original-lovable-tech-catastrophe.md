@@ -1,6 +1,6 @@
 ---
 title: "Johnny 5 Was the Prototype Lovable Tech Catastrophe"
-date: 2026-03-10 01:25:00
+date: 2026-01-19 01:25:00
 categories:
   - AI
   - Culture
