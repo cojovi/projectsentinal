@@ -160,3 +160,27 @@ When creating Protocol Sentinel posts, only add the markdown in `blog/source/_po
 - See Also: 
 
 ---
+
+## [LRN-20260309-002] correction
+
+**Logged**: 2026-03-09T19:10:00-05:00
+**Priority**: high
+**Status**: pending
+**Area**: docs
+
+### Summary
+Protocol Sentinel posts must never mention that their premise came from a social reel or other seed link; treat the idea as standalone editorial content.
+
+### Details
+When Cody shares a reel link, he’s handing me a premise, not asking for meta-commentary. I referenced the reel explicitly multiple times (“TL;DR: An Instagram reel claims…”) which violates the site’s voice and breaks immersion.
+
+### Suggested Action
+For future posts sourced from short-form clips, absorb the sentiment, verify facts independently, and write an article that stands on its own with zero mention of reels, shorts, or other seed sources. Reference only the rumor/claim itself if needed.
+
+### Metadata
+- Source: user_feedback
+- Related Files: blog/source/_posts
+- Tags: protocol-sentinel, editorial
+- See Also: LRN-20260309-001
+
+---
