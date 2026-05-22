@@ -58,8 +58,9 @@ menu:
   Landing:
     name: 'Friend Links'
     i18n:
+      en: 'Friend Links'
+      cn: '友链'
     path: '/links'
-    en: 'friend-links'
 
 #! ---------------------------------------------------------------
 #! Theme Config
