@@ -53,15 +53,13 @@ authors:
 #! ---------------------------------------------------------------
 menu:
   About: true
-  Tags: false
+  Tags: true
   Archives: true
-  Friends: false
-  Links: false
   Landing:
-    name: 'Topics'
+    name: 'Friend Links'
     i18n:
-    path: '/topics'
-    en: 'topics'
+    path: '/links'
+    en: 'friend-links'
 
 #! ---------------------------------------------------------------
 #! Theme Config
