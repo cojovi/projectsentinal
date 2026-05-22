@@ -1,13 +1,11 @@
 ---
 title: Why Learning Rust Is the Power Move
-tags:
-  - programming
-  - tech
-id: '709'
 categories:
-  - - coding
-  - - News
-  - - Tech Stuff
+- Devices & Experiments
+tags:
+- programming
+- tech
+id: '709'
 date: 2023-09-15 01:53:29
 cover: http://techdonecheap.com/blog/wp-content/uploads/2023/09/introduction-to-rust-programming-language_art-board-1.jpg
 ---

@@ -1,9 +1,10 @@
 ---
 title: Drones and Disbelief. The Great Aerial Mystery
 date: 2024-12-29
+categories:
+- Signal vs Noise
 tags: drones, sightings, government, conspiracy, social-media
-categories: Technology, Current Events
-feature: yes
+feature: true
 cover: https://github.com/cojovi/stargazerproject/blob/main/test/drone0.webp?raw=true
 ---
 

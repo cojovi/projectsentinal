@@ -1,10 +1,9 @@
 ---
 title: OpenAI Unveils Free Voice Feature for ChatGPT Amidst Leadership Tumult
 date: 2023-11-23 16:33:14
-tags: tech
 categories:
-  - - News
-  - - Tech Stuff
+- AI & Models
+tags: tech
 ---
 
 It seems like OpenAI is not only breaking new grounds in AI but also in humor! In a delightful twist, amidst the rollercoaster of executive shake-ups, they've rolled out a nifty new feature for ChatGPT – and it's free! Yes, you read that right. The voice feature, previously a premium perk, is now available to all ChatGPT users at no cost. 

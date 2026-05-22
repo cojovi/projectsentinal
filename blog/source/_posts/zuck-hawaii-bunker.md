@@ -2,8 +2,9 @@
 title: Mark Zuckerberg's $100M Hawaiian Hideaway Bunker Included
 feature: true
 date: 2023-12-17 18:40:49
+categories:
+- Big Tech & Platforms
 tags: news
-categories: tech
 cover: https://i.imgur.com/eZhIhue.jpg
 ---
 # **Mark Zuckerberg's $100M Hawaiian Hideaway: Bunker Included**

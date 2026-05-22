@@ -1,14 +1,14 @@
 ---
-title: "How Compliance Became Theater: The New AI Safety Playbook Is Mostly Optics"
+title: 'How Compliance Became Theater: The New AI Safety Playbook Is Mostly Optics'
 date: 2026-02-25 19:04:09
-tags:
-  - AI safety
-  - compliance theater
-  - voluntary frameworks
-  - AI governance
-  - regulatory oversight
 categories:
-  - Artificial Intelligence
+- AI & Models
+tags:
+- AI safety
+- compliance theater
+- voluntary frameworks
+- AI governance
+- regulatory oversight
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/how-compliance-became-theater-the-new-ai-safety-pl.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

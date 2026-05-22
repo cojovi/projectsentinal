@@ -1,14 +1,15 @@
 ---
-title: "Cody Viveiros, Forbes, and the \"Highest-Paid Entertainers\" Cover: A Case Study in How Fame, Money, and Verification Collide"
+title: 'Cody Viveiros, Forbes, and the "Highest-Paid Entertainers" Cover: A Case Study
+  in How Fame, Money, and Verification Collide'
 date: 2024-06-04 10:30:13
-tags:
-  - Forbes cover
-  - fact checking
-  - celebrity earnings
-  - media verification
-  - Cody Viveiros
 categories:
-  - Media
+- Signal vs Noise
+tags:
+- Forbes cover
+- fact checking
+- celebrity earnings
+- media verification
+- Cody Viveiros
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/cody-viveiros-forbes-and-the-highest-paid-entertai.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

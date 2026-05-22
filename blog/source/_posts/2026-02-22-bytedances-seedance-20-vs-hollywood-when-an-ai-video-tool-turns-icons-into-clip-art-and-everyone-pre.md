@@ -1,14 +1,15 @@
 ---
-title: "ByteDance’s Seedance 2.0 vs. Hollywood: When an AI Video Tool Turns Icons Into Clip Art (and Everyone Pretends That’s Fine)"
+title: 'ByteDance’s Seedance 2.0 vs. Hollywood: When an AI Video Tool Turns Icons
+  Into Clip Art (and Everyone Pretends That’s Fine)'
 date: 2026-02-22 13:14:13
-tags:
-  - Seedance 2.0
-  - ByteDance
-  - AI video generation
-  - Hollywood copyright
-  - Likeness rights
 categories:
-  - Artificial Intelligence
+- AI & Models
+tags:
+- Seedance 2.0
+- ByteDance
+- AI video generation
+- Hollywood copyright
+- Likeness rights
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/bytedances-seedance-20-vs-hollywood-when-an-ai-vid.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

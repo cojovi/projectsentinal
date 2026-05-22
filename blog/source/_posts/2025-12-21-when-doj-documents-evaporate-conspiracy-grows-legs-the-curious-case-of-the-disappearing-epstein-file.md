@@ -1,14 +1,15 @@
 ---
-title: "When DOJ Documents Evaporate, Conspiracy Grows Legs: The Curious Case of the Disappearing Epstein Files"
+title: 'When DOJ Documents Evaporate, Conspiracy Grows Legs: The Curious Case of the
+  Disappearing Epstein Files'
 date: 2025-12-21 16:41:18
-tags:
-  - DOJ documents
-  - Epstein files
-  - government transparency
-  - conspiracy theories
-  - online speculation
 categories:
-  - Politics
+- Privacy & Power
+tags:
+- DOJ documents
+- Epstein files
+- government transparency
+- conspiracy theories
+- online speculation
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/when-doj-documents-evaporate-conspiracy-grows-legs.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

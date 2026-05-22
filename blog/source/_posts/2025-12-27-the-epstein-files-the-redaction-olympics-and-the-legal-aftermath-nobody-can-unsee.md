@@ -1,14 +1,15 @@
 ---
-title: "The Epstein Files, the Redaction Olympics, and the Legal Aftermath Nobody Can Unsee"
+title: The Epstein Files, the Redaction Olympics, and the Legal Aftermath Nobody Can
+  Unsee
 date: 2025-12-27 01:18:17
-tags:
-  - Epstein files
-  - DOJ redactions
-  - government transparency
-  - political backlash
-  - Trump references
 categories:
-  - Politics
+- Privacy & Power
+tags:
+- Epstein files
+- DOJ redactions
+- government transparency
+- political backlash
+- Trump references
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/the-epstein-files-the-redaction-olympics-and-the-l.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

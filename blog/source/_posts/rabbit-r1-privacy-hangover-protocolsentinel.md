@@ -1,6 +1,8 @@
 ---
 title: Rabbit R1 Hype Reality and the Privacy Hangover
 date: 2025-12-23 12:00:00
+categories:
+- Privacy & Power
 tags: ai
 catagories: ai
 feature: true

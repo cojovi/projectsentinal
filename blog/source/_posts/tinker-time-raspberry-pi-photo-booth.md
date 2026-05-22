@@ -1,12 +1,12 @@
 ---
 title: Tinker Time - Raspberry Pi Photo Booth
-tags:
-  - DIY
-  - home
-  - tech
-id: '396'
 categories:
-  - - Tech Stuff
+- Devices & Experiments
+tags:
+- DIY
+- home
+- tech
+id: '396'
 date: 2022-12-20 22:13:42
 cover: https://techdonecheap.files.wordpress.com/2023/04/61bba-img_0348.jpg
 ---

@@ -1,14 +1,15 @@
 ---
-title: "Moltbook: The AI-Only Social Network Where Bots Plot Your Doom (Or Just Complain About You)"
+title: 'Moltbook: The AI-Only Social Network Where Bots Plot Your Doom (Or Just Complain
+  About You)'
 date: 2026-02-02 12:05:00
-tags:
-  - Artificial Intelligence
-  - Social Media
-  - Technology
-  - Singularity
-  - AI Agents
 categories:
-  - Artificial Intelligence
+- AI & Models
+tags:
+- Artificial Intelligence
+- Social Media
+- Technology
+- Singularity
+- AI Agents
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/moltbook-ai-only-social-network.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

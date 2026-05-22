@@ -1,19 +1,19 @@
 ---
 title: "Minnesota’s Fraud Iceberg: How Nick Shirley’s Viral Investigation Lit a Fire Under the System"
 date: 2026-01-01 01:30:23
-tags:
-- government-fraud
-- accountability
-- investigation
-- Address change
-- Politics
 categories:
-- Politics
+  - Privacy & Power
+tags:
+  - government-fraud
+  - accountability
+  - investigation
+  - Address change
+  - Politics
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/nick_hero.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true
 og_image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true
-excerpt: "If you’ve been paying attention, you already know the basic outline: a 23-year-old independent YouTuber goes to Minneapolis, points his camera at a handful of state-funded child care sites that look “closed” or “empty,” asks uncomfortable questions, and within days the entire country is arguing about fraud, immigration, and whether legacy media has lost the plot."
+excerpt: "If you’ve been paying attention, you already know the basic outline: a 23-year-old independent YouTuber goes to Minneapolis, points his camera at a handful of state-funded child care sites that look “closed” or “empty”, asks uncomfortable questions, and within days the entire country is arguing about fraud, immigration, and whether legacy media has lost the plot."
 ---
 
 If you’ve been paying attention, you already know the basic outline: a 23-year-old independent YouTuber goes to Minneapolis, points his camera at a handful of state-funded child care sites that look “closed” or “empty,” asks uncomfortable questions, and within days the entire country is arguing about fraud, immigration, and whether legacy media has lost the plot. ([WUNC][1])

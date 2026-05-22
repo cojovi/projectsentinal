@@ -1,14 +1,15 @@
 ---
-title: "Greenland, Again: Trump’s Advisers Float “Acquisition” Options, and Everyone Else Tries Not to Scream"
+title: 'Greenland, Again: Trump’s Advisers Float “Acquisition” Options, and Everyone
+  Else Tries Not to Scream'
 date: 2026-01-06 22:38:39
-tags:
-  - Greenland
-  - Trump advisers
-  - US acquisition
-  - Denmark
-  - Arctic strategy
 categories:
-  - US Foreign Policy
+- Privacy & Power
+tags:
+- Greenland
+- Trump advisers
+- US acquisition
+- Denmark
+- Arctic strategy
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/greenland-again-trumps-advisers-float-acquisition-.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

@@ -2,13 +2,14 @@
 title: Wyze Smart Watch 47mm - A Comprehensive Review
 feature: false
 date: 2023-12-06 10:01:19
-tags:
-  - tech
-  - smart
-  - amazon
-  - comfort
-  - smart home
 categories:
+- Devices & Experiments
+tags:
+- tech
+- smart
+- amazon
+- comfort
+- smart home
 cover: https://i.imgur.com/uWf9xfk.png
 ---
 

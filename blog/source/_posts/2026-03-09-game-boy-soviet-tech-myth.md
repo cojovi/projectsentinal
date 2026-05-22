@@ -1,15 +1,14 @@
 ---
-title: "Did Nintendo Steal the Game Boy From Soviet Military Labs? A Reality Check on a Favorite Myth"
+title: Did Nintendo Steal the Game Boy From Soviet Military Labs? A Reality Check
+  on a Favorite Myth
 date: 2026-03-09 18:20:00
 categories:
-  - Geopolitics/Aviation
-  - Business
-  - Culture
+- Signal vs Noise
 tags:
-  - Nintendo
-  - Espionage
-  - Retro Tech
-  - Disinformation
+- Nintendo
+- Espionage
+- Retro Tech
+- Disinformation
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/protocolsentinel_logos/gameboy-espionage.png?raw=true
 image: https://github.com/cojovi/projectsentinal_logos/gameboy-espionage.png?raw=true

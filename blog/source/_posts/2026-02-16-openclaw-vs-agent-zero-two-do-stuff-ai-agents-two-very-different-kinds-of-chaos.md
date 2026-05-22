@@ -1,14 +1,15 @@
 ---
-title: "OpenClaw vs. Agent Zero: Two “Do Stuff” AI Agents, Two Very Different Kinds of Chaos"
+title: 'OpenClaw vs. Agent Zero: Two “Do Stuff” AI Agents, Two Very Different Kinds
+  of Chaos'
 date: 2026-02-12 03:03:21
-tags:
-  - AI agents
-  - OpenClaw
-  - Agent Zero
-  - local automation
-  - Docker sandboxing
 categories:
-  - Artificial Intelligence
+- AI & Models
+tags:
+- AI agents
+- OpenClaw
+- Agent Zero
+- local automation
+- Docker sandboxing
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/openclaw-vs-agent-zero-two-do-stuff-ai-agents-two-.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

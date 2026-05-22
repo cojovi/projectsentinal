@@ -1,7 +1,9 @@
 ---
-title: OpenAI’s New Pro Tier - A Disappointment at Ten Times the Price 
+title: OpenAI’s New Pro Tier - A Disappointment at Ten Times the Price
 feature: true
 date: 2024-12-18 12:31:52
+categories:
+- AI & Models
 tags:
 - OpenAI
 - AI
@@ -9,7 +11,6 @@ tags:
 - SaaS
 - Pricing
 - Developer Tools
-categories: ai
 cover: https://github.com/cojovi/stargazerproject/blob/main/test/blog.png?raw=true
 ---
 

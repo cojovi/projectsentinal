@@ -1,14 +1,15 @@
 ---
-title: "SNL’s Christmas “Joke Swap” Blindsides Colin Jost (Again): The Annual Ritual Where HR Would Die Instantly"
+title: 'SNL’s Christmas “Joke Swap” Blindsides Colin Jost (Again): The Annual Ritual
+  Where HR Would Die Instantly'
 date: 2025-12-21 19:34:06
-tags:
-  - Saturday Night Live
-  - Weekend Update
-  - joke swap
-  - Colin Jost
-  - Michael Che
 categories:
-  - Media
+- Signal vs Noise
+tags:
+- Saturday Night Live
+- Weekend Update
+- joke swap
+- Colin Jost
+- Michael Che
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/snls-christmas-joke-swap-blindsides-colin-jost-aga.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

@@ -4,16 +4,16 @@
 
 # Site
 title: Protocol Sentinel
-subtitle: 'We Blog, We Talk, Be Share!'
-description: 'Tech, Software, Coding, Builds'
+subtitle: 'Opinionated coverage of AI, big tech, privacy, platforms, devices, and internet culture'
+description: 'Opinionated coverage of AI, big tech, privacy, platforms, devices, and internet culture.'
 keywords:
-author: Digital Predator
+author: Protocol Sentinel
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://www.protocolsentinel.com
+url: https://protocolsentinel.com
 permalink: /post/:title.html
 permalink_defaults:
 pretty_urls:

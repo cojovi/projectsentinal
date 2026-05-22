@@ -1,15 +1,16 @@
 ---
-title: "OpenClaw v2026.2.17–v2026.2.19: Security Hardening, Wrist-Mode Control, and Agents Having Agents"
+title: 'OpenClaw v2026.2.17–v2026.2.19: Security Hardening, Wrist-Mode Control, and
+  Agents Having Agents'
 date: 2026-02-22 04:00:00
-tags:
-  - OpenClaw
-  - AI agents
-  - Apple Watch
-  - Telegram streaming
-  - Discord Components
-  - device hygiene
 categories:
-  - Artificial Intelligence
+- AI & Models
+tags:
+- OpenClaw
+- AI agents
+- Apple Watch
+- Telegram streaming
+- Discord Components
+- device hygiene
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/openclaw-v2026217v2026219-security-hardening-wrist-mode-control-and-agents-having-agents-because-of-.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

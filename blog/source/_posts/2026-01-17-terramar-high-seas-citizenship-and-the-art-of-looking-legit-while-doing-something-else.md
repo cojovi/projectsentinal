@@ -1,14 +1,15 @@
 ---
-title: "TerraMar, “High Seas Citizenship,” and the Art of Looking Legit While Doing Something Else"
+title: TerraMar, “High Seas Citizenship,” and the Art of Looking Legit While Doing
+  Something Else
 date: 2026-01-17 04:52:25
-tags:
-  - TerraMar Project
-  - Ghislaine Maxwell
-  - high seas
-  - ocean conservation
-  - nonprofit scrutiny
 categories:
-  - Current Events
+- Privacy & Power
+tags:
+- TerraMar Project
+- Ghislaine Maxwell
+- high seas
+- ocean conservation
+- nonprofit scrutiny
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/terramar-high-seas-citizenship-and-the-art-of-look.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

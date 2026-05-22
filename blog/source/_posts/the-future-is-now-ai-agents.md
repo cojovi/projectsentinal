@@ -1,31 +1,29 @@
 ---
-title: "The Future is Now (and It's Building Your Slack): Why AI Agents Are About to Change Everything!"
+title: 'The Future is Now (and It''s Building Your Slack): Why AI Agents Are About
+  to Change Everything!'
 date: 2025-10-08 01:10:15
-tags:
-  - AI Agents
-  - Autonomous AI
-  - Claude 4.5
-  - ChatGPT Pulse
-  - AI PCs
-  - Machine Learning
-  - Deep Learning
-  - Ethical AI
-  - AI History
-  - Future of AI
-  - Anthropic
-  - OpenAI
-  - Intel
-  - NVIDIA
-  - Goodhart's Law
-  - Slack
-  - Software Development
 categories:
-  - Artificial Intelligence
-  - Technology
-  - Future
-  - Business
+- AI & Models
+tags:
+- AI Agents
+- Autonomous AI
+- Claude 4.5
+- ChatGPT Pulse
+- AI PCs
+- Machine Learning
+- Deep Learning
+- Ethical AI
+- AI History
+- Future of AI
+- Anthropic
+- OpenAI
+- Intel
+- NVIDIA
+- Goodhart's Law
+- Slack
+- Software Development
 feature: true
-cover: https://github.com/cojovi/projectsentinal/blob/main/test/ai1.png?raw=true 
+cover: https://github.com/cojovi/projectsentinal/blob/main/test/ai1.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true
 og_image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true
 ---

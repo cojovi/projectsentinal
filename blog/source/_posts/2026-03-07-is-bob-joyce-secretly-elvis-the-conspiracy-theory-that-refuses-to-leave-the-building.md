@@ -1,14 +1,15 @@
 ---
-title: "Is Bob Joyce Secretly Elvis? The Conspiracy Theory That Refuses to Leave the Building"
+title: Is Bob Joyce Secretly Elvis? The Conspiracy Theory That Refuses to Leave the
+  Building
 date: 2026-03-07 01:21:00
-tags:
-  - Elvis Presley
-  - Bob Joyce
-  - conspiracy theory
-  - celebrity rumors
-  - death hoax
 categories:
-  - Media
+- Signal vs Noise
+tags:
+- Elvis Presley
+- Bob Joyce
+- conspiracy theory
+- celebrity rumors
+- death hoax
 feature: false
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/is-bob-joyce-secretly-elvis-the-conspiracy-theory-.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

@@ -2,8 +2,9 @@
 title: Mysterious AI Breakthrough Known As Q*
 feature: false
 date: 2023-11-28 11:48:19
-tags:
 categories:
+- AI & Models
+tags: null
 cover: https://i.imgur.com/3kwmXBB.png
 ---
 

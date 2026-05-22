@@ -1,6 +1,8 @@
 ---
 title: OK, so ChatGPT just debugged my code. For real
 date: 2023-10-05 01:58:55
+categories:
+- AI & Models
 tags: tech
 cover: https://i.imgur.com/MtYXUQn.jpg
 ---

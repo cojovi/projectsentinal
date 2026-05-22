@@ -1,14 +1,15 @@
 ---
-title: "From Sitcom to Statecraft: How Zelensky Turned a TV Script into Ukraine’s Biggest Plot Twist"
+title: 'From Sitcom to Statecraft: How Zelensky Turned a TV Script into Ukraine’s
+  Biggest Plot Twist'
 date: 2025-12-26 02:34:48
-tags:
-  - Volodymyr Zelensky
-  - Ukraine politics
-  - political satire
-  - media influence
-  - anti-corruption
 categories:
-  - Politics
+- Privacy & Power
+tags:
+- Volodymyr Zelensky
+- Ukraine politics
+- political satire
+- media influence
+- anti-corruption
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/from-sitcom-to-statecraft-how-zelensky-turned-a-tv.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

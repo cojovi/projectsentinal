@@ -1,8 +1,16 @@
 ---
-title: "The AI Olympics: Will Enhanced Digital Coaches Engineer the Next Generation of Superhuman Records?"
-date: "2024-12-15"
-tags: ["AI", "Sports", "Enhanced Games", "Athletics", "Conspiracy", "Human Augmentation"]
-categories: ["Technology", "Sports", "Conspiracy"]
+title: 'The AI Olympics: Will Enhanced Digital Coaches Engineer the Next Generation
+  of Superhuman Records?'
+date: '2024-12-15'
+categories:
+- AI & Models
+tags:
+- AI
+- Sports
+- Enhanced Games
+- Athletics
+- Conspiracy
+- Human Augmentation
 cover: https://github.com/cojovi/stargazerproject/blob/main/test/starblog_banner.png?raw=true
 ---
 

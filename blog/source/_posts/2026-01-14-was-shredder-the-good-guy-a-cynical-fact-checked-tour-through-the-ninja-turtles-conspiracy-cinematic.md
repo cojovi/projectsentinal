@@ -1,14 +1,15 @@
 ---
-title: "Was Shredder the Good Guy? A Cynical, Fact-Checked Tour Through the Ninja Turtles Conspiracy Cinematic Universe"
+title: Was Shredder the Good Guy? A Cynical, Fact-Checked Tour Through the Ninja Turtles
+  Conspiracy Cinematic Universe
 date: 2026-01-14 07:37:49
-tags:
-  - Teenage Mutant Ninja Turtles
-  - Shredder
-  - conspiracy theories
-  - media manipulation
-  - pop culture analysis
 categories:
-  - Media
+- Signal vs Noise
+tags:
+- Teenage Mutant Ninja Turtles
+- Shredder
+- conspiracy theories
+- media manipulation
+- pop culture analysis
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/was-shredder-the-good-guy-a-cynical-fact-checked-t.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

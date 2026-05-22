@@ -1,14 +1,15 @@
 ---
-title: "Waymo, Remote Help, and the Viral Prison-Driver Myth: Here’s What’s Actually Steering the Car (Spoiler: Not a Guy in a Jumpsuit)"
+title: 'Waymo, Remote Help, and the Viral Prison-Driver Myth: Here’s What’s Actually
+  Steering the Car (Spoiler: Not a Guy in a Jumpsuit)'
 date: 2026-01-24 05:40:20
-tags:
-  - Waymo
-  - robotaxis
-  - remote assistance
-  - autonomous vehicles
-  - viral misinformation
 categories:
-  - Artificial Intelligence
+- Big Tech & Platforms
+tags:
+- Waymo
+- robotaxis
+- remote assistance
+- autonomous vehicles
+- viral misinformation
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/waymo-remote-help-and-the-viral-prison-driver-myth.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

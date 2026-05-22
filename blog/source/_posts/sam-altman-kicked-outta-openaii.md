@@ -1,11 +1,10 @@
 ---
 title: Sam Altman's Departure from OpenAI - A Turning Point in AI's Journey
 date: 2023-11-21 18:20:57
+categories:
+- AI & Models
 tags: tech
 id: '754'
-categories:
-  - - News
-  - - Tech Stuff
 cover: https://compote.slate.com/images/131badd7-e589-4d26-a638-1ea2ee2de79a.jpeg?crop=1560%2C1040%2Cx0%2Cy0
 feature: true
 ---

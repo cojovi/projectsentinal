@@ -1,14 +1,15 @@
 ---
-title: "From Lone Chatbots to AI Swarms: How Multi‑Agent Systems and Domain‑Specific Models Are Quietly Replacing Your “One Bot to Rule Them All” Fantasy"
+title: 'From Lone Chatbots to AI Swarms: How Multi‑Agent Systems and Domain‑Specific
+  Models Are Quietly Replacing Your “One Bot to Rule Them All” Fantasy'
 date: 2026-02-21 00:03:56
-tags:
-  - multi-agent systems
-  - AI swarms
-  - domain-specific models
-  - vertical AI
-  - healthcare AI
 categories:
-  - Artificial Intelligence
+- AI & Models
+tags:
+- multi-agent systems
+- AI swarms
+- domain-specific models
+- vertical AI
+- healthcare AI
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/from-lone-chatbots-to-ai-swarms-how-multiagent-sys.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

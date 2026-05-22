@@ -1,13 +1,12 @@
 ---
 title: 'Tinker Time : Motorized TV Mount built from scraps'
-tags:
-  - DIY
-  - Fancy
-  - tech
-id: '517'
 categories:
-  - - home automation
-  - - Tech Stuff
+- Devices & Experiments
+tags:
+- DIY
+- Fancy
+- tech
+id: '517'
 date: 2023-03-25 14:47:06
 cover: https://i.imgur.com/dTjXkv6.png
 ---

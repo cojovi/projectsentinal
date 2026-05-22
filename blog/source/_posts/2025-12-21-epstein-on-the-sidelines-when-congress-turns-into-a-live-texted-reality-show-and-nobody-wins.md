@@ -1,14 +1,15 @@
 ---
-title: "Epstein on the Sidelines: When Congress Turns Into a Live-Texted Reality Show (and Nobody Wins)"
+title: 'Epstein on the Sidelines: When Congress Turns Into a Live-Texted Reality Show
+  (and Nobody Wins)'
 date: 2025-12-21 11:28:33
-tags:
-  - Congress
-  - Jeffrey Epstein
-  - hearing footage
-  - political influence
-  - text messages
 categories:
-  - Politics
+- Privacy & Power
+tags:
+- Congress
+- Jeffrey Epstein
+- hearing footage
+- political influence
+- text messages
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/epstein-on-the-sidelines-when-congress-turns-into-.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

@@ -1,14 +1,15 @@
 ---
-title: "Texas Hit “Update” on January 1, 2026: New AI Rules, Faster Evictions, ICE Partnerships, and a Tax Break That Actually Matters"
+title: 'Texas Hit “Update” on January 1, 2026: New AI Rules, Faster Evictions, ICE
+  Partnerships, and a Tax Break That Actually Matters'
 date: 2026-01-03 02:39:10
-tags:
-  - Texas laws 2026
-  - AI governance
-  - eviction rules
-  - ICE 287(g)
-  - property tax break
 categories:
-  - Politics
+- Privacy & Power
+tags:
+- Texas laws 2026
+- AI governance
+- eviction rules
+- ICE 287(g)
+- property tax break
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/texas-hit-update-on-january-1-2026-new-ai-rules-fa.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

@@ -1,14 +1,14 @@
 ---
-title: "The Spam Folder Defense: How a Court Said Continued App Use Means You Agreed"
+title: 'The Spam Folder Defense: How a Court Said Continued App Use Means You Agreed'
 date: 2026-03-09 11:45:00
 categories:
-  - Business
+- Privacy & Power
 tags:
-  - Terms of Service
-  - Tile
-  - Digital Consent
-  - Surveillance
-  - Arbitration
+- Terms of Service
+- Tile
+- Digital Consent
+- Surveillance
+- Arbitration
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

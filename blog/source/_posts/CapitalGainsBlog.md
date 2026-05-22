@@ -1,14 +1,16 @@
 ---
-title: Capitol Gains — Why Banning Congressional Stock Trading Became Washington's Hottest Fight
+title: Capitol Gains — Why Banning Congressional Stock Trading Became Washington's
+  Hottest Fight
 feature: true
 date: 2025-08-02 12:00:00
+categories:
+- Privacy & Power
 tags:
 - Politics
 - Ethics
 - Finance
 - Congress
 - Stock Trading Ban
-categories: politics
 cover: https://live.staticflickr.com/65535/54760071283_509da049f9.jpg
 ---
 

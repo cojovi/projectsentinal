@@ -1,15 +1,16 @@
 ---
-title: "Occult Bloodlines, Podcast Mics & The C-I-A: What That Viral Theo Von/Tucker Carlson Video Actually Claims"
+title: 'Occult Bloodlines, Podcast Mics & The C-I-A: What That Viral Theo Von/Tucker
+  Carlson Video Actually Claims'
 date: 2025-09-08
-feature: yes
-tags:
-  - conspiracies
-  - media-literacy
-  - theo-von
-  - tucker-carlson
-  - occult-bloodlines
+feature: true
 categories:
-  - Culture
+- Signal vs Noise
+tags:
+- conspiracies
+- media-literacy
+- theo-von
+- tucker-carlson
+- occult-bloodlines
 cover: https://i.ticketweb.com/i/00/00/50/15/21/Original.jpg
 ---
 

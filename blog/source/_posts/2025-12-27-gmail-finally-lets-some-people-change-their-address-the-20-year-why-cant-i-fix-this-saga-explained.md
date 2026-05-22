@@ -1,14 +1,15 @@
 ---
-title: "Gmail Finally Lets (Some) People Change Their Address: The 20-Year “Why Can’t I Fix This?” Saga, Explained"
+title: 'Gmail Finally Lets (Some) People Change Their Address: The 20-Year “Why Can’t
+  I Fix This?” Saga, Explained'
 date: 2025-12-27 01:30:23
-tags:
-  - Gmail
-  - Google Accounts
-  - Email alias
-  - Address change
-  - Account identity
 categories:
-  - Technology
+- Big Tech & Platforms
+tags:
+- Gmail
+- Google Accounts
+- Email alias
+- Address change
+- Account identity
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/gmail-finally-lets-some-people-change-their-addres.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

@@ -1,9 +1,10 @@
 ---
 title: Area 51 A Nexus of Alien Conspiracy Theories
 date: 2024-01-29 01:58:55
+categories:
+- Signal vs Noise
 tags: Conspiracy
-categories: Conspiracy
-feature: yes
+feature: true
 cover: https://img.etimg.com/thumb/msid-70274163,width-640,height-480,imgsize-111488,resizemode-4/internet-reacts.jpg
 ---
 

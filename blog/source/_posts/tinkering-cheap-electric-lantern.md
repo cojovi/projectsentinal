@@ -1,16 +1,14 @@
 ---
 title: Tinkering - Cheap Electric Lantern
-tags:
-  - Decor
-  - DIY
-  - home
-  - home automation
-  - tech
-id: '350'
 categories:
-  - - Amazon Item Review
-  - - Tech Stuff
-  - - Wall Decor
+- Devices & Experiments
+tags:
+- Decor
+- DIY
+- home
+- home automation
+- tech
+id: '350'
 date: 2022-12-11 22:33:20
 cover: https://techdonecheap.files.wordpress.com/2023/04/cdbed-screen-shot-2022-12-11-at-10.20.14-pm.png
 ---

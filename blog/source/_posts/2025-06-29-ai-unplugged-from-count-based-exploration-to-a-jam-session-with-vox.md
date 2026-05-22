@@ -1,9 +1,10 @@
 ---
-title: "AI Unplugged: From Count-Based Exploration to a Jam Session with Vox"
+title: 'AI Unplugged: From Count-Based Exploration to a Jam Session with Vox'
 date: 2025-06-29
+categories:
+- AI & Models
 tags: AI, Deep Learning, Media Partnership
-categories: Technology, Innovation, Collaboration
-feature: yes
+feature: true
 cover: https://github.com/cojovi/stargazerproject/blob/main/test/ai_unplugged_main.png?raw=true
 ---
 

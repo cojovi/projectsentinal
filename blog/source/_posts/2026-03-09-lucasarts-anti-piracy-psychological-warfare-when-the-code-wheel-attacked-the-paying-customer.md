@@ -1,14 +1,15 @@
 ---
-title: "LucasArts’ Anti-Piracy “Psychological Warfare”: When the Code Wheel Attacked the Paying Customer"
+title: 'LucasArts’ Anti-Piracy “Psychological Warfare”: When the Code Wheel Attacked
+  the Paying Customer'
 date: 2026-03-09 16:26:34
-tags:
-  - LucasArts
-  - code wheels
-  - copy protection
-  - video game piracy
-  - adventure games
 categories:
-  - Tech Stuff
+- Signal vs Noise
+tags:
+- LucasArts
+- code wheels
+- copy protection
+- video game piracy
+- adventure games
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/lucasarts-anti-piracy-psychological-warfare-when-t.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true

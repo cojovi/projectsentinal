@@ -2,6 +2,8 @@
 title: Election Security A Rollercoaster of Drama and Suspense
 date: 2024-02-16 18:41:52
 cover: https://i.imgur.com/MtYXUQn.jpg
+categories:
+- Signal vs Noise
 ---
 
 Election Security: A Rollercoaster of Drama and Suspense

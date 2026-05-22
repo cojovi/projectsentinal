@@ -2,16 +2,17 @@
 title: Apple Releases iOS AI Model - A Game-Changer in Natural Language Processing
 feature: true
 date: 2024-04-25 22:31:52
+categories:
+- AI & Models
 tags:
-  - AI
-  - Apple
-  - iOS
-  - OpenSource
-  - TechStuff
-  - HuggingFace
-  - LLM
-  - OpenELM
-categories: ai
+- AI
+- Apple
+- iOS
+- OpenSource
+- TechStuff
+- HuggingFace
+- LLM
+- OpenELM
 cover: https://i.imgur.com/ifk8QYi.jpg
 ---
 

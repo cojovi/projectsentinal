@@ -1,8 +1,9 @@
 ---
 title: Conspiracy Theory Chronicles Part 1 Willy Wonka & Snowpiercer
 date: 2024-01-31 10:01:19
+categories:
+- Signal vs Noise
 tags: conspiracy
-categories: articles
 feature: true
 cover: https://external-preview.redd.it/niDKjkYr7t_GTeTfnN_TzKiT8fZSGAI6crJowsSXays.jpg?auto=webp&s=0b4ce2a2c575122d6ed86fab56344649bb1f9432
 ---

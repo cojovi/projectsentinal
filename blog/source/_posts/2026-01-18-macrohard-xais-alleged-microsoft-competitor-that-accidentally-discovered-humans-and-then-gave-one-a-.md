@@ -1,14 +1,15 @@
 ---
-title: "MacroHard: xAI’s Alleged “Microsoft Competitor” That Accidentally Discovered Humans (and Then Gave One a Trophy)"
+title: 'MacroHard: xAI’s Alleged “Microsoft Competitor” That Accidentally Discovered
+  Humans (and Then Gave One a Trophy)'
 date: 2026-01-18 01:49:19
-tags:
-  - xAI
-  - Elon Musk
-  - AI agents
-  - MacroHard
-  - open source award
 categories:
-  - Artificial Intelligence
+- AI & Models
+tags:
+- xAI
+- Elon Musk
+- AI agents
+- MacroHard
+- open source award
 feature: true
 cover: https://github.com/cojovi/projectsentinal/blob/main/test/macrohard-xais-alleged-microsoft-competitor-that-a.png?raw=true
 image: https://github.com/cojovi/projectsentinal/blob/main/test/ProtocolSentinelbanner.png?raw=true
