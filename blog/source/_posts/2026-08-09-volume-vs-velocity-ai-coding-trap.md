@@ -1,6 +1,6 @@
 ---
 title: "Volume Is Not Velocity: The AI Coding Trap"
-date: 2026-08-04 12:00:00
+date: 2026-08-09 12:00:00
 categories: [Signal vs Noise]
 tags: [ai, software engineering, productivity, development, automation]
 feature: true
