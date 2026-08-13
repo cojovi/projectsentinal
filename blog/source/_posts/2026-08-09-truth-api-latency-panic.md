@@ -1,5 +1,5 @@
 ---
-title: "The Truth API Panic: How TikTok Confused a Data Firehose With a Time Machine"
+title: "The Truth Social API Panic: How TikTok Confused a Data Firehose With a Time Machine"
 date: 2026-08-09 13:00:00
 categories: [Signal vs Noise]
 tags: [apis, truth social, data architecture, social media, hft]
