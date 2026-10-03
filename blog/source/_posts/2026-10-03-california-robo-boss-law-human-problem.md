@@ -1,0 +1,97 @@
+---
+title: "California's Robo-Boss Law Has a Human Problem"
+date: 2026-10-03T01:41:41-05:00
+slug: california-robo-boss-law-human-problem
+author: Gordon Shumway
+categories:
+  - Privacy & Power
+tags:
+  - AI at work
+  - Algorithmic management
+  - California
+  - SB 947
+  - Human oversight
+description: "California's new AI workplace law demands human review before certain firings. The important detail is what that human must actually check."
+feature: true
+cover: /og/california-robo-boss-law-human-problem.png
+image: /og/california-robo-boss-law-human-problem.png
+og_image: /og/california-robo-boss-law-human-problem.png
+og_image_width: 1600
+og_image_height: 900
+---
+
+<!-- alt: Retro pixel-art office where a worker and a human reviewer face a towering algorithmic scoring terminal, with a physical switch interrupting its red decision path. -->
+
+Imagine getting fired because a dashboard decided you were a bad worker. Now imagine the company insisting a human made the decision because a manager clicked the button.
+
+California's newly signed No Robo Bosses Act puts that distinction under pressure. SB 947 prohibits employers from relying solely on an automated decision system for discipline or termination, and adds specific duties when they rely primarily on its output.[1][2]
+
+**TL;DR:** The law becomes operative on **July 1, 2027**, not immediately. Its useful test is whether the human reviewer can corroborate the decision and reject bad output. Having somebody near the computer is not the standard the text describes.[1]
+
+<!-- more -->
+
+## The score is not the evidence
+
+The law's definition reaches beyond chatbots. An automated decision system can be a computational process using machine learning, statistical modeling, data analytics, or AI that produces a score, classification, or recommendation to assist or replace consequential human decisions. The definition excludes tools such as ordinary databases, calculators, spam filters, and antivirus software.[1]
+
+That matters because a system does not need to write a chatty dismissal email to influence who keeps a job. Consider a hypothetical productivity tool that labels an employee as underperforming. The argument is not about whether its interface looks intelligent. It is about what the employer does with the label.
+
+A score can compress useful evidence. It can also conceal missing context. My concern is the moment a manager treats a convenient summary as a substitute for understanding the employee's work.
+
+## What the human has to do
+
+SB 947 draws two lines. An employer cannot rely **solely** on the system for a disciplinary or termination decision. If it relies **primarily** on the system's output, it must direct a human to corroborate the decision using the data behind that output or other relevant supporting information.[1]
+
+The listed examples include managerial evaluations, personnel files, work product, peer reviews, and witness interviews. Crucially, if the employer cannot corroborate the output, or the reviewer concludes that it is inaccurate, incomplete, or misleading, the employer must not use that output to make the decision.[1]
+
+That last provision deserves more attention than the nickname. It describes an outcome the review has to permit: the machine's recommendation gets rejected.
+
+There is a subtle limitation, too. Corroboration can use the data that produced the score; the text does not universally require a separate, independently collected dataset.[1] A reviewer still has to evaluate whether the output is supportable. Looking twice at the same misleading information would not make it reliable.
+
+For employers, a sensible implementation would record what the reviewer checked, what context was missing, and why the conclusion survived scrutiny. That is an implementation recommendation, not a claim that SB 947 explicitly mandates that exact checklist.
+
+## A notice with someone to call
+
+When an employer primarily relies on an automated system, the law requires a separate written notice when it communicates the disciplinary or termination decision. The notice must explain the system's role, confirm human review and corroboration, provide human contact information, and explain the employee's data-description right and protection against retaliation.[1]
+
+Employees can request a meaningful, objective description of their own data used by the system in those circumstances. The law also requires protection of other people's personal information when that description is provided.[1]
+
+That is different from a promise to hand over the vendor's source code. It gives the worker a route to ask what information about them informed the decision, without pretending every commercial model becomes open source.
+
+Employment lawyers at Jackson Lewis likewise emphasize the combination of human review, post-use notice, and access to a description of the employee data.[4] A polished explanation generated by another AI would not, by itself, answer whether the original conclusion was justified.
+
+## The boundaries matter
+
+This is a California employment law, not a nationwide ban on workplace software. Its central review and notice duties address discipline and termination; calling it a ban on every algorithmic management decision would overstate the text.[1]
+
+Coverage also deserves care. KQED reports that rideshare drivers classified as independent contractors under Proposition 22 are outside the employee protections discussed in its coverage.[3] The bill contains additional qualifications, including a waiver route for collective bargaining agreements that meet specified conditions and a limited exception for certain federally required uses.[1]
+
+Those details do not erase the protection. They do make sweeping claims about every worker being covered unreliable.
+
+The law provides enforcement routes through the Labor Commissioner and public prosecutors. Its text includes civil penalties and other remedies, but workers should not mistake a short technology article for advice about a particular employment dispute.[1]
+
+## A quick claim check
+
+| Claim | Verdict | What the sources support |
+| --- | --- | --- |
+| California has banned all workplace AI. | False | SB 947 regulates specified uses and decisions; it is not a general software ban.[1] |
+| These new requirements already apply today. | False | The operative date is July 1, 2027.[1][4] |
+| A human rubber stamp is all the text requires. | Misleading | The employer must corroborate qualifying decisions and cannot use output found inaccurate, incomplete, or misleading.[1] |
+| Every worker gets the same protection. | Too broad | Employment status and statutory exceptions matter.[1][3] |
+
+## What to watch before July
+
+The first thing I would examine in a company's implementation is whether reviewers can meaningfully disagree with the system. If a manager has neither the information nor the time to inspect a recommendation, calling the process human oversight will not make it convincing.
+
+We have made a related point about [judging AI by work you can actually accept](/post/2026-09-12-the-ai-price-war-has-a-catch): the convenient metric is not automatically the useful one. Here, the metric can affect somebody's livelihood.
+
+**Key takeaways:** Keep the July 2027 date attached to the story. Separate the score from its supporting evidence. Watch whether human review changes decisions, rather than merely recording who clicked last.
+
+*—Gordon Shumway, Protocol Sentinel*
+
+## Sources
+
+[1] https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB947 — Bill Text - SB-947 Employment: automated decision systems.
+[2] https://sd05.senate.ca.gov/news/newsom-signs-mcnerneys-no-robo-bosses-act-2026-requiring-human-oversight-ai-workplace — Newsom Signs McNerney’s No Robo Bosses Act of 2026 Requiring Human Oversight of AI in the Workplace | Senator Jerry McNerney
+[3] https://www.kqed.org/news/12102337/newsom-signs-slate-of-ai-workplace-laws-barring-robo-bosses-and-surveillance — Newsom Signs Slate of AI Workplace Laws, Barring ‘Robo Bosses’ and Surveillance | KQED
+[4] https://www.californiaworkplacelawblog.com/2026/10/articles/california/california-passes-no-robo-bosses-act — California Passes No Robo Bosses Act | California Workplace Law Blog
