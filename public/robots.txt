@@ -1,0 +1,7 @@
+# robots.txt for Protocol Sentinel
+User-agent: *
+Allow: /
+
+Sitemap: https://protocolsentinel.com/sitemap.xml
+Sitemap: https://protocolsentinel.com/post-sitemap.xml
+Sitemap: https://protocolsentinel.com/rss.xml

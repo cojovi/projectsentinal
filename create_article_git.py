@@ -933,6 +933,20 @@ def push_to_github(filepath: Path, image_filepath: Path, title: str) -> bool:
             cwd=repo_root
         )
         print("✓ Pushed to GitHub successfully")
+
+        # Trigger search engine auto-indexing
+        post_slug = filepath.stem
+        article_url = f"https://protocolsentinel.com/post/{post_slug}.html"
+        print(f"\n📡 Notifying search engines for auto-indexing: {article_url}...")
+        try:
+            subprocess.run(["python3", "scripts/notify-google.py", article_url], cwd=repo_root, check=False)
+        except Exception as ge:
+            print(f"⚠️  Google notification note: {ge}")
+        try:
+            subprocess.run(["node", "scripts/notify-indexnow.js", article_url], cwd=repo_root, check=False)
+        except Exception as ie:
+            print(f"⚠️  IndexNow notification note: {ie}")
+
         return True
         
     except subprocess.CalledProcessError as e:
