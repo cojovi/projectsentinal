@@ -9,15 +9,15 @@
 #！ @docs https://aurora.tridiamond.tech/guide/configuration.html
 #! ---------------------------------------------------------------
 site:
-  subtitle: Opinionated coverage of AI, big tech, privacy, platforms, devices, and internet culture
+  subtitle: Protocol Sentinel
   author: Protocol Sentinel
   nick: Signal over noise.
-  description: Sharp, fact-checked coverage of AI, big tech, privacy, platforms, devices, and internet culture.
-  link: ''
+  description: Skeptical, source-aware analysis of AI, big tech, privacy, platforms, devices, and internet culture.
+  link: /authors/protocol-sentinel
   language: en
   multi_language: false
-  logo: https://github.com/cojovi/projectsentinal/blob/main/test/7.png?raw=true
-  avatar: https://github.com/cojovi/projectsentinal/blob/main/test/5.png?raw=true
+  logo: /brand/logo.png
+  avatar: /brand/avatar.png
   beian:
     number: ''
     link: ''
@@ -38,14 +38,18 @@ site:
 #！ @docs https://aurora.tridiamond.tech/guide/authors.html
 #! ---------------------------------------------------------------
 authors:
-  ##! example
-  # TriDiamond:
-     name: Tech Predator
-     avatar: https://github.com/cojovi/projectsentinal/blob/main/test/TechPredator_NoBG.png?raw=true
-     link: https://github.com/cojovi
-     description: 'watch carefully, listen more.'
-  #   socials:
-     github: https://github.com/cojovi
+  Protocol Sentinel:
+    name: Protocol Sentinel desk
+    slug: protocol-sentinel
+    avatar: /brand/avatar.png
+    link: /authors/protocol-sentinel
+    description: Publication desk; AI-assisted research and drafting, with limits disclosed in each article.
+  Cody Viveiros:
+    name: Cody Viveiros
+    slug: cody-viveiros
+    avatar: /brand/avatar.png
+    link: /authors/cody-viveiros
+    description: Owner of Protocol Sentinel and Northstar Ledger; ownership is not a historical review credit.
 
 #! ---------------------------------------------------------------
 #! Menu Configs
@@ -80,22 +84,7 @@ theme:
 #! @docs https://aurora.tridiamond.tech/guide/social.html
 #! ---------------------------------------------------------------
 socials:
-  customs:
-  ##! Example:
-  ##! --- Using SVG
-  # bilibili:
-     icon: iconfont-facebook
-     link: https://www.facebook.com/techdonecheap
-
-  ##! --- Using IconFont
-  # baidu:
-  #   icon: iconfont icon-baidu
-  #   link: https://live.bilibili.com/22619211
-
-  ##! --- Using FontAwesome
-  # book:
-  #   icon: far fa-address-book
-  #   link: https://live.bilibili.com/22619211
+  customs: {}
 
 #! ---------------------------------------------------------------
 #! Site Meta Configs
@@ -104,10 +93,10 @@ socials:
 site_meta:
   cdn: cn
   favicon: /favicon.ico
-  description: 'Sharp, fact-checked coverage of AI, big tech, privacy, platforms, devices, and internet culture.'
+  description: 'Skeptical, source-aware analysis of AI, big tech, privacy, platforms, devices, and internet culture.'
   keywords: 'AI, big tech, privacy, platforms, devices, internet culture, signal over noise'
-  author: 'Protocol Sentinel'
-  og_image: 'https://raw.githubusercontent.com/cojovi/projectsentinal/main/protocolsentinel_logos/OG_image_protocol.jpeg'
+  author: 'Protocol Sentinel desk'
+  og_image: '/brand/og.jpeg'
   og_image_width: 1200
   og_image_height: 630
 
@@ -128,7 +117,7 @@ site_meta:
 
 # For local development only!
 gitalk:
-  enable: true
+  enable: false
   autoExpand: true
   clientID: ''
   clientSecret: ''
@@ -187,7 +176,7 @@ busuanzi:
   enable: false
 
 copy_protection:
-  enable: true
+  enable: false
   author:
     cn: 作者
     en: Author
@@ -203,7 +192,7 @@ copy_protection:
 #! @docs https://aurora.tridiamond.tech/guide/site-meta.html#custom-meta
 #! ---------------------------------------------------------------
 aurora_bot:
-  enable: true
+  enable: false
   locale: en
   bot_type: dia
   tips:
@@ -375,24 +364,26 @@ injects:
 #! Footer links
 #! ---------------------------------------------------------------
 footer_links:
-  - title: Feed
+  - title: Read
     links:
-      - title: RSS
-        url: /rss.xml
-  - title: Pish Posh
+      - {title: Topics, url: /topics}
+      - {title: RSS, url: /rss.xml}
+      - {title: Archives, url: /archives}
+  - title: Publication
     links:
-      - title: Protocol Sentinel
-        url: www.protocolsentinel.com
-      - title: Visit Beefy
-        url: www.beefthroat.com
-      - title: Visit Cojovi
-        url: www.cojovi.com
-      - title: Friends # link of friends mode / 友链模式
-        mode: 'links'
+      - {title: About, url: /about}
+      - {title: Ownership, url: /ownership}
+      - {title: Editorial standards, url: /editorial-standards}
+      - {title: Corrections, url: /corrections}
+      - {title: Contact, url: /contact}
+      - {title: AI and media policy, url: /ai-media-policy}
+      - {title: Privacy, url: /privacy}
+      - {title: Terms, url: /terms}
+      - {title: Owner website, url: 'https://cojovi.com'}
 
 #! ---------------------------------------------------------------
 #! Highlighter Shiki
 #! ---------------------------------------------------------------
 shiki:
-  enable: true
+  enable: false
   backgroundColor: "#1a1a1a"

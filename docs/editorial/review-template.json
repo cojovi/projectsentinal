@@ -1,0 +1,11 @@
+{
+  "status": "source-review-pending",
+  "article_type": "analysis",
+  "source_sha256": "REPLACE_WITH_SHA256_OF_TRIMMED_MARKDOWN_BODY",
+  "reporting_cutoff": null,
+  "sources": [],
+  "unknowns": ["Source checks and claim review pending."],
+  "claims": [],
+  "corrections": [],
+  "sister_body_comparison": {"status":"pending","publication":"Northstar Ledger","method":"Local five-word shingle overlap plus editorial comparison; same-source accounts are not independent."}
+}

@@ -1,0 +1,40 @@
+{
+  "status": "documented",
+  "article_type": "correction",
+  "source_sha256": "086b0a34bc128838f5cef40b1778a8598e81bea51ef73e1aeafd600bac9f1477",
+  "checked_at": "2026-10-28T21:26:28.286Z",
+  "reporting_cutoff": "2026-10-28T21:26:28.286Z",
+  "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+  "review_process": {
+    "agent": "Codex (AI-assisted editorial pass)",
+    "human_reviewer": null,
+    "completed_full_factcheck": false,
+    "responsibility": "Protocol Sentinel desk"
+  },
+  "sources": [],
+  "checked_sources": [],
+  "unknowns": [
+    "No direct supporting source or authenticated provenance was recorded for the withdrawn reconstruction.",
+    "No direct source URL, authenticated recording provenance, tool identification, production/cost records or audience/conversion evidence in the reviewed record. No finding that the video is authentic, AI-generated or false."
+  ],
+  "claims": [
+    {
+      "claim": "The publication source record does not substantiate the asserted production reconstruction or metrics.",
+      "disposition": "uncertain",
+      "sources": [],
+      "unknowns": "No direct source URL, authenticated recording provenance, tool identification, production/cost records or audience/conversion evidence in the reviewed record. No finding that the video is authentic, AI-generated or false."
+    }
+  ],
+  "corrections": [
+    {
+      "date": "2026-10-28T21:26:28.286Z",
+      "description": "Retracted unsupported forensic certainty, production reconstruction, allegations and audience/financial figures. Replaced published text and article data with a correction notice at the original URL; original retained in Git history. This does not authenticate or determine the production method of the video."
+    }
+  ],
+  "sister_body_comparison": {
+    "status": "not-performed",
+    "publication": "Northstar Ledger",
+    "independent_corroboration": false,
+    "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+  }
+}
