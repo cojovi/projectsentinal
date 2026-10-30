@@ -1,0 +1,120 @@
+{
+  "status": "source-review-pending",
+  "article_type": "analysis",
+  "scope": "Original historical copy restored at the publisher's explicit request; no new fact-check, recording authentication or technical reconstruction was performed.",
+  "review_process": {
+    "agent": "Publisher-requested original-copy restoration",
+    "human_reviewer": null,
+    "completed_full_factcheck": false,
+    "responsibility": "Protocol Sentinel desk"
+  },
+  "sources": [
+    "https://www.tinderpressroom.com/powering-tinder-r-the-method-behind-our-matching",
+    "https://www.tinderpressroom.com/Tinder-R-Unveils-Photo-Selector-AI-Feature-to-Make-Choosing-Profile-Pictures-Easier"
+  ],
+  "unknowns": [
+    "Restoring the original copy is not independent authentication of its claims. Earlier body-bound checks are retained as historical records and are not a verification badge for this restored body."
+  ],
+  "claims": [],
+  "corrections": [
+    {
+      "date": "2026-10-28T21:26:28.286Z",
+      "description": "Added a limited vendor-document check and Northstar Ledger shared-ownership context; made source entries clickable. No code authentication, experiment replication or exact match-effect claim is supported by this pass."
+    },
+    {
+      "date": "2026-10-30T19:34:18.737794+00:00",
+      "description": "Restored the original title and complete body at the publisher's explicit request, returning the article to published discovery. Earlier on-page editorial treatment is superseded; this restoration adds no factual authentication."
+    }
+  ],
+  "history": [
+    {
+      "preserved_at": "2026-10-30T19:34:18.737794+00:00",
+      "record": {
+        "status": "documented",
+        "article_type": "analysis",
+        "source_sha256": "43e38866e7ec855814f276d2f26abd2d993d06ce1f8dfdf356c028fc90af67a3",
+        "checked_at": "2026-10-28T21:26:28.286Z",
+        "reporting_cutoff": "2026-10-22T00:45:15.690547-05:00",
+        "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+        "review_process": {
+          "agent": "Codex (AI-assisted editorial pass)",
+          "human_reviewer": null,
+          "completed_full_factcheck": false,
+          "responsibility": "Protocol Sentinel desk"
+        },
+        "sources": [
+          "https://www.tinderpressroom.com/powering-tinder-r-the-method-behind-our-matching",
+          "https://www.tinderpressroom.com/Tinder-R-Unveils-Photo-Selector-AI-Feature-to-Make-Choosing-Profile-Pictures-Easier"
+        ],
+        "checked_sources": [
+          {
+            "url": "https://www.tinderpressroom.com/powering-tinder-r-the-method-behind-our-matching",
+            "artifact": "priority-primary-batch-1.json",
+            "source_text_sha256": "ba6a5cb649680dd1cfc7dfc40057a1c528663500cfcc2a7aae5285e38614f628",
+            "checked_excerpt": "* **Things members tell us** - Tinder has and always will be an open-ended adventure.  For those who want to share more, Tinder factors in interests and lifestyle descriptions members add to their profiles. Love hiking? Prefer someone who loves dogs? Members can focus on people with interests in common.\n* **Similar Photos** - Beyond using what members tell us, we use anonymized cues from photos to help tailor recommendations. We’ll suggest profiles with similar photos to ones members have Liked before, and show their profiles to more people who have Liked members with photos similar to their own. For example, if members Like people enjoying the great outdoors, at festivals, or just enjoying the beach, we’ll take the hint.\n* **Likes and Nopes** - Likes and Nopes are obviously key pieces of ",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          },
+          {
+            "url": "https://www.tinderpressroom.com/Tinder-R-Unveils-Photo-Selector-AI-Feature-to-Make-Choosing-Profile-Pictures-Easier",
+            "artifact": "priority-primary-batch-1.json",
+            "source_text_sha256": "e4e17bfe00bf76110a5543a240fcd52eb7a65ac7aa783c73ccd075c912dbf5f5",
+            "checked_excerpt": "**LOS ANGELES, July 17, 2024 —** Tinder, the dating app that revolutionized how people meet, announces the release of ‘Photo Selector’— an AI-powered feature that empowers users to effortlessly choose their profile pictures from a curated selection of photos retrieved directly from their devices.",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          }
+        ],
+        "unknowns": [
+          "Only the listed documentary claims were checked against stored source text; remaining historical citations and underlying evidence were not comprehensively authenticated.",
+          "Vendor explanation updated July 2022, not full current implementation audit.",
+          "Does not authenticate reel code, independently reproduce experiments or establish exact effects on matches.",
+          "Mechanism interpretation; no controlled deployment test or quantitative effect established."
+        ],
+        "claims": [
+          {
+            "claim": "Tinder describes similar-photo cues in recommendations.",
+            "disposition": "attributed",
+            "sources": [
+              "https://www.tinderpressroom.com/powering-tinder-r-the-method-behind-our-matching"
+            ],
+            "unknowns": "Vendor explanation updated July 2022, not full current implementation audit."
+          },
+          {
+            "claim": "Tinder announced Photo Selector July 17, 2024.",
+            "disposition": "attributed",
+            "sources": [
+              "https://www.tinderpressroom.com/Tinder-R-Unveils-Photo-Selector-AI-Feature-to-Make-Choosing-Profile-Pictures-Easier"
+            ],
+            "unknowns": "Does not authenticate reel code, independently reproduce experiments or establish exact effects on matches."
+          },
+          {
+            "claim": "A predicted photo score is distinct from actual exposure and matches.",
+            "disposition": "opinion",
+            "sources": [
+              "https://www.tinderpressroom.com/powering-tinder-r-the-method-behind-our-matching",
+              "https://www.tinderpressroom.com/Tinder-R-Unveils-Photo-Selector-AI-Feature-to-Make-Choosing-Profile-Pictures-Easier"
+            ],
+            "unknowns": "Mechanism interpretation; no controlled deployment test or quantitative effect established."
+          }
+        ],
+        "corrections": [
+          {
+            "date": "2026-10-28T21:26:28.286Z",
+            "description": "Added a limited vendor-document check and Northstar Ledger shared-ownership context; made source entries clickable. No code authentication, experiment replication or exact match-effect claim is supported by this pass."
+          }
+        ],
+        "sister_body_comparison": {
+          "status": "pending-parent-later-build",
+          "publication": "Northstar Ledger",
+          "independent_corroboration": false,
+          "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+        }
+      }
+    }
+  ],
+  "restoration": {
+    "requested_by": "publisher",
+    "restored_at": "2026-10-30T19:34:18.737794+00:00",
+    "original_revision": "1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2",
+    "original_source": "https://github.com/cojovi/projectsentinal/blob/1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2/blog/source/_posts/2026-10-22-what-happens-after-you-swipe-right-on-tinder.md",
+    "verification_performed": false
+  }
+}

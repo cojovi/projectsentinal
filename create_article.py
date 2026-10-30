@@ -52,28 +52,10 @@ IMAGE_SIZE = "1792x1024"  # Landscape format for hero images
 IMAGE_QUALITY = "hd"
 IMAGE_STYLE = "natural"
 
-# Author name pools (diverse cultural names)
-FIRST_NAMES = [
-    "Elena", "Marcus", "Sophia", "James", "Priya", "David", "Aisha", "Michael",
-    "Yuki", "Robert", "Fatima", "William", "Mei", "Christopher", "Layla",
-    "Daniel", "Ananya", "Matthew", "Zara", "Andrew", "Sofia", "Joseph",
-    "Isabella", "Thomas", "Emma", "Richard", "Olivia", "Charles", "Maya",
-    "Benjamin"
-]
-
-LAST_NAMES = [
-    "Chen", "Rodriguez", "Kim", "Petrov", "Johnson", "Patel", "Williams",
-    "Singh", "Brown", "Ahmed", "Davis", "Tanaka", "Miller", "Kumar",
-    "Wilson", "Garcia", "Moore", "Martinez", "Taylor", "Anderson", "Lee",
-    "Zhang", "Wang", "Li", "Nguyen", "Fernandez", "Lopez", "Gonzalez",
-    "Hernandez", "Smith"
-]
-
 # Categories (based on existing blog structure)
 CATEGORIES = [
-    "Technology", "Politics", "US Foreign Policy", "Conservative Movement",
-    "Current Events", "Media", "Artificial Intelligence", "Innovation",
-    "Collaboration", "Business", "Future", "Coding", "News", "Tech Stuff"
+    "AI & Models", "Big Tech & Platforms", "Privacy & Power",
+    "Devices & Experiments", "Signal vs Noise"
 ]
 
 # Static Blog Tone (Witty + Sarcastic + Precise)
@@ -715,7 +697,7 @@ JSON response:"""
         print(f"⚠️  Warning: Metadata generation failed: {e}")
         # Fallback metadata
         return {
-            "category": "Technology",
+            "category": "Signal vs Noise",
             "tags": ["Technology", "News", "Innovation"],
             "location": None
         }
@@ -859,26 +841,9 @@ def generate_image(
 
 
 def generate_author_name() -> Tuple[str, str]:
-    """Generate random author name and slug."""
-    first = random.choice(FIRST_NAMES)
-    last = random.choice(LAST_NAMES)
-    
-    # 20% chance of "Dr." prefix
-    if random.random() < 0.2:
-        full_name = f"Dr. {first} {last}"
-    else:
-        full_name = f"{first} {last}"
-    
-    author_slug = f"{first.lower()}-{last.lower()}"
-    if full_name.startswith("Dr."):
-        author_slug = f"dr-{author_slug}"
-    
-    return full_name, author_slug
+    """Return the registered publication desk; never fabricate a person or degree."""
+    return "Protocol Sentinel desk", "protocol-sentinel"
 
-
-# ============================================================================
-# MAIN EXECUTION
-# ============================================================================
 
 def main():
     """Main execution flow."""
@@ -984,7 +949,7 @@ def main():
     print("🏷️  Generating metadata...")
     try:
         metadata = generate_metadata(client, title, body)
-        category = metadata.get("category", "Technology")
+        category = metadata.get("category", "Signal vs Noise")
         tags = metadata.get("tags", [])
         location = metadata.get("location")
         
@@ -1061,6 +1026,13 @@ def main():
         "---",
         f"title: {yaml_escape(title)}",
         f"date: {datetime_str}",
+        'author: "Protocol Sentinel desk"',
+        "article_type: analysis",
+        "evidence_status: source-review-pending",
+        "unknowns: [Source verification and claim review pending; no independent confirmation asserted.]",
+        "draft: true",
+        "published: false",
+        'image_credit: "AI-generated symbolic pixel-art editorial illustration; not event evidence."',
         "tags:"
     ]
     
@@ -1070,6 +1042,11 @@ def main():
     
     front_matter_lines.append("categories:")
     front_matter_lines.append(f"  - {category}")
+    front_matter_lines.append("sources:")
+    for finding in web_findings:
+        source_url = finding.get("url", "")
+        if re.match(r"^https?://", source_url):
+            front_matter_lines.append(f"  - {yaml_escape(source_url)}")
     front_matter_lines.append("feature: true")
     front_matter_lines.append(f"cover: {cover_url}")
     front_matter_lines.append(f"image: {banner_url}")

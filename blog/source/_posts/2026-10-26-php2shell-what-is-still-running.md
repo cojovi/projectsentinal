@@ -22,6 +22,11 @@ og_image_width: 1600
 og_image_height: 900
 image_credit: AI-generated symbolic pixel-art editorial illustration via Higgsfield
   Nano Banana Pro; not an image of an actual incident or infrastructure.
+updated: 2026-10-30T19:34:18.737794+00:00
+publication_state: published
+editorial_notices: false
+evidence_status: source-review-pending
+article_type: analysis
 ---
 
 The PHP fixes are available. That does not mean the PHP handling your next web request has changed.

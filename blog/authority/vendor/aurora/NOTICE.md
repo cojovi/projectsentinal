@@ -1,0 +1,1 @@
+API generators/helpers adapted from hexo-plugin-aurora 1.8.4, Copyright Benny Guo (bennyxguo), MIT licensed (see LICENSE). Native deasync/Shiki highlighter and optional network plugins are deliberately excluded. Hexo's Markdown renderer handles code. site.js resolves the pinned theme directly; generator state is reset each build.

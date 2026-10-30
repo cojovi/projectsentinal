@@ -23,6 +23,11 @@ og_image_width: 1600
 og_image_height: 900
 image_credit: Original symbolic pixel-art editorial illustration, composed locally;
   not a depiction of a search or a DNA result.
+updated: 2026-10-30T19:34:18.737794+00:00
+publication_state: published
+editorial_notices: false
+evidence_status: source-review-pending
+article_type: analysis
 ---
 
 A phone is not a filing cabinet with a battery. It is a map of relationships: private conversations, professional contacts, old photographs, calendars, searches, arguments and messages written for an audience of one. When the person carrying it is a member of Congress, some of that map can also contain legislative work.

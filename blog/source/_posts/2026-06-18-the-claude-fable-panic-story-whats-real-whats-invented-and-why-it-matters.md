@@ -12,6 +12,11 @@ categories:
 cover: /og/claude-fable-panic-fact-check.png
 image: /og/claude-fable-panic-fact-check.png
 og_image: /og/claude-fable-panic-fact-check.png
+updated: 2026-10-30T19:34:18.737794+00:00
+publication_state: published
+editorial_notices: false
+evidence_status: source-review-pending
+article_type: analysis
 ---
 
 <!-- alt: A split-screen of two control rooms: one labeled "Policy" with red warning lights, one labeled "Hype" with a megaphone and viral charts. -->
