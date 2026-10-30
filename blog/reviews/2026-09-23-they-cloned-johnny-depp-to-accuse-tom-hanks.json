@@ -1,40 +1,78 @@
 {
-  "status": "documented",
-  "article_type": "correction",
-  "source_sha256": "086b0a34bc128838f5cef40b1778a8598e81bea51ef73e1aeafd600bac9f1477",
-  "checked_at": "2026-10-28T21:26:28.286Z",
-  "reporting_cutoff": "2026-10-28T21:26:28.286Z",
-  "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+  "status": "source-review-pending",
+  "article_type": "analysis",
+  "scope": "Original historical copy restored at the publisher's explicit request; no new fact-check, recording authentication or technical reconstruction was performed.",
   "review_process": {
-    "agent": "Codex (AI-assisted editorial pass)",
+    "agent": "Publisher-requested original-copy restoration",
     "human_reviewer": null,
     "completed_full_factcheck": false,
     "responsibility": "Protocol Sentinel desk"
   },
   "sources": [],
-  "checked_sources": [],
   "unknowns": [
-    "No direct supporting source or authenticated provenance was recorded for the withdrawn reconstruction.",
-    "No direct source URL, authenticated recording provenance, tool identification, production/cost records or audience/conversion evidence in the reviewed record. No finding that the video is authentic, AI-generated or false."
+    "Restoring the original copy is not independent authentication of its claims. Earlier body-bound checks are retained as historical records and are not a verification badge for this restored body."
   ],
-  "claims": [
-    {
-      "claim": "The publication source record does not substantiate the asserted production reconstruction or metrics.",
-      "disposition": "uncertain",
-      "sources": [],
-      "unknowns": "No direct source URL, authenticated recording provenance, tool identification, production/cost records or audience/conversion evidence in the reviewed record. No finding that the video is authentic, AI-generated or false."
-    }
-  ],
+  "claims": [],
   "corrections": [
     {
       "date": "2026-10-28T21:26:28.286Z",
       "description": "Retracted unsupported forensic certainty, production reconstruction, allegations and audience/financial figures. Replaced published text and article data with a correction notice at the original URL; original retained in Git history. This does not authenticate or determine the production method of the video."
+    },
+    {
+      "date": "2026-10-30T19:34:18.737794+00:00",
+      "description": "Restored the original title and complete body at the publisher's explicit request, returning the article to published discovery. Earlier on-page editorial treatment is superseded; this restoration adds no factual authentication."
     }
   ],
-  "sister_body_comparison": {
-    "status": "not-performed",
-    "publication": "Northstar Ledger",
-    "independent_corroboration": false,
-    "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+  "history": [
+    {
+      "preserved_at": "2026-10-30T19:34:18.737794+00:00",
+      "record": {
+        "status": "documented",
+        "article_type": "correction",
+        "source_sha256": "086b0a34bc128838f5cef40b1778a8598e81bea51ef73e1aeafd600bac9f1477",
+        "checked_at": "2026-10-28T21:26:28.286Z",
+        "reporting_cutoff": "2026-10-28T21:26:28.286Z",
+        "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+        "review_process": {
+          "agent": "Codex (AI-assisted editorial pass)",
+          "human_reviewer": null,
+          "completed_full_factcheck": false,
+          "responsibility": "Protocol Sentinel desk"
+        },
+        "sources": [],
+        "checked_sources": [],
+        "unknowns": [
+          "No direct supporting source or authenticated provenance was recorded for the withdrawn reconstruction.",
+          "No direct source URL, authenticated recording provenance, tool identification, production/cost records or audience/conversion evidence in the reviewed record. No finding that the video is authentic, AI-generated or false."
+        ],
+        "claims": [
+          {
+            "claim": "The publication source record does not substantiate the asserted production reconstruction or metrics.",
+            "disposition": "uncertain",
+            "sources": [],
+            "unknowns": "No direct source URL, authenticated recording provenance, tool identification, production/cost records or audience/conversion evidence in the reviewed record. No finding that the video is authentic, AI-generated or false."
+          }
+        ],
+        "corrections": [
+          {
+            "date": "2026-10-28T21:26:28.286Z",
+            "description": "Retracted unsupported forensic certainty, production reconstruction, allegations and audience/financial figures. Replaced published text and article data with a correction notice at the original URL; original retained in Git history. This does not authenticate or determine the production method of the video."
+          }
+        ],
+        "sister_body_comparison": {
+          "status": "not-performed",
+          "publication": "Northstar Ledger",
+          "independent_corroboration": false,
+          "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+        }
+      }
+    }
+  ],
+  "restoration": {
+    "requested_by": "publisher",
+    "restored_at": "2026-10-30T19:34:18.737794+00:00",
+    "original_revision": "1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2",
+    "original_source": "https://github.com/cojovi/projectsentinal/blob/1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2/blog/source/_posts/2026-09-23-they-cloned-johnny-depp-to-accuse-tom-hanks.md",
+    "verification_performed": false
   }
 }

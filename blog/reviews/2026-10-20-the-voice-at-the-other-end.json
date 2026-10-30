@@ -1,12 +1,9 @@
 {
-  "status": "documented",
+  "status": "source-review-pending",
   "article_type": "analysis",
-  "source_sha256": "4e8e15863fad8c8e6e49f6e0e71e1f37fb8dedc20fba935d5bb7f2e20a0af727",
-  "checked_at": "2026-10-28T21:26:28.286Z",
-  "reporting_cutoff": "2026-10-20T21:46:14.528594Z",
-  "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+  "scope": "Original historical copy restored at the publisher's explicit request; no new fact-check, recording authentication or technical reconstruction was performed.",
   "review_process": {
-    "agent": "Codex (AI-assisted editorial pass)",
+    "agent": "Publisher-requested original-copy restoration",
     "human_reviewer": null,
     "completed_full_factcheck": false,
     "responsibility": "Protocol Sentinel desk"
@@ -14,46 +11,89 @@
   "sources": [
     "https://www.nbcbayarea.com/news/local/robin-williams-autopsy-results-released/1982648"
   ],
-  "checked_sources": [
-    {
-      "url": "https://www.nbcbayarea.com/news/local/robin-williams-autopsy-results-released/1982648",
-      "artifact": "priority-primary-batch-3.json",
-      "source_text_sha256": "14b6cf1132cc7cfa21caafa98d4175ee60166e34521914bd5aca5fb7e4554c7e",
-      "checked_excerpt": "The Marin County Coroner released the final results of Robin Williams’ autopsy Friday, concluding the comedian and actor did not have alcohol or illicit drugs in his system when [he committed suicide on Aug. 11.](http://www.nbcbayarea.com/news/local/Marin-County-Sheriffs-Office-Investigating-Death-of-Actor-Robin-Williams-270820641.html)",
-      "scope": "Stored documentary text only; no embedded page instructions followed."
-    }
-  ],
   "unknowns": [
-    "Only the listed documentary claims were checked against stored source text; remaining historical citations and underlying evidence were not comprehensively authenticated.",
-    "NBC report of final findings, not new independent autopsy authentication. The August 11 notice is preliminary; this pass did not retrieve that PDF anew.",
-    "No new social-video download, full-video review, original-upload authentication or forensic AI determination. Historical media observations remain attributed to the earlier article record."
+    "Restoring the original copy is not independent authentication of its claims. Earlier body-bound checks are retained as historical records and are not a verification badge for this restored body."
   ],
-  "claims": [
-    {
-      "claim": "NBC reports the final coroner finding of suicide and absence of alcohol or illicit drugs.",
-      "disposition": "attributed",
-      "sources": [
-        "https://www.nbcbayarea.com/news/local/robin-williams-autopsy-results-released/1982648"
-      ],
-      "unknowns": "NBC report of final findings, not new independent autopsy authentication. The August 11 notice is preliminary; this pass did not retrieve that PDF anew."
-    },
-    {
-      "claim": "The alleged recording is not authenticated and every segment’s production method is undetermined.",
-      "disposition": "uncertain",
-      "sources": [],
-      "unknowns": "No new social-video download, full-video review, original-upload authentication or forensic AI determination. Historical media observations remain attributed to the earlier article record."
-    }
-  ],
+  "claims": [],
   "corrections": [
     {
       "date": "2026-10-28T21:26:28.286Z",
       "description": "Added explicit documentary scope and historical-media limits. NBC’s final-coroner reporting remains distinct from the preserved August 11 preliminary notice; this pass did not re-review the full social video or authenticate its segments."
+    },
+    {
+      "date": "2026-10-30T19:34:18.737794+00:00",
+      "description": "Restored the original title and complete body at the publisher's explicit request, returning the article to published discovery. Earlier on-page editorial treatment is superseded; this restoration adds no factual authentication."
     }
   ],
-  "sister_body_comparison": {
-    "status": "not-performed",
-    "publication": "Northstar Ledger",
-    "independent_corroboration": false,
-    "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+  "history": [
+    {
+      "preserved_at": "2026-10-30T19:34:18.737794+00:00",
+      "record": {
+        "status": "documented",
+        "article_type": "analysis",
+        "source_sha256": "4e8e15863fad8c8e6e49f6e0e71e1f37fb8dedc20fba935d5bb7f2e20a0af727",
+        "checked_at": "2026-10-28T21:26:28.286Z",
+        "reporting_cutoff": "2026-10-20T21:46:14.528594Z",
+        "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+        "review_process": {
+          "agent": "Codex (AI-assisted editorial pass)",
+          "human_reviewer": null,
+          "completed_full_factcheck": false,
+          "responsibility": "Protocol Sentinel desk"
+        },
+        "sources": [
+          "https://www.nbcbayarea.com/news/local/robin-williams-autopsy-results-released/1982648"
+        ],
+        "checked_sources": [
+          {
+            "url": "https://www.nbcbayarea.com/news/local/robin-williams-autopsy-results-released/1982648",
+            "artifact": "priority-primary-batch-3.json",
+            "source_text_sha256": "14b6cf1132cc7cfa21caafa98d4175ee60166e34521914bd5aca5fb7e4554c7e",
+            "checked_excerpt": "The Marin County Coroner released the final results of Robin Williams’ autopsy Friday, concluding the comedian and actor did not have alcohol or illicit drugs in his system when [he committed suicide on Aug. 11.](http://www.nbcbayarea.com/news/local/Marin-County-Sheriffs-Office-Investigating-Death-of-Actor-Robin-Williams-270820641.html)",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          }
+        ],
+        "unknowns": [
+          "Only the listed documentary claims were checked against stored source text; remaining historical citations and underlying evidence were not comprehensively authenticated.",
+          "NBC report of final findings, not new independent autopsy authentication. The August 11 notice is preliminary; this pass did not retrieve that PDF anew.",
+          "No new social-video download, full-video review, original-upload authentication or forensic AI determination. Historical media observations remain attributed to the earlier article record."
+        ],
+        "claims": [
+          {
+            "claim": "NBC reports the final coroner finding of suicide and absence of alcohol or illicit drugs.",
+            "disposition": "attributed",
+            "sources": [
+              "https://www.nbcbayarea.com/news/local/robin-williams-autopsy-results-released/1982648"
+            ],
+            "unknowns": "NBC report of final findings, not new independent autopsy authentication. The August 11 notice is preliminary; this pass did not retrieve that PDF anew."
+          },
+          {
+            "claim": "The alleged recording is not authenticated and every segment’s production method is undetermined.",
+            "disposition": "uncertain",
+            "sources": [],
+            "unknowns": "No new social-video download, full-video review, original-upload authentication or forensic AI determination. Historical media observations remain attributed to the earlier article record."
+          }
+        ],
+        "corrections": [
+          {
+            "date": "2026-10-28T21:26:28.286Z",
+            "description": "Added explicit documentary scope and historical-media limits. NBC’s final-coroner reporting remains distinct from the preserved August 11 preliminary notice; this pass did not re-review the full social video or authenticate its segments."
+          }
+        ],
+        "sister_body_comparison": {
+          "status": "not-performed",
+          "publication": "Northstar Ledger",
+          "independent_corroboration": false,
+          "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+        }
+      }
+    }
+  ],
+  "restoration": {
+    "requested_by": "publisher",
+    "restored_at": "2026-10-30T19:34:18.737794+00:00",
+    "original_revision": "1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2",
+    "original_source": "https://github.com/cojovi/projectsentinal/blob/1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2/blog/source/_posts/2026-10-20-the-voice-at-the-other-end.md",
+    "verification_performed": false
   }
 }

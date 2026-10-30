@@ -1,12 +1,9 @@
 {
-  "status": "documented",
+  "status": "source-review-pending",
   "article_type": "analysis",
-  "source_sha256": "2fd83efc57cf47b4f26406497cece1e8329cdd4f46e5376917d9d1b565c4bc4c",
-  "checked_at": "2026-10-28T21:26:28.286Z",
-  "reporting_cutoff": "2026-10-28T21:26:28.286Z",
-  "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+  "scope": "Original historical copy restored at the publisher's explicit request; no new fact-check, recording authentication or technical reconstruction was performed.",
   "review_process": {
-    "agent": "Codex (AI-assisted editorial pass)",
+    "agent": "Publisher-requested original-copy restoration",
     "human_reviewer": null,
     "completed_full_factcheck": false,
     "responsibility": "Protocol Sentinel desk"
@@ -16,73 +13,118 @@
     "https://www.anthropic.com/news/fable-mythos-access",
     "https://www.anthropic.com/news/redeploying-fable-5"
   ],
-  "checked_sources": [
-    {
-      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-      "artifact": "priority-primary-batch-1.json",
-      "source_text_sha256": "eea002c65083fb18c7bed04ef088696cac02aa10188fcf8ab26ad601c40922c9",
-      "checked_excerpt": "Today we’re launching **Claude Fable 5**: a Mythos-class[1](#footnote-1) model that we’ve made safe for general use.",
-      "scope": "Stored documentary text only; no embedded page instructions followed."
-    },
-    {
-      "url": "https://www.anthropic.com/news/fable-mythos-access",
-      "artifact": "priority-primary-batch-1.json",
-      "source_text_sha256": "fb03a60c79724963b4e02c8646ad9ca0128d81d4f43aa2caa05c9b529273c943",
-      "checked_excerpt": "The US government, citing national security authorities, has issued an export control directive to suspend all access to Fable 5 and Mythos 5 by any foreign national, whether inside or outside the United States, including foreign national Anthropic employees. The net effect of this order is that we must abruptly disable Fable 5 and Mythos 5 for **all** our customers to ensure compliance. **Access to all other Anthropic models** **will not be affected.**",
-      "scope": "Stored documentary text only; no embedded page instructions followed."
-    },
-    {
-      "url": "https://www.anthropic.com/news/redeploying-fable-5",
-      "artifact": "priority-primary-batch-1.json",
-      "source_text_sha256": "79c12542f234c682abe75d7fef18836d0ef04727c2194ee52d786f2f06bfe856",
-      "checked_excerpt": "**As of today, June 30, the export controls on Fable 5 and Mythos 5 [have been lifted](https://x.com/howardlutnick/status/2072100729603452965).**",
-      "scope": "Stored documentary text only; no embedded page instructions followed."
-    }
-  ],
   "unknowns": [
-    "Only the listed documentary claims were checked against stored source text; remaining historical citations and underlying evidence were not comprehensively authenticated.",
-    "Government directive itself not independently inspected.",
-    "Not a universal disproof or exhaustive legal/institutional search; benchmarks not replicated.",
-    "Historical company account; no current access test."
+    "Restoring the original copy is not independent authentication of its claims. Earlier body-bound checks are retained as historical records and are not a verification badge for this restored body."
   ],
-  "claims": [
-    {
-      "claim": "Anthropic says the export-control directive led it to suspend access.",
-      "disposition": "attributed",
-      "sources": [
-        "https://www.anthropic.com/news/fable-mythos-access"
-      ],
-      "unknowns": "Government directive itself not independently inspected."
-    },
-    {
-      "claim": "Weight handover, IAIA inspection powers and 70% ceiling are unsupported in these texts.",
-      "disposition": "uncertain",
-      "sources": [
-        "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-        "https://www.anthropic.com/news/fable-mythos-access",
-        "https://www.anthropic.com/news/redeploying-fable-5"
-      ],
-      "unknowns": "Not a universal disproof or exhaustive legal/institutional search; benchmarks not replicated."
-    },
-    {
-      "claim": "Fable 5 return was announced June 30 for July 1.",
-      "disposition": "attributed",
-      "sources": [
-        "https://www.anthropic.com/news/redeploying-fable-5"
-      ],
-      "unknowns": "Historical company account; no current access test."
-    }
-  ],
+  "claims": [],
   "corrections": [
     {
       "date": "2026-10-28T21:26:28.286Z",
       "description": "Replaced categorical invented/false language with unsupported-in-reviewed-source findings; added July return and removed unsubstantiated comparative benchmark claims. No full recording or government-directive authentication performed."
+    },
+    {
+      "date": "2026-10-30T19:34:18.737794+00:00",
+      "description": "Restored the original title and complete body at the publisher's explicit request, returning the article to published discovery. Earlier on-page editorial treatment is superseded; this restoration adds no factual authentication."
     }
   ],
-  "sister_body_comparison": {
-    "status": "not-performed",
-    "publication": "Northstar Ledger",
-    "independent_corroboration": false,
-    "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+  "history": [
+    {
+      "preserved_at": "2026-10-30T19:34:18.737794+00:00",
+      "record": {
+        "status": "documented",
+        "article_type": "analysis",
+        "source_sha256": "2fd83efc57cf47b4f26406497cece1e8329cdd4f46e5376917d9d1b565c4bc4c",
+        "checked_at": "2026-10-28T21:26:28.286Z",
+        "reporting_cutoff": "2026-10-28T21:26:28.286Z",
+        "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+        "review_process": {
+          "agent": "Codex (AI-assisted editorial pass)",
+          "human_reviewer": null,
+          "completed_full_factcheck": false,
+          "responsibility": "Protocol Sentinel desk"
+        },
+        "sources": [
+          "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "https://www.anthropic.com/news/fable-mythos-access",
+          "https://www.anthropic.com/news/redeploying-fable-5"
+        ],
+        "checked_sources": [
+          {
+            "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+            "artifact": "priority-primary-batch-1.json",
+            "source_text_sha256": "eea002c65083fb18c7bed04ef088696cac02aa10188fcf8ab26ad601c40922c9",
+            "checked_excerpt": "Today we’re launching **Claude Fable 5**: a Mythos-class[1](#footnote-1) model that we’ve made safe for general use.",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          },
+          {
+            "url": "https://www.anthropic.com/news/fable-mythos-access",
+            "artifact": "priority-primary-batch-1.json",
+            "source_text_sha256": "fb03a60c79724963b4e02c8646ad9ca0128d81d4f43aa2caa05c9b529273c943",
+            "checked_excerpt": "The US government, citing national security authorities, has issued an export control directive to suspend all access to Fable 5 and Mythos 5 by any foreign national, whether inside or outside the United States, including foreign national Anthropic employees. The net effect of this order is that we must abruptly disable Fable 5 and Mythos 5 for **all** our customers to ensure compliance. **Access to all other Anthropic models** **will not be affected.**",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          },
+          {
+            "url": "https://www.anthropic.com/news/redeploying-fable-5",
+            "artifact": "priority-primary-batch-1.json",
+            "source_text_sha256": "79c12542f234c682abe75d7fef18836d0ef04727c2194ee52d786f2f06bfe856",
+            "checked_excerpt": "**As of today, June 30, the export controls on Fable 5 and Mythos 5 [have been lifted](https://x.com/howardlutnick/status/2072100729603452965).**",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          }
+        ],
+        "unknowns": [
+          "Only the listed documentary claims were checked against stored source text; remaining historical citations and underlying evidence were not comprehensively authenticated.",
+          "Government directive itself not independently inspected.",
+          "Not a universal disproof or exhaustive legal/institutional search; benchmarks not replicated.",
+          "Historical company account; no current access test."
+        ],
+        "claims": [
+          {
+            "claim": "Anthropic says the export-control directive led it to suspend access.",
+            "disposition": "attributed",
+            "sources": [
+              "https://www.anthropic.com/news/fable-mythos-access"
+            ],
+            "unknowns": "Government directive itself not independently inspected."
+          },
+          {
+            "claim": "Weight handover, IAIA inspection powers and 70% ceiling are unsupported in these texts.",
+            "disposition": "uncertain",
+            "sources": [
+              "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+              "https://www.anthropic.com/news/fable-mythos-access",
+              "https://www.anthropic.com/news/redeploying-fable-5"
+            ],
+            "unknowns": "Not a universal disproof or exhaustive legal/institutional search; benchmarks not replicated."
+          },
+          {
+            "claim": "Fable 5 return was announced June 30 for July 1.",
+            "disposition": "attributed",
+            "sources": [
+              "https://www.anthropic.com/news/redeploying-fable-5"
+            ],
+            "unknowns": "Historical company account; no current access test."
+          }
+        ],
+        "corrections": [
+          {
+            "date": "2026-10-28T21:26:28.286Z",
+            "description": "Replaced categorical invented/false language with unsupported-in-reviewed-source findings; added July return and removed unsubstantiated comparative benchmark claims. No full recording or government-directive authentication performed."
+          }
+        ],
+        "sister_body_comparison": {
+          "status": "not-performed",
+          "publication": "Northstar Ledger",
+          "independent_corroboration": false,
+          "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+        }
+      }
+    }
+  ],
+  "restoration": {
+    "requested_by": "publisher",
+    "restored_at": "2026-10-30T19:34:18.737794+00:00",
+    "original_revision": "1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2",
+    "original_source": "https://github.com/cojovi/projectsentinal/blob/1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2/blog/source/_posts/2026-06-18-the-claude-fable-panic-story-whats-real-whats-invented-and-why-it-matters.md",
+    "verification_performed": false
   }
 }

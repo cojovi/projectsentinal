@@ -1,12 +1,9 @@
 {
-  "status": "documented",
+  "status": "source-review-pending",
   "article_type": "analysis",
-  "source_sha256": "f343ddc4835b848130cf0c01d3105a4839068a8a077ca485183859f6481d119e",
-  "checked_at": "2026-10-28T21:26:28.286Z",
-  "reporting_cutoff": "2026-10-08T23:59:59-05:00",
-  "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+  "scope": "Original historical copy restored at the publisher's explicit request; no new fact-check, recording authentication or technical reconstruction was performed.",
   "review_process": {
-    "agent": "Codex (AI-assisted editorial pass)",
+    "agent": "Publisher-requested original-copy restoration",
     "human_reviewer": null,
     "completed_full_factcheck": false,
     "responsibility": "Protocol Sentinel desk"
@@ -15,73 +12,117 @@
     "https://x.com/GoogleVRP/status/2105689195180179605",
     "https://www.bleepingcomputer.com/news/google/google-halts-open-source-bug-bounty-program-amid-ai-spam-surge"
   ],
-  "checked_sources": [
-    {
-      "url": "https://x.com/GoogleVRP/status/2105689195180179605",
-      "artifact": "priority-primary-batch-5.json",
-      "source_text_sha256": "1d9cd3aff862bea56e1cd8b74dd32d256a0eee754d362d46522827cb69433b2c",
-      "checked_excerpt": "# Google VRP (Google Bug Hunters) on X: \"📢 PSA for open-source bug hunters We are temporarily no longer accepting OSS VRP product vulnerability submissions. This does not impact OSS VRP supply chain reports, or any outstanding reports. As an alternative, we encourage you to find impact across our other VRP programs and submit there instead, or pursue the Patch Rewards Program. Why is this happening? This pause is due to a significant rise in automated submissions, the vast majority of which are not valid. We will continue to reformat and work on this aspect of the OSS VRP and commit to giving an update in Q1 2027. https://t.co/nQEkHVfbHS\"",
-      "scope": "Stored documentary text only; no embedded page instructions followed."
-    },
-    {
-      "url": "https://www.bleepingcomputer.com/news/google/google-halts-open-source-bug-bounty-program-amid-ai-spam-surge",
-      "artifact": "priority-primary-batch-5.json",
-      "source_text_sha256": "0eef160bc6fa576931f51d9c961d2adab227a773d886548b58584fdce50a45a8",
-      "checked_excerpt": "\"We are temporarily no longer accepting OSS VRP product vulnerability submissions. This does not impact OSS VRP supply chain reports, or any outstanding reports,\" the company said. \"Why is this happening? This pause is due to a significant rise in automated submissions, the vast majority of which are not valid.\"",
-      "scope": "Stored documentary text only; no embedded page instructions followed."
-    }
-  ],
   "unknowns": [
-    "Only the listed documentary claims were checked against stored source text; remaining historical citations and underlying evidence were not comprehensively authenticated.",
-    "Program-operator statement, not independent queue audit.",
-    "Future program design and reopening remain unspecified.",
-    "Secondary reporting; no standalone full rules capture in packet. Eligibility must be assessed against receiving program rules.",
-    "No measured costs, other-organization investigation or universal market forecast."
+    "Restoring the original copy is not independent authentication of its claims. Earlier body-bound checks are retained as historical records and are not a verification badge for this restored body."
   ],
-  "claims": [
-    {
-      "claim": "The October 1 pause covers OSS VRP product vulnerabilities, excluding supply-chain and outstanding reports.",
-      "disposition": "attributed",
-      "sources": [
-        "https://x.com/GoogleVRP/status/2105689195180179605"
-      ],
-      "unknowns": "Program-operator statement, not independent queue audit."
-    },
-    {
-      "claim": "Google committed to a Q1 2027 update, not a reopening date.",
-      "disposition": "supported",
-      "sources": [
-        "https://x.com/GoogleVRP/status/2105689195180179605"
-      ],
-      "unknowns": "Future program design and reopening remain unspecified."
-    },
-    {
-      "claim": "Some Cloud-impact findings may qualify for Cloud VRP.",
-      "disposition": "attributed",
-      "sources": [
-        "https://www.bleepingcomputer.com/news/google/google-halts-open-source-bug-bounty-program-amid-ai-spam-surge"
-      ],
-      "unknowns": "Secondary reporting; no standalone full rules capture in packet. Eligibility must be assessed against receiving program rules."
-    },
-    {
-      "claim": "Generation/triage asymmetry can strain intake; text disclosures are not demonstrated permanently dead.",
-      "disposition": "opinion",
-      "sources": [
-        "https://x.com/GoogleVRP/status/2105689195180179605"
-      ],
-      "unknowns": "No measured costs, other-organization investigation or universal market forecast."
-    }
-  ],
+  "claims": [],
   "corrections": [
     {
       "date": "2026-10-28T21:26:28.286Z",
       "description": "Corrected Q1 2027 to an update commitment, not guaranteed resumption; preserved supply-chain/outstanding exclusions and conditional alternative routes. Removed unsupported costs and other-organization comparisons; labeled market forecasts as opinion."
+    },
+    {
+      "date": "2026-10-30T19:34:18.737794+00:00",
+      "description": "Restored the original title and complete body at the publisher's explicit request, returning the article to published discovery. Earlier on-page editorial treatment is superseded; this restoration adds no factual authentication."
     }
   ],
-  "sister_body_comparison": {
-    "status": "not-performed",
-    "publication": "Northstar Ledger",
-    "independent_corroboration": false,
-    "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+  "history": [
+    {
+      "preserved_at": "2026-10-30T19:34:18.737794+00:00",
+      "record": {
+        "status": "documented",
+        "article_type": "analysis",
+        "source_sha256": "f343ddc4835b848130cf0c01d3105a4839068a8a077ca485183859f6481d119e",
+        "checked_at": "2026-10-28T21:26:28.286Z",
+        "reporting_cutoff": "2026-10-08T23:59:59-05:00",
+        "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+        "review_process": {
+          "agent": "Codex (AI-assisted editorial pass)",
+          "human_reviewer": null,
+          "completed_full_factcheck": false,
+          "responsibility": "Protocol Sentinel desk"
+        },
+        "sources": [
+          "https://x.com/GoogleVRP/status/2105689195180179605",
+          "https://www.bleepingcomputer.com/news/google/google-halts-open-source-bug-bounty-program-amid-ai-spam-surge"
+        ],
+        "checked_sources": [
+          {
+            "url": "https://x.com/GoogleVRP/status/2105689195180179605",
+            "artifact": "priority-primary-batch-5.json",
+            "source_text_sha256": "1d9cd3aff862bea56e1cd8b74dd32d256a0eee754d362d46522827cb69433b2c",
+            "checked_excerpt": "# Google VRP (Google Bug Hunters) on X: \"📢 PSA for open-source bug hunters We are temporarily no longer accepting OSS VRP product vulnerability submissions. This does not impact OSS VRP supply chain reports, or any outstanding reports. As an alternative, we encourage you to find impact across our other VRP programs and submit there instead, or pursue the Patch Rewards Program. Why is this happening? This pause is due to a significant rise in automated submissions, the vast majority of which are not valid. We will continue to reformat and work on this aspect of the OSS VRP and commit to giving an update in Q1 2027. https://t.co/nQEkHVfbHS\"",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          },
+          {
+            "url": "https://www.bleepingcomputer.com/news/google/google-halts-open-source-bug-bounty-program-amid-ai-spam-surge",
+            "artifact": "priority-primary-batch-5.json",
+            "source_text_sha256": "0eef160bc6fa576931f51d9c961d2adab227a773d886548b58584fdce50a45a8",
+            "checked_excerpt": "\"We are temporarily no longer accepting OSS VRP product vulnerability submissions. This does not impact OSS VRP supply chain reports, or any outstanding reports,\" the company said. \"Why is this happening? This pause is due to a significant rise in automated submissions, the vast majority of which are not valid.\"",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          }
+        ],
+        "unknowns": [
+          "Only the listed documentary claims were checked against stored source text; remaining historical citations and underlying evidence were not comprehensively authenticated.",
+          "Program-operator statement, not independent queue audit.",
+          "Future program design and reopening remain unspecified.",
+          "Secondary reporting; no standalone full rules capture in packet. Eligibility must be assessed against receiving program rules.",
+          "No measured costs, other-organization investigation or universal market forecast."
+        ],
+        "claims": [
+          {
+            "claim": "The October 1 pause covers OSS VRP product vulnerabilities, excluding supply-chain and outstanding reports.",
+            "disposition": "attributed",
+            "sources": [
+              "https://x.com/GoogleVRP/status/2105689195180179605"
+            ],
+            "unknowns": "Program-operator statement, not independent queue audit."
+          },
+          {
+            "claim": "Google committed to a Q1 2027 update, not a reopening date.",
+            "disposition": "supported",
+            "sources": [
+              "https://x.com/GoogleVRP/status/2105689195180179605"
+            ],
+            "unknowns": "Future program design and reopening remain unspecified."
+          },
+          {
+            "claim": "Some Cloud-impact findings may qualify for Cloud VRP.",
+            "disposition": "attributed",
+            "sources": [
+              "https://www.bleepingcomputer.com/news/google/google-halts-open-source-bug-bounty-program-amid-ai-spam-surge"
+            ],
+            "unknowns": "Secondary reporting; no standalone full rules capture in packet. Eligibility must be assessed against receiving program rules."
+          },
+          {
+            "claim": "Generation/triage asymmetry can strain intake; text disclosures are not demonstrated permanently dead.",
+            "disposition": "opinion",
+            "sources": [
+              "https://x.com/GoogleVRP/status/2105689195180179605"
+            ],
+            "unknowns": "No measured costs, other-organization investigation or universal market forecast."
+          }
+        ],
+        "corrections": [
+          {
+            "date": "2026-10-28T21:26:28.286Z",
+            "description": "Corrected Q1 2027 to an update commitment, not guaranteed resumption; preserved supply-chain/outstanding exclusions and conditional alternative routes. Removed unsupported costs and other-organization comparisons; labeled market forecasts as opinion."
+          }
+        ],
+        "sister_body_comparison": {
+          "status": "not-performed",
+          "publication": "Northstar Ledger",
+          "independent_corroboration": false,
+          "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+        }
+      }
+    }
+  ],
+  "restoration": {
+    "requested_by": "publisher",
+    "restored_at": "2026-10-30T19:34:18.737794+00:00",
+    "original_revision": "1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2",
+    "original_source": "https://github.com/cojovi/projectsentinal/blob/1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2/blog/source/_posts/2026-10-08-google-freezes-open-source-bug-bounty-ai-slop.md",
+    "verification_performed": false
   }
 }

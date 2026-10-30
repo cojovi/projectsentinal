@@ -4,16 +4,16 @@ date: '2026-10-22T00:45:15.690547-05:00'
 slug: what-happens-after-you-swipe-right-on-tinder
 author: Gordon Shumway
 categories:
-  - Privacy & Power
+- Privacy & Power
 tags:
-  - Tinder
-  - Recommendation systems
-  - Privacy
-  - Photo scoring
-  - Algorithmic bias
-description: >-
-  A reverse-engineering reel raises questions about photo scores, privacy and paid attention. Understanding it
-  starts with separating what a model predicts from what happens to your matches.
+- Tinder
+- Recommendation systems
+- Privacy
+- Photo scoring
+- Algorithmic bias
+description: A reverse-engineering reel raises questions about photo scores, privacy
+  and paid attention. Understanding it starts with separating what a model predicts
+  from what happens to your matches.
 feature: true
 draft: false
 cover: /og/what-happens-after-you-swipe-right-on-tinder.png
@@ -21,15 +21,14 @@ image: /og/what-happens-after-you-swipe-right-on-tinder.png
 og_image: /og/what-happens-after-you-swipe-right-on-tinder.png
 og_image_width: 1600
 og_image_height: 900
-image_credit: >-
-  Original symbolic pixel-art illustration composed locally; not an actual Tinder interface or a visualization
-  of verified model results.
-updated: '2026-10-28T21:26:28.286Z'
+image_credit: Original symbolic pixel-art illustration composed locally; not an actual
+  Tinder interface or a visualization of verified model results.
+updated: 2026-10-30T19:34:18.737794+00:00
+publication_state: published
+editorial_notices: false
+evidence_status: source-review-pending
 article_type: analysis
-reporting_cutoff: '2026-10-22T00:45:15.690547-05:00'
 ---
-
-**Source review note — October 28, 2026.** The limited check of [Tinder’s matching explanation](https://www.tinderpressroom.com/powering-tinder-r-the-method-behind-our-matching) and [2024 Photo Selector announcement](https://www.tinderpressroom.com/Tinder-R-Unveils-Photo-Selector-AI-Feature-to-Make-Choosing-Profile-Pictures-Easier) supports broad photo-based recommendation cues and the feature’s launch, not the reel’s exact implementation or measured effects. This pass did not authenticate extracted code, replicate synthetic-image tests, or re-review the full social video. The creator’s claims below remain attributed to the earlier article record.
 
 A reverse-engineering reel raises questions about photo scores, privacy and paid attention. Understanding it starts with separating what a model predicts from what happens to your matches.
 
@@ -99,10 +98,8 @@ The unanswered questions concern deployment and consequences: which model versio
 
 For users, the sensible takeaway is to resist treating a disappointing run of matches as a scientific verdict on themselves. The reel describes predictions and purchase prompts. It does not demonstrate that an app can calculate what a relationship with you would be worth.
 
-For a related consumer-consequences account, see [Northstar Ledger’s Tinder coverage](https://thenorthstarledger.com/tech/what-happens-after-you-swipe-right-on-tinder). Northstar Ledger and Protocol Sentinel share owner Cody Viveiros; that coverage is context, not independent corroboration or replication.
-
 ## Sources
 
-[1] [Source 1](https://www.instagram.com/reel/DeuN3vGRrMV/?srtk=bzh3aDNjcm9xbnI1) — Ayo Omolewa (@ayoships), Tinder reverse-engineering reel; transcript and visuals described in the historical article record; not re-reviewed in this pass
-[2] [Source 2](https://www.tinderpressroom.com/powering-tinder-r-the-method-behind-our-matching) — Tinder: The method behind our matching (updated July 11, 2022)
-[3] [Source 3](https://www.tinderpressroom.com/Tinder-R-Unveils-Photo-Selector-AI-Feature-to-Make-Choosing-Profile-Pictures-Easier) — Tinder: Photo Selector launch announcement (July 17, 2024)
+[1] https://www.instagram.com/reel/DeuN3vGRrMV/?srtk=bzh3aDNjcm9xbnI1 — Ayo Omolewa (@ayoships), Tinder reverse-engineering reel; reviewed transcript and visuals
+[2] https://www.tinderpressroom.com/powering-tinder-r-the-method-behind-our-matching — Tinder: The method behind our matching (updated July 11, 2022)
+[3] https://www.tinderpressroom.com/Tinder-R-Unveils-Photo-Selector-AI-Feature-to-Make-Choosing-Profile-Pictures-Easier — Tinder: Photo Selector launch announcement (July 17, 2024)

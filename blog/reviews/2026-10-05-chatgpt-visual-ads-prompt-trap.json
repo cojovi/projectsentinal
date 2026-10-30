@@ -1,12 +1,9 @@
 {
-  "status": "documented",
+  "status": "source-review-pending",
   "article_type": "analysis",
-  "source_sha256": "5de1c63b667a338664d88dd7e56fcb699579afde2aee458f0b13b7bccb073ad2",
-  "checked_at": "2026-10-28T21:26:28.286Z",
-  "reporting_cutoff": "2026-10-05T23:59:59-05:00",
-  "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+  "scope": "Original historical copy restored at the publisher's explicit request; no new fact-check, recording authentication or technical reconstruction was performed.",
   "review_process": {
-    "agent": "Codex (AI-assisted editorial pass)",
+    "agent": "Publisher-requested original-copy restoration",
     "human_reviewer": null,
     "completed_full_factcheck": false,
     "responsibility": "Protocol Sentinel desk"
@@ -14,66 +11,109 @@
   "sources": [
     "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
   ],
-  "checked_sources": [
-    {
-      "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
-      "artifact": "priority-primary-batch-3.json",
-      "source_text_sha256": "cdb3d5f03bb46b3129b0b141acbcafc871a8a772b370bec6379435a4f22c817c",
-      "checked_excerpt": "Initially, we’ll test this new ad format during image generation in ChatGPT for users on the Free and Go plans. Ads will be clearly labeled, and remain separate from the image being created. As with our other ad formats, advertising does not influence the answers ChatGPT provides.",
-      "scope": "Stored documentary text only; no embedded page instructions followed."
-    }
-  ],
   "unknowns": [
-    "Only the listed documentary claims were checked against stored source text; remaining historical citations and underlying evidence were not comprehensively authenticated.",
-    "No subsequent rollout or live account behavior checked.",
-    "Does not establish private-chat disclosure, all-prompt tracking or complete production data flows.",
-    "Vendor assurances, not independent audit or model-weight examination.",
-    "Not an observed finding that every prompt trains an auction."
+    "Restoring the original copy is not independent authentication of its claims. Earlier body-bound checks are retained as historical records and are not a verification badge for this restored body."
   ],
-  "claims": [
-    {
-      "claim": "October 5 announcement planned a later-month US image-generation ad test for Free and Go.",
-      "disposition": "attributed",
-      "sources": [
-        "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
-      ],
-      "unknowns": "No subsequent rollout or live account behavior checked."
-    },
-    {
-      "claim": "Hightouch, Tealium and LiveRamp integrations send advertiser conversion data to ChatGPT Ads.",
-      "disposition": "attributed",
-      "sources": [
-        "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
-      ],
-      "unknowns": "Does not establish private-chat disclosure, all-prompt tracking or complete production data flows."
-    },
-    {
-      "claim": "OpenAI says ads are separate and suitability pilots do not access private conversations.",
-      "disposition": "attributed",
-      "sources": [
-        "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
-      ],
-      "unknowns": "Vendor assurances, not independent audit or model-weight examination."
-    },
-    {
-      "claim": "Crowd tracking describes an incentive concern.",
-      "disposition": "opinion",
-      "sources": [
-        "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
-      ],
-      "unknowns": "Not an observed finding that every prompt trains an auction."
-    }
-  ],
+  "claims": [],
   "corrections": [
     {
       "date": "2026-10-28T21:26:28.286Z",
       "description": "Narrowed rollout to an announced later-month test; attributed separation/privacy assurances to OpenAI; corrected conversion-data direction and removed unsupported tracking certainty, weight behavior, auction-training, traffic and malformed pricing claims."
+    },
+    {
+      "date": "2026-10-30T19:34:18.737794+00:00",
+      "description": "Restored the original title and complete body at the publisher's explicit request, returning the article to published discovery. Earlier on-page editorial treatment is superseded; this restoration adds no factual authentication."
     }
   ],
-  "sister_body_comparison": {
-    "status": "not-performed",
-    "publication": "Northstar Ledger",
-    "independent_corroboration": false,
-    "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+  "history": [
+    {
+      "preserved_at": "2026-10-30T19:34:18.737794+00:00",
+      "record": {
+        "status": "documented",
+        "article_type": "analysis",
+        "source_sha256": "5de1c63b667a338664d88dd7e56fcb699579afde2aee458f0b13b7bccb073ad2",
+        "checked_at": "2026-10-28T21:26:28.286Z",
+        "reporting_cutoff": "2026-10-05T23:59:59-05:00",
+        "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+        "review_process": {
+          "agent": "Codex (AI-assisted editorial pass)",
+          "human_reviewer": null,
+          "completed_full_factcheck": false,
+          "responsibility": "Protocol Sentinel desk"
+        },
+        "sources": [
+          "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
+        ],
+        "checked_sources": [
+          {
+            "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+            "artifact": "priority-primary-batch-3.json",
+            "source_text_sha256": "cdb3d5f03bb46b3129b0b141acbcafc871a8a772b370bec6379435a4f22c817c",
+            "checked_excerpt": "Initially, we’ll test this new ad format during image generation in ChatGPT for users on the Free and Go plans. Ads will be clearly labeled, and remain separate from the image being created. As with our other ad formats, advertising does not influence the answers ChatGPT provides.",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          }
+        ],
+        "unknowns": [
+          "Only the listed documentary claims were checked against stored source text; remaining historical citations and underlying evidence were not comprehensively authenticated.",
+          "No subsequent rollout or live account behavior checked.",
+          "Does not establish private-chat disclosure, all-prompt tracking or complete production data flows.",
+          "Vendor assurances, not independent audit or model-weight examination.",
+          "Not an observed finding that every prompt trains an auction."
+        ],
+        "claims": [
+          {
+            "claim": "October 5 announcement planned a later-month US image-generation ad test for Free and Go.",
+            "disposition": "attributed",
+            "sources": [
+              "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
+            ],
+            "unknowns": "No subsequent rollout or live account behavior checked."
+          },
+          {
+            "claim": "Hightouch, Tealium and LiveRamp integrations send advertiser conversion data to ChatGPT Ads.",
+            "disposition": "attributed",
+            "sources": [
+              "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
+            ],
+            "unknowns": "Does not establish private-chat disclosure, all-prompt tracking or complete production data flows."
+          },
+          {
+            "claim": "OpenAI says ads are separate and suitability pilots do not access private conversations.",
+            "disposition": "attributed",
+            "sources": [
+              "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
+            ],
+            "unknowns": "Vendor assurances, not independent audit or model-weight examination."
+          },
+          {
+            "claim": "Crowd tracking describes an incentive concern.",
+            "disposition": "opinion",
+            "sources": [
+              "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
+            ],
+            "unknowns": "Not an observed finding that every prompt trains an auction."
+          }
+        ],
+        "corrections": [
+          {
+            "date": "2026-10-28T21:26:28.286Z",
+            "description": "Narrowed rollout to an announced later-month test; attributed separation/privacy assurances to OpenAI; corrected conversion-data direction and removed unsupported tracking certainty, weight behavior, auction-training, traffic and malformed pricing claims."
+          }
+        ],
+        "sister_body_comparison": {
+          "status": "not-performed",
+          "publication": "Northstar Ledger",
+          "independent_corroboration": false,
+          "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+        }
+      }
+    }
+  ],
+  "restoration": {
+    "requested_by": "publisher",
+    "restored_at": "2026-10-30T19:34:18.737794+00:00",
+    "original_revision": "1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2",
+    "original_source": "https://github.com/cojovi/projectsentinal/blob/1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2/blog/source/_posts/2026-10-05-chatgpt-visual-ads-prompt-trap.md",
+    "verification_performed": false
   }
 }

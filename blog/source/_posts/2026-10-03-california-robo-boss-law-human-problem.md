@@ -1,5 +1,5 @@
 ---
-title: California's Robo-Boss Law Has a Human Problem
+title: "California's Robo-Boss Law Has a Human Problem"
 date: 2026-10-03T01:41:41-05:00
 slug: california-robo-boss-law-human-problem
 author: Gordon Shumway
@@ -11,21 +11,19 @@ tags:
   - California
   - SB 947
   - Human oversight
-description: >-
-  California’s SB947 becomes operative July 1, 2027. Its human-review duties for discipline and termination
-  raise a practical question: what must a reviewer check?
+description: "California's new AI workplace law demands human review before certain firings. The important detail is what that human must actually check."
 feature: true
 cover: /og/california-robo-boss-law-human-problem.png
 image: /og/california-robo-boss-law-human-problem.png
 og_image: /og/california-robo-boss-law-human-problem.png
 og_image_width: 1600
 og_image_height: 900
-updated: '2026-10-28T21:26:28.286Z'
+updated: 2026-10-30T19:34:18.737794+00:00
+publication_state: published
+editorial_notices: false
+evidence_status: source-review-pending
 article_type: analysis
-reporting_cutoff: '2026-10-03T23:59:59-05:00'
 ---
-
-**Source review note — October 28, 2026.** The limited check of the [official SB947 text](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB947) and [sponsor announcement](https://sd05.senate.ca.gov/news/newsom-signs-mcnerneys-no-robo-bosses-act-2026-requiring-human-oversight-ai-workplace) supports the review requirements discussed below and the **July 1, 2027** operative date. Those requirements are not already operative at this article’s October 3 reporting cutoff and do not constitute a blanket ban on AI. This pass did not reassess every legal authority or coverage example cited below.
 
 <!-- alt: Retro pixel-art office where a worker and a human reviewer face a towering algorithmic scoring terminal, with a physical switch interrupting its red decision path. -->
 
@@ -98,7 +96,7 @@ We have made a related point about [judging AI by work you can actually accept](
 
 ## Sources
 
-[1] [Source 1](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB947) — Bill Text - SB-947 Employment: automated decision systems.
-[2] [Source 2](https://sd05.senate.ca.gov/news/newsom-signs-mcnerneys-no-robo-bosses-act-2026-requiring-human-oversight-ai-workplace) — Newsom Signs McNerney’s No Robo Bosses Act of 2026 Requiring Human Oversight of AI in the Workplace | Senator Jerry McNerney
-[3] [Source 3](https://www.kqed.org/news/12102337/newsom-signs-slate-of-ai-workplace-laws-barring-robo-bosses-and-surveillance) — Newsom Signs Slate of AI Workplace Laws, Barring ‘Robo Bosses’ and Surveillance | KQED
-[4] [Source 4](https://www.californiaworkplacelawblog.com/2026/10/articles/california/california-passes-no-robo-bosses-act) — California Passes No Robo Bosses Act | California Workplace Law Blog
+[1] https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB947 — Bill Text - SB-947 Employment: automated decision systems.
+[2] https://sd05.senate.ca.gov/news/newsom-signs-mcnerneys-no-robo-bosses-act-2026-requiring-human-oversight-ai-workplace — Newsom Signs McNerney’s No Robo Bosses Act of 2026 Requiring Human Oversight of AI in the Workplace | Senator Jerry McNerney
+[3] https://www.kqed.org/news/12102337/newsom-signs-slate-of-ai-workplace-laws-barring-robo-bosses-and-surveillance — Newsom Signs Slate of AI Workplace Laws, Barring ‘Robo Bosses’ and Surveillance | KQED
+[4] https://www.californiaworkplacelawblog.com/2026/10/articles/california/california-passes-no-robo-bosses-act — California Passes No Robo Bosses Act | California Workplace Law Blog

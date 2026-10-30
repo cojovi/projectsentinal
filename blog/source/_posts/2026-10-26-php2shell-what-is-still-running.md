@@ -3,16 +3,16 @@ title: 'PHP2Shell: What Is Still Running?'
 date: '2026-10-26T18:14:09.806623+00:00'
 author: Protocol Sentinel
 categories:
-  - Privacy & Power
+- Privacy & Power
 tags:
-  - PHP
-  - PHP2Shell
-  - Cybersecurity
-  - Patch Management
-  - Software Supply Chain
-description: >-
-  PHP2Shell fixes are available and AWS reports exploitation. The remaining job is proving which web-serving
-  runtimes and deployable images actually contain both patches.
+- PHP
+- PHP2Shell
+- Cybersecurity
+- Patch Management
+- Software Supply Chain
+description: PHP2Shell fixes are available and AWS reports exploitation. The remaining
+  job is proving which web-serving runtimes and deployable images actually contain
+  both patches.
 feature: true
 draft: false
 cover: /og/php2shell-what-is-still-running.png
@@ -20,15 +20,14 @@ image: /og/php2shell-what-is-still-running.png
 og_image: /og/php2shell-what-is-still-running.png
 og_image_width: 1600
 og_image_height: 900
-image_credit: >-
-  AI-generated symbolic pixel-art editorial illustration via Higgsfield Nano Banana Pro; not an image of an
-  actual incident or infrastructure.
-updated: '2026-10-28T21:26:28.286Z'
+image_credit: AI-generated symbolic pixel-art editorial illustration via Higgsfield
+  Nano Banana Pro; not an image of an actual incident or infrastructure.
+updated: 2026-10-30T19:34:18.737794+00:00
+publication_state: published
+editorial_notices: false
+evidence_status: source-review-pending
 article_type: analysis
-reporting_cutoff: '2026-10-26T18:14:09.806623Z'
 ---
-
-**Source review note — October 28, 2026.** This pass narrowly checked the stored PHP release notice, both linked PHP advisories and Amazon’s telemetry report. It supports the branch-specific fixes and exploit-condition distinctions below. It does not verify every deployment, reproduce exploits, reassess every secondary guidance link or establish successful compromise of a particular system. The article’s reporting checkpoint remains **October 26, 2026**.
 
 The PHP fixes are available. That does not mean the PHP handling your next web request has changed.
 
@@ -106,7 +105,7 @@ PHP shipped the fixes. The remaining work is proving where they are running, and
 
 ## Sources and reporting checkpoint
 
-Sources retrieved again on **October 26, 2026**. That is the original article’s reporting checkpoint; the October 28 documentary check has the narrower scope stated above. Vendor-specific product status can change; use the responsible vendor's current advisory for a particular appliance or distribution. This article does not claim a worldwide compromise count or that every exposed system was successfully exploited.
+Sources retrieved again on **October 26, 2026**. This is a fresh review, not the previously held draft. Vendor-specific product status can change; use the responsible vendor's current advisory for a particular appliance or distribution. This article does not claim a worldwide compromise count or that every exposed system was successfully exploited.
 
 1. [PHP project: critical security advisory and October 21 release information](https://www.php.net/index.php#2026-10-21-5).
 2. [Amazon Threat Intelligence: PHP2Shell exploitation observed in MadPot](https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/).

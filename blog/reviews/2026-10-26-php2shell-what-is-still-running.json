@@ -1,12 +1,9 @@
 {
-  "status": "documented",
+  "status": "source-review-pending",
   "article_type": "analysis",
-  "source_sha256": "dbbb9b2b5ac5fcbd33add9219fdc56a6a3565f70f0b26b0fc41d1bc856f3d70f",
-  "checked_at": "2026-10-28T21:26:28.286Z",
-  "reporting_cutoff": "2026-10-26T18:14:09.806623Z",
-  "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+  "scope": "Original historical copy restored at the publisher's explicit request; no new fact-check, recording authentication or technical reconstruction was performed.",
   "review_process": {
-    "agent": "Codex (AI-assisted editorial pass)",
+    "agent": "Publisher-requested original-copy restoration",
     "human_reviewer": null,
     "completed_full_factcheck": false,
     "responsibility": "Protocol Sentinel desk"
@@ -17,79 +14,125 @@
     "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
     "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/"
   ],
-  "checked_sources": [
-    {
-      "url": "https://www.php.net/index.php#2026-10-21-5",
-      "artifact": "priority-primary-batch-2.json",
-      "source_text_sha256": "574942471717322c53601901fffc54802dfca82273cd319ffdf8b1796681ae8f",
-      "checked_excerpt": "**PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution. All PHP users are strongly encouraged to update immediately.**",
-      "scope": "Stored documentary text only; no embedded page instructions followed."
-    },
-    {
-      "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
-      "artifact": "priority-primary-batch-2.json",
-      "source_text_sha256": "cf4b3e2e0c472fcc5d128990ad2bc34097635237793e9f87caec557957bc6a41",
-      "checked_excerpt": "PHP uses `longjmp()` for out-of-memory (OOM) errors to exit the current context and abort handling of the request. In some contexts, request memory is temporarily reachable before it is fully initialized. If any allocation fails at that point, PHP does not properly account for the early exit and leaves the request memory in an invalid state. The failed allocation does not need to be related to the invalid memory. The request shutdown procedure may then read or branch on it. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
-      "scope": "Stored documentary text only; no embedded page instructions followed."
-    },
-    {
-      "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
-      "artifact": "priority-primary-batch-2.json",
-      "source_text_sha256": "3bee28909db25b2edea14724f91595baa0f98975167cb2bae1ed04d09205e0ab",
-      "checked_excerpt": "The confirmed impact is unauthenticated heap use-after-free, memory disclosure and remote code execution with the web worker's privileges. The fatal backtrace path has confirmed RCE against mod\\_php. Session lifecycle RCE was validated against mod\\_php and FPM. Other state families establish security impact only after a concrete producer and consumer are shown.",
-      "scope": "Stored documentary text only; no embedded page instructions followed."
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
-      "artifact": "priority-primary-batch-2.json",
-      "source_text_sha256": "3740ab37f1d619ff1864acedb8b39263cd2c901327e65096a5f03cc016ed16f4",
-      "checked_excerpt": "Amazon Threat Intelligence identified a PHP2Shell exploitation attempt dating to Oct. 17, 2026, in MadPot telemetry, four days before public disclosure of CVE-2026-109618 and CVE-2026-109619. The exploit attempt originated from an IP address associated with a commercial anonymization network. While the vulnerability was under embargo, the targeting of a honeypot from an anonymized IP address suggests the activity was conducted by a threat actor, though it remains unclear how the actor acquired exploit information prior to disclosure.",
-      "scope": "Stored documentary text only; no embedded page instructions followed."
-    }
-  ],
   "unknowns": [
-    "Only the listed documentary claims were checked against stored source text; remaining historical citations and underlying evidence were not comprehensively authenticated.",
-    "Version table does not establish downstream vendor backports or a particular running deployment.",
-    "No exploit replication or proof every configuration is equally exposed.",
-    "Vendor telemetry; not a global compromise count or a finding about a particular system."
+    "Restoring the original copy is not independent authentication of its claims. Earlier body-bound checks are retained as historical records and are not a verification badge for this restored body."
   ],
-  "claims": [
-    {
-      "claim": "PHP lists fixed upstream releases 8.2.35, 8.3.36, 8.4.27 and 8.5.12 for the two CVEs.",
-      "disposition": "supported",
-      "sources": [
-        "https://www.php.net/index.php#2026-10-21-5"
-      ],
-      "unknowns": "Version table does not establish downstream vendor backports or a particular running deployment."
-    },
-    {
-      "claim": "The two advisories describe different exploitation conditions, including different FPM paths.",
-      "disposition": "supported",
-      "sources": [
-        "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
-        "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
-      ],
-      "unknowns": "No exploit replication or proof every configuration is equally exposed."
-    },
-    {
-      "claim": "AWS reports an October 17 attempt, uncertainty about pre-disclosure real-world success, and subsequent broad exploitation.",
-      "disposition": "attributed",
-      "sources": [
-        "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/"
-      ],
-      "unknowns": "Vendor telemetry; not a global compromise count or a finding about a particular system."
-    }
-  ],
+  "claims": [],
   "corrections": [
     {
       "date": "2026-10-28T21:26:28.286Z",
       "description": "Added a narrow PHP/AWS documentary source-check note. Preserved branch-specific fixes, exploit-condition differences, deployment/backport distinctions, and the difference between observed attempts and proven compromise."
+    },
+    {
+      "date": "2026-10-30T19:34:18.737794+00:00",
+      "description": "Restored the original title and complete body at the publisher's explicit request, returning the article to published discovery. Earlier on-page editorial treatment is superseded; this restoration adds no factual authentication."
     }
   ],
-  "sister_body_comparison": {
-    "status": "not-performed",
-    "publication": "Northstar Ledger",
-    "independent_corroboration": false,
-    "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+  "history": [
+    {
+      "preserved_at": "2026-10-30T19:34:18.737794+00:00",
+      "record": {
+        "status": "documented",
+        "article_type": "analysis",
+        "source_sha256": "dbbb9b2b5ac5fcbd33add9219fdc56a6a3565f70f0b26b0fc41d1bc856f3d70f",
+        "checked_at": "2026-10-28T21:26:28.286Z",
+        "reporting_cutoff": "2026-10-26T18:14:09.806623Z",
+        "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+        "review_process": {
+          "agent": "Codex (AI-assisted editorial pass)",
+          "human_reviewer": null,
+          "completed_full_factcheck": false,
+          "responsibility": "Protocol Sentinel desk"
+        },
+        "sources": [
+          "https://www.php.net/index.php#2026-10-21-5",
+          "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+          "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+          "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/"
+        ],
+        "checked_sources": [
+          {
+            "url": "https://www.php.net/index.php#2026-10-21-5",
+            "artifact": "priority-primary-batch-2.json",
+            "source_text_sha256": "574942471717322c53601901fffc54802dfca82273cd319ffdf8b1796681ae8f",
+            "checked_excerpt": "**PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution. All PHP users are strongly encouraged to update immediately.**",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          },
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+            "artifact": "priority-primary-batch-2.json",
+            "source_text_sha256": "cf4b3e2e0c472fcc5d128990ad2bc34097635237793e9f87caec557957bc6a41",
+            "checked_excerpt": "PHP uses `longjmp()` for out-of-memory (OOM) errors to exit the current context and abort handling of the request. In some contexts, request memory is temporarily reachable before it is fully initialized. If any allocation fails at that point, PHP does not properly account for the early exit and leaves the request memory in an invalid state. The failed allocation does not need to be related to the invalid memory. The request shutdown procedure may then read or branch on it. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          },
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+            "artifact": "priority-primary-batch-2.json",
+            "source_text_sha256": "3bee28909db25b2edea14724f91595baa0f98975167cb2bae1ed04d09205e0ab",
+            "checked_excerpt": "The confirmed impact is unauthenticated heap use-after-free, memory disclosure and remote code execution with the web worker's privileges. The fatal backtrace path has confirmed RCE against mod\\_php. Session lifecycle RCE was validated against mod\\_php and FPM. Other state families establish security impact only after a concrete producer and consumer are shown.",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          },
+          {
+            "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+            "artifact": "priority-primary-batch-2.json",
+            "source_text_sha256": "3740ab37f1d619ff1864acedb8b39263cd2c901327e65096a5f03cc016ed16f4",
+            "checked_excerpt": "Amazon Threat Intelligence identified a PHP2Shell exploitation attempt dating to Oct. 17, 2026, in MadPot telemetry, four days before public disclosure of CVE-2026-109618 and CVE-2026-109619. The exploit attempt originated from an IP address associated with a commercial anonymization network. While the vulnerability was under embargo, the targeting of a honeypot from an anonymized IP address suggests the activity was conducted by a threat actor, though it remains unclear how the actor acquired exploit information prior to disclosure.",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          }
+        ],
+        "unknowns": [
+          "Only the listed documentary claims were checked against stored source text; remaining historical citations and underlying evidence were not comprehensively authenticated.",
+          "Version table does not establish downstream vendor backports or a particular running deployment.",
+          "No exploit replication or proof every configuration is equally exposed.",
+          "Vendor telemetry; not a global compromise count or a finding about a particular system."
+        ],
+        "claims": [
+          {
+            "claim": "PHP lists fixed upstream releases 8.2.35, 8.3.36, 8.4.27 and 8.5.12 for the two CVEs.",
+            "disposition": "supported",
+            "sources": [
+              "https://www.php.net/index.php#2026-10-21-5"
+            ],
+            "unknowns": "Version table does not establish downstream vendor backports or a particular running deployment."
+          },
+          {
+            "claim": "The two advisories describe different exploitation conditions, including different FPM paths.",
+            "disposition": "supported",
+            "sources": [
+              "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+              "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+            ],
+            "unknowns": "No exploit replication or proof every configuration is equally exposed."
+          },
+          {
+            "claim": "AWS reports an October 17 attempt, uncertainty about pre-disclosure real-world success, and subsequent broad exploitation.",
+            "disposition": "attributed",
+            "sources": [
+              "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/"
+            ],
+            "unknowns": "Vendor telemetry; not a global compromise count or a finding about a particular system."
+          }
+        ],
+        "corrections": [
+          {
+            "date": "2026-10-28T21:26:28.286Z",
+            "description": "Added a narrow PHP/AWS documentary source-check note. Preserved branch-specific fixes, exploit-condition differences, deployment/backport distinctions, and the difference between observed attempts and proven compromise."
+          }
+        ],
+        "sister_body_comparison": {
+          "status": "not-performed",
+          "publication": "Northstar Ledger",
+          "independent_corroboration": false,
+          "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+        }
+      }
+    }
+  ],
+  "restoration": {
+    "requested_by": "publisher",
+    "restored_at": "2026-10-30T19:34:18.737794+00:00",
+    "original_revision": "1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2",
+    "original_source": "https://github.com/cojovi/projectsentinal/blob/1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2/blog/source/_posts/2026-10-26-php2shell-what-is-still-running.md",
+    "verification_performed": false
   }
 }
