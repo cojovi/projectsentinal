@@ -1,0 +1,338 @@
+{
+  "status": "documented",
+  "article_type": "analysis",
+  "source_sha256": "3108dcb32063551bcda8cb80a5783a5f048156772c39291d596e11344a3c1f47",
+  "checked_at": "2026-11-05T19:09:52.588710Z",
+  "reporting_cutoff": "2026-10-15T23:59:59-05:00",
+  "scope": "Limited documentary check of the cited historical account and mechanism; original prose retained where defensible. No human review, firsthand reporting, technical replication or current legal-status certification.",
+  "review_process": {
+    "agent": "Codex documentary recovery",
+    "human_reviewer": null,
+    "completed_full_factcheck": false,
+    "responsibility": "Protocol Sentinel desk"
+  },
+  "sources": [
+    "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+    "https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming"
+  ],
+  "claims": [
+    {
+      "id": "ad-01",
+      "claim": "“Don't click suspicious links” is useful advice. It is not a security architecture.",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-02",
+      "claim": "On October 15, Citizen Lab published a technical investigation into **AdFection**: targeted advertising used to deliver zero-click mercenary spyware. Researchers linked Discover-Tech, an Israeli advertising company, to a pipeline connecting ordinary ad inventory with surveillance vendors. Their evidence includes attacks on devices at Al Jazeera in 2024 and 2025. The publication is new; those attacks are not happening for the first time this week.",
+      "disposition": "attributed",
+      "sources": [
+        "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming"
+      ],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-03",
+      "claim": "The important story isn't that an evil banner can magically hack every phone. It's that the advertising system already supplies two things an attacker wants: a way to locate particular devices and a way to deliver code to them. Add a working exploit, and “I never clicked it” stops being the defense people assume it is.",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-04",
+      "claim": "Start with targeting. When an app or website offers an advertising slot, intermediaries can circulate information about the audience and device through a real-time auction. Depending on the implementation, that information can include advertising identifiers, IP addresses and location signals. Buyers decide which impressions to purchase.",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-05",
+      "claim": "Next comes delivery. An ad is not necessarily a flat picture. Its rendering can involve scripts, additional network requests and code from multiple companies. A recognizable publisher does not personally write every component that arrives through its advertising supply chain.",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-06",
+      "claim": "Then comes exploitation. **Running advertising JavaScript is not the same thing as compromising the operating system.** Installing spyware requires an additional attack against the target's software. That distinction matters: it separates a demonstrated infection from fingerprinting, reconnaissance or an ad impression.",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-07",
+      "claim": "[Citizen Lab's investigation](https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/) describes Discover-Tech ads that contacted an intermediate server. That server could decide, using identifiers and the source IP address, whether to return further code. Non-targets could receive nothing. Selected devices could be sent onward into the spyware delivery process.",
+      "disposition": "attributed",
+      "sources": [
+        "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming"
+      ],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-08",
+      "claim": "That selectivity is the nasty part. An ad can look harmless to most visitors while behaving differently for the person the operator actually wants.",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-09",
+      "claim": "Citizen Lab says network logs supplied by Al Jazeera allowed it to connect advertising infrastructure, a Candiru validation stage and subsequent spyware communications. It reports at least 45 devices targeted within the organization.",
+      "disposition": "attributed",
+      "sources": [
+        "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming"
+      ],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-10",
+      "claim": "Separately, researchers analyzed almost four billion bidding records showing Discover-Tech ads reaching almost 200,000 websites and mobile apps over four months. That is evidence of distribution reach, **not evidence of four billion attacks or 200,000 infected services**.",
+      "disposition": "attributed",
+      "sources": [
+        "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming"
+      ],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-11",
+      "claim": "[Confiant's concurrent investigation](https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming) describes suspicious ad behavior, device fingerprinting and a handoff to infrastructure attributed to Candiru by Citizen Lab. These are collaborating investigations, not two completely independent discoveries of the same victims.",
+      "disposition": "attributed",
+      "sources": [
+        "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming"
+      ],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-12",
+      "claim": "The responsible boundary is simple: researchers documented spyware delivery through targeted ads. They did not establish that every device receiving a Discover-Tech ad was infected, nor identify every government customer behind the activity.",
+      "disposition": "uncertain",
+      "sources": [
+        "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming"
+      ],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-13",
+      "claim": "Citizen Lab reports that Discover-Tech appeared on approved or certified vendor lists maintained by Google and IAB Europe. Following disclosures, both removed it from their registries; other advertising companies also disconnected or restricted its access. These responses are recorded in Citizen Lab’s report and correspondence section.",
+      "disposition": "attributed",
+      "sources": [
+        "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming"
+      ],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-14",
+      "claim": "That response matters. So does its limitation. Removing one supplier does not remove the combination of granular targeting and third-party code delivery that made the supplier useful.",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-15",
+      "claim": "This is not proof that advertising companies knowingly authorized spyware. It is evidence that admission to an advertising ecosystem did not prevent the abuse researchers documented. A consent interface or vendor listing is not a forensic guarantee that subsequent code is safe.",
+      "disposition": "uncertain",
+      "sources": [
+        "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming"
+      ],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-16",
+      "claim": "For publishers, the uncomfortable consequence is that advertising is also a software supply chain. The site earns money from an impression; the visitor's browser receives dependencies the visitor did not individually select.",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-17",
+      "claim": "Keep browsers and operating systems updated. Blocking ads and trackers can reduce exposure to this delivery channel; it cannot establish that a previously exposed device is clean or guarantee protection against every spyware route. Disabling advertising identifiers reduces one targeting input, not every possible identifier.",
+      "disposition": "uncertain",
+      "sources": [
+        "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming"
+      ],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-18",
+      "claim": "For organizations handling sensitive reporting, legal work or public-interest research, the question should be operational: which third-party advertising and tracking components are allowed on managed devices, and what evidence would reveal an unexpected chain of network connections? People at elevated risk need specialist security support, not just another reminder to inspect links.",
+      "disposition": "attributed",
+      "sources": [
+        "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming"
+      ],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-19",
+      "claim": "For everyone else, the lesson is narrower than panic and bigger than etiquette. A person can follow the usual rules and still encounter a dangerous supply chain. Security advice that puts the entire burden on the final click is missing the machinery that runs before it.",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    },
+    {
+      "id": "ad-20",
+      "claim": "**The browser didn't need your click to load the ad. That's the boundary worth arguing about.**",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ]
+    }
+  ],
+  "unknowns": [
+    "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+    "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+    "No universal compromise count, government-customer identification or guarantee of protection established."
+  ],
+  "corrections": [
+    {
+      "date": "2026-11-05T19:09:52.588710Z",
+      "description": "Recovery preparation: preserved editorial date; added archival dating; checked originals; removed internal labels and bounded claims to retrieved evidence."
+    }
+  ],
+  "sister_body_comparison": {
+    "status": "not-performed",
+    "independent_corroboration": false,
+    "limits": "Parent must assess sibling coverage before publication."
+  },
+  "checked_sources": [
+    {
+      "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+      "retrieval_status": "retrieved-via-web",
+      "artifact": "retrieved/web-additional.json",
+      "checked_excerpt": "In 2024 and 2025, international news network Al Jazeera was targeted in a series of zero-click attacks that we link",
+      "limits": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ],
+      "excerpt_role": "Actual retrieved text substring; full fetch response retained. Documentary support, not independent replication."
+    },
+    {
+      "url": "https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming",
+      "retrieval_status": "retrieved-via-web",
+      "artifact": "retrieved/web-ad.json",
+      "checked_excerpt": "# ADINT: Weaponized Ad Tech for Zero-Click Spyware and Mass Identity Vacuuming",
+      "limits": [
+        "Documentary analysis of collaborating researchers, not an independent device examination or exploit replication.",
+        "Targeted devices, infected devices, impressions and bidding records are different denominators.",
+        "No universal compromise count, government-customer identification or guarantee of protection established."
+      ],
+      "excerpt_role": "Actual retrieved text substring; full fetch response retained. Documentary support, not independent replication."
+    }
+  ],
+  "provenance": {
+    "assignment": {
+      "site": "PS",
+      "original_scheduled_date": "2026-10-15",
+      "original_frontmatter_date": "2026-10-15 16:00:00",
+      "title": "The Ad You Never Clicked",
+      "source_draft": "/Users/cojovi/.hermes/profiles/loki/reports/protocol-sentinel/2026-10-15/2026-10-15-the-ad-you-never-clicked.md",
+      "evidence_files": [
+        "/Users/cojovi/.hermes/profiles/loki/reports/protocol-sentinel/2026-10-15/2026-10-15-the-ad-you-never-clicked.md",
+        "/Users/cojovi/.hermes/profiles/loki/reports/protocol-sentinel/2026-10-15/publication-plan.md",
+        "/Users/cojovi/.hermes/profiles/loki/reports/protocol-sentinel/2026-10-15/radar-input.json",
+        "/Users/cojovi/.hermes/profiles/loki/reports/protocol-sentinel/2026-10-15/radar.json"
+      ],
+      "log_path": "/Users/cojovi/.hermes/profiles/loki/cron/output/114099981e5f/2026-10-15_15-55-49.md",
+      "disposition": "publish_after_batch_approval",
+      "existing_url": null,
+      "draft_recovery_required": false
+    },
+    "originals_directory": "/Users/cojovi/.hermes/profiles/loki/publications/backlog-recovery-2026-11-05/workers/ps-a/originals",
+    "preservation": "Byte-for-byte text copies retained; no originals modified.",
+    "missing_surviving_draft": false
+  },
+  "publication_note": {
+    "status": "Prepared for parent publication on 2026-11-05; no publication performed here.",
+    "action_if_publication_slips": "Update the visible first-publication recovery date and regenerate the body hash before publication."
+  }
+}

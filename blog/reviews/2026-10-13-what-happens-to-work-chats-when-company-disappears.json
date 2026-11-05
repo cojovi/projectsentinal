@@ -1,0 +1,331 @@
+{
+  "status": "documented",
+  "article_type": "analysis",
+  "source_sha256": "8d2cb16b8ff572f84df0c77918f703e039c778efdba32d90a7bc633af0ac2b44",
+  "checked_at": "2026-11-05T19:09:52.588710Z",
+  "reporting_cutoff": "2026-10-13T23:59:59-05:00",
+  "scope": "Limited documentary check of the cited historical account and mechanism; original prose retained where defensible. No human review, firsthand reporting, technical replication or current legal-status certification.",
+  "review_process": {
+    "agent": "Codex documentary recovery",
+    "human_reviewer": null,
+    "completed_full_factcheck": false,
+    "responsibility": "Protocol Sentinel desk"
+  },
+  "sources": [
+    "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+    "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+    "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM"
+  ],
+  "claims": [
+    {
+      "id": "spirit-01",
+      "claim": "Deleting names does not delete what people told their employer. A workplace message can reveal a health problem, a dispute or an operational vulnerability even when its author becomes an anonymous identifier.",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-02",
+      "claim": "That distinction sits at the center of objections to Spirit Airlines’ proposed sale of internal data to Google. The question is not simply whether a buyer receives a list of named workers. It is what remains in the conversations, attachments and relationships after the identifiers are transformed.",
+      "disposition": "attributed",
+      "sources": [
+        "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM"
+      ],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-03",
+      "claim": "In its [August 18 limited objection](https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf), the Association of Flight Attendants-CWA described Google as the successful bidder at $10 million for the proposed data transaction. The union described a sweeping workplace archive, including roughly 100 million emails and 500 million Teams items, alongside payroll, training and other employment records.",
+      "disposition": "attributed",
+      "sources": [
+        "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM"
+      ],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-04",
+      "claim": "Those figures describe the original proposal as represented in an objector’s filing. They are not a count of messages already delivered to Google, or a demonstration that every item contains confidential information. A successful auction bid and a completed, court-approved transfer are different stages.",
+      "disposition": "attributed",
+      "sources": [
+        "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM"
+      ],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-05",
+      "claim": "The preserved October 13 reporting premise was a proposed sale. The documents examined here do not establish completion or what any eventual training dataset contained. This article examines the privacy mechanism and the objections, rather than offering a current account of the bankruptcy docket.",
+      "disposition": "uncertain",
+      "sources": [
+        "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM"
+      ],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-06",
+      "claim": "The union’s original objection separates two tests. One asks whether information can be associated with a person. The other asks whether the substance should leave the employment relationship at all.",
+      "disposition": "attributed",
+      "sources": [
+        "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM"
+      ],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-07",
+      "claim": "Consider a hypothetical discussion of a small team’s staffing dispute. Replacing each participant’s name might make direct identification harder. It would still expose the existence and substance of the dispute. Add schedules or other context and the group might become recognizable. That example illustrates the risk; it is not a recovered Spirit conversation.",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-08",
+      "claim": "Links between records matter too. A dataset can be more revealing when a communications history can be joined to operational records. But the existence of links does not prove that a particular person has been reidentified. The original objection explicitly stopped short of claiming a technical demonstration involving a particular record.",
+      "disposition": "attributed",
+      "sources": [
+        "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM"
+      ],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-09",
+      "claim": "A fair account cannot freeze the dispute at its most alarming opening version. The union’s [September 24 supplemental objection](https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM) acknowledged progress: the debtors had agreed to exclude sensitive categories including medical and disability information, accommodations, leave, testing records and union records.",
+      "disposition": "attributed",
+      "sources": [
+        "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM"
+      ],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-10",
+      "claim": "The remaining disagreement concerned how exclusions would work across systems. A record normally stored in a dedicated application can also be discussed in an email. Excluding the application does not automatically remove every narrative reference elsewhere. The filing describes search and deidentification stages while questioning how their effectiveness could be verified.",
+      "disposition": "attributed",
+      "sources": [
+        "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM"
+      ],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-11",
+      "claim": "It also records qualifications to the earlier concern about linked records: no reidentification key would be transferred, actual employee numbers would not be transferred, and randomized identifiers would not necessarily be universal across separate datasets. These are material safeguards as represented in that filing. They do not settle the union’s concerns about confidential content, but omitting them would misdescribe the dispute.",
+      "disposition": "attributed",
+      "sources": [
+        "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM"
+      ],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-12",
+      "claim": "In an [October 1 proposed amicus brief](https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM), EPIC and Professor Seema Patel supported the objection and challenged the adequacy of the proposed privacy arrangements. Their filing argues that inference can expose sensitive information even after deidentification and questions how clearly protections extend to employees.",
+      "disposition": "attributed",
+      "sources": [
+        "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM"
+      ],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-13",
+      "claim": "That is an advocacy position in a court submission. It does not demonstrate that Google trained a model on these records or that a model reproduced a worker’s information. Neither outcome should be invented to make the risk sound concrete.",
+      "disposition": "attributed",
+      "sources": [
+        "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM"
+      ],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-14",
+      "claim": "For a proposed training use, useful scrutiny would follow the whole chain: which content is excluded, which transformations occur, who can test them, what uses are permitted and who can enforce the promises. Those are analytical questions, not a statement of legal obligations or personal legal advice.",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-15",
+      "claim": "A privacy promise is easier to assess when it identifies its object. Does it protect names, confidential subjects, groups, or all three? Does it apply to structured fields and free-form communications? Does an independent check examine what survived the filtering?",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-16",
+      "claim": "These questions are worth asking before a transfer because later restrictions may be harder to evaluate once copies and derived datasets exist. That is a recommendation for governance, not a claim that this transaction has become irreversible.",
+      "disposition": "opinion",
+      "sources": [],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    },
+    {
+      "id": "spirit-17",
+      "claim": "Spirit’s proposed transaction exposes a gap between an employer’s operational archive and the people whose lives appear inside it. Removing names addresses part of that gap. Deciding whether the underlying conversations should become somebody else’s training material requires a separate answer.",
+      "disposition": "attributed",
+      "sources": [
+        "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+        "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM"
+      ],
+      "unknowns": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ]
+    }
+  ],
+  "unknowns": [
+    "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+    "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+    "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+  ],
+  "corrections": [
+    {
+      "date": "2026-11-05T19:09:52.588710Z",
+      "description": "Recovery preparation: preserved editorial date; added archival dating; checked originals; removed internal labels and bounded claims to retrieved evidence."
+    }
+  ],
+  "sister_body_comparison": {
+    "status": "not-performed",
+    "independent_corroboration": false,
+    "limits": "Parent must assess sibling coverage before publication."
+  },
+  "checked_sources": [
+    {
+      "url": "https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf",
+      "retrieval_status": "retrieved-via-web",
+      "artifact": "retrieved/web-appendix.json",
+      "checked_excerpt": "2. That screen was designed to solve a different problem. Deidentification addresses",
+      "limits": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ],
+      "excerpt_role": "Actual retrieved text substring; full fetch response retained. Documentary support, not independent replication."
+    },
+    {
+      "url": "https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM",
+      "retrieval_status": "retrieved-via-web",
+      "artifact": "retrieved/web-spirit.json",
+      "checked_excerpt": "agreed to outright exclude several of the most sensitive categories the AFA raised, including",
+      "limits": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ],
+      "excerpt_role": "Actual retrieved text substring; full fetch response retained. Documentary support, not independent replication."
+    },
+    {
+      "url": "https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM",
+      "retrieval_status": "retrieved-via-web",
+      "artifact": "retrieved/web-additional.json",
+      "checked_excerpt": "Spirit Airlines is proposing to sell that data to Google for $10 million. See Notice of",
+      "limits": [
+        "No surviving draft or scratch directory; article reconstructed from preserved cron response and newly retrieved original filings.",
+        "Objector and amicus claims are advocacy, not findings; no final sale order, transfer, training use or reidentification established.",
+        "Original proposal changed; September 24 concessions are included. Later docket developments are outside this historical analysis."
+      ],
+      "excerpt_role": "Actual retrieved text substring; full fetch response retained. Documentary support, not independent replication."
+    }
+  ],
+  "provenance": {
+    "assignment": {
+      "site": "PS",
+      "original_scheduled_date": "2026-10-13",
+      "original_frontmatter_date": null,
+      "title": "What Happens to Your Work Chats When the Company Disappears?",
+      "source_draft": null,
+      "evidence_files": [],
+      "log_path": "/Users/cojovi/.hermes/profiles/loki/cron/output/114099981e5f/2026-10-13_03-51-46.md",
+      "disposition": "publish_after_batch_approval",
+      "existing_url": null,
+      "draft_recovery_required": true
+    },
+    "originals_directory": "/Users/cojovi/.hermes/profiles/loki/publications/backlog-recovery-2026-11-05/workers/ps-a/originals",
+    "preservation": "Byte-for-byte text copies retained; no originals modified.",
+    "missing_surviving_draft": true
+  },
+  "publication_note": {
+    "status": "Prepared for parent publication on 2026-11-05; no publication performed here.",
+    "action_if_publication_slips": "Update the visible first-publication recovery date and regenerate the body hash before publication."
+  }
+}

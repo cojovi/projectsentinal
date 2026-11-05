@@ -24,7 +24,7 @@ test('restored story participates in ordinary homepage, sitemap, RSS, archive an
  const corrections=cheerio.load(read('corrections/index.html'));assert.match(corrections('article').text(),/now published again, not withdrawn/);assert.match(corrections('article').text(),/historical actions/);
 });
 test('ten restoration records preserve historical checked-body ledgers without falsely binding them to restored originals',()=>{
- const reviews=fs.readdirSync(path.join(root,'reviews')).filter(f=>f.endsWith('.json'));assert.equal(reviews.length,10);
+ const reviews=fs.readdirSync(path.join(root,'reviews')).filter(f=>f.endsWith('.json')&&JSON.parse(fs.readFileSync(path.join(root,'reviews',f))).restoration);assert.equal(reviews.length,10);
  for(const file of reviews){
   const r=JSON.parse(fs.readFileSync(path.join(root,'reviews',file)));assert.equal(r.status,'source-review-pending');assert.equal(r.source_sha256,undefined);assert.equal(r.checked_at,undefined);assert.equal(r.review_process.completed_full_factcheck,false);assert.equal(r.review_process.human_reviewer,null);assert.equal(r.claims.length,0);assert.ok(r.unknowns.length);assert.equal(r.restoration.verification_performed,false);
   const historical=r.history.at(-1).record;assert.equal(historical.status,'documented');assert.match(historical.source_sha256,/^[a-f0-9]{64}$/);assert.equal(historical.review_process.completed_full_factcheck,false);assert.equal(historical.review_process.human_reviewer,null);assert.ok(historical.claims.length);assert.ok(historical.scope.includes('not a full article fact-check'));

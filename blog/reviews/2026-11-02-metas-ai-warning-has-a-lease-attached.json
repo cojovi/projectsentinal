@@ -1,0 +1,68 @@
+{
+  "status": "source-review-pending",
+  "article_type": "analysis",
+  "source_sha256": "874db249959c3d3d7d823dc89e0ad2a0348c546b0510d76b278c0a014b976b62",
+  "reporting_cutoff": "2026-11-02T09:23:00Z",
+  "checked_at": "2026-11-05T19:10:42.097717Z",
+  "scope": "Limited documentary checks during recovery; public-source analysis, no human review, interviews, independent replication or deployment verification claimed.",
+  "sources": [
+    "https://www.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101715788",
+    "https://spratings.spglobal.com/ratings/%5Blang%5D/regulatory/article/-/view/type/HTML/id/3653386"
+  ],
+  "claims": [
+    {
+      "claim": "The later S&P Sopaipilla notice dates Meta’s outlook change to October 30 and identifies its AA-minus negative outlook.",
+      "disposition": "attributed",
+      "sources": [
+        "https://spratings.spglobal.com/ratings/%5Blang%5D/regulatory/article/-/view/type/HTML/id/3653386"
+      ],
+      "unknowns": [
+        "Retrieved through indexed primary text; direct open produced an empty body. Original October 30 full notice unavailable."
+      ]
+    },
+    {
+      "claim": "S&P describes project guarantees and rent commencement obligations independent of completion, with limited exceptions.",
+      "disposition": "attributed",
+      "sources": [
+        "https://spratings.spglobal.com/ratings/%5Blang%5D/regulatory/article/-/view/type/HTML/id/3653386"
+      ],
+      "unknowns": [
+        "Original lease contracts not examined."
+      ]
+    },
+    {
+      "claim": "The earlier specific forecasts, leverage threshold and Reuters response are not currently substantiated from retrieved originals.",
+      "disposition": "uncertain",
+      "sources": [
+        "https://www.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101715788",
+        "https://www.reuters.com/business/sp-global-revises-outlook-meta-negative-cashflow-concerns-2026-10-30"
+      ],
+      "unknowns": [
+        "Removed from public factual assertions; earlier review is not a genuine source extract."
+      ]
+    },
+    {
+      "claim": "Lease obligations merit scrutiny alongside ownership and chip purchases.",
+      "disposition": "opinion",
+      "sources": [
+        "https://spratings.spglobal.com/ratings/%5Blang%5D/regulatory/article/-/view/type/HTML/id/3653386"
+      ],
+      "unknowns": [
+        "No forecast of failure or changes to consumer products."
+      ]
+    }
+  ],
+  "unknowns": [
+    "Full original rating notice, detailed forecasts and Reuters company response unavailable for substantive recovery checking.",
+    "A later primary search extract supports the narrow mechanism, not an audit of Meta financials or private contracts.",
+    "Original draft numeric discrepancy remains unresolved and numbers were removed."
+  ],
+  "recovery_changes": [
+    "Preserved core lease mechanism and defensible original analysis; removed unretrieved forecasts and unverified company-response paraphrase.",
+    "Added explicitly dated November 2 later primary notice; retained original timestamp."
+  ],
+  "sister_body_comparison": {
+    "status": "not-performed",
+    "limits": "Parent must compare current sister inventory before publication."
+  }
+}

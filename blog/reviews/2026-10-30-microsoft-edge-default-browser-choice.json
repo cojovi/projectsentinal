@@ -1,0 +1,66 @@
+{
+  "status": "documented",
+  "article_type": "explainer",
+  "source_sha256": "1fed32b0824508e394df665efdde6959ff8dc9a0e43dd47f5e5c85526e2eb8cd",
+  "reporting_cutoff": "2026-10-30T21:19:51Z",
+  "checked_at": "2026-11-05T19:10:42.097717Z",
+  "scope": "Limited documentary checks during recovery; public-source analysis, no human review, interviews, independent replication or deployment verification claimed.",
+  "sources": [
+    "https://support.microsoft.com/en-us/outlook/web-links-from-outlook-emails-and-teams-chats-open-in-microsoft-edge",
+    "https://browserchoicealliance.org/press-corner/"
+  ],
+  "claims": [
+    {
+      "claim": "Microsoft documents app-specific Edge routing that does not replace the Windows default-browser setting.",
+      "disposition": "supported",
+      "sources": [
+        "https://support.microsoft.com/en-us/outlook/web-links-from-outlook-emails-and-teams-chats-open-in-microsoft-edge"
+      ],
+      "unknowns": [
+        "No fresh Windows testing; versions, regions and policies may differ."
+      ]
+    },
+    {
+      "claim": "Microsoft describes app preferences for changing that experience and a side-by-side productivity rationale.",
+      "disposition": "attributed",
+      "sources": [
+        "https://support.microsoft.com/en-us/outlook/web-links-from-outlook-emails-and-teams-chats-open-in-microsoft-edge"
+      ],
+      "unknowns": [
+        "No guarantee of universal availability or usability."
+      ]
+    },
+    {
+      "claim": "BCA identifies a BIT report and is a coalition of browser developers.",
+      "disposition": "supported",
+      "sources": [
+        "https://browserchoicealliance.org/press-corner/"
+      ],
+      "unknowns": [
+        "Full PDF not retrieved; report findings not certified."
+      ]
+    },
+    {
+      "claim": "Browser choice should be evaluated throughout a workflow, including predictable routing.",
+      "disposition": "opinion",
+      "sources": [
+        "https://support.microsoft.com/en-us/outlook/web-links-from-outlook-emails-and-teams-chats-open-in-microsoft-edge",
+        "https://browserchoicealliance.org/press-corner/"
+      ],
+      "unknowns": [
+        "Design analysis rather than measured user outcomes."
+      ]
+    }
+  ],
+  "unknowns": [
+    "No independent Windows testing; report PDF unavailable; detailed allegations, counts and jurisdiction comparisons omitted.",
+    "Microsoft documentation checked November 5 is later evidence and does not prove the exact October 30 software state."
+  ],
+  "recovery_changes": [
+    "No surviving draft; reconstructed from selected angle and cron response, bounded by live official documentation."
+  ],
+  "sister_body_comparison": {
+    "status": "not-performed",
+    "limits": "Parent must compare current sister inventory before publication."
+  }
+}
