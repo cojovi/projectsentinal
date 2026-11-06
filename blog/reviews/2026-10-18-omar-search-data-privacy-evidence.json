@@ -1,0 +1,128 @@
+{
+  "status": "source-review-pending",
+  "article_type": "analysis",
+  "scope": "Original historical copy restored at the publisher's explicit request; no new fact-check, recording authentication or technical reconstruction was performed.",
+  "review_process": {
+    "agent": "Publisher-requested original-copy restoration",
+    "human_reviewer": null,
+    "completed_full_factcheck": false,
+    "responsibility": "Protocol Sentinel desk"
+  },
+  "sources": [
+    "https://www.cbsnews.com/news/attorneys-ilhan-omar-doj-violating-judge-orders",
+    "https://www.newsnationnow.com/politics/feds-dumpster-dive-ilhan-omar-dna",
+    "https://www.cnn.com/2026/10/17/politics/explainer-wouldnt-be-easy-to-strip-rep-ilhan-omar-citizenship"
+  ],
+  "unknowns": [
+    "Restoring the original copy is not independent authentication of its claims. Earlier body-bound checks are retained as historical records and are not a verification badge for this restored body."
+  ],
+  "claims": [],
+  "corrections": [
+    {
+      "date": "2026-10-28T21:26:28.286Z",
+      "description": "Clarified the October 18 historical reporting cutoff and limited documentary check; made source entries clickable. The checked reports do not establish DNA results, charges, guilt or present docket status."
+    },
+    {
+      "date": "2026-10-30T19:34:18.737794+00:00",
+      "description": "Restored the original title and complete body at the publisher's explicit request, returning the article to published discovery. Earlier on-page editorial treatment is superseded; this restoration adds no factual authentication."
+    }
+  ],
+  "history": [
+    {
+      "preserved_at": "2026-10-30T19:34:18.737794+00:00",
+      "record": {
+        "status": "documented",
+        "article_type": "analysis",
+        "source_sha256": "f3923e8ddbe33d857d930a4be7152ebe5c51792ae56db88683f09a5c67d76807",
+        "checked_at": "2026-10-28T21:26:28.286Z",
+        "reporting_cutoff": "2026-10-18T23:59:59-05:00",
+        "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+        "review_process": {
+          "agent": "Codex (AI-assisted editorial pass)",
+          "human_reviewer": null,
+          "completed_full_factcheck": false,
+          "responsibility": "Protocol Sentinel desk"
+        },
+        "sources": [
+          "https://www.cbsnews.com/news/attorneys-ilhan-omar-doj-violating-judge-orders",
+          "https://www.newsnationnow.com/politics/feds-dumpster-dive-ilhan-omar-dna",
+          "https://www.cnn.com/2026/10/17/politics/explainer-wouldnt-be-easy-to-strip-rep-ilhan-omar-citizenship"
+        ],
+        "checked_sources": [
+          {
+            "url": "https://www.cbsnews.com/news/attorneys-ilhan-omar-doj-violating-judge-orders",
+            "artifact": "priority-primary-batch-4.json",
+            "source_text_sha256": "cf8a6af4f1c522791ed4fb73ae8fd1f4abea28211ec22e2b406fac544483ae59",
+            "checked_excerpt": "Attorneys for Representative Ilhan Omar have accused the Justice Department of violating a magistrate judge's order by failing to follow certain protocols designed to safeguard her constitutional interests as a member of Congress during [the search of her home](https://www.cbsnews.com/news/ilhan-omar-immigration-raid-washington-dc/) in Washington, D.C.",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          },
+          {
+            "url": "https://www.newsnationnow.com/politics/feds-dumpster-dive-ilhan-omar-dna",
+            "artifact": "priority-primary-batch-4.json",
+            "source_text_sha256": "8b833164c987a18162e15c5b82cbbf374ae6bf4c13b56b944bd530333e357bff",
+            "checked_excerpt": "([NewsNation](https://www.newsnationnow.com/)) — Federal agents collected garbage in hopes of obtaining the DNA of [U.S. Rep. Ilhan Omar](https://www.newsnationnow.com/politics/ilhan-omar-immigration-fraud-probe-continues/) and her family before this week’s raid at the Minnesota Democrat’s home in Washington, D.C., sources tell NewsNation.",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          },
+          {
+            "url": "https://www.cnn.com/2026/10/17/politics/explainer-wouldnt-be-easy-to-strip-rep-ilhan-omar-citizenship",
+            "artifact": "priority-primary-batch-4.json",
+            "source_text_sha256": "2fcde0391363d10a949827726de48b6ad4dbcd64b51f805d7df034d449b1ec04",
+            "checked_excerpt": "The government has not yet indicated it will take steps to attempt to strip Omar of her citizenship. But the president himself has said he’d like to see Omar sent [to Somalia](https://www.cnn.com/2025/12/02/us/ice-operation-somali-migrants-minneapolis).",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          }
+        ],
+        "unknowns": [
+          "Only the listed documentary claims were checked against stored source text; remaining historical citations and underlying evidence were not comprehensively authenticated.",
+          "Competing accounts, not a judicial ruling or our review of sealed evidence.",
+          "No laboratory result, authenticated relationship finding or guilt established.",
+          "Historical report within October 18 cutoff; no current docket or sealed-file review."
+        ],
+        "claims": [
+          {
+            "claim": "CBS reported the lawyers’ search-protocol allegations and DOJ’s dispute.",
+            "disposition": "attributed",
+            "sources": [
+              "https://www.cbsnews.com/news/attorneys-ilhan-omar-doj-violating-judge-orders"
+            ],
+            "unknowns": "Competing accounts, not a judicial ruling or our review of sealed evidence."
+          },
+          {
+            "claim": "NewsNation sources described garbage collection in hopes of obtaining DNA.",
+            "disposition": "attributed",
+            "sources": [
+              "https://www.newsnationnow.com/politics/feds-dumpster-dive-ilhan-omar-dna"
+            ],
+            "unknowns": "No laboratory result, authenticated relationship finding or guilt established."
+          },
+          {
+            "claim": "CNN distinguished a reported objective from publicly announced citizenship action and reported no charges.",
+            "disposition": "attributed",
+            "sources": [
+              "https://www.cnn.com/2026/10/17/politics/explainer-wouldnt-be-easy-to-strip-rep-ilhan-omar-citizenship"
+            ],
+            "unknowns": "Historical report within October 18 cutoff; no current docket or sealed-file review."
+          }
+        ],
+        "corrections": [
+          {
+            "date": "2026-10-28T21:26:28.286Z",
+            "description": "Clarified the October 18 historical reporting cutoff and limited documentary check; made source entries clickable. The checked reports do not establish DNA results, charges, guilt or present docket status."
+          }
+        ],
+        "sister_body_comparison": {
+          "status": "not-performed",
+          "publication": "Northstar Ledger",
+          "independent_corroboration": false,
+          "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+        }
+      }
+    }
+  ],
+  "restoration": {
+    "requested_by": "publisher",
+    "restored_at": "2026-10-30T19:34:18.737794+00:00",
+    "original_revision": "1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2",
+    "original_source": "https://github.com/cojovi/projectsentinal/blob/1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2/blog/source/_posts/2026-10-18-omar-search-data-privacy-evidence.md",
+    "verification_performed": false
+  }
+}

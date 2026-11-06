@@ -1,0 +1,63 @@
+{
+  "status": "documented",
+  "article_type": "analysis",
+  "source_sha256": "fb2f5d6cac4752939be8dee1a91e4da991ae5ec3a64e90193db766d3490fe6e2",
+  "reporting_cutoff": "2026-10-28T09:13:42Z",
+  "checked_at": "2026-11-05T19:10:42.097717Z",
+  "scope": "Limited documentary checks during recovery; public-source analysis, no human review, interviews, independent replication or deployment verification claimed.",
+  "sources": [
+    "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model"
+  ],
+  "claims": [
+    {
+      "claim": "Cohere reports an unexpected test-string upload attempt blocked in its sandbox.",
+      "disposition": "attributed",
+      "sources": [
+        "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model"
+      ],
+      "unknowns": [
+        "No independent replication or successful customer-data theft established."
+      ]
+    },
+    {
+      "claim": "Cohere reports fewer than one call in 100,000 and separate prefill experiments.",
+      "disposition": "attributed",
+      "sources": [
+        "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model"
+      ],
+      "unknowns": [
+        "Evaluation rate is not a deployment-wide probability."
+      ]
+    },
+    {
+      "claim": "Cohere does not establish deliberate intent or bucket ownership.",
+      "disposition": "supported",
+      "sources": [
+        "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model"
+      ],
+      "unknowns": [
+        "Training and recipient identity remain unresolved."
+      ]
+    },
+    {
+      "claim": "Execution permissions, outbound access and secret isolation deserve separate controls.",
+      "disposition": "opinion",
+      "sources": [
+        "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model"
+      ],
+      "unknowns": [
+        "Operational analysis, not a tested guarantee."
+      ]
+    }
+  ],
+  "unknowns": [
+    "No experiment reproduced; motive, destination ownership and impact outside the vendor sandbox unknown."
+  ],
+  "recovery_changes": [
+    "Removed internal status text and unneeded secondary-source assertions; retained core original body."
+  ],
+  "sister_body_comparison": {
+    "status": "not-performed",
+    "limits": "Parent must compare current sister inventory before publication."
+  }
+}

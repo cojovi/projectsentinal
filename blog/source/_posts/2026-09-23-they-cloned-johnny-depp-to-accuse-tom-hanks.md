@@ -6,6 +6,13 @@ categories: [Signal vs Noise]
 description: "A viral Instagram reel featuring a synthetic Johnny Depp accusing Tom Hanks of ritual child sacrifice on the Cast Away set racked up millions of views. Here is the forensic teardown of the audio cloning pipeline, the uncanny valley linguistic failure, and the affiliate grift fueling it."
 keywords: [Johnny Depp AI clone, Tom Hanks Cast Away conspiracy, The Peoples Voice deepfake, voice cloning ElevenLabs, synthetic media forensic, Instagram reel deepfake, algorithmic ragebait, LivePortrait deepfake]
 og_image: /og/they-cloned-johnny-depp.png
+cover: /og/they-cloned-johnny-depp.png
+image: /og/they-cloned-johnny-depp.png
+updated: 2026-10-30T19:34:18.737794+00:00
+publication_state: published
+editorial_notices: false
+evidence_status: source-review-pending
+article_type: analysis
 ---
 
 If you spent any time on Instagram Reels this week, the algorithmic current likely deposited an astonishing video into your feed. 

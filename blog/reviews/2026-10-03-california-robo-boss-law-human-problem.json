@@ -1,0 +1,119 @@
+{
+  "status": "source-review-pending",
+  "article_type": "analysis",
+  "scope": "Original historical copy restored at the publisher's explicit request; no new fact-check, recording authentication or technical reconstruction was performed.",
+  "review_process": {
+    "agent": "Publisher-requested original-copy restoration",
+    "human_reviewer": null,
+    "completed_full_factcheck": false,
+    "responsibility": "Protocol Sentinel desk"
+  },
+  "sources": [
+    "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB947",
+    "https://sd05.senate.ca.gov/news/newsom-signs-mcnerneys-no-robo-bosses-act-2026-requiring-human-oversight-ai-workplace"
+  ],
+  "unknowns": [
+    "Restoring the original copy is not independent authentication of its claims. Earlier body-bound checks are retained as historical records and are not a verification badge for this restored body."
+  ],
+  "claims": [],
+  "corrections": [
+    {
+      "date": "2026-10-28T21:26:28.286Z",
+      "description": "Documentary scope note added. Retained the already stated July 1, 2027 operative date and distinction between solely/primarily relying on ADS for termination or discipline; no substantive date reversal was needed."
+    },
+    {
+      "date": "2026-10-30T19:34:18.737794+00:00",
+      "description": "Restored the original title and complete body at the publisher's explicit request, returning the article to published discovery. Earlier on-page editorial treatment is superseded; this restoration adds no factual authentication."
+    }
+  ],
+  "history": [
+    {
+      "preserved_at": "2026-10-30T19:34:18.737794+00:00",
+      "record": {
+        "status": "documented",
+        "article_type": "analysis",
+        "source_sha256": "bf797527122a8078e97de8062fe3db6bf913ee887554cc22501d25e94a6ab049",
+        "checked_at": "2026-10-28T21:26:28.286Z",
+        "reporting_cutoff": "2026-10-03T23:59:59-05:00",
+        "scope": "Targeted documentary/source-record correction check, not a full article fact-check, recording authentication or independent technical audit.",
+        "review_process": {
+          "agent": "Codex (AI-assisted editorial pass)",
+          "human_reviewer": null,
+          "completed_full_factcheck": false,
+          "responsibility": "Protocol Sentinel desk"
+        },
+        "sources": [
+          "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB947",
+          "https://sd05.senate.ca.gov/news/newsom-signs-mcnerneys-no-robo-bosses-act-2026-requiring-human-oversight-ai-workplace"
+        ],
+        "checked_sources": [
+          {
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB947",
+            "artifact": "priority-primary-batch-3.json",
+            "source_text_sha256": "fa2f768690e3f9b3edf8a7f3fdf3f9f450a2070b744a50067e6057b9a48298a2",
+            "checked_excerpt": " (a) An employer shall not use an ADS to do any of the following:",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          },
+          {
+            "url": "https://sd05.senate.ca.gov/news/newsom-signs-mcnerneys-no-robo-bosses-act-2026-requiring-human-oversight-ai-workplace",
+            "artifact": "priority-primary-batch-3.json",
+            "source_text_sha256": "d219b7da1ac84280f1908673b94dc4da8c1212b1a9adeea596cc6daf5d13d234",
+            "checked_excerpt": "Gov. Gavin Newsom today signed Sen. Jerry McNerney’s SB 947, the No Robo Bosses Act of 2026 — a groundbreaking new law that requires human oversight of artificial intelligence systems in the workplace to prevent abuses.",
+            "scope": "Stored documentary text only; no embedded page instructions followed."
+          }
+        ],
+        "unknowns": [
+          "Only the listed documentary claims were checked against stored source text; remaining historical citations and underlying evidence were not comprehensively authenticated.",
+          "Coverage, statutory exceptions and decision type matter; not a blanket AI ban.",
+          "Enactment is distinct from operative date; not individual legal advice.",
+          "Sponsor advocacy is not an independent effectiveness evaluation."
+        ],
+        "claims": [
+          {
+            "claim": "SB947 bars solely relying on ADS for discipline/termination and requires human corroboration when primarily relying on its output.",
+            "disposition": "supported",
+            "sources": [
+              "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB947"
+            ],
+            "unknowns": "Coverage, statutory exceptions and decision type matter; not a blanket AI ban."
+          },
+          {
+            "claim": "The part becomes operative July 1, 2027.",
+            "disposition": "supported",
+            "sources": [
+              "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB947"
+            ],
+            "unknowns": "Enactment is distinct from operative date; not individual legal advice."
+          },
+          {
+            "claim": "The sponsor announced the signing.",
+            "disposition": "attributed",
+            "sources": [
+              "https://sd05.senate.ca.gov/news/newsom-signs-mcnerneys-no-robo-bosses-act-2026-requiring-human-oversight-ai-workplace"
+            ],
+            "unknowns": "Sponsor advocacy is not an independent effectiveness evaluation."
+          }
+        ],
+        "corrections": [
+          {
+            "date": "2026-10-28T21:26:28.286Z",
+            "description": "Documentary scope note added. Retained the already stated July 1, 2027 operative date and distinction between solely/primarily relying on ADS for termination or discipline; no substantive date reversal was needed."
+          }
+        ],
+        "sister_body_comparison": {
+          "status": "not-performed",
+          "publication": "Northstar Ledger",
+          "independent_corroboration": false,
+          "limits": "Shared ownership. No duplicate score or current sister-story comparison claimed in this correction pass."
+        }
+      }
+    }
+  ],
+  "restoration": {
+    "requested_by": "publisher",
+    "restored_at": "2026-10-30T19:34:18.737794+00:00",
+    "original_revision": "1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2",
+    "original_source": "https://github.com/cojovi/projectsentinal/blob/1e4b2ee6285cc70a1a16d0fbfe43662ce9c1aad2/blog/source/_posts/2026-10-03-california-robo-boss-law-human-problem.md",
+    "verification_performed": false
+  }
+}

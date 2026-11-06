@@ -34,7 +34,7 @@ def parse_issue(body: str) -> dict:
         "tags": [],
         "category": None,
         "min_words": 900,
-        "draft": False,
+        "draft": True,
         "model": DEFAULT_MODEL
     }
     for line in body.splitlines():
@@ -135,8 +135,13 @@ def main():
         "title": title,
         "date": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
         "tags": tags,
-        "categories": [category] if category else [],
-        "draft": draft,
+        "categories": [category] if category in ["AI & Models", "Big Tech & Platforms", "Privacy & Power", "Devices & Experiments", "Signal vs Noise"] else ["Signal vs Noise"],
+        "draft": True,
+        "published": False,
+        "author": "Protocol Sentinel desk",
+        "article_type": "analysis",
+        "evidence_status": "source-review-pending",
+        "unknowns": ["Sources and claims need editorial review; no independent confirmation asserted."],
         "slug": slug,
         "sources": source_urls
     }
