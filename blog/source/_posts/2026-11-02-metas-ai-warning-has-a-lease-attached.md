@@ -17,8 +17,6 @@ sources: ["https://www.spglobal.com/ratings/en/regulatory/article/-/view/sourceI
 description: "Meta’s AI Warning Has a Lease Attached — mechanisms, evidence and limits."
 ---
 
-*Archival note: Originally scheduled 2026-11-02; first published on recovery date 2026-11-05 when released by the publisher. Original reporting cutoff 2026-11-02T09:23:00Z. Later source checks and developments are explicitly dated below.*
-
 The obvious way to read Meta’s AI warning is that the company is spending an enormous amount of money on computers. The more interesting part is what happens when it rents the buildings those computers live in.
 
 “We are leasing capacity” can sound lighter than “we are borrowing to build it.” From a credit analyst’s perspective, both can create claims on tomorrow’s cash. Moving the bill into a different contractual box does not make it disappear.

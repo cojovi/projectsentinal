@@ -7,7 +7,7 @@ const quality=require('../authority/quality.cjs');
 const root=path.resolve(__dirname,'..');
 const expected=require('./fixtures/backlog-recovery-20261105.json');
 const map=JSON.parse(fs.readFileSync(path.join(root,'public/authority-map.json')));
-test('approved recovered articles retain original editorial dates, honest recovery notes, ledgers, images and complete discovery',()=>{
+test('approved recovered articles retain original editorial dates, no reader-facing recovery notes, ledgers, images and complete discovery',()=>{
  assert.equal(expected.length,9);
  const legacy=new Set(require('../authority/legacy-articles.json'));
  for(const item of expected){
@@ -15,7 +15,7 @@ test('approved recovered articles retain original editorial dates, honest recove
   const source=c.readSource(path.join(root,'source/_posts',item.key+'.md'));
   const record=map.articles.find(a=>a.key===item.key);assert.ok(record,item.key);
   assert.equal(record.published.slice(0,10),item.date);assert.ok(record.updated>=record.published);
-  assert.match(source.body,/Archival note: Originally scheduled/);assert.match(source.body,/2026-11-05/);
+  assert.doesNotMatch(source.body,/Archival note:|Originally scheduled/);
   const review=JSON.parse(fs.readFileSync(path.join(root,'reviews',item.key+'.json')));
   assert.equal(review.source_sha256,quality.bodyHash(source.body));assert.ok(review.claims.length);
   assert.equal(quality.check(source,review).pass,true);

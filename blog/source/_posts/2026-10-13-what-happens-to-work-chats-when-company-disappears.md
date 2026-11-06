@@ -16,8 +16,6 @@ image_credit: "Original locally drawn pixel-art editorial illustration; not docu
 description: "What Happens to Your Work Chats When the Company Disappears? — a historical, source-bounded analysis."
 ---
 
-*Archival note: Originally scheduled 2026-10-13; first published on recovery date 2026-11-05. Original reporting cutoff: 2026-10-13. This is historical analysis; later developments are included only when explicitly dated.*
-
 Deleting names does not delete what people told their employer. A workplace message can reveal a health problem, a dispute or an operational vulnerability even when its author becomes an anonymous identifier.
 
 That distinction sits at the center of objections to Spirit Airlines’ proposed sale of internal data to Google. The question is not simply whether a buyer receives a list of named workers. It is what remains in the conversations, attachments and relationships after the identifiers are transformed.

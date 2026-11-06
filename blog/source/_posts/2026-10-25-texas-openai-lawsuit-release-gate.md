@@ -16,8 +16,6 @@ image_credit: "Original locally drawn pixel-art editorial illustration; not docu
 description: "What Is Texas Actually Asking OpenAI to Change? — a historical, source-bounded analysis."
 ---
 
-*Archival note: Originally scheduled 2026-10-25; first published on recovery date 2026-11-05. Original reporting cutoff: 2026-10-25. This is historical analysis; later developments are included only when explicitly dated.*
-
 A lawsuit is not a product update. It does not switch off your chatbot, install a new age check, or prove the allegations in its opening paragraphs. But the changes a government asks a court to impose can tell you more about AI's direction than another launch keynote.
 
 On October 23, Texas Attorney General Ken Paxton announced a lawsuit against OpenAI entities and CEO Sam Altman over ChatGPT's alleged safety failures and deceptive representations. The interesting part is not the press release's apocalypse-adjacent language. It is the proposed machinery near the end of the state's petition.

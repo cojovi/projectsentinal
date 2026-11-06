@@ -16,8 +16,6 @@ image_credit: "Original locally drawn pixel-art editorial illustration; not docu
 description: "The Ad You Never Clicked — a historical, source-bounded analysis."
 ---
 
-*Archival note: Originally scheduled 2026-10-15; first published on recovery date 2026-11-05. Original reporting cutoff: 2026-10-15. This is historical analysis; later developments are included only when explicitly dated.*
-
 “Don't click suspicious links” is useful advice. It is not a security architecture.
 
 On October 15, Citizen Lab published a technical investigation into **AdFection**: targeted advertising used to deliver zero-click mercenary spyware. Researchers linked Discover-Tech, an Israeli advertising company, to a pipeline connecting ordinary ad inventory with surveillance vendors. Their evidence includes attacks on devices at Al Jazeera in 2024 and 2025. The publication is new; those attacks are not happening for the first time this week.

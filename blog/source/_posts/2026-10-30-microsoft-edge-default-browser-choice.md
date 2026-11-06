@@ -17,8 +17,6 @@ sources: ["https://support.microsoft.com/en-us/outlook/web-links-from-outlook-em
 description: "Microsoft Edge: why one default-browser setting is not the whole choice — mechanisms, evidence and limits."
 ---
 
-*Archival note: Originally scheduled 2026-10-30; first published on recovery date 2026-11-05 when released by the publisher. Original reporting cutoff 2026-10-30T21:19:51Z. Later source checks and developments are explicitly dated below.*
-
 Changing a browser preference is an instruction about where a link should go. Whether that instruction governs every application is a separate design decision. The practical question is which component gets the final say when you click.
 
 That is the durable angle behind the browser-choice report selected for October 30. The Browser Choice Alliance’s [press page](https://browserchoicealliance.org/press-corner/) identifies a Behavioural Insights Team report about interface patterns that obstruct or override browser choice. The alliance is a coalition of competing browser developers. Its commercial interest belongs alongside its criticism.

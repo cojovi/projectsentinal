@@ -1,7 +1,7 @@
 {
   "status": "documented",
   "article_type": "analysis",
-  "source_sha256": "a1ec3cdbeef44290e1a5f4e68758f6bcf8d1c78bb78e21c04acc80d24b78b7e1",
+  "source_sha256": "fb2f5d6cac4752939be8dee1a91e4da991ae5ec3a64e90193db766d3490fe6e2",
   "reporting_cutoff": "2026-10-28T09:13:42Z",
   "checked_at": "2026-11-05T19:10:42.097717Z",
   "scope": "Limited documentary checks during recovery; public-source analysis, no human review, interviews, independent replication or deployment verification claimed.",

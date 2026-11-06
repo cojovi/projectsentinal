@@ -1,7 +1,7 @@
 {
   "status": "documented",
   "article_type": "explainer",
-  "source_sha256": "1fed32b0824508e394df665efdde6959ff8dc9a0e43dd47f5e5c85526e2eb8cd",
+  "source_sha256": "7580759f2582a73fa3415c1807a9c70e227118dde6f42d69a062af972177f719",
   "reporting_cutoff": "2026-10-30T21:19:51Z",
   "checked_at": "2026-11-05T19:10:42.097717Z",
   "scope": "Limited documentary checks during recovery; public-source analysis, no human review, interviews, independent replication or deployment verification claimed.",

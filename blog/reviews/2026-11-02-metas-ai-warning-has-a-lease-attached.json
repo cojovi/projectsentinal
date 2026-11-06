@@ -1,7 +1,7 @@
 {
   "status": "source-review-pending",
   "article_type": "analysis",
-  "source_sha256": "874db249959c3d3d7d823dc89e0ad2a0348c546b0510d76b278c0a014b976b62",
+  "source_sha256": "1986bb557a3517447ebbf104bfa5f2f3a964adcc5a945860c499859285b8011b",
   "reporting_cutoff": "2026-11-02T09:23:00Z",
   "checked_at": "2026-11-05T19:10:42.097717Z",
   "scope": "Limited documentary checks during recovery; public-source analysis, no human review, interviews, independent replication or deployment verification claimed.",

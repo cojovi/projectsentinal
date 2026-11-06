@@ -17,8 +17,6 @@ sources: ["https://developer.apple.com/news/?id=gdk2umrf"]
 description: "What Exactly Did Apple Open Up? — mechanisms, evidence and limits."
 ---
 
-*Archival note: Originally scheduled 2026-11-04; first published on recovery date 2026-11-05 when released by the publisher. Original reporting cutoff 2026-11-04T21:31:40.089863Z. Later source checks and developments are explicitly dated below.*
-
 An assistant integration is a route into an app’s capabilities. It is not automatically an opening of the assistant’s model, its distribution rules or the commercial terms around it. The useful question is which boundary actually moved.
 
 [Apple’s November 3 announcement](https://developer.apple.com/news/?id=gdk2umrf), rechecked November 5, describes a Siri AI Developer Preview using App Intents in the 27.3 operating-system betas. Apps can expose content and actions, with skills combining actions and broader access to entities in Spotlight’s semantic index. Apple distinguishes this preview from customer shipping and App Store submissions, and says further usage-policy details will follow.

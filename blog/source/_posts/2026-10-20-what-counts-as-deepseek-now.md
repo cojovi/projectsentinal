@@ -16,8 +16,6 @@ image_credit: "Original locally drawn pixel-art editorial illustration; not docu
 description: "What Counts as DeepSeek Now? — a historical, source-bounded analysis."
 ---
 
-*Archival note: Originally scheduled 2026-10-20; first published on recovery date 2026-11-05. Original reporting cutoff: 2026-10-20. This is historical analysis; later developments are included only when explicitly dated.*
-
 Removing a chatbot is straightforward. Finding a model inside somebody else's product is not.
 
 That is the useful distinction in the Department of Homeland Security's October 20 DeepSeek notice. The notice publishes a federal restriction on a Chinese AI company. The operational story is a supply-chain question: **what is your software actually running?**
