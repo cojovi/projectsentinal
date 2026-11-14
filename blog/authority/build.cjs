@@ -1,5 +1,6 @@
 const fs=require('node:fs');const path=require('node:path');const {spawnSync}=require('node:child_process');
 const cheerio=require('cheerio');const c=require('./contract.cjs');const assets=require('./assets.cjs');
+const {readSocialImageMetadata}=require('./social-image-metadata.cjs');
 const root=path.resolve(__dirname,'..');const out=path.join(root,'public');process.chdir(root);
 function run(args) {const r=spawnSync(process.execPath,[require.resolve('hexo/bin/hexo'),...args],{encoding:'utf8'});if(r.status||/Plugin load failed|ERROR/.test(r.stdout+r.stderr)){process.stdout.write(r.stdout+r.stderr);throw Error('Hexo failed');}console.log(r.stdout.split('\n').filter(x=>/files generated|Start processing/.test(x)).join('\n'));}
 // A clean output is required: obsolete HTML aliases must never shadow redirects.
@@ -14,12 +15,18 @@ const read=name=>fs.readFileSync(path.join(out,name),'utf8');
 for(const source of assets.sourceAssets(root)) write(path.relative(path.join(root,'source'),source),fs.readFileSync(source));
 for(const [name,src] of [['lodash.min.js','lodash/lodash.min.js'],['md5.min.js','blueimp-md5/js/md5.min.js']]) write('authority/'+name,fs.readFileSync(require.resolve(src)));
 for(const file of fs.readdirSync(path.join(out,'static/js'))) {const f=path.join(out,'static/js',file);fs.writeFileSync(f,fs.readFileSync(f,'utf8').replaceAll('https://unpkg.com/@waline/client@v2/dist/waline.mjs','/authority/comments-disabled.js'));}
+// Localized covers must exist before their actual bytes are measured for OG metadata.
+for(const source of sources){for(const value of [source.data.cover,source.data.image]){const asset=c.localAsset(value);if(asset?.startsWith('/media/'))write(decodeURIComponent(asset.slice(1)),fs.readFileSync(path.join(root,'../test',decodeURIComponent(asset.slice(7)))));}}
 const shell=read('index.html').replace('</head>','<script src="/authority/lodash.min.js"></script><script src="/authority/md5.min.js"></script></head>');
 const nav=`<nav class="sentinel-nav" aria-label="Publication"><a href="/">Protocol Sentinel</a><a href="/topics">Five pillars</a><a href="/archives">Archive</a><a href="/about">About</a><a href="/editorial-standards">Standards</a><a href="/corrections">Corrections</a><a href="/rss.xml">RSS</a></nav>`;
 const footer=`<footer class="sentinel-footer"><a href="/ownership">Ownership</a> · <a href="/contact">Contact</a> · <a href="/ai-media-policy">AI and media</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></footer>`;
 function meta(document,item) {
  const $=cheerio.load(document);$('title,link[rel="canonical"],meta[property^="og:"],meta[name="description"],meta[name="robots"],meta[name="keywords"],meta[name^="twitter:"],script[type="application/ld+json"]').remove();
  $('head').append(`<title>${c.esc(item.title)}${item.title==='Protocol Sentinel'?'':' | Protocol Sentinel'}</title><link rel="canonical" href="${c.base+item.path}"><meta name="description" content="${c.esc(item.description)}"><meta name="robots" content="${item.robots||c.robots.indexable}"><meta property="og:title" content="${c.esc(item.title)}"><meta property="og:url" content="${c.base+item.path}"><meta property="og:type" content="${item.schema?.['@type']==='BlogPosting'||item.schema?.['@type']==='NewsArticle'?'article':'website'}"><meta property="og:site_name" content="Protocol Sentinel"><meta property="og:description" content="${c.esc(item.description)}"><meta property="og:image" content="${c.esc(item.schema?.image||c.base+'/brand/og.jpeg')}"><meta name="twitter:card" content="summary_large_image"><link rel="alternate" type="application/rss+xml" title="Protocol Sentinel" href="/rss.xml"><link rel="stylesheet" href="/authority/reader.css"><script defer src="/authority/reader.js"></script>`);
+ const socialImage=item.schema?.image||c.base+'/brand/og.jpeg';
+ const measured=readSocialImageMetadata(socialImage,{publicDir:out});
+ if(measured) for(const field of ['width','height','type']) $('head').append(`<meta property="og:image:${field}" content="${c.esc(measured[field])}">`);
+ if(socialImage.startsWith('https:')) $('head').append(`<meta property="og:image:secure_url" content="${c.esc(socialImage)}">`);
  if(item.schema) $('head').append(`<script id="sentinel-schema" type="application/ld+json">${JSON.stringify(item.schema).replace(/</g,'\\u003c')}</script>`);
  $('noscript').remove();return $.html();
 }
@@ -76,7 +83,6 @@ const categoryAliases=[];
 for(const [slug,keys]of legacyCats){const file='api/categories/'+slug+'.json';if(!fs.existsSync(path.join(out,file))){write(file,JSON.stringify({name:slug,slug,count:keys.size,postlist:[...keys].map(key=>JSON.parse(read('api/articles/'+key+'.json')))}));categoryAliases.push({api:'/'+file,keys:[...keys]});}}
 // Preserve old case-sensitive tag API requests at the host while emitting one normalized tag record.
 for(const source of sources)for(const tag of (Array.isArray(source.data.tags)?source.data.tags:[source.data.tags]).filter(Boolean)){const old=slugize(String(tag));const current=slugize(String(tag).toLowerCase());if(old!==current)redirects.push(`/api/tags/${old}.json /api/tags/${current}.json 301!`);}
-for(const source of sources){for(const value of [source.data.cover,source.data.image]){const asset=c.localAsset(value);if(asset?.startsWith('/media/'))write(decodeURIComponent(asset.slice(1)),fs.readFileSync(path.join(root,'../test',decodeURIComponent(asset.slice(7)))));}}
 // Body illustrations that were localized use the same existing source-controlled asset directory.
 for(const file of fs.readdirSync(path.join(root,'../test'))){if(!/\.(png|jpe?g|gif|webp)$/i.test(file))continue;const target='/media/'+encodeURIComponent(file);if(records.some(a=>read(a.api.slice(1)).includes(target)))write(decodeURIComponent(target.slice(1)),fs.readFileSync(path.join(root,'../test',file)));}
 write('authority-map.json',JSON.stringify({version:1,robots:c.robots,categoryAliases,articles:records,pages:[home,archive,...pages]},null,2));

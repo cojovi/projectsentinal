@@ -1,0 +1,150 @@
+{
+  "status": "documented",
+  "article_type": "analysis",
+  "source_sha256": "0891dcdf0e28fbb7c956a1afd5eba1c83c6a1671021212643e4141a8842ffc51",
+  "reporting_cutoff": "2026-11-14T15:37:10.347323Z",
+  "checked_at": "2026-11-14T15:37:10.347323Z",
+  "scope": "Limited automated documentary source checks with preserved quotes; separates attributed reporting, proposed legislation, vendor positions, hypothesis and opinion. No human review, full fact-check, interviews, hardware testing or intelligence findings claimed.",
+  "sources": [
+    "https://www.instagram.com/reel/DftQjaKinEZ/?cplk=MW4ycGJzdTJuanJkNg==",
+    "https://www.business-standard.com/world-news/us-intelligence-links-nvidia-ceo-contact-to-china-spying-concerns-report-126102901145_1.html",
+    "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
+    "https://blogs.nvidia.com/blog/no-backdoors-no-kill-switches-no-spyware",
+    "https://blogs.nvidia.com/blog/optional-data-center-fleet-management-software",
+    "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+    "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+  ],
+  "claims": [
+    {
+      "claim": "The supplied reel explicitly labels a political-motive explanation as speculation.",
+      "disposition": "attributed",
+      "sources": [
+        "https://www.instagram.com/reel/DftQjaKinEZ/?cplk=MW4ycGJzdTJuanJkNg=="
+      ],
+      "supporting_excerpts": [
+        "I'm just speculating here"
+      ],
+      "unknowns": [
+        "The reel is an edited excerpt; model-assisted transcription does not authenticate the speakers, original recording or a covert political operation.",
+        "The intelligence account is New York Times reporting republished by Business Standard, not a second independent investigation. Classified evidence, an identified leaker, legal findings and the reason for not giving a defensive briefing were not obtained.",
+        "The legislative analysis concerns the retrieved May 2025 introduced text of H.R.3447, not an enacted requirement or an unpublished committee substitute.",
+        "Nvidia product/security statements are attributed vendor descriptions, not independent hardware inspection or verification of every deployed system."
+      ]
+    },
+    {
+      "claim": "The dated NYT republication reports no defensive briefing and discusses protecting surveillance as a possible explanation without establishing the reason.",
+      "disposition": "attributed",
+      "sources": [
+        "https://www.business-standard.com/world-news/us-intelligence-links-nvidia-ceo-contact-to-china-spying-concerns-report-126102901145_1.html"
+      ],
+      "supporting_excerpts": [
+        "Mr. Huang has not received a defensive briefing, warnings sometimes given to Americans who are being targeted by foreign intelligence services, people briefed on the surveillance said.",
+        "It is unclear whether concerns about protecting the surveillance played a role in the decision not to inform Mr. Huang. Telling him could have alerted Ms. Huang that she was being watched, which is a common reason intelligence officials hesitate to give defensive briefings.",
+        "This account is based on interviews with people briefed on the surveillance, who spoke on the condition of anonymity because the findings are drawn from classified intelligence, as well as other officials and industry executives and analysts."
+      ],
+      "unknowns": [
+        "The reel is an edited excerpt; model-assisted transcription does not authenticate the speakers, original recording or a covert political operation.",
+        "The intelligence account is New York Times reporting republished by Business Standard, not a second independent investigation. Classified evidence, an identified leaker, legal findings and the reason for not giving a defensive briefing were not obtained.",
+        "The legislative analysis concerns the retrieved May 2025 introduced text of H.R.3447, not an enacted requirement or an unpublished committee substitute.",
+        "Nvidia product/security statements are attributed vendor descriptions, not independent hardware inspection or verification of every deployed system."
+      ]
+    },
+    {
+      "claim": "The introduced bill proposes location verification and examination of additional functionality controls; it is not an enacted universal GPS/shutdown mandate.",
+      "disposition": "attributed",
+      "sources": [
+        "https://www.congress.gov/bill/119th-congress/house-bill/3447/text"
+      ],
+      "supporting_excerpts": [
+        "(1) IN GENERAL.—Not later than 180 days after the date of the enactment of this Act, the Secretary shall require any covered integrated circuit product to be outfitted with chip security mechanisms that implement location verification, using techniques that are feasible and appropriate on such date of enactment, before it is exported, reexported, or in-country transferred to or in a foreign country.",
+        "(III) methods to modify the functionality of covered integrated circuit products that have been illicitly acquired; and",
+        "(bb) the potential for the introduction of new vulnerabilities into the products;",
+        "| Tracker: Tip | This bill has the status Introduced  Here are the steps for Status of Legislation:   1. Introduced Array    (    [actionDate] => 2025-05-15    [displayText] => Introduced in House    [externalActionCode] => 1000    [description] => Introduced    [chamberOfAction] => House    ) 2. Passed House 3. Passed Senate 4. To President 5. Became Law |"
+      ],
+      "unknowns": [
+        "The reel is an edited excerpt; model-assisted transcription does not authenticate the speakers, original recording or a covert political operation.",
+        "The intelligence account is New York Times reporting republished by Business Standard, not a second independent investigation. Classified evidence, an identified leaker, legal findings and the reason for not giving a defensive briefing were not obtained.",
+        "The legislative analysis concerns the retrieved May 2025 introduced text of H.R.3447, not an enacted requirement or an unpublished committee substitute.",
+        "Nvidia product/security statements are attributed vendor descriptions, not independent hardware inspection or verification of every deployed system."
+      ]
+    },
+    {
+      "claim": "Nvidia publicly opposed hardware kill switches and backdoors in August 2025.",
+      "disposition": "attributed",
+      "sources": [
+        "https://blogs.nvidia.com/blog/no-backdoors-no-kill-switches-no-spyware"
+      ],
+      "supporting_excerpts": [
+        "NVIDIA GPUs do not and should not have kill switches and backdoors.",
+        "NVIDIA has always supported open, transparent software that helps customers get the most from their GPU-powered systems — diagnostics, performance monitoring, bug reporting and timely patching — with the user’s knowledge and consent. That’s responsible, secure computing. It helps our customers excel, and industry stay ahead."
+      ],
+      "unknowns": [
+        "Nvidia product/security statements are attributed vendor descriptions, not independent hardware inspection or verification of every deployed system."
+      ]
+    },
+    {
+      "claim": "Nvidia described optional customer-installed read-only telemetry in December 2025.",
+      "disposition": "attributed",
+      "sources": [
+        "https://blogs.nvidia.com/blog/optional-data-center-fleet-management-software"
+      ],
+      "supporting_excerpts": [
+        "The offering is an opt-in, customer-installed service that monitors GPU usage, configuration and errors. It will include an open-source client software agent — part of NVIDIA’s ongoing support of open, transparent software that helps customers get the most from their GPU-powered systems.",
+        "The software provides insight into a company’s GPU inventory but cannot modify GPU configurations or underlying operations. It provides read-only telemetry data that’s customer managed and customizable.",
+        "This optional service provides real-time monitoring by each GPU system communicating and sharing GPU metrics with the external cloud service. NVIDIA GPUs do not have hardware tracking technology, [kill switches and backdoors](https://blogs.nvidia.com/blog/no-backdoors-no-kill-switches-no-spyware/)."
+      ],
+      "unknowns": [
+        "Nvidia product/security statements are attributed vendor descriptions, not independent hardware inspection or verification of every deployed system."
+      ]
+    },
+    {
+      "claim": "Nvidia announced Huang’s resignation on November 12 without a finding tying it to a political campaign.",
+      "disposition": "attributed",
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+      ],
+      "supporting_excerpts": [
+        "NVIDIA (NASDAQ: NVDA) Board of Directors announced today that Jensen Huang has resigned as President, Chief Executive Officer, and a member of the Board, effective immediately."
+      ],
+      "unknowns": [
+        "Nvidia product/security statements are attributed vendor descriptions, not independent hardware inspection or verification of every deployed system."
+      ]
+    },
+    {
+      "claim": "The November 8 board statement gives an initial no-reason-to-believe position and announces an inquiry, not final clearance.",
+      "disposition": "attributed",
+      "sources": [
+        "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+      ],
+      "supporting_excerpts": [
+        "While the Board has no reason to believe that either national security or NVIDIA secrets were compromised, the Board's inquiry will examine all available information."
+      ],
+      "unknowns": [
+        "Nvidia product/security statements are attributed vendor descriptions, not independent hardware inspection or verification of every deployed system."
+      ]
+    },
+    {
+      "claim": "Operational authority, customer consent and appeal rights should be assessed separately from physical hardware ownership.",
+      "disposition": "opinion",
+      "sources": [
+        "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
+        "https://blogs.nvidia.com/blog/no-backdoors-no-kill-switches-no-spyware",
+        "https://blogs.nvidia.com/blog/optional-data-center-fleet-management-software"
+      ],
+      "unknowns": [
+        "Normative analysis and hypothetical failure scenarios, not a claim that Nvidia ships a hidden kill switch."
+      ]
+    }
+  ],
+  "unknowns": [
+    "The reel is an edited excerpt; model-assisted transcription does not authenticate the speakers, original recording or a covert political operation.",
+    "The intelligence account is New York Times reporting republished by Business Standard, not a second independent investigation. Classified evidence, an identified leaker, legal findings and the reason for not giving a defensive briefing were not obtained.",
+    "The legislative analysis concerns the retrieved May 2025 introduced text of H.R.3447, not an enacted requirement or an unpublished committee substitute.",
+    "Nvidia product/security statements are attributed vendor descriptions, not independent hardware inspection or verification of every deployed system."
+  ],
+  "sister_body_comparison": {
+    "status": "not-applicable",
+    "publication": "Northstar Ledger",
+    "method": "No companion article requested. Prior Nvidia PS/NSL coverage used only for duplicate/overlap checks; this piece examines compute controls rather than succession."
+  }
+}
