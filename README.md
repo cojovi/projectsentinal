@@ -1,209 +1,129 @@
-<!-- COJOVI / SIGNAL — Project Sentinal project edition. Keep readme-assets/ with this file. -->
-<a name="top"></a>
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 640px)" srcset="readme-assets/cover-mobile-still.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="readme-assets/cover-still.svg">
+  <source media="(max-width: 640px)" srcset="readme-assets/cover-mobile.svg">
+  <img src="readme-assets/cover.svg" alt="Protocol Sentinel — from raw idea to published signal. Python, AI article tools, Markdown, Hexo and Aurora." width="100%">
+</picture>
 
-<p align="center">
-  <img src="readme-assets/banner.svg" alt="Project Sentinal — a Protocol Sentinel publishing workspace with Hexo source and a separate construction application." width="100%">
-</p>
+# Protocol Sentinel
 
-<h1 align="center">Project Sentinal</h1>
+**An AI-assisted publishing workflow with a live publication at the other end.** Python tools turn an idea, a URL, or source text into an article, supporting metadata, and a hero image. Markdown is the handoff to a Hexo site with the Aurora theme.
 
-<p align="center">
-  <strong>Write the story. Understand the tools. Choose the right workspace.</strong><br>
-  Protocol Sentinel blog content, Hexo framework source, and a separate TrueGrit application share this repository.
-</p>
+Built and integrated by **[Cody / COJOVI](https://github.com/cojovi)** using established publishing foundations and AI development tools. This showcase focuses on the article tooling, site configuration, content workflow, and metadata integration.
 
-<p align="center">
-  <img src="readme-assets/stack.svg" alt="Hexo · TypeScript · Python · React / Supabase" width="640">
-</p>
+[Visit the publication ↗](https://protocolsentinel.com) · [Follow the pipeline](#the-publishing-pipeline) · [Run locally](#run-the-publication-locally) · [Read the source map](#source-map)
 
-<p align="center">
-  <a href="#overview">Overview</a> ·
-  <a href="#architecture">Architecture</a> ·
-  <a href="#quickstart">Quickstart</a> ·
-  <a href="#configuration">Configuration</a> ·
-  <a href="#usage">Workspaces</a> ·
-  <a href="#security">Security</a>
-</p>
+`Python` · `OpenAI integration` · `Optional Tavily research` · `Markdown / YAML` · `Hexo` · `Aurora`
 
----
+<img src="readme-assets/experience.svg" alt="The publication. A workflow with a public face." width="100%">
 
-<a name="overview"></a>
-## `> meet_the_workspace`
+## The product
 
-**[cojovi/projectsentinal](https://github.com/cojovi/projectsentinal) is a mixed-source workspace, not one uniformly packaged application.** Its publishing side combines a Hexo/Aurora blog named **Protocol Sentinel** with Python article helpers. The root retains the upstream Hexo framework package and test tree.
+<img src="readme-assets/publication.jpg" alt="Actual Protocol Sentinel homepage: Aurora article cards with the publication’s artwork, categories, and editorial selection." width="100%">
 
-A separate React application under `src/` presents **TrueGrit**, a construction-management interface backed by Supabase. It is not the blog's administrative interface, and the root package does not currently provide its Vite startup scripts.
+*Live publication capture, November 16, 2026. Aurora provides the theme foundation.*
 
-| Publish | Extend | Organize |
-| :--- | :--- | :--- |
-| Markdown posts, Aurora configuration, RSS, and social metadata. | Hexo core, plugin extension points, and framework tests. | TrueGrit pages for jobs, schedules, estimates, materials, crew, and photo records. |
+The publication is the visible result. The useful engineering lives behind it: recognizing different inputs, coordinating text and image generation, writing files the publishing system understands, and turning those files into a browsable site.
 
-> [!IMPORTANT]
-> **Choose a workspace before installing or running anything.** The root `package.json` describes Hexo, while the tracked root lockfile describes a React/Vite starter. Do not treat `npm ci` at the root or an assumed `npm run dev` as a verified setup path. The blog has its own manifest; the frontend needs packaging reconciliation.
+- **Three entry formats:** an idea, a URL, or a longer piece of text.
+- **Optional research context:** Tavily search results can inform generation; URL inputs can supply extracted page text.
+- **A complete content handoff:** article body, title, taxonomy, hero artwork, and Hexo front matter.
+- **Static distribution:** Aurora pages and content APIs, RSS, and sitemaps generated from the blog workspace.
+- **Share metadata:** an HTML filter adds missing Open Graph and Twitter tags and normalizes GitHub image links.
 
-<a name="architecture"></a>
-## `> trace_the_story`
+<img src="readme-assets/engineering.svg" alt="The publishing engine. The handoff is the architecture." width="100%">
 
-<p align="center">
-  <img src="readme-assets/flow.svg" alt="Reviewed Markdown and site settings → Hexo with the Aurora theme → generated static pages and feeds." width="100%">
-</p>
+## The publishing pipeline
 
-```text
-Publishing path
-  blog/source/_posts/ + blog/_config*.yml
-                  ↓
-  blog/package.json → Hexo + Aurora + local metadata filter
-                  ↓
-  blog/public/ → static pages, theme data, RSS, and sitemaps
+<img src="readme-assets/architecture.svg" alt="Idea, URL or text enters generation; the resulting Markdown and artwork are reviewed before Hexo builds the static site." width="100%">
 
-Separate source areas
-  lib/ + test/           Hexo framework development
-  src/ + supabase/       TrueGrit UI and database migrations
-  Python helpers        optional provider-backed article generation
-```
+### 01 / Normalize the brief
 
-The diagram describes the **configured publishing path**, not a deployment pipeline. `blog/_config.yml` resolves `public_dir: public` relative to the blog directory. The separately tracked root [public/](public/) is an existing generated snapshot, not proof that a fresh blog build updates that location.
+[`create_article.py`](create_article.py) distinguishes short ideas, substantial text, and URLs. URL handling extracts readable content with BeautifulSoup. Idea and text inputs can request supplemental search context when `TAVILY_API_KEY` is configured.
 
-[opengraph.js](blog/scripts/opengraph.js) injects missing Open Graph and Twitter metadata after HTML rendering. Optional article helpers write source files; they are not required to read or manually edit the blog.
+The current main workflow uses a configured editorial tone. An older tone-analysis helper is present in the file but is not the active path in `main()`.
 
-<a name="quickstart"></a>
-## `> prepare_the_blog`
+### 02 / Coordinate generation into useful files
 
-**Prerequisites:** Git, a text editor, and a Node.js/npm environment compatible with the blog's resolved dependencies. The root Hexo manifest declares Node `>=14`; this is not a tested minimum for every component in this mixed repository.
+The Python workflow separates article generation, metadata, image-prompt generation, and hero-image generation. It writes a dated Markdown post under `blog/source/_posts/` and artwork under `test/`.
 
-### 1. Clone the exact repository
+The resulting artifact is inspectable and editable before publishing. The recommended entry point, `create_article.py`, does **not** automatically commit or push. The similarly named Git-enabled variants can publish to Git and are documented separately in the [workspace guide](docs/SHOWCASE-GUIDE.md).
+
+The scripts include JSON cleanup and fallback paths. These are practical integration code, not a guarantee of factual accuracy or a fully hardened ingestion service. Generated content still needs editorial review.
+
+### 03 / Keep the publishing boundary explicit
+
+The blog has its own [`package.json`](blog/package.json), configuration, themes, and build directory. A post's front matter supplies title, date, categories, tags, and image references. Hexo and Aurora turn those inputs into the publication.
+
+**Hexo and Aurora are upstream projects.** The work showcased here is their integration with the article tools, the publication's configuration and content, and the custom metadata behavior—not authorship of the underlying framework or theme.
+
+### 04 / Make previews portable
+
+[`blog/scripts/opengraph.js`](blog/scripts/opengraph.js) runs after HTML rendering. It chooses a cover from available page fields or a fallback, converts GitHub `blob` image URLs to raw URLs, escapes text for HTML attributes, and inserts missing social tags without duplicating existing ones.
+
+That is a small but useful boundary: content authors supply metadata once, and the rendering pipeline prepares the share-card fields.
+
+## Run the publication locally
+
+Use a current Node.js LTS release compatible with Hexo 7, plus npm. Run the blog workspace—not the repository-root package, which contains a separate Hexo framework checkout.
 
 ```bash
-git clone --branch main https://github.com/cojovi/projectsentinal.git
-cd projectsentinal
-```
-
-Keep the repository spelling `projectsentinal`; the blog's display name is **Protocol Sentinel**.
-
-### 2. Review settings before previewing
-
-Read [blog/_config.yml](blog/_config.yml) and [blog/_config.aurora.yml](blog/_config.aurora.yml). Replace site identity and deployment-specific URLs in your own copy. Review analytics, comments, injected scripts, external links, and content rights before loading a preview in a browser.
-
-The theme entry at `blog/themes/aurora` is a relative symlink into `blog/node_modules/hexo-theme-aurora`. It is not a vendored theme checkout. Dependency installation must supply the target, and symlink behavior should be checked on your platform.
-
-### 3. Use the blog's own package
-
-After that review, these are the blog manifest's local development commands:
-
-```bash
-cd blog
+git clone https://github.com/cojovi/projectsentinal.git
+cd projectsentinal/blog
 npm install
-npm run server -- --ip 127.0.0.1
+npm run build
+npm run server
 ```
 
-Use the local address reported by Hexo. Installing dependencies may run package lifecycle scripts; review those in an environment you control. These instructions do not install or start the TrueGrit frontend.
+Open the local URL printed by Hexo. Generated output goes to **`blog/public/`**. The root-level `public/` directory is a separate committed site snapshot.
 
-The blog also defines `npm run build` for static generation and `npm run clean` for generated-file cleanup. Its `deploy` script exists, but `deploy.type` is empty in the reviewed configuration; no working deployment destination is established here.
+**Verified November 16, 2026:** the blog generated 556 static files successfully from the reviewed checkout. The refreshed documentation leaves the publishing application unchanged.
 
-<a name="configuration"></a>
-## `> set_the_context`
+<details>
+<summary><strong>Optional: generate an article</strong></summary>
 
-| Area | Source of truth | What to review |
-| :--- | :--- | :--- |
-| Blog identity | [Main config](blog/_config.yml) | Title, URL, permalinks, feed, sitemap, and output directory. |
-| Theme | [Aurora config](blog/_config.aurora.yml) | Menu, authors, social links, comments, injections, and metadata. |
-| Sharing metadata | [Local filter](blog/scripts/opengraph.js) | Cover-image selection, descriptions, and generated tags. |
-| Framework build | [Root manifest](package.json) and [tsconfig.json](tsconfig.json) | TypeScript in `lib/` compiles into `dist/`. |
-| Frontend connection | [Client loader](src/lib/supabase.ts) | `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`. |
-| Database | [Migrations](supabase/migrations/) | Schema, seeds, policies, and identity-specific changes. |
-
-The [.env.example](.env.example) also lists `VITE_APP_NAME` and `VITE_APP_VERSION`. Do not assume those labels change the hardcoded UI identity. A Supabase browser key is not an authorization policy; never place a service-role key in a `VITE_` variable.
-
-### Optional article tooling
-
-- [create_article.py](create_article.py) uses `OPENAI_API_KEY`, optionally `TAVILY_API_KEY`, and can load a local `.env` through `python-dotenv`. It writes posts under `blog/source/_posts/` and generated artwork under `test/`.
-- [requirements.txt](requirements.txt) belongs to those root Python helpers, not the React or Hexo dependency graph.
-- [generate_post.py](blog/source/scripts/generate_post.py) is a different, issue-shaped generator with its own [requirements](blog/source/scripts/requirements.txt). It accepts `ISSUE_TITLE`, `ISSUE_BODY`, `ISSUE_NUMBER`, `POSTS_DIR`, `DEFAULT_MODEL`, and provider settings; `LOCAL_LLM_URL` is its fallback when no OpenAI key is present.
-- `POSTS_DIR` in that helper is resolved from the process working directory. Review paths rather than launching it from an arbitrary folder.
-
-No AI credentials are needed for manual Markdown editing. Provider use can transmit input and source material off-machine and incur charges.
-
-<a name="usage"></a>
-## `> choose_your_lane`
-
-### Blog authoring
-
-Edit posts in [blog/source/_posts/](blog/source/_posts/) and check their YAML front matter, categories, tags, and image references. Review generated prose and sources before publication. The current configuration enables future-dated posts and does not render drafts by default.
-
-RSS is configured as `rss.xml`; tag/category sitemap entries are disabled in the main sitemap settings. Verify generated output rather than assuming the existing root snapshot reflects current configuration.
-
-### Hexo framework development
-
-The root package remains named `hexo`, with the `hexo` CLI entry at [bin/hexo](bin/hexo). After reconciling the root manifest and lockfile in a separate development change, the declared commands are:
+From the repository root, with Python 3.10+:
 
 ```bash
-npm run build
-npm run eslint
-npm test
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt requests
+python create_article.py
 ```
 
-`npm test` invokes a pretest clean/build before the Mocha suite. These commands target Hexo, not frontend tests. The root `prepare` script installs Husky hooks, and the pre-commit hook runs `lint-staged`.
+Provide `OPENAI_API_KEY` through your shell or a local `.env` file. `TAVILY_API_KEY` is optional. Enter the brief and finish with Ctrl-D on macOS/Linux. Generation makes paid provider calls; confirm the hard-coded model IDs in the script are available to your account before running it.
 
-### TrueGrit source exploration
+Review the generated Markdown, image, sources, claims, and publication metadata before committing. The current script stores posts under `_posts`, so a subsequent site build can include them. The showcase validation did not generate or publish a new article.
 
-[App.tsx](src/App.tsx) places dashboard, jobs, schedule, estimates, communities, floorplans, materials, crew, photos, reports, and settings routes behind its authentication wrapper. Pages include real Supabase reads and inserts, but not every visible control is wired.
+</details>
 
-For example, [Photos.tsx](src/pages/Photos.tsx) records an existing image URL; its “Upload” label does not implement binary file storage. [Reports.tsx](src/pages/Reports.tsx) calculates job charts, while its additional report buttons have no action handlers. Dashboard growth percentages are static text.
+## Source map
 
-A missing Supabase configuration leaves the auth user unset, so the wrapper shows login; dashboard fallback values do not constitute a usable, signed-in offline demo. Restore the frontend dependency manifest and review database authorization before attempting a separate frontend setup.
+| Entry point | Responsibility |
+|---|---|
+| [`create_article.py`](create_article.py) | Interactive article, metadata, and hero-image pipeline |
+| [`blog/source/scripts/generate_post.py`](blog/source/scripts/generate_post.py) | Alternate issue-style input with cloud or configured local LLM support |
+| [`blog/_config.yml`](blog/_config.yml) | URLs, content paths, feed, sitemap, and theme selection |
+| [`blog/_config.aurora.yml`](blog/_config.aurora.yml) | Publication identity and Aurora presentation |
+| [`blog/scripts/opengraph.js`](blog/scripts/opengraph.js) | HTML social-metadata filter |
+| [`blog/source/_posts/`](blog/source/_posts) | Markdown publication source |
+| [Workspace and verification guide](docs/SHOWCASE-GUIDE.md) | Build boundaries, inherited code, and current limits |
 
-<a name="validation"></a>
-## `> verify_each_lane`
+## What this project demonstrates
 
-**Application builds and tests were not run for this documentation work.** The following are maintainer checks, not passing results:
+**AI integration across a complete workflow:** input → generation → editable artifact → static publication. It also shows the practical work between services: content formats, failure paths, metadata, filesystem conventions, and a clear place for human review.
 
-- [ ] Reconcile the root manifest and lockfile before framework installation.
-- [ ] Verify the blog theme symlink and installed theme package.
-- [ ] Preview blog routes, feeds, image references, and social metadata locally.
-- [ ] Confirm the intended output directory before copying generated files.
-- [ ] Review external scripts, provider settings, and content ownership.
-- [ ] Restore a coherent frontend package and verify its actual build separately.
-- [ ] Test Supabase policies and role changes against an isolated database.
-- [ ] Distinguish working controls from display-only placeholders.
-- [ ] Run the appropriate framework or helper tests only after reviewing their scope.
+This is an evolving personal publishing system. Next improvements are consolidating the overlapping generator scripts, making model selection configurable, tightening structured-response validation, and adding reproducible provider fixtures. No audience, revenue, or generation-quality benchmark is claimed here.
 
-No root GitHub Actions workflow is tracked. `blog/.github/dependabot.yml` is nested configuration, not an active root workflow or a deployment guarantee.
+<details>
+<summary><strong>About this repository's other code</strong></summary>
 
-<a name="source-map"></a>
-## `> explore_the_source`
+The repository also contains a Hexo framework development copy (`lib/`, root `package.json`, and framework tests) and a separate TrueGrit construction application (`src/`, `supabase/`). They are not steps in the Protocol Sentinel publishing pipeline. The [workspace guide](docs/SHOWCASE-GUIDE.md) explains the boundaries.
 
-| Path | Responsibility |
-| :--- | :--- |
-| [lib/](lib/) · [test/](test/) | Hexo framework and tests; `test/` also contains media. |
-| [blog/](blog/) | Blog manifest, configuration, source posts, and theme link. |
-| [public/](public/) | Tracked generated website snapshot. |
-| [archived_blogs/](archived_blogs/) | Archived article sources. |
-| [src/](src/) · [supabase/](supabase/) | Separate construction UI and database migrations. |
-| [CLAUDE.md](CLAUDE.md) | Historical maintenance guidance; reconcile against current source. |
-| [ARTICLE_GENERATOR_README.md](ARTICLE_GENERATOR_README.md) | Helper documentation; verify model and execution details in Python source. |
+The existing [MIT license](LICENSE) credits the Hexo authors. Aurora retains its own upstream license and attribution. This README does not reassign authorship or relicense those projects.
 
-<a name="security"></a>
-## `> protect_the_edges`
+</details>
 
-- **Keep publication deliberate.** `create_article_git.py` and `protocol_sentinal_blog_creator.py` contain automatic Git add/commit/push paths. They are not safe read-only preview commands.
-- **Review database policy changes.** Some migrations introduce broad authenticated access. Client-side role checks, identity-specific admin handling, and displayed demo credentials must not be treated as production authorization.
-- **Do not run seed migrations blindly.** They include identity-specific records and privilege changes. Use sanitized data and a separate database after reviewing every migration.
-- **Keep private values private.** Do not copy source identities, credentials, analytics identifiers, operational endpoints, or generated personal records into public documentation or test fixtures.
+<img src="readme-assets/footer.svg" alt="Build the signal. Designed and integrated by COJOVI." width="100%">
 
-### Attribution and license
-
-The repository is not marked as a GitHub fork, but it retains **[Hexo](https://github.com/hexojs/hexo)** source and package identity. The root **[MIT license](LICENSE)** carries **Copyright (c) 2012-present Tommy Chen**; preserve that notice and applicable third-party notices. Aurora, React, Supabase, and provider services are separate projects. Verify rights for article and media content independently.
-
----
-
-<p align="center">
-  <img src="readme-assets/signal-divider.svg" alt="" width="100%">
-</p>
-
-<p align="center">
-  <strong>Clear workspaces. Reviewed stories. Deliberate publication.</strong><br>
-  <sub>A <a href="https://github.com/cojovi">Cody / cojovi</a> workspace · <a href="https://cojovi.com">cojovi.com</a><br>
-  Hexo upstream identity retained · Presented in COJOVI / SIGNAL.</sub>
-</p>
-
-<p align="center"><a href="#top">↑ Back to the signal</a></p>
+[Publication](https://protocolsentinel.com) · [More work](https://github.com/cojovi) · [Portfolio](https://cojovi.com) · [Font licenses](readme-assets/FONT-LICENSES.txt)
