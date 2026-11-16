@@ -21,6 +21,11 @@ og_image_width: 1600
 og_image_height: 900
 image_credit: Original symbolic pixel-art illustration, composed locally; not a depiction
   of the people or alleged events in the reel.
+updated: 2026-10-30T19:34:18.737794+00:00
+publication_state: published
+editorial_notices: false
+evidence_status: source-review-pending
+article_type: analysis
 ---
 
 A familiar voice can make an accusation feel like a revelation before anybody has established who recorded it.

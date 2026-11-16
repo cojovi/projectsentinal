@@ -12,3 +12,14 @@ coverage/
 .vscode
 dist/
 .env
+
+# Actual Hexo output/cache; retain the site lockfile.
+blog/public/
+blog/db.json
+!blog/package-lock.json
+
+# Local release/reviewer evidence is not publication source.
+/research/
+.netlify/
+.vercel/
+.env.*

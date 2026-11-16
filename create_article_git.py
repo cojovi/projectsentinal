@@ -53,28 +53,10 @@ IMAGE_SIZE = "1792x1024"  # Landscape format for hero images
 IMAGE_QUALITY = "hd"
 IMAGE_STYLE = "natural"
 
-# Author name pools (diverse cultural names)
-FIRST_NAMES = [
-    "Elena", "Marcus", "Sophia", "James", "Priya", "David", "Aisha", "Michael",
-    "Yuki", "Robert", "Fatima", "William", "Mei", "Christopher", "Layla",
-    "Daniel", "Ananya", "Matthew", "Zara", "Andrew", "Sofia", "Joseph",
-    "Isabella", "Thomas", "Emma", "Richard", "Olivia", "Charles", "Maya",
-    "Benjamin"
-]
-
-LAST_NAMES = [
-    "Chen", "Rodriguez", "Kim", "Petrov", "Johnson", "Patel", "Williams",
-    "Singh", "Brown", "Ahmed", "Davis", "Tanaka", "Miller", "Kumar",
-    "Wilson", "Garcia", "Moore", "Martinez", "Taylor", "Anderson", "Lee",
-    "Zhang", "Wang", "Li", "Nguyen", "Fernandez", "Lopez", "Gonzalez",
-    "Hernandez", "Smith"
-]
-
 # Categories (based on existing blog structure)
 CATEGORIES = [
-    "Technology", "Politics", "US Foreign Policy", "Conservative Movement",
-    "Current Events", "Media", "Artificial Intelligence", "Innovation",
-    "Collaboration", "Business", "Future", "Coding", "News", "Tech Stuff"
+    "AI & Models", "Big Tech & Platforms", "Privacy & Power",
+    "Devices & Experiments", "Signal vs Noise"
 ]
 
 # Static Blog Tone (Witty + Sarcastic + Precise)
@@ -716,7 +698,7 @@ JSON response:"""
         print(f"⚠️  Warning: Metadata generation failed: {e}")
         # Fallback metadata
         return {
-            "category": "Technology",
+            "category": "Signal vs Noise",
             "tags": ["Technology", "News", "Innovation"],
             "location": None
         }
@@ -860,108 +842,15 @@ def generate_image(
 
 
 def generate_author_name() -> Tuple[str, str]:
-    """Generate random author name and slug."""
-    first = random.choice(FIRST_NAMES)
-    last = random.choice(LAST_NAMES)
-    
-    # 20% chance of "Dr." prefix
-    if random.random() < 0.2:
-        full_name = f"Dr. {first} {last}"
-    else:
-        full_name = f"{first} {last}"
-    
-    author_slug = f"{first.lower()}-{last.lower()}"
-    if full_name.startswith("Dr."):
-        author_slug = f"dr-{author_slug}"
-    
-    return full_name, author_slug
+    """Return the registered publication desk; never fabricate a person or degree."""
+    return "Protocol Sentinel desk", "protocol-sentinel"
 
 
 def push_to_github(filepath: Path, image_filepath: Path, title: str) -> bool:
-    """
-    Add, commit, and push the new article and image to GitHub.
-    Returns True if successful, False otherwise.
-    """
-    try:
-        # Check if we're in a git repository
-        result = subprocess.run(
-            ["git", "rev-parse", "--git-dir"],
-            capture_output=True,
-            text=True,
-            cwd=Path.cwd()
-        )
-        if result.returncode != 0:
-            print("⚠️  Warning: Not in a git repository, skipping GitHub push")
-            return False
-        
-        print("📤 Pushing to GitHub...")
-        
-        # Get relative paths for git add
-        # Convert to relative paths from repo root
-        repo_root = Path(subprocess.run(
-            ["git", "rev-parse", "--show-toplevel"],
-            capture_output=True,
-            text=True,
-            check=True
-        ).stdout.strip())
-        
-        article_rel_path = filepath.relative_to(repo_root) if filepath.is_absolute() else filepath
-        image_rel_path = image_filepath.relative_to(repo_root) if image_filepath.is_absolute() else image_filepath
-        
-        # Stage the files
-        subprocess.run(
-            ["git", "add", str(article_rel_path), str(image_rel_path)],
-            check=True,
-            cwd=repo_root
-        )
-        print(f"✓ Staged: {article_rel_path}")
-        print(f"✓ Staged: {image_rel_path}")
-        
-        # Commit with descriptive message
-        commit_message = f"Add blog post: {title}"
-        subprocess.run(
-            ["git", "commit", "-m", commit_message],
-            check=True,
-            cwd=repo_root
-        )
-        print(f"✓ Committed: {commit_message}")
-        
-        # Push to remote (default branch, typically 'main')
-        subprocess.run(
-            ["git", "push"],
-            check=True,
-            cwd=repo_root
-        )
-        print("✓ Pushed to GitHub successfully")
+    """Compatibility interface: generation saves a draft; publication is a separate reviewed action."""
+    print("Draft saved locally. Run the publishing quality gate and review before committing or publishing.")
+    return False
 
-        # Trigger search engine auto-indexing
-        post_slug = filepath.stem
-        article_url = f"https://protocolsentinel.com/post/{post_slug}.html"
-        print(f"\n📡 Notifying search engines for auto-indexing: {article_url}...")
-        try:
-            subprocess.run(["python3", "scripts/notify-google.py", article_url], cwd=repo_root, check=False)
-        except Exception as ge:
-            print(f"⚠️  Google notification note: {ge}")
-        try:
-            subprocess.run(["node", "scripts/notify-indexnow.js", article_url], cwd=repo_root, check=False)
-        except Exception as ie:
-            print(f"⚠️  IndexNow notification note: {ie}")
-
-        return True
-        
-    except subprocess.CalledProcessError as e:
-        print(f"⚠️  Warning: Git operation failed: {e}")
-        print("   You may need to manually commit and push the files")
-        return False
-    except Exception as e:
-        print(f"⚠️  Warning: Failed to push to GitHub: {e}")
-        print("   You may need to manually commit and push the files")
-        return False
-
-
-# ============================================================================
-# MAIN EXECUTION
-# ============================================================================
 
 def main():
     """Main execution flow."""
@@ -1067,7 +956,7 @@ def main():
     print("🏷️  Generating metadata...")
     try:
         metadata = generate_metadata(client, title, body)
-        category = metadata.get("category", "Technology")
+        category = metadata.get("category", "Signal vs Noise")
         tags = metadata.get("tags", [])
         location = metadata.get("location")
         
@@ -1144,6 +1033,13 @@ def main():
         "---",
         f"title: {yaml_escape(title)}",
         f"date: {datetime_str}",
+        'author: "Protocol Sentinel desk"',
+        "article_type: analysis",
+        "evidence_status: source-review-pending",
+        "unknowns: [Source verification and claim review pending; no independent confirmation asserted.]",
+        "draft: true",
+        "published: false",
+        'image_credit: "AI-generated symbolic pixel-art editorial illustration; not event evidence."',
         "tags:"
     ]
     
@@ -1153,6 +1049,11 @@ def main():
     
     front_matter_lines.append("categories:")
     front_matter_lines.append(f"  - {category}")
+    front_matter_lines.append("sources:")
+    for finding in web_findings:
+        source_url = finding.get("url", "")
+        if re.match(r"^https?://", source_url):
+            front_matter_lines.append(f"  - {yaml_escape(source_url)}")
     front_matter_lines.append("feature: true")
     front_matter_lines.append(f"cover: {cover_url}")
     front_matter_lines.append(f"image: {banner_url}")

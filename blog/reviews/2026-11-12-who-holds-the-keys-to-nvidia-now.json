@@ -1,0 +1,122 @@
+{
+  "status": "documented",
+  "article_type": "analysis",
+  "source_sha256": "39d6cdf106471048e68079ae519fe5b92c1d697287b41dc00223526b9eeb37e9",
+  "reporting_cutoff": "2026-11-12T17:10:29.605554Z",
+  "checked_at": "2026-11-12T17:10:29.605554Z",
+  "scope": "Limited automated documentary checks against retrieved primary statements and attributed independent reporting; source quotations validated. No full fact-check, human review, interviews or independent security findings claimed.",
+  "sources": [
+    "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+    "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+    "https://nvidianews.nvidia.com/news/a-message-to-our-company",
+    "https://www.cnn.com/2026/11/12/tech/jensen-huang-nvidia-resigns",
+    "https://developer.nvidia.com/cuda-toolkit"
+  ],
+  "claims": [
+    {
+      "claim": "The board announced Huang resigned as president, CEO and director effective immediately.",
+      "disposition": "attributed",
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+      ],
+      "supporting_excerpt": "NVIDIA (NASDAQ: NVDA) Board of Directors announced today that Jensen Huang has resigned as President, Chief Executive Officer, and a member of the Board, effective immediately.",
+      "unknowns": []
+    },
+    {
+      "claim": "Kress remains CFO while serving as interim CEO.",
+      "disposition": "attributed",
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+      ],
+      "supporting_excerpt": "Kress will continue to serve as Executive Vice President and Chief Financial Officer while serving as Interim Chief Executive Officer until a permanent successor has been named.",
+      "unknowns": []
+    },
+    {
+      "claim": "The board is considering internal and external permanent candidates.",
+      "disposition": "attributed",
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+      ],
+      "supporting_excerpt": "The Board is initiating a search for a permanent Chief Executive Officer and will consider internal and external candidates.",
+      "unknowns": []
+    },
+    {
+      "claim": "Harvey C. Jones is the first-ever board chair.",
+      "disposition": "attributed",
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+      ],
+      "supporting_excerpt": "The Board of Directors appointed Harvey C. Jones as its first-ever Chair of the Board.",
+      "unknowns": []
+    },
+    {
+      "claim": "The November 8 board statement says no reason to believe national security or company secrets were compromised; this is an initial position, not a final clearance.",
+      "disposition": "attributed",
+      "sources": [
+        "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+      ],
+      "supporting_excerpt": "While the Board has no reason to believe that either national security or NVIDIA secrets were compromised, the Board's inquiry will examine all available information.",
+      "unknowns": [
+        "Underlying intelligence, sealed evidence and investigative findings were not obtained; allegations are not findings of espionage or information compromise.",
+        "The original New York Times relationship reporting was not independently retrieved; the article attributes that reporting through CNN."
+      ]
+    },
+    {
+      "claim": "Huang publicly acknowledged infidelity without identifying the other party.",
+      "disposition": "attributed",
+      "sources": [
+        "https://nvidianews.nvidia.com/news/a-message-to-our-company"
+      ],
+      "supporting_excerpt": "I was unfaithful to my wife. My actions hurt her and our children. There is no excuse for what I did. I am deeply sorry.",
+      "unknowns": []
+    },
+    {
+      "claim": "CNN attributes the second relationship allegation to New York Times reporting.",
+      "disposition": "attributed",
+      "sources": [
+        "https://www.cnn.com/2026/11/12/tech/jensen-huang-nvidia-resigns"
+      ],
+      "supporting_excerpt": "The leadership shakeup came days after the board said it would investigate whether Huang was the target of a foreign intelligence effort amid reports of his relationship with a woman US officials believe is a Chinese spy, and shortly after the New York Times reported that the CEO also had an affair with an executive who reports to him.",
+      "unknowns": [
+        "Underlying intelligence, sealed evidence and investigative findings were not obtained; allegations are not findings of espionage or information compromise.",
+        "The original New York Times relationship reporting was not independently retrieved; the article attributes that reporting through CNN."
+      ]
+    },
+    {
+      "claim": "CUDA includes accelerated libraries, debugging tools, a C/C++ compiler and a runtime library.",
+      "disposition": "attributed",
+      "sources": [
+        "https://developer.nvidia.com/cuda-toolkit"
+      ],
+      "supporting_excerpt": "The NVIDIA® CUDA® Toolkit provides a development environment for creating high-performance, GPU-accelerated applications. With it, you can develop, optimize, and deploy your applications on GPU-accelerated embedded systems, desktop workstations, enterprise data centers, cloud-based platforms, and supercomputers. The toolkit includes [GPU-accelerated libraries](/cuda/cuda-x-libraries), debugging and optimization tools, a C/C++ compiler, and a runtime library.",
+      "unknowns": [
+        "No workload migration or comparative benchmark was performed."
+      ]
+    }
+  ],
+  "unknowns": [
+    "Underlying intelligence, sealed evidence and investigative findings were not obtained; allegations are not findings of espionage or information compromise.",
+    "The original New York Times relationship reporting was not independently retrieved; the article attributes that reporting through CNN.",
+    "No interviews, human editorial review, workload benchmark replication, securities audit or forecast validation is claimed.",
+    "Market movement describes the explicitly identified premarket period; interim appointment and company commitments are not guarantees of future performance."
+  ],
+  "sister_body_comparison": {
+    "status": "performed",
+    "publication": "Northstar Ledger",
+    "method": "Distinct lede, sections and conclusion; ten-word overlap checked programmatically. Shared research is not independent corroboration.",
+    "result": {
+      "shared_ten_word_sequences": 7,
+      "protocol_total": 948,
+      "northstar_total": 1523,
+      "shared_sequences": [
+        "customer commitments and the product roadmap to continue without interruption",
+        "had resigned as president chief executive and a director effective",
+        "huang had resigned as president chief executive and a director",
+        "jensen huang had resigned as president chief executive and a",
+        "on november 8 nvidia s board announced an independent investigation",
+        "operations customer commitments and the product roadmap to continue without",
+        "resigned as president chief executive and a director effective immediately"
+      ]
+    }
+  }
+}

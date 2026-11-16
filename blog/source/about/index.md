@@ -1,34 +1,13 @@
 ---
-title: About
-date: 2025-06-29 14:00:00
-description: "Protocol Sentinel is an anti-hype editorial publication covering AI, big tech, privacy, platforms, devices, and the mechanism underneath the headline."
-excerpt: "An anti-hype publication about AI, big tech, privacy, platforms, devices, and the mechanism underneath the headline."
+title: "About Protocol Sentinel"
+date: 2026-10-28 12:00:00
+updated: 2026-10-28 12:00:00
 ---
 
-# Protocol Sentinel
+Protocol Sentinel is an independent, anti-hype editorial publication owned by **Cody Viveiros**. The aim is to explain mechanisms, incentives and limits behind AI, platforms, privacy and devices. Sharp language does not turn an assertion into evidence.
 
-Protocol Sentinel is an independent editorial publication covering *AI, big tech, privacy, platforms, devices,* and the ugly little gaps between what companies say and what their systems actually do.
+The five pillars are [AI & Models](/topics/ai-models), [Big Tech & Platforms](/topics/big-tech-platforms), [Privacy & Power](/topics/privacy-power), [Devices & Experiments](/topics/devices-experiments), and [Signal vs Noise](/topics/signal-vs-noise).
 
-We keep the voice sharp, skeptical, and human. The goal is not hot-take sludge. The goal is to isolate the signal, kill the hype, and explain the mechanism underneath the headline.
+Research and drafting can use AI assistance. Historical articles have not all been reassessed under the current evidence contract. Their visible status identifies that gap. We do not claim a staffed newsroom, routine human review, professional credentials, independent field reporting or completed hands-on testing where none is documented.
 
-## What you’ll find here
-
-- **AI & Models** — the model wars, product shifts, and weird incentives hiding inside the AI boom
-- **Big Tech & Platforms** — Apple, Google, Microsoft, Meta, xAI, and the power moves they’d rather you didn’t notice
-- **Privacy & Power** — surveillance, policy, trust, platform control, and the quiet erosion of user rights
-- **Devices & Experiments** — gadgets, hardware, and real-world tests of tools that promise more than they usually deliver
-- **Signal vs Noise** — hype audits, media nonsense, conspiracy-adjacent claims, and the reality check that comes after
-
-## The tone
-
-Think: *witty, fact-checked, anti-hype, and not afraid to be a little nasty when the facts deserve it.*
-
-If a story is dumb, we say so.
-If a claim is thin, we say so.
-If the mechanism matters more than the drama, we explain it.
-
-## Why it exists
-
-Protocol Sentinel exists for readers who want more than press-release recycling. The site is built for people who like a clean read, a sharp point of view, and a little friction with the official story.
-
-That’s the whole game: **signal over noise**.
+Read [ownership](/ownership), [editorial standards](/editorial-standards), the [desk profile](/authors/protocol-sentinel), and [corrections](/corrections). Retro pixel art is part of the visual identity; illustration is not event evidence.

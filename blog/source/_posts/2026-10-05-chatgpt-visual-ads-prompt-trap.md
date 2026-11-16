@@ -18,6 +18,11 @@ image: /og/chatgpt-visual-ads-prompt-trap.png
 og_image: /og/chatgpt-visual-ads-prompt-trap.png
 og_image_width: 1600
 og_image_height: 900
+updated: 2026-10-30T19:34:18.737794+00:00
+publication_state: published
+editorial_notices: false
+evidence_status: source-review-pending
+article_type: analysis
 ---
 
 <!-- alt: Retro pixel-art CRT terminal generating an image canvas surrounded by glowing neon corporate billboard frames and commercial data pipes. -->

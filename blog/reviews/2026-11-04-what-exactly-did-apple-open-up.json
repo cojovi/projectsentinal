@@ -1,0 +1,74 @@
+{
+  "status": "documented",
+  "article_type": "explainer",
+  "source_sha256": "745645b3d676892f47c801dbc92392170d22336944c7aeb5c5b6ac5317ebf3e0",
+  "reporting_cutoff": "2026-11-04T21:31:40.089863Z",
+  "checked_at": "2026-11-05T19:10:42.097717Z",
+  "scope": "Limited documentary checks during recovery; public-source analysis, no human review, interviews, independent replication or deployment verification claimed.",
+  "sources": [
+    "https://developer.apple.com/news/?id=gdk2umrf"
+  ],
+  "claims": [
+    {
+      "claim": "Apple announced a November 3 Siri AI Developer Preview using App Intents in 27.3 betas.",
+      "disposition": "supported",
+      "sources": [
+        "https://developer.apple.com/news/?id=gdk2umrf"
+      ],
+      "unknowns": [
+        "Vendor announcement; no hands-on preview testing."
+      ]
+    },
+    {
+      "claim": "Apple describes skills combining actions and expanded semantic-index entity access.",
+      "disposition": "attributed",
+      "sources": [
+        "https://developer.apple.com/news/?id=gdk2umrf"
+      ],
+      "unknowns": [
+        "No API reference implementation examined or performance established."
+      ]
+    },
+    {
+      "claim": "Apple distinguishes preview, customer shipping and App Store submissions; further policies are pending.",
+      "disposition": "supported",
+      "sources": [
+        "https://developer.apple.com/news/?id=gdk2umrf"
+      ],
+      "unknowns": [
+        "No guaranteed release date or final commercial terms established."
+      ]
+    },
+    {
+      "claim": "Apple describes eligibility restrictions, daily limits and future paid expanded access.",
+      "disposition": "supported",
+      "sources": [
+        "https://developer.apple.com/news/?id=gdk2umrf"
+      ],
+      "unknowns": [
+        "Historical November 3 announcement; not a complete current entitlement or price table."
+      ]
+    },
+    {
+      "claim": "Integration access should be distinguished from open weights, universal availability and demonstrated reliability.",
+      "disposition": "opinion",
+      "sources": [
+        "https://developer.apple.com/news/?id=gdk2umrf"
+      ],
+      "unknowns": [
+        "Evaluation criteria rather than measured outcomes."
+      ]
+    }
+  ],
+  "unknowns": [
+    "No hands-on testing; preview terms, rollout, prices and reliability not independently established.",
+    "No evidence of open model weights; developer access is bounded by Apple platform conditions."
+  ],
+  "recovery_changes": [
+    "No surviving draft; reconstructed from original selected angle and cron response, using the retrieved November 3 primary announcement."
+  ],
+  "sister_body_comparison": {
+    "status": "not-performed",
+    "limits": "Parent must compare current sister inventory before publication."
+  }
+}

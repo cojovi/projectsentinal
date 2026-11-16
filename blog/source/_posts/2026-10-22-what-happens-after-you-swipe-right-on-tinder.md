@@ -23,6 +23,11 @@ og_image_width: 1600
 og_image_height: 900
 image_credit: Original symbolic pixel-art illustration composed locally; not an actual
   Tinder interface or a visualization of verified model results.
+updated: 2026-10-30T19:34:18.737794+00:00
+publication_state: published
+editorial_notices: false
+evidence_status: source-review-pending
+article_type: analysis
 ---
 
 A reverse-engineering reel raises questions about photo scores, privacy and paid attention. Understanding it starts with separating what a model predicts from what happens to your matches.

@@ -13,6 +13,11 @@ categories:
 cover: /og/anthropic-fable-5.png
 image: /og/anthropic-fable-5.png
 og_image: /og/anthropic-fable-5.png
+updated: 2026-10-30T19:34:18.737794+00:00
+publication_state: published
+editorial_notices: false
+evidence_status: source-review-pending
+article_type: analysis
 ---
 
 <!-- alt: A dark, magazine-style illustration of server racks and a power-switch symbol being stamped with access revoked, representing Anthropic’s Fable 5 model being taken offline after a government directive -->

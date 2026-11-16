@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
+    "build": "node authority/build.cjs",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "test": "node --test test/*.test.cjs",
+    "test:browser": "node test/browser.cjs",
+    "quality": "node authority/quality.cjs",
+    "test:reader": "node --test test/reader.test.cjs"
   },
   "hexo": {
     "version": "7.3.0"
@@ -17,14 +21,26 @@
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
     "hexo-generator-index": "^3.0.0",
-    "hexo-generator-seo-friendly-sitemap": "^0.2.1",
     "hexo-generator-tag": "^2.0.0",
-    "hexo-plugin-aurora": "^1.8.4",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
-    "hexo-theme-aurora": "^2.5.3",
-    "hexo-theme-landscape": "^1.0.0"
+    "hexo-theme-aurora": "2.5.3",
+    "hexo-theme-landscape": "^1.0.0",
+    "cheerio": "1.0.0",
+    "js-yaml": "4.3.2",
+    "hexo-util": "3.3.0",
+    "hexo-pagination": "3.0.0",
+    "truncate-html": "1.2.2",
+    "chalk": "4.1.2",
+    "lodash": "4.18.1",
+    "blueimp-md5": "2.19.0",
+    "moment": "2.31.0"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1",
+    "@xmldom/xmldom": "0.8.15",
+    "jsdom": "26.1.0"
   }
 }
