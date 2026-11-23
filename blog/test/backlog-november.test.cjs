@@ -28,6 +28,11 @@ test('remaining approved November backlog retains provenance dates, complete bod
   for(const file of ['index.html','archives/index.html','post-sitemap.xml','rss.xml'])assert.ok(fs.readFileSync(path.join(root,'public',file),'utf8').includes(article.path));
  }
 });
+test('mobile Aurora article labels wrap without suppressing theme features',()=>{
+ const css=fs.readFileSync(path.join(root,'source/authority/reader.css'),'utf8');
+ assert.match(css,/#app \.post-labels ul\{display:flex;flex-wrap:wrap;/);
+ assert.doesNotMatch(css,/#app \.post-labels\{display:none/);
+});
 test('Spirit later safeguards are explicit and Meta uses the recovered original rating action, not public recovery notes',()=>{
  const spirit=c.readSource(path.join(root,'source/_posts/2026-10-13-what-happens-to-work-chats-when-company-disappears.md'));
  assert.match(spirit.body,/Later developments: November 2026/);assert.match(spirit.body,/ISO 27559/);assert.match(spirit.body,/judicial approval/);
