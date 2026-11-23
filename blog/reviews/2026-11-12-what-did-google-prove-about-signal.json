@@ -1,0 +1,61 @@
+{
+  "status": "documented",
+  "article_type": "analysis",
+  "source_sha256": "50aecc3478c5100e0c3e2002678e8f043b3c7893022d05d1afacf9001fc600a9",
+  "checked_at": "2026-11-23T21:17:43.501226Z",
+  "reporting_cutoff": "2026-11-12T09:39:00Z",
+  "scope": "Limited documentary source checks; no independent implementation testing or human-review claim.",
+  "sources": [
+    "https://deepmind.google/blog/introducing-alphaproof-code/",
+    "https://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf",
+    "https://google-deepmind.github.io/code-verification"
+  ],
+  "unknowns": [
+    "Research-team materials, not independent reproduction. Full proof corpus not executed."
+  ],
+  "claims": [
+    {
+      "claim": "The paper targets libsignal in a command-line harness compiled to AArch64 Linux, not complete Signal apps.",
+      "disposition": "attributed",
+      "sources": [
+        "https://deepmind.google/blog/introducing-alphaproof-code/",
+        "https://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf",
+        "https://google-deepmind.github.io/code-verification"
+      ],
+      "unknowns": [
+        "Research-team materials, not independent reproduction. Full proof corpus not executed."
+      ]
+    },
+    {
+      "claim": "Human-approved specifications and Lean kernel checking are distinct from AI-generated proof proposals.",
+      "disposition": "attributed",
+      "sources": [
+        "https://deepmind.google/blog/introducing-alphaproof-code/",
+        "https://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf",
+        "https://google-deepmind.github.io/code-verification"
+      ],
+      "unknowns": [
+        "Research-team materials, not independent reproduction. Full proof corpus not executed."
+      ]
+    },
+    {
+      "claim": "PQXDH and Triple Ratchet properties rely on explicit cryptographic, external-routine and machine-model assumptions.",
+      "disposition": "attributed",
+      "sources": [
+        "https://deepmind.google/blog/introducing-alphaproof-code/",
+        "https://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf",
+        "https://google-deepmind.github.io/code-verification"
+      ],
+      "unknowns": [
+        "Research-team materials, not independent reproduction. Full proof corpus not executed."
+      ]
+    }
+  ],
+  "source_receipt": "/Users/cojovi/.hermes/profiles/loki/publication-recovery/20261123T210657Z/ps-sources/new-3.json",
+  "recovery_audit": {
+    "actual_integration_at": "2026-11-23T21:17:43.501226Z",
+    "date_preserved": "2026-11-12T03:39:00-06:00",
+    "prior_review_retained": true,
+    "sister_comparison": "No companion requested; independent source body compared before release."
+  }
+}

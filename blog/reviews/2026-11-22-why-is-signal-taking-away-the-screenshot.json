@@ -1,0 +1,65 @@
+{
+  "status": "documented",
+  "article_type": "analysis",
+  "source_sha256": "e9b9534a464e03e15a6ef9503ee7975bb31e6fe4ea6e3834ef17bec986ec94a9",
+  "checked_at": "2026-11-23T21:17:43.501226Z",
+  "reporting_cutoff": "2026-11-22 09:59:12+00:00",
+  "scope": "Limited documentary source checks; no independent implementation testing or human-review claim.",
+  "sources": [
+    "https://signal.org/blog/protecting-your-privacy/",
+    "https://signal.org/blog/signal-doesnt-recall/",
+    "https://www.eff.org/deeplinks/2026/10/victory-you-can-now-exclude-apps-siri-ai",
+    "https://tech.yahoo.com/ai/meta-ai/articles/signal-blocking-screenshots-keep-ai-211452907.html"
+  ],
+  "unknowns": [
+    "No device testing. Android vendor behavior varies; exclusions for one assistant do not exclude every third-party agent."
+  ],
+  "claims": [
+    {
+      "claim": "Signal’s November 20 announcement describes screenshot blocking on iOS 27 and conditional Screen security activation on Android.",
+      "disposition": "attributed",
+      "sources": [
+        "https://signal.org/blog/protecting-your-privacy/",
+        "https://signal.org/blog/signal-doesnt-recall/",
+        "https://www.eff.org/deeplinks/2026/10/victory-you-can-now-exclude-apps-siri-ai",
+        "https://tech.yahoo.com/ai/meta-ai/articles/signal-blocking-screenshots-keep-ai-211452907.html"
+      ],
+      "unknowns": [
+        "No device testing. Android vendor behavior varies; exclusions for one assistant do not exclude every third-party agent."
+      ]
+    },
+    {
+      "claim": "Signal calls the remedy incomplete and recommends macOS 27 Siri Excluded Apps due to screenshot API limits.",
+      "disposition": "attributed",
+      "sources": [
+        "https://signal.org/blog/protecting-your-privacy/",
+        "https://signal.org/blog/signal-doesnt-recall/",
+        "https://www.eff.org/deeplinks/2026/10/victory-you-can-now-exclude-apps-siri-ai",
+        "https://tech.yahoo.com/ai/meta-ai/articles/signal-blocking-screenshots-keep-ai-211452907.html"
+      ],
+      "unknowns": [
+        "No device testing. Android vendor behavior varies; exclusions for one assistant do not exclude every third-party agent."
+      ]
+    },
+    {
+      "claim": "Screen access to decrypted content is an endpoint-permission issue, not a demonstrated break of encryption.",
+      "disposition": "attributed",
+      "sources": [
+        "https://signal.org/blog/protecting-your-privacy/",
+        "https://signal.org/blog/signal-doesnt-recall/",
+        "https://www.eff.org/deeplinks/2026/10/victory-you-can-now-exclude-apps-siri-ai",
+        "https://tech.yahoo.com/ai/meta-ai/articles/signal-blocking-screenshots-keep-ai-211452907.html"
+      ],
+      "unknowns": [
+        "No device testing. Android vendor behavior varies; exclusions for one assistant do not exclude every third-party agent."
+      ]
+    }
+  ],
+  "source_receipt": "/Users/cojovi/.hermes/profiles/loki/publication-recovery/20261123T210657Z/ps-sources/remaining-1.json",
+  "recovery_audit": {
+    "actual_integration_at": "2026-11-23T21:17:43.501226Z",
+    "date_preserved": "2026-11-22 09:59:12+00:00",
+    "prior_review_retained": false,
+    "sister_comparison": "No companion requested; independent source body compared before release."
+  }
+}

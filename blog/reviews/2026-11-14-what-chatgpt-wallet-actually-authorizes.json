@@ -1,0 +1,57 @@
+{
+  "status": "documented",
+  "article_type": "analysis",
+  "source_sha256": "c83adefcd98844f5372554514ae1b7d3e2bd003c8fdca5ea9541f1ea96f83174",
+  "checked_at": "2026-11-23T21:17:43.501226Z",
+  "reporting_cutoff": "2026-11-14 21:42:00+00:00",
+  "scope": "Limited documentary source checks; no independent implementation testing or human-review claim.",
+  "sources": [
+    "https://openai.com/index/introducing-chatgpt-wallet",
+    "https://www.digitaltransactions.net/new-news-brief-headline-for-web-openai-launches-chatgpt-wallet-and-other-digital-transactions-news-briefs-from-11-13-26"
+  ],
+  "unknowns": [
+    "Vendor-described mechanisms. No hands-on purchase, bypass, refund or independent security certification."
+  ],
+  "claims": [
+    {
+      "claim": "OpenAI announced Wallet November 13 with initial US Pro availability through dots and per-purchase approval.",
+      "disposition": "attributed",
+      "sources": [
+        "https://openai.com/index/introducing-chatgpt-wallet",
+        "https://www.digitaltransactions.net/new-news-brief-headline-for-web-openai-launches-chatgpt-wallet-and-other-digital-transactions-news-briefs-from-11-13-26"
+      ],
+      "unknowns": [
+        "Vendor-described mechanisms. No hands-on purchase, bypass, refund or independent security certification."
+      ]
+    },
+    {
+      "claim": "OpenAI describes payment tokens that substitute for actual card details and acknowledges merchant compatibility limits.",
+      "disposition": "attributed",
+      "sources": [
+        "https://openai.com/index/introducing-chatgpt-wallet",
+        "https://www.digitaltransactions.net/new-news-brief-headline-for-web-openai-launches-chatgpt-wallet-and-other-digital-transactions-news-briefs-from-11-13-26"
+      ],
+      "unknowns": [
+        "Vendor-described mechanisms. No hands-on purchase, bypass, refund or independent security certification."
+      ]
+    },
+    {
+      "claim": "Fully delegated purchases are a future plan, while businesses retain fulfillment and returns responsibilities.",
+      "disposition": "attributed",
+      "sources": [
+        "https://openai.com/index/introducing-chatgpt-wallet",
+        "https://www.digitaltransactions.net/new-news-brief-headline-for-web-openai-launches-chatgpt-wallet-and-other-digital-transactions-news-briefs-from-11-13-26"
+      ],
+      "unknowns": [
+        "Vendor-described mechanisms. No hands-on purchase, bypass, refund or independent security certification."
+      ]
+    }
+  ],
+  "source_receipt": "/Users/cojovi/.hermes/profiles/loki/publication-recovery/20261123T210657Z/ps-sources/new-0.json",
+  "recovery_audit": {
+    "actual_integration_at": "2026-11-23T21:17:43.501226Z",
+    "date_preserved": "2026-11-14 21:42:00+00:00",
+    "prior_review_retained": false,
+    "sister_comparison": "No companion requested; independent source body compared before release."
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "status": "documented",
+  "article_type": "analysis",
+  "source_sha256": "de8449a0ad8cb613684771e0b89eebd1ff92cdd4d7333678c53d9cf628db57e6",
+  "checked_at": "2026-11-23T21:17:43.501226Z",
+  "reporting_cutoff": "2026-11-17T09:48:57Z",
+  "scope": "Limited documentary source checks; no independent implementation testing or human-review claim.",
+  "sources": [
+    "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+    "https://venturebeat.com/security/google-says-attackers-built-an-ai-framework-to-turn-software-patches-into-exploits-without-human-intervention",
+    "https://www.theregister.com/research/2026/11/16/google-ai-agent-turned-a-security-patch-into-a-working-exploit-with-no-human-help/5309926",
+    "https://www.govtech.com/security/report-cyber-criminal-use-of-ai-increasingly-sophisticated"
+  ],
+  "unknowns": [
+    "Primary vendor threat report; no access to server, framework or victim data. Other outlets report the same account."
+  ],
+  "claims": [
+    {
+      "claim": "Google reports exploit_agent on an exposed staging server, configured for patch comparison, exploit drafting and execution.",
+      "disposition": "attributed",
+      "sources": [
+        "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+        "https://venturebeat.com/security/google-says-attackers-built-an-ai-framework-to-turn-software-patches-into-exploits-without-human-intervention",
+        "https://www.theregister.com/research/2026/11/16/google-ai-agent-turned-a-security-patch-into-a-working-exploit-with-no-human-help/5309926",
+        "https://www.govtech.com/security/report-cyber-criminal-use-of-ai-increasingly-sophisticated"
+      ],
+      "unknowns": [
+        "Primary vendor threat report; no access to server, framework or victim data. Other outlets report the same account."
+      ]
+    },
+    {
+      "claim": "Stolen data on a server does not independently attribute each compromise to the recovered framework.",
+      "disposition": "attributed",
+      "sources": [
+        "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+        "https://venturebeat.com/security/google-says-attackers-built-an-ai-framework-to-turn-software-patches-into-exploits-without-human-intervention",
+        "https://www.theregister.com/research/2026/11/16/google-ai-agent-turned-a-security-patch-into-a-working-exploit-with-no-human-help/5309926",
+        "https://www.govtech.com/security/report-cyber-criminal-use-of-ai-increasingly-sophisticated"
+      ],
+      "unknowns": [
+        "Primary vendor threat report; no access to server, framework or victim data. Other outlets report the same account."
+      ]
+    },
+    {
+      "claim": "Google describes detectable traces and nonworking claimed exploits; no universal patch-to-exploit deadline established.",
+      "disposition": "attributed",
+      "sources": [
+        "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+        "https://venturebeat.com/security/google-says-attackers-built-an-ai-framework-to-turn-software-patches-into-exploits-without-human-intervention",
+        "https://www.theregister.com/research/2026/11/16/google-ai-agent-turned-a-security-patch-into-a-working-exploit-with-no-human-help/5309926",
+        "https://www.govtech.com/security/report-cyber-criminal-use-of-ai-increasingly-sophisticated"
+      ],
+      "unknowns": [
+        "Primary vendor threat report; no access to server, framework or victim data. Other outlets report the same account."
+      ]
+    }
+  ],
+  "source_receipt": "/Users/cojovi/.hermes/profiles/loki/publication-recovery/20261123T210657Z/ps-sources/new-1.json",
+  "recovery_audit": {
+    "actual_integration_at": "2026-11-23T21:17:43.501226Z",
+    "date_preserved": "2026-11-17T09:48:57Z",
+    "prior_review_retained": false,
+    "sister_comparison": "No companion requested; independent source body compared before release."
+  }
+}

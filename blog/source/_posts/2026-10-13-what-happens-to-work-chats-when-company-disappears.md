@@ -1,19 +1,20 @@
 ---
-title: "What Happens to Your Work Chats When the Company Disappears?"
-date: "2026-10-13 12:00:00"
-updated: "2026-11-05T19:09:52.588710Z"
-author: "Protocol Sentinel desk"
-categories: ["Privacy & Power"]
-article_type: "analysis"
-evidence_status: "documented"
+title: What Happens to Your Work Chats When the Company Disappears?
+date: '2026-10-13 12:00:00'
+updated: '2026-11-23T21:17:43.501226Z'
+author: Protocol Sentinel desk
+categories:
+- Privacy & Power
+article_type: analysis
+evidence_status: documented
 editorial_notices: false
-reporting_cutoff: "2026-10-13T23:59:59-05:00"
-slug: "what-happens-to-work-chats-when-company-disappears"
-cover: "/og/what-happens-to-work-chats-when-company-disappears.png"
-image: "/og/what-happens-to-work-chats-when-company-disappears.png"
-og_image: "/og/what-happens-to-work-chats-when-company-disappears.png"
-image_credit: "Original locally drawn pixel-art editorial illustration; not documentary evidence."
-description: "What Happens to Your Work Chats When the Company Disappears? — a historical, source-bounded analysis."
+reporting_cutoff: '2026-11-23T21:17:43.501226Z'
+slug: what-happens-to-work-chats-when-company-disappears
+cover: /og/what-happens-to-work-chats-when-company-disappears.png
+image: /og/what-happens-to-work-chats-when-company-disappears.png
+og_image: /og/what-happens-to-work-chats-when-company-disappears.png
+image_credit: Original locally drawn pixel-art editorial illustration; not documentary evidence.
+description: What Happens to Your Work Chats When the Company Disappears? — a historical, source-bounded analysis.
 ---
 
 Deleting names does not delete what people told their employer. A workplace message can reveal a health problem, a dispute or an operational vulnerability even when its author becomes an anonymous identifier.
@@ -26,7 +27,7 @@ In its [August 18 limited objection](https://afacwa.org/wp-content/uploads/2026/
 
 Those figures describe the original proposal as represented in an objector’s filing. They are not a count of messages already delivered to Google, or a demonstration that every item contains confidential information. A successful auction bid and a completed, court-approved transfer are different stages.
 
-The preserved October 13 reporting premise was a proposed sale. The documents examined here do not establish completion or what any eventual training dataset contained. This article examines the privacy mechanism and the objections, rather than offering a current account of the bankruptcy docket.
+The October dispute concerned a proposed sale. The later agreement and approval materially changed that posture; the dated update below distinguishes those developments from the opening objections. None of the reviewed material independently establishes what records Google has received or used for training.
 
 ## Identification and confidentiality answer different questions
 
@@ -38,15 +39,15 @@ Links between records matter too. A dataset can be more revealing when a communi
 
 ## The September filing changes the picture
 
-A fair account cannot freeze the dispute at its most alarming opening version. The union’s [September 24 supplemental objection](https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM) acknowledged progress: the debtors had agreed to exclude sensitive categories including medical and disability information, accommodations, leave, testing records and union records.
+A fair account cannot freeze the dispute at its most alarming opening version. [ComplexDiscovery’s October 9 account of the September 24 supplemental objection](https://complexdiscovery.com/lawmakers-press-google-and-spirit-on-employee-data-before-a-hearing-on-a-10-million-ai-training-data-sale) describes progress: the debtors had agreed to exclude sensitive categories including medical and disability information, accommodations, leave, testing records and union records.
 
 The remaining disagreement concerned how exclusions would work across systems. A record normally stored in a dedicated application can also be discussed in an email. Excluding the application does not automatically remove every narrative reference elsewhere. The filing describes search and deidentification stages while questioning how their effectiveness could be verified.
 
-It also records qualifications to the earlier concern about linked records: no reidentification key would be transferred, actual employee numbers would not be transferred, and randomized identifiers would not necessarily be universal across separate datasets. These are material safeguards as represented in that filing. They do not settle the union’s concerns about confidential content, but omitting them would misdescribe the dispute.
+Those changes matter even without proving the filtering is perfect. An objection to an early asset schedule must not be presented as if every original category remained unchanged through the later negotiations.
 
 ## Training is another use, not another filing cabinet
 
-In an [October 1 proposed amicus brief](https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM), EPIC and Professor Seema Patel supported the objection and challenged the adequacy of the proposed privacy arrangements. Their filing argues that inference can expose sensitive information even after deidentification and questions how clearly protections extend to employees.
+ComplexDiscovery also describes EPIC and Professor Seema Patel’s proposed amicus brief supporting the objection, including its argument that the sale could encourage excessive collection of employee data. The original supplemental filings could not be retrieved directly for this check; those descriptions are attributed to the reporting, not independently authenticated here.
 
 That is an advocacy position in a court submission. It does not demonstrate that Google trained a model on these records or that a model reproduced a worker’s information. Neither outcome should be invented to make the risk sound concrete.
 
@@ -60,8 +61,17 @@ These questions are worth asking before a transfer because later restrictions ma
 
 Spirit’s proposed transaction exposes a gap between an employer’s operational archive and the people whose lives appear inside it. Removing names addresses part of that gap. Deciding whether the underlying conversations should become somebody else’s training material requires a separate answer.
 
+## Later developments: November 2026
+
+On [November 10, AFA announced](https://afacwa.org/afa-wins-data-privacy-protections) that the objections had been withdrawn the previous evening after the parties agreed to exclusions for sensitive employee records, a de-identification process under ISO 27559, independent verification chosen in consultation with the unions, and restrictions on reidentification and handling. That is the union’s account of the safeguards it obtained, not our independent audit of their implementation.
+
+[The Record subsequently reported judicial approval](https://therecord.media/judge-signs-off-google-purchase-spirit-airlines-data), citing the bankruptcy court filing. Approval is therefore no longer merely hypothetical. The order itself was not independently retrieved for this analysis, and approval does not establish that every contemplated record has been delivered, used in a model or rendered impossible to reidentify.
+
+The safeguards change the deal and belong in any fair assessment. They also reinforce the original point: excluding confidential subjects, testing de-identification and limiting subsequent use are separate tasks. Replacing a worker’s name was never the whole question.
+
 ## Sources
 
-- [Supporting document 1](https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf)
-- [Supporting document 2](https://document.epiq11.com/document/getdocumentbycode?docId=4617018&projectCode=SPJ&source=DM)
-- [Supporting document 3](https://document.epiq11.com/document/getdocumentbycode?docId=4619268&projectCode=SPJ&source=DM)
+- [AFA: original August objection](https://afacwa.org/wp-content/uploads/2026/08/NYSB-25-11897-1489-Objection-Limited-Objection-of-the-Association-of-Flight-A.pdf)
+- [ComplexDiscovery: October 9 account quoting the supplemental filings](https://complexdiscovery.com/lawmakers-press-google-and-spirit-on-employee-data-before-a-hearing-on-a-10-million-ai-training-data-sale)
+- [AFA: November 10 safeguards and withdrawal announcement](https://afacwa.org/afa-wins-data-privacy-protections)
+- [The Record: court approval reporting](https://therecord.media/judge-signs-off-google-purchase-spirit-airlines-data)

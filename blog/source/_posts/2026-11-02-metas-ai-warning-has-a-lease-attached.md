@@ -1,35 +1,37 @@
 ---
-title: "Meta’s AI Warning Has a Lease Attached"
-date: "2026-11-02 03:23:00"
-updated: "2026-11-05T19:10:42.097717Z"
-author: "Protocol Sentinel desk"
-article_type: "analysis"
-evidence_status: "source-review-pending"
+title: Meta’s AI Warning Has a Lease Attached
+date: '2026-11-02 03:23:00'
+updated: '2026-11-23T21:17:43.501226Z'
+author: Protocol Sentinel desk
+article_type: analysis
+evidence_status: documented
 editorial_notices: false
-reporting_cutoff: "2026-11-02T09:23:00Z"
-categories: ["Big Tech & Platforms"]
-slug: "metas-ai-warning-has-a-lease-attached"
-cover: "/og/metas-ai-warning-has-a-lease-attached.png"
-image: "/og/metas-ai-warning-has-a-lease-attached.png"
-og_image: "/og/metas-ai-warning-has-a-lease-attached.png"
-image_credit: "Original locally drawn pixel-art editorial illustration; not documentary evidence."
-sources: ["https://www.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101715788", "https://spratings.spglobal.com/ratings/%5Blang%5D/regulatory/article/-/view/type/HTML/id/3653386"]
-description: "Meta’s AI Warning Has a Lease Attached — mechanisms, evidence and limits."
+reporting_cutoff: '2026-11-02T09:23:00Z'
+categories:
+- Big Tech & Platforms
+slug: metas-ai-warning-has-a-lease-attached
+cover: /og/metas-ai-warning-has-a-lease-attached.png
+image: /og/metas-ai-warning-has-a-lease-attached.png
+og_image: /og/metas-ai-warning-has-a-lease-attached.png
+image_credit: Original locally drawn pixel-art editorial illustration; not documentary evidence.
+sources:
+- https://spratings.spglobal.com/ratings/%5Blang%5D/regulatory/article/-/view/type/HTML/id/3652897
+description: Meta’s AI Warning Has a Lease Attached — mechanisms, evidence and limits.
 ---
 
 The obvious way to read Meta’s AI warning is that the company is spending an enormous amount of money on computers. The more interesting part is what happens when it rents the buildings those computers live in.
 
 “We are leasing capacity” can sound lighter than “we are borrowing to build it.” From a credit analyst’s perspective, both can create claims on tomorrow’s cash. Moving the bill into a different contractual box does not make it disappear.
 
-The original reporting centered on [S&P’s October 30 notice](https://www.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101715788). That page returned no usable body during the November 5 recovery check. The detailed financial forecasts and Meta response in the earlier reporting could not be rechecked against their original documents, so they are not repeated here. The lease mechanism can still be examined, with the date of the available evidence made explicit.
+In its [October 30 rating action](https://spratings.spglobal.com/ratings/%5Blang%5D/regulatory/article/-/view/type/HTML/id/3652897), S&P Global Ratings revised Meta’s outlook to negative from stable and affirmed its ratings. It forecast a rise in adjusted leverage driven primarily by data-center capacity leases rather than new debt issuance.
 
-## A later document supports a narrower account
+## An outlook warning is not a downgrade
 
-**Later development, November 2, 2026, 16:42 EST:** S&P’s [Sopaipilla project notice](https://spratings.spglobal.com/ratings/%5Blang%5D/regulatory/article/-/view/type/HTML/id/3653386), retrieved through live search on November 5, says it revised the project’s outlook to negative and affirmed its A+ rating following similar action on Meta. It identifies Meta as AA-minus with a negative outlook, and dates Meta’s outlook revision to October 30.
+S&P identified a 1.0-times adjusted-leverage threshold for the AA-minus issuer rating and projected leverage above that threshold as early as 2027. Those are the agency’s conditional forecasts, not measured future outcomes or a declaration of default.
 
-The notice describes Meta’s guarantees during construction and operations. It says Meta must begin paying rent on December 1, 2028, with very limited exceptions, regardless of completion, and that its guarantee does not depend on subsequent project performance. Those are S&P’s descriptions; this publication has not examined the contracts.
+The agency said Meta’s disclosed future lease obligations had increased to $355.7 billion from approximately $279 billion in the second quarter. Its analysis includes future capacity commitments, including the proposed El Paso project, rather than merely counting debt already issued.
 
-That distinction matters. The notice records an outlook warning, rather than a claim that Meta had already defaulted or that its issuer rating had been downgraded. The project’s treatment also shows why an analyst looks beyond who holds title to a building.
+This publication has not independently audited those financial statements or the underlying lease contracts. The rating action establishes what S&P concluded and why; it does not turn the agency’s model into a guaranteed outcome.
 
 ## The lease is part of the mechanism
 
@@ -43,7 +45,7 @@ There is no universal rule that leasing is worse than ownership. Renting can all
 
 The earlier reporting depended on projected capital spending, adjusted leverage and free operating cash flow. Those measures answer different questions. A forecast concerns a possible future path; an obligation concerns a promise; a cash payment concerns a particular period. Adding them together without checking definitions can count the same economic burden twice or move it into the wrong year.
 
-The preserved reporting also recorded conflicting forecast-year figures between the original S&P account and Reuters. The original pages could not be substantively retrieved during recovery, so this version does not choose a disputed number and present it as newly verified. The uncertainty remains in the evidence register.
+S&P’s forecast assumes spending and funding choices that may change. Its projected free-operating-cash-flow deficits are not the same thing as net losses, a liquidity shortfall or an unpaid invoice. Nor should a financial model be used to infer a product decision that Meta has not announced.
 
 A negative outlook is likewise conditional. Spending, monetization and funding choices can change the path. It should prompt scrutiny of assumptions rather than a declaration that investment failure is inevitable.
 
