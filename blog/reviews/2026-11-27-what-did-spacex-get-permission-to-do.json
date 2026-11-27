@@ -1,0 +1,101 @@
+{
+  "status": "documented",
+  "article_type": "analysis",
+  "source_sha256": "fc40083912a30eed76afb088e505dbed2a89f4150ba561ad2f115613c0b288b6",
+  "reporting_cutoff": "2026-11-27T10:27:16Z",
+  "checked_at": "2026-11-27T10:27:03.443604+00:00",
+  "scope": "AI-assisted source comparison of FCC order, AAS response and attributed trade reporting. No human-review, interview, technical replication or deployed impact measurement is claimed.",
+  "sources": [
+    "https://docs.fcc.gov/public/attachments/DA-26-1273A1.txt",
+    "https://aas.org/press/spacex-data-center-fcc-approval",
+    "https://www.geekwire.com/2026/fcc-clears-spacex-million-satellites-starmind-data-center",
+    "https://satellitetoday.com/connectivity/2026/11/25/fcc-approves-spacexs-1-million-satellite-orbital-data-center-constellation"
+  ],
+  "unknowns": [
+    "Actual deployment, operational compute capacity and cost competitiveness were not independently established.",
+    "AAS concerns are attributed predictions; future impacts have not been measured here.",
+    "Subsequent modifications, superseding rules and compliance reports may change the conditions."
+  ],
+  "claims": [
+    {
+      "claim": "The Nov 25 order authorizes a conditional million-satellite Starmind constellation, 500\u20131002km.",
+      "disposition": "supported",
+      "sources": [
+        "https://docs.fcc.gov/public/attachments/DA-26-1273A1.txt"
+      ],
+      "unknowns": "Authorization is not evidence of completed deployment."
+    },
+    {
+      "claim": "RF grant covers backup and emergency TT&C on non-interference, unprotected Ka-band terms; optical links are primary.",
+      "disposition": "supported",
+      "sources": [
+        "https://docs.fcc.gov/public/attachments/DA-26-1273A1.txt"
+      ],
+      "unknowns": "Not a technical demonstration of optical network performance."
+    },
+    {
+      "claim": "Alternative disposal waiver is deferred and requires modification before satellites using non-reentry disposal can deploy and operate.",
+      "disposition": "supported",
+      "sources": [
+        "https://docs.fcc.gov/public/attachments/DA-26-1273A1.txt"
+      ],
+      "unknowns": "Not a finding that the entire constellation is prohibited or unsafe."
+    },
+    {
+      "claim": "Milestones are one satellite in 2033, 10% in 2035, 50% in 2038, completion in 2040; license term starts with certified compliant first operations.",
+      "disposition": "supported",
+      "sources": [
+        "https://docs.fcc.gov/public/attachments/DA-26-1273A1.txt"
+      ],
+      "unknowns": "Regulatory deadlines are not commercial availability forecasts."
+    },
+    {
+      "claim": "FCC declines additional optical astronomy conditions and excludes non-RF viability issues from controlling scope.",
+      "disposition": "supported",
+      "sources": [
+        "https://docs.fcc.gov/public/attachments/DA-26-1273A1.txt"
+      ],
+      "unknowns": "Regulatory judgment does not resolve future physical impacts."
+    },
+    {
+      "claim": "AAS objects on brightness, radio, heat, pollution and collision grounds.",
+      "disposition": "attributed",
+      "sources": [
+        "https://aas.org/press/spacex-data-center-fcc-approval"
+      ],
+      "unknowns": "Advocacy statement, not measurement of an operational Starmind constellation."
+    },
+    {
+      "claim": "Thermal and economic viability remain unproven by this approval.",
+      "disposition": "supported",
+      "sources": [
+        "https://docs.fcc.gov/public/attachments/DA-26-1273A1.txt",
+        "https://satellitetoday.com/connectivity/2026/11/25/fcc-approves-spacexs-1-million-satellite-orbital-data-center-constellation"
+      ],
+      "unknowns": "No independent hardware test, cost model or future impact study performed."
+    },
+    {
+      "claim": "Semiannual reporting conditions enumerate conjunctions, removals, reentries, deployments and backup Ka use.",
+      "disposition": "supported",
+      "sources": [
+        "https://docs.fcc.gov/public/attachments/DA-26-1273A1.txt"
+      ],
+      "unknowns": "Subject to superseding reporting rules, not a guarantee of reporting quality."
+    },
+    {
+      "claim": "A license clears a gate, not the sky; readers should track separate evidence for each claimed achievement.",
+      "disposition": "opinion",
+      "sources": [
+        "https://docs.fcc.gov/public/attachments/DA-26-1273A1.txt",
+        "https://aas.org/press/spacex-data-center-fcc-approval"
+      ],
+      "unknowns": "Editorial conclusion derived from the stated scope and unresolved conditions."
+    }
+  ],
+  "corrections": [],
+  "sister_body_comparison": {
+    "status": "not_applicable",
+    "publication": "Northstar Ledger",
+    "method": "PS-only task; no sister article created. Existing PS/recovery corpus checked for underlying-event duplicates."
+  }
+}
